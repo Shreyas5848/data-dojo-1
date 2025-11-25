@@ -5,8 +5,8 @@ for learning data preparation in retail/online shopping contexts.
 """
 
 from typing import List, Dict, Any
-from ..models.learning_project import LearningProject, Domain, Difficulty, ValidationRule
-from ..models.domain_module import DomainModule, OperationDefinition
+from datadojo.models.learning_project import LearningProject, Domain, Difficulty, ValidationRule
+from datadojo.models.domain_module import DomainModule, OperationDefinition
 
 
 def get_ecommerce_module() -> DomainModule:
@@ -21,11 +21,13 @@ def get_ecommerce_module() -> DomainModule:
         description=(
             "Learn data preparation for e-commerce analytics, customer segmentation, "
             "sales forecasting, and recommendation systems using real-world retail datasets."
-        )
+        ),
+        operations=[],
+        validation_rules=[]
     )
 
     # Add domain-specific operations
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="customer_segmentation_prep",
         operation_type="feature_engineering",
         description="Prepare customer data for segmentation (RFM analysis)",
@@ -40,7 +42,7 @@ def get_ecommerce_module() -> DomainModule:
         )
     ))
 
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="product_category_encoding",
         operation_type="transformation",
         description="Encode product categories for machine learning",
@@ -54,7 +56,7 @@ def get_ecommerce_module() -> DomainModule:
         )
     ))
 
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="sales_seasonality_features",
         operation_type="feature_engineering",
         description="Extract seasonal features from sales data",
@@ -69,7 +71,7 @@ def get_ecommerce_module() -> DomainModule:
     ))
 
     # Add validation rules
-    module.add_validation_rule({
+    module.validation_rules.append({
         "name": "positive_price_check",
         "type": "range",
         "description": "Ensure all prices are positive",
@@ -77,7 +79,7 @@ def get_ecommerce_module() -> DomainModule:
         "min_value": 0.01
     })
 
-    module.add_validation_rule({
+    module.validation_rules.append({
         "name": "valid_quantity_check",
         "type": "range",
         "description": "Ensure quantities are valid integers",
@@ -86,7 +88,7 @@ def get_ecommerce_module() -> DomainModule:
         "max_value": 10000
     })
 
-    module.add_validation_rule({
+    module.validation_rules.append({
         "name": "date_order_check",
         "type": "temporal",
         "description": "Ensure order dates are not in the future",

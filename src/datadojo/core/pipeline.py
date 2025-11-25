@@ -4,15 +4,10 @@ Interface for building and executing preprocessing pipelines.
 """
 
 from typing import List, Dict, Any
-import sys
-import os
 import pandas as pd
 import time
 
-# Add contracts to path for interface imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../..', 'specs/001-use-the-requirements/contracts'))
-
-from dojo_api import PipelineInterface, ExecutionResult
+from datadojo.dojo_api import PipelineInterface, ExecutionResult
 from ..models.pipeline import Pipeline
 from ..models.processing_step import ProcessingStep, OperationType, CompletionStatus
 from ..services.educational_service import EducationalService

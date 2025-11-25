@@ -1,12 +1,13 @@
 """CLI command for explaining data preprocessing concepts."""
 
-import sys
-import os
+from typing import Optional
 
-# Add contracts to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../..', 'specs/001-use-the-requirements/contracts'))
-
-from cli_interface import CLIResult
+class CLIResult:
+    def __init__(self, success: bool, output: str, exit_code: int, error_message: Optional[str] = None):
+        self.success = success
+        self.output = output
+        self.exit_code = exit_code
+        self.error_message = error_message
 
 
 def explain_concept(
@@ -35,12 +36,7 @@ def explain_concept(
                 error_message="Concept ID is required"
             )
 
-        # Get educational interface
-        from ..core.educational import Educational
-        from ..services.educational_service import EducationalService
-
-        educational_service = EducationalService()
-        educational = Educational(educational_service)
+        educational = dojo.get_educational_interface()
 
         # Get concept explanation
         try:

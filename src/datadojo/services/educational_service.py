@@ -43,19 +43,11 @@ class EducationalService:
 
     def _load_content(self) -> None:
         """Load educational content from storage."""
-        self._content_cache.clear()
+        from ..educational.concepts import get_concept_database
+        concept_db = get_concept_database()
+        for concept in concept_db.list_concepts():
+            self._content_cache[concept.concept_id] = concept
 
-        if not self.content_path.exists():
-            return
-
-        for content_file in self.content_path.glob("*.json"):
-            try:
-                with open(content_file, 'r') as f:
-                    data = json.load(f)
-                    content = EducationalContent.from_dict(data)
-                    self._content_cache[content.concept_id] = content
-            except (json.JSONDecodeError, KeyError, ValueError) as e:
-                print(f"Warning: Failed to load content from {content_file}: {e}")
 
     def _save_content(self, content: EducationalContent) -> None:
         """Save educational content to storage.

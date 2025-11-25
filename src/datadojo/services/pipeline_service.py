@@ -60,19 +60,24 @@ class PipelineService:
         Returns:
             Cleaned DataFrame
         """
-        # Placeholder implementation
         result = data.copy()
 
-        if parameters.get("remove_duplicates"):
-            result = result.drop_duplicates()
+        if "remove_duplicates" in parameters:
+            subset = parameters["remove_duplicates"].get("subset")
+            result = result.drop_duplicates(subset=subset)
 
-        if parameters.get("handle_missing"):
-            strategy = parameters.get("missing_strategy", "drop")
+        if "handle_missing" in parameters:
+            strategy = parameters["handle_missing"].get("strategy", "drop")
             if strategy == "drop":
                 result = result.dropna()
             elif strategy == "fill":
-                fill_value = parameters.get("fill_value", 0)
+                fill_value = parameters["handle_missing"].get("fill_value", 0)
                 result = result.fillna(fill_value)
+            elif strategy == "median":
+                for col in result.columns:
+                    if result[col].isnull().any():
+                        median = result[col].median()
+                        result[col] = result[col].fillna(median)
 
         return result
 

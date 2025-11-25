@@ -4,15 +4,10 @@ Interface for working with specific learning projects.
 """
 
 from typing import Dict, Any, Optional
-import sys
-import os
 import pandas as pd
 from pathlib import Path
 
-# Add contracts to path for interface imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../..', 'specs/001-use-the-requirements/contracts'))
-
-from dojo_api import ProjectInterface, ProjectInfo, GuidanceLevel, DifficultyLevel, Domain
+from datadojo.dojo_api import ProjectInterface, ProjectInfo, GuidanceLevel, DifficultyLevel, Domain
 from ..models.learning_project import LearningProject, Domain as ModelDomain, Difficulty as ModelDifficulty
 from ..services.educational_service import EducationalService
 from .pipeline import PipelineImpl
@@ -192,3 +187,30 @@ class Project(ProjectInterface):
             "current_step": tracker.current_step,
             "average_skill_score": tracker.get_average_skill_score()
         }
+
+    def track_progress(self, student_id: str, completed_step: str, concepts_learned: List[str]) -> None:
+        """Record learning progress for a student on this project.
+
+        Args:
+            student_id: Unique learner identifier
+            completed_step: Step that was just finished
+            concepts_learned: New concepts covered in this step
+        """
+        if not student_id:
+            raise ValueError("Student ID cannot be empty")
+
+        # Get progress tracker from educational service
+        tracker = self._educational_service.track_progress(
+            student_id=student_id,
+            project_id=self._project.id
+        )
+
+        # Record step completion
+        tracker.complete_step(completed_step)
+
+        # Add learned concepts
+        for concept in concepts_learned:
+            tracker.learn_concept(concept)
+
+        # Save progress
+        self._educational_service._save_progress(tracker)

@@ -10,11 +10,7 @@ TDD Note: These tests MUST FAIL until ProjectInterface is implemented in Phase 3
 import pytest
 from typing import Dict, Any
 
-# Contract imports
-import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../specs/001-use-the-requirements'))
-from contracts.dojo_api import (
+from datadojo.dojo_api import (
     ProjectInterface,
     ProjectInfo,
     PipelineInterface,

@@ -1,15 +1,17 @@
 """CLI command for listing available projects."""
 
 import json
-import sys
-import os
 from typing import Optional
 
-# Add contracts to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../..', 'specs/001-use-the-requirements/contracts'))
+from datadojo.dojo_api import Domain, DifficultyLevel
 
-from cli_interface import CLIResult
-from dojo_api import Domain, DifficultyLevel
+class CLIResult:
+    def __init__(self, success: bool, output: str, exit_code: int, error_message: Optional[str] = None):
+        self.success = success
+        self.output = output
+        self.exit_code = exit_code
+        self.error_message = error_message
+
 
 
 def list_projects(

@@ -6,8 +6,8 @@ on privacy and regulatory compliance.
 """
 
 from typing import List, Dict, Any
-from ..models.learning_project import LearningProject, Domain, Difficulty, ValidationRule
-from ..models.domain_module import DomainModule, OperationDefinition
+from datadojo.models.learning_project import LearningProject, Domain, Difficulty, ValidationRule
+from datadojo.models.domain_module import DomainModule, OperationDefinition
 
 
 def get_healthcare_module() -> DomainModule:
@@ -22,11 +22,13 @@ def get_healthcare_module() -> DomainModule:
         description=(
             "Learn data preparation for healthcare analytics, patient records processing, "
             "clinical decision support, and medical research with HIPAA-compliant practices."
-        )
+        ),
+        operations=[],
+        validation_rules=[]
     )
 
     # Add domain-specific operations
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="phi_deidentification",
         operation_type="data_cleaning",
         description="Remove or anonymize Protected Health Information (PHI)",
@@ -40,7 +42,7 @@ def get_healthcare_module() -> DomainModule:
         )
     ))
 
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="icd_code_standardization",
         operation_type="transformation",
         description="Standardize ICD (International Classification of Diseases) codes",
@@ -54,7 +56,7 @@ def get_healthcare_module() -> DomainModule:
         )
     ))
 
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="vitals_normalization",
         operation_type="transformation",
         description="Normalize vital signs to standard ranges",
@@ -68,7 +70,7 @@ def get_healthcare_module() -> DomainModule:
         )
     ))
 
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="lab_results_preprocessing",
         operation_type="feature_engineering",
         description="Process and normalize laboratory test results",
@@ -83,7 +85,7 @@ def get_healthcare_module() -> DomainModule:
     ))
 
     # Add validation rules
-    module.add_validation_rule({
+    module.validation_rules.append({
         "name": "valid_age_range",
         "type": "range",
         "description": "Age must be between 0 and 120",
@@ -92,14 +94,14 @@ def get_healthcare_module() -> DomainModule:
         "max_value": 120
     })
 
-    module.add_validation_rule({
+    module.validation_rules.append({
         "name": "valid_blood_pressure",
         "type": "composite",
         "description": "Systolic must be higher than diastolic",
         "condition": "systolic_bp > diastolic_bp"
     })
 
-    module.add_validation_rule({
+    module.validation_rules.append({
         "name": "phi_check",
         "type": "privacy",
         "description": "Ensure no direct patient identifiers in exported data",

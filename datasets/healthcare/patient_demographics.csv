@@ -1,0 +1,6 @@
+patient_id,age,gender,race,zip_code
+1,55,Male,White,10001
+2,62,Female,Black,20002
+3,48,Female,Asian,90210
+4,71,Male,White,60606
+5,35,Male,Hispanic,33101

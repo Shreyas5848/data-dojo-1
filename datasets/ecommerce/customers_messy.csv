@@ -1,0 +1,8 @@
+customer_id,name,email,age,city
+1,Alice,alice@email.com,25,New York
+2,Bob,,30,London
+3,Charlie,charlie@email.com,35,Paris
+4,David,david@email.com,25,New York
+2,Bob,,30,London
+5,Eve,eve@email.com,28,Tokyo
+6,Frank,frank@email.com,,Berlin

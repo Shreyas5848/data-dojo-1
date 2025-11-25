@@ -5,6 +5,9 @@ Simple DataDojo Demo - Showcases Working Features
 This demo shows the core working features of DataDojo framework.
 """
 
+import sys
+print(sys.path)
+
 import pandas as pd
 import numpy as np
 

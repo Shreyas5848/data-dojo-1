@@ -4,13 +4,8 @@ Interface for accessing educational content and guidance.
 """
 
 from typing import Dict, Any, List
-import sys
-import os
 
-# Add contracts to path for interface imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../..', 'specs/001-use-the-requirements/contracts'))
-
-from dojo_api import EducationalInterface
+from datadojo.dojo_api import EducationalInterface
 from ..services.educational_service import EducationalService
 from ..models.educational_content import DifficultyLevel
 
@@ -151,40 +146,3 @@ class Educational(EducationalInterface):
 
         return guidance
 
-    def track_progress(
-        self,
-        student_id: str,
-        completed_step: str,
-        concepts_learned: List[str]
-    ) -> None:
-        """Record learning progress.
-
-        Args:
-            student_id: Unique learner identifier
-            completed_step: Step that was just finished
-            concepts_learned: New concepts covered in this step
-        """
-        if not student_id:
-            raise ValueError("Student ID cannot be empty")
-        if not completed_step:
-            raise ValueError("Completed step cannot be empty")
-
-        # Track progress through educational service
-        # Note: We need a project_id which isn't provided in the interface
-        # For now, we'll use a default or extract from step if available
-        project_id = "default_project"  # This should be passed differently in real implementation
-
-        tracker = self._educational_service.track_progress(
-            student_id=student_id,
-            project_id=project_id
-        )
-
-        # Record step completion
-        tracker.complete_step(completed_step)
-
-        # Add learned concepts
-        for concept in concepts_learned:
-            tracker.add_learned_concept(concept)
-
-        # Save progress
-        self._educational_service._save_progress(tracker)

@@ -5,7 +5,7 @@ and data science fundamentals.
 """
 
 from typing import Dict, List, Optional
-from ..models.educational_content import EducationalContent, DifficultyLevel
+from datadojo.models.educational_content import EducationalContent, DifficultyLevel
 
 
 class ConceptDatabase:

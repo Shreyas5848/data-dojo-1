@@ -1,15 +1,15 @@
 """CLI command for showing student progress."""
 
 import json
-import sys
-import os
 from typing import Optional
 from datetime import datetime
 
-# Add contracts to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../..', 'specs/001-use-the-requirements/contracts'))
-
-from cli_interface import CLIResult
+class CLIResult:
+    def __init__(self, success: bool, output: str, exit_code: int, error_message: Optional[str] = None):
+        self.success = success
+        self.output = output
+        self.exit_code = exit_code
+        self.error_message = error_message
 
 
 def show_progress(
@@ -129,7 +129,7 @@ def _format_single_project_progress(project_info, progress, detail_level: str) -
 
     # Progress metrics
     lines.append("Progress Metrics:")
-    lines.append(f"  Completed Steps: {progress['completed_steps_count']}")
+    lines.append(f"  Completed Steps: {len(progress['completed_steps'])}")
     lines.append(f"  Learned Concepts: {len(progress['learned_concepts'])}")
     lines.append(f"  Average Skill Score: {progress['average_skill_score']:.1f}%")
     lines.append("")
@@ -183,7 +183,7 @@ def _format_all_progress(student_id: str, progress_data, detail_level: str) -> s
 
         lines.append(f"Project: {project_info.name} ({project_info.id})")
         lines.append(f"  Domain: {project_info.domain.value} | Difficulty: {project_info.difficulty.value}")
-        lines.append(f"  Completed Steps: {progress['completed_steps_count']}")
+        lines.append(f"  Completed Steps: {len(progress['completed_steps'])}")
         lines.append(f"  Learned Concepts: {len(progress['learned_concepts'])}")
         lines.append(f"  Average Score: {progress['average_skill_score']:.1f}%")
 

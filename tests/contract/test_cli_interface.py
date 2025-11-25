@@ -10,11 +10,7 @@ TDD Note: These tests MUST FAIL until CLIInterface is implemented in Phase 3.3
 import pytest
 from typing import List, Optional
 
-# Contract imports
-import sys
-import os
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../specs/001-use-the-requirements'))
-from contracts.cli_interface import CLIInterface, CLIResult
+from datadojo.cli.interface import CLIInterface, CLIResult
 
 
 class TestCLIInterfaceContract:

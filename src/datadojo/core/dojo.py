@@ -4,13 +4,8 @@ Main entry point for the DataDojo learning framework.
 """
 
 from typing import List, Optional
-import sys
-import os
 
-# Add contracts to path for interface imports
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../..', 'specs/001-use-the-requirements/contracts'))
-
-from dojo_api import DojoInterface, ProjectInfo, Domain, DifficultyLevel
+from datadojo.dojo_api import DojoInterface, ProjectInfo, Domain, DifficultyLevel
 from ..services.project_service import ProjectService
 from ..services.educational_service import EducationalService
 from ..services.domain_service import DomainService
@@ -38,6 +33,10 @@ class Dojo(DojoInterface):
 
         # Initialize default domains if needed
         self.domain_service.initialize_default_domains()
+
+        # Load projects from domains
+        from ..domains import load_domain_projects
+        load_domain_projects(self.project_service)
 
     def _convert_domain_to_model(self, domain: Optional[Domain]) -> Optional[ModelDomain]:
         """Convert contract Domain to model Domain.
@@ -148,6 +147,15 @@ class Dojo(DojoInterface):
             project_infos.append(project_info)
 
         return project_infos
+
+    def get_educational_interface(self) -> 'EducationalInterface':
+        """Get the educational interface.
+
+        Returns:
+            EducationalInterface implementation
+        """
+        from .educational import Educational
+        return Educational(self.educational_service)
 
     def load_project(
         self,

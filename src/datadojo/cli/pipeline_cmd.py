@@ -1,16 +1,16 @@
 """CLI command for executing preprocessing pipelines."""
 
 import json
-import sys
-import os
 from typing import List, Optional
 from pathlib import Path
 import pandas as pd
 
-# Add contracts to path
-sys.path.insert(0, os.path.join(os.path.dirname(__file__), '../../..', 'specs/001-use-the-requirements/contracts'))
-
-from cli_interface import CLIResult
+class CLIResult:
+    def __init__(self, success: bool, output: str, exit_code: int, error_message: Optional[str] = None):
+        self.success = success
+        self.output = output
+        self.exit_code = exit_code
+        self.error_message = error_message
 
 
 def pipeline_cmd(

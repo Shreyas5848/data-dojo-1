@@ -10,6 +10,8 @@ from .show_progress import show_progress
 from .pipeline_cmd import pipeline_cmd
 from .explain_concept import explain_concept
 from .validate_data import validate_data
+from .complete_step import complete_step
+from .doctor import doctor
 
 
 def main():
@@ -163,6 +165,32 @@ def main():
         help="Report format (default: summary)"
     )
 
+    # complete-step command
+    complete_step_parser = subparsers.add_parser(
+        "complete-step",
+        help="Mark a step as complete"
+    )
+    complete_step_parser.add_argument(
+        "step_id",
+        help="The ID of the step to mark as complete"
+    )
+    complete_step_parser.add_argument(
+        "--student",
+        required=True,
+        help="Student identifier for progress tracking"
+    )
+    complete_step_parser.add_argument(
+        "--project",
+        required=True,
+        help="Project identifier"
+    )
+
+    # doctor command
+    doctor_parser = subparsers.add_parser(
+        "doctor",
+        help="Check the DataDojo environment and report any issues"
+    )
+
     # Parse arguments
     args = parser.parse_args()
 
@@ -170,80 +198,91 @@ def main():
     if not args.command:
         parser.print_help()
         sys.exit(0)
-
-    # Initialize Dojo
-    try:
-        dojo = Dojo(educational_mode=args.educational)
-    except Exception as e:
-        print(f"Error: Failed to initialize DataDojo: {e}", file=sys.stderr)
-        sys.exit(1)
-
-    # Execute command
-    result = None
-
-    try:
-        if args.command == "list-projects":
-            result = list_projects(
-                dojo=dojo,
-                domain=args.domain,
-                difficulty=args.difficulty,
-                format_output=args.format
-            )
-
-        elif args.command == "start":
-            result = start_project(
-                dojo=dojo,
-                project_id=args.project_id,
-                student_id=args.student,
-                guidance_level=args.guidance,
-                interactive=args.interactive
-            )
-
-        elif args.command == "progress":
-            result = show_progress(
-                dojo=dojo,
-                student_id=args.student_id,
-                project_id=args.project,
-                format_output=args.format
-            )
-
-        elif args.command == "pipeline":
-            operations = [op.strip() for op in args.ops.split(",")]
-            result = pipeline_cmd(
-                dojo=dojo,
-                operations=operations,
-                input_file=getattr(args, 'input'),
-                output_file=args.output,
-                config_file=args.config,
-                educational_mode=args.educational
-            )
-
-        elif args.command == "explain":
-            result = explain_concept(
-                dojo=dojo,
-                concept_id=args.concept,
-                detail_level=args.detail,
-                include_examples=args.examples
-            )
-
-        elif args.command == "validate":
-            result = validate_data(
-                dojo=dojo,
-                data_file=args.data_file,
-                validation_rules=args.rules,
-                report_format=args.format
-            )
-
-        else:
-            print(f"Error: Unknown command: {args.command}", file=sys.stderr)
+    
+    if args.command == "doctor":
+        result = doctor()
+    else:
+        # Initialize Dojo
+        try:
+            dojo = Dojo(educational_mode=args.educational)
+        except Exception as e:
+            print(f"Error: Failed to initialize DataDojo: {e}", file=sys.stderr)
             sys.exit(1)
 
-    except KeyboardInterrupt:
-        print("\nOperation cancelled by user.", file=sys.stderr)
-        sys.exit(130)
-    except Exception as e:
-        print(f"Error: {e}", file=sys.stderr)
-        sys.exit(1)
+        # Execute command
+        result = None
+
+        try:
+            if args.command == "list-projects":
+                result = list_projects(
+                    dojo=dojo,
+                    domain=args.domain,
+                    difficulty=args.difficulty,
+                    format_output=args.format
+                )
+
+            elif args.command == "start":
+                result = start_project(
+                    dojo=dojo,
+                    project_id=args.project_id,
+                    student_id=args.student,
+                    guidance_level=args.guidance,
+                    interactive=args.interactive
+                )
+
+            elif args.command == "progress":
+                result = show_progress(
+                    dojo=dojo,
+                    student_id=args.student_id,
+                    project_id=args.project,
+                    format_output=args.format
+                )
+
+            elif args.command == "pipeline":
+                operations = [op.strip() for op in args.ops.split(",")]
+                result = pipeline_cmd(
+                    dojo=dojo,
+                    operations=operations,
+                    input_file=getattr(args, 'input'),
+                    output_file=args.output,
+                    config_file=args.config,
+                    educational_mode=args.educational
+                )
+
+            elif args.command == "explain":
+                result = explain_concept(
+                    dojo=dojo,
+                    concept_id=args.concept,
+                    detail_level=args.detail,
+                    include_examples=args.examples
+                )
+
+            elif args.command == "validate":
+                result = validate_data(
+                    dojo=dojo,
+                    data_file=args.data_file,
+                    validation_rules=args.rules,
+                    report_format=args.format
+                )
+
+            elif args.command == "complete-step":
+                result = complete_step(
+                    dojo=dojo,
+                    student_id=args.student,
+                    project_id=args.project,
+                    step_id=args.step_id
+                )
+
+            else:
+                print(f"Error: Unknown command: {args.command}", file=sys.stderr)
+                sys.exit(1)
+
+        except KeyboardInterrupt:
+            print("\nOperation cancelled by user.", file=sys.stderr)
+            sys.exit(130)
+        except Exception as e:
+            print(f"Error: {e}", file=sys.stderr)
+            sys.exit(1)
 
     # Handle result
     if result:

@@ -5,8 +5,8 @@ for learning data preparation in banking, trading, and financial analysis contex
 """
 
 from typing import List, Dict, Any
-from ..models.learning_project import LearningProject, Domain, Difficulty, ValidationRule
-from ..models.domain_module import DomainModule, OperationDefinition
+from datadojo.models.learning_project import LearningProject, Domain, Difficulty, ValidationRule
+from datadojo.models.domain_module import DomainModule, OperationDefinition
 
 
 def get_finance_module() -> DomainModule:
@@ -21,11 +21,13 @@ def get_finance_module() -> DomainModule:
         description=(
             "Learn data preparation for financial analysis, risk assessment, fraud "
             "detection, and market predictions using real-world financial datasets."
-        )
+        ),
+        operations=[],
+        validation_rules=[]
     )
 
     # Add domain-specific operations
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="financial_ratios",
         operation_type="feature_engineering",
         description="Calculate financial ratios from balance sheet and income statement",
@@ -39,7 +41,7 @@ def get_finance_module() -> DomainModule:
         )
     ))
 
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="time_series_features",
         operation_type="feature_engineering",
         description="Create lag features, moving averages, and technical indicators",
@@ -53,7 +55,7 @@ def get_finance_module() -> DomainModule:
         )
     ))
 
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="transaction_anomaly_detection",
         operation_type="validation",
         description="Identify unusual transaction patterns for fraud detection",
@@ -67,7 +69,7 @@ def get_finance_module() -> DomainModule:
         )
     ))
 
-    module.add_operation(OperationDefinition(
+    module.operations.append(OperationDefinition(
         name="credit_risk_features",
         operation_type="feature_engineering",
         description="Engineer features for credit risk assessment",
@@ -82,7 +84,7 @@ def get_finance_module() -> DomainModule:
     ))
 
     # Add validation rules
-    module.add_validation_rule({
+    module.validation_rules.append({
         "name": "positive_amounts",
         "type": "range",
         "description": "Transaction amounts must be positive",
@@ -90,7 +92,7 @@ def get_finance_module() -> DomainModule:
         "min_value": 0.01
     })
 
-    module.add_validation_rule({
+    module.validation_rules.append({
         "name": "valid_ticker_format",
         "type": "pattern",
         "description": "Stock ticker symbols must be valid format",
@@ -98,14 +100,14 @@ def get_finance_module() -> DomainModule:
         "pattern": r"^[A-Z]{1,5}$"
     })
 
-    module.add_validation_rule({
+    module.validation_rules.append({
         "name": "account_balance_check",
         "type": "consistency",
         "description": "Closing balance must equal opening balance plus net transactions",
         "columns": ["opening_balance", "transactions", "closing_balance"]
     })
 
-    module.add_validation_rule({
+    module.validation_rules.append({
         "name": "date_ordering",
         "type": "temporal",
         "description": "Transaction dates must be in chronological order",

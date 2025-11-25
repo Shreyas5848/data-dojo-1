@@ -1,0 +1,6 @@
+patient_id,test_name,value,unit,timestamp
+1,Hemoglobin,14.5,g/dL,2023-01-15T09:00:00Z
+1,Cholesterol,205,mg/dL,2023-01-15T09:00:00Z
+2,Hemoglobin,12.2,g/dL,2023-01-16T09:30:00Z
+2,Cholesterol,240,mg/dL,2023-01-16T09:30:00Z
+3,Hemoglobin,13.8,g/dL,2023-01-17T10:00:00Z
