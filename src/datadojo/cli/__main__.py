@@ -11,7 +11,9 @@ from .pipeline_cmd import pipeline_cmd
 from .explain_concept import explain_concept
 from .validate_data import validate_data
 from .complete_step import complete_step
+from .complete_step import complete_step
 from .doctor import doctor
+from .interactive_session import start_interactive_session
 
 
 def main():
@@ -191,6 +193,12 @@ def main():
         help="Check the DataDojo environment and report any issues"
     )
 
+    # learn command
+    learn_parser = subparsers.add_parser(
+        "learn",
+        help="Start an interactive learning session"
+    )
+
     # Parse arguments
     args = parser.parse_args()
 
@@ -201,6 +209,9 @@ def main():
     
     if args.command == "doctor":
         result = doctor()
+    elif args.command == "learn":
+        start_interactive_session()
+        sys.exit(0)
     else:
         # Initialize Dojo
         try:
