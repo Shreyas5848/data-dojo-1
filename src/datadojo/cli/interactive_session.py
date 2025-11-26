@@ -10,8 +10,10 @@ import inspect
 from rich.console import Console
 from rich.panel import Panel
 from rich.table import Table
+from rich.text import Text
 
 from ..core.dojo import Dojo
+from ..utils.claude_theme import claude_theme
 from ..utils.theme import default_theme
 from .list_projects import list_projects
 from .start_project import start_project
@@ -20,6 +22,16 @@ from .explain_concept import explain_concept
 from .complete_step import complete_step
 from .practice import practice
 
+ASCII_ART = """
+[bold #FF9900]
+██████╗  █████╗ ████████╗ █████╗     ██████╗  ██████╗      ██╗ ██████╗ 
+██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗    ██╔══██╗██╔═══██╗     ██║██╔═══██╗
+██║  ██║███████║   ██║   ███████║    ██║  ██║██║   ██║     ██║██║   ██║
+██║  ██║██╔══██║   ██║   ██╔══██║    ██║  ██║██║   ██║██   ██║██║   ██║
+██████╔╝██║  ██║   ██║   ██║  ██║    ██████╔╝╚██████╔╝╚█████╔╝╚██████╔╝
+╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝    ╚═════╝  ╚═════╝  ╚════╝  ╚═════╝ 
+[/bold #FF9900]
+"""
 
 class DojoCompleter(Completer):
     def __init__(self, session):
@@ -47,7 +59,8 @@ class DojoCompleter(Completer):
 class DojoSession:
     def __init__(self, dojo_instance: Dojo):
         self.dojo = dojo_instance
-        self.console = Console(theme=default_theme)
+        self.themes = {"default": default_theme, "claude": claude_theme}
+        self.console = Console(theme=self.themes["claude"]) # Default to claude theme
         self.current_student_id = None
         self.current_project_id = None
         self.prompt_text = "(dojo) > "
@@ -63,6 +76,7 @@ class DojoSession:
             "practice": self._practice_command,
             "back": self._back_command,
             "set-student": self._set_student_command,
+            "theme": self._theme_command,
         }
         self.command_args = {
             "list-projects": ["--domain", "--difficulty"],
@@ -70,7 +84,7 @@ class DojoSession:
             "explain": ["--detail", "--examples"],
             "progress": ["--project", "--format"],
             "complete-step": [], "practice": [], "help": [],
-            "exit": [], "quit": [], "back": [], "set-student": [],
+            "exit": [], "quit": [], "back": [], "set-student": [], "theme": ["default", "claude"],
         }
         self.completer = DojoCompleter(self)
 
@@ -106,6 +120,15 @@ class DojoSession:
         self.current_student_id = args[0]
         self.console.print(f"Student ID set to: [info]{self.current_student_id}[/info]")
 
+    def _theme_command(self, args: List[str]):
+        """Switches the color theme.
+Usage: theme [default|claude]"""
+        if not args or args[0] not in self.themes:
+            self.console.print(f"Usage: theme [{'/'.join(self.themes.keys())}]", style="warning")
+            return
+        self.console.theme = self.themes[args[0]]
+        self.console.print(f"Theme changed to [info]{args[0]}[/info].")
+
     def _list_projects_command(self, args: List[str]):
         parser = argparse.ArgumentParser(prog="list-projects", add_help=False)
         parser.add_argument("--domain", choices=["ecommerce", "healthcare", "finance"])
@@ -134,13 +157,18 @@ class DojoSession:
     def _start_command(self, args: List[str]):
         parser = argparse.ArgumentParser(prog="start", add_help=False)
         parser.add_argument("project_id")
-        parser.add_argument("--student", required=True)
+        parser.add_argument("--student")
         try:
             parsed_args = parser.parse_args(args)
-            result = start_project(dojo=self.dojo, project_id=parsed_args.project_id, student_id=parsed_args.student)
+            student_id = parsed_args.student or self.current_student_id
+            if not student_id:
+                self.console.print("Student ID is required. Use 'set-student <name>' or specify with --student.", style="danger")
+                return
+
+            result = start_project(dojo=self.dojo, project_id=parsed_args.project_id, student_id=student_id)
             if result.success:
                 self.current_project_id = parsed_args.project_id
-                self.current_student_id = parsed_args.student
+                self.current_student_id = student_id
                 self.prompt_text = f"({self.current_project_id}) > "
                 self.console.print(result.output)
             else:
@@ -223,6 +251,7 @@ class DojoSession:
             self.console.print(parser.format_help(), style="warning")
 
     def run(self):
+        self.console.print(ASCII_ART)
         self.console.print(Panel("Welcome to the [title]DataDojo Interactive Session[/title]!\nType 'help' for commands or 'exit' to quit.", border_style="border"))
         while True:
             try:
