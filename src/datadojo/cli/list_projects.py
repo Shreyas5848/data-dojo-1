@@ -17,86 +17,26 @@ class CLIResult:
 def list_projects(
     dojo,
     domain: Optional[str] = None,
-    difficulty: Optional[str] = None,
-    format_output: str = "table"
+    difficulty: Optional[str] = None
 ) -> CLIResult:
-    """List available learning projects.
-
-    Args:
-        dojo: Dojo instance
-        domain: Filter by subject area
-        difficulty: Filter by skill level
-        format_output: Output format (table|json|csv)
-
-    Returns:
-        CLI result with formatted project list
-    """
+    """Gets a list of available learning projects."""
     try:
-        # Convert string arguments to enums
-        domain_filter = None
-        if domain:
-            domain_map = {
-                "ecommerce": Domain.ECOMMERCE,
-                "healthcare": Domain.HEALTHCARE,
-                "finance": Domain.FINANCE
-            }
-            domain_filter = domain_map.get(domain.lower())
-            if not domain_filter:
-                return CLIResult(
-                    success=False,
-                    output="",
-                    exit_code=1,
-                    error_message=f"Invalid domain: {domain}. Must be one of: ecommerce, healthcare, finance"
-                )
-
-        difficulty_filter = None
-        if difficulty:
-            difficulty_map = {
-                "beginner": DifficultyLevel.BEGINNER,
-                "intermediate": DifficultyLevel.INTERMEDIATE,
-                "advanced": DifficultyLevel.ADVANCED
-            }
-            difficulty_filter = difficulty_map.get(difficulty.lower())
-            if not difficulty_filter:
-                return CLIResult(
-                    success=False,
-                    output="",
-                    exit_code=1,
-                    error_message=f"Invalid difficulty: {difficulty}. Must be one of: beginner, intermediate, advanced"
-                )
-
-        # Get projects from dojo
+        domain_filter = Domain(domain) if domain else None
+        difficulty_filter = DifficultyLevel(difficulty) if difficulty else None
+        
         projects = dojo.list_projects(domain=domain_filter, difficulty=difficulty_filter)
-
+        
         if not projects:
-            output = "No projects found matching criteria."
-            return CLIResult(
-                success=True,
-                output=output,
-                exit_code=0
-            )
+            return CLIResult(success=True, output=[], exit_code=0, error_message="No projects found matching criteria.")
+        
+        # Return the raw list of projects
+        return CLIResult(success=True, output=projects, exit_code=0)
 
-        # Format output
-        if format_output == "json":
-            output = _format_json(projects)
-        elif format_output == "csv":
-            output = _format_csv(projects)
-        else:  # table
-            output = _format_table(projects)
-
-        return CLIResult(
-            success=True,
-            output=output,
-            exit_code=0
-        )
-
+    except ValueError as e: # Handles invalid domain/difficulty strings
+        return CLIResult(success=False, output=None, exit_code=1, error_message=str(e))
     except Exception as e:
-        return CLIResult(
-            success=False,
-            output="",
-            exit_code=1,
-            error_message=f"Failed to list projects: {str(e)}"
-        )
+        return CLIResult(success=False, output=None, exit_code=1, error_message=f"Failed to list projects: {str(e)}")
+
 
 
 def _format_table(projects) -> str:

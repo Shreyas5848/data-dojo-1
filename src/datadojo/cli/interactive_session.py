@@ -1,13 +1,18 @@
 from prompt_toolkit import prompt
-from prompt_toolkit.completion import WordCompleter
-from typing import Dict, Any, List, Optional
+from prompt_toolkit.completion import Completer, Completion
+from typing import Dict, Any, List
 import shlex
 import argparse
 import io
 import sys
 import inspect
 
+from rich.console import Console
+from rich.panel import Panel
+from rich.table import Table
+
 from ..core.dojo import Dojo
+from ..utils.theme import default_theme
 from .list_projects import list_projects
 from .start_project import start_project
 from .show_progress import show_progress
@@ -16,9 +21,33 @@ from .complete_step import complete_step
 from .practice import practice
 
 
+class DojoCompleter(Completer):
+    def __init__(self, session):
+        self.session = session
+
+    def get_completions(self, document, complete_event):
+        text = document.text_before_cursor.lstrip()
+        words = text.split()
+
+        if len(words) == 0 or (len(words) == 1 and not text.endswith(" ")):
+            for cmd in self.session.commands:
+                if cmd.startswith(words[0] if words else ""):
+                    yield Completion(cmd, start_position=-len(words[0]) if words else 0)
+        else:
+            command = words[0]
+            if command in self.session.command_args:
+                current_arg = ""
+                if not text.endswith(" "):
+                    current_arg = words[-1]
+                
+                for arg in self.session.command_args[command]:
+                    if arg.startswith(current_arg):
+                        yield Completion(arg, start_position=-len(current_arg))
+
 class DojoSession:
     def __init__(self, dojo_instance: Dojo):
         self.dojo = dojo_instance
+        self.console = Console(theme=default_theme)
         self.current_student_id = None
         self.current_project_id = None
         self.prompt_text = "(dojo) > "
@@ -32,274 +61,187 @@ class DojoSession:
             "progress": self._progress_command,
             "complete-step": self._complete_step_command,
             "practice": self._practice_command,
+            "back": self._back_command,
+            "set-student": self._set_student_command,
         }
-        self.completer = WordCompleter(list(self.commands.keys()) + ["--domain", "--difficulty", "--student", "--project", "--detail", "--examples"], ignore_case=True)
+        self.command_args = {
+            "list-projects": ["--domain", "--difficulty"],
+            "start": ["--student", "--guidance"],
+            "explain": ["--detail", "--examples"],
+            "progress": ["--project", "--format"],
+            "complete-step": [], "practice": [], "help": [],
+            "exit": [], "quit": [], "back": [], "set-student": [],
+        }
+        self.completer = DojoCompleter(self)
 
-    def _help_command(self, args: List[str]) -> str:
-        """Displays help information.\nUsage: help [command]"""
+    def _help_command(self, args: List[str]):
         if not args:
-            return "Available commands: " + ", ".join(self.commands.keys()) + "\nType 'help <command>' for more details."
-        
-        cmd_name = args[0]
-        if cmd_name in self.commands:
-            return self.commands[cmd_name].__doc__ or f"No specific help available for '{cmd_name}'."
-        return f"Unknown command: '{cmd_name}'."
+            table = Table(title="[title]Available Commands[/title]", border_style="border")
+            table.add_column("Command", style="command", no_wrap=True)
+            table.add_column("Description", style="info")
+            for cmd, func in self.commands.items():
+                description = (func.__doc__ or "No description.").split('\n')[0]
+                table.add_row(cmd, description)
+            self.console.print(table)
+        else:
+            cmd_name = args[0]
+            if cmd_name in self.commands:
+                docstring = self.commands[cmd_name].__doc__ or f"No help for '{cmd_name}'."
+                self.console.print(Panel(docstring.strip(), title=f"[title]Help: {cmd_name}[/title]", border_style="border"))
+            else:
+                self.console.print(f"Unknown command: '{cmd_name}'.", style="danger")
 
-    def _exit_command(self, args: List[str]) -> str:
-        """Exits the interactive session."""
-        raise EOFError # Use EOFError to break the loop
+    def _exit_command(self, args: List[str]):
+        raise EOFError
 
-    def _execute_cli_command(self, func, args_list, parser_creator) -> str:
-        """Helper to parse and execute CLI commands within the interactive session."""
-        parser = parser_creator()
-        
-        # Capture stderr to prevent argparse from printing directly
-        old_stderr = sys.stderr
-        sys.stderr = io.StringIO()
+    def _back_command(self, args: List[str]):
+        self.current_project_id = None
+        self.prompt_text = "(dojo) > "
+        self.console.print("Returned to the main dojo prompt.", style="info")
+
+    def _set_student_command(self, args: List[str]):
+        if not args:
+            self.console.print("Usage: set-student <student_name>", style="warning")
+            return
+        self.current_student_id = args[0]
+        self.console.print(f"Student ID set to: [info]{self.current_student_id}[/info]")
+
+    def _list_projects_command(self, args: List[str]):
+        parser = argparse.ArgumentParser(prog="list-projects", add_help=False)
+        parser.add_argument("--domain", choices=["ecommerce", "healthcare", "finance"])
+        parser.add_argument("--difficulty", choices=["beginner", "intermediate", "advanced"])
         try:
-            parsed_args = parser.parse_args(args_list)
-            
-            # Prepare arguments for the function call
-            # Inspect the function signature to get expected parameter names
-            sig = inspect.signature(func)
-            call_args = {}
-
-            for param_name, param in sig.parameters.items():
-                if param_name == 'dojo':
-                    continue # 'dojo' is handled separately
-
-                # Check for direct match from parsed_args
-                if hasattr(parsed_args, param_name):
-                    value = getattr(parsed_args, param_name)
-                    if value is not None:
-                        call_args[param_name] = value
-                # Handle common mismatches, e.g., 'student' in parsed_args but 'student_id' in func
-                elif param_name == 'student_id' and hasattr(parsed_args, 'student'):
-                    value = getattr(parsed_args, 'student')
-                    if value is not None:
-                        call_args['student_id'] = value
-                elif param_name == 'concept_id' and hasattr(parsed_args, 'concept'):
-                    value = getattr(parsed_args, 'concept')
-                    if value is not None:
-                        call_args['concept_id'] = value
-                
-                # If a required parameter is still missing and it's not handled by argparse default
-                # this will typically be caught by the called function itself.
-
-            result = func(dojo=self.dojo, **call_args)
-            
-            sys.stderr.seek(0)
-            argparse_output = sys.stderr.read()
-
+            parsed_args = parser.parse_args(args)
+            result = list_projects(dojo=self.dojo, domain=parsed_args.domain, difficulty=parsed_args.difficulty)
             if result.success:
-                return f"{argparse_output.strip()}\n{result.output}" if argparse_output else result.output
+                projects = result.output
+                if not projects:
+                    self.console.print(result.error_message or "No projects found.", style="info")
+                    return
+                table = Table(title="[title]Available Projects[/title]", border_style="border")
+                table.add_column("ID", style="code", no_wrap=True)
+                table.add_column("Name", style="bold")
+                table.add_column("Domain", style="info")
+                table.add_column("Difficulty", style="info")
+                for p in projects:
+                    table.add_row(p.id, p.name, p.domain.value, p.difficulty.value)
+                self.console.print(table)
             else:
-                return f"Error: {argparse_output.strip()}\n{result.error_message}" if argparse_output else f"Error: {result.error_message}"
-
-        except SystemExit as e:
-            # argparse calls sys.exit(status) on errors or --help
-            sys.stderr.seek(0)
-            argparse_output = sys.stderr.read()
-            if e.code == 0: # This usually means --help was requested
-                return argparse_output
-            else:
-                return f"Invalid arguments: {argparse_output.strip()}"
-        except Exception as e:
-            return f"Command execution error: {e}"
-        finally:
-            sys.stderr = old_stderr # Ensure stderr is always restored
-
-
-    def _list_projects_command(self, args: List[str]) -> str:
-        """Lists available learning projects.\nUsage: list-projects [--domain <domain>] [--difficulty <level>]"""
-        def parser_creator():
-            parser = argparse.ArgumentParser(prog="list-projects", add_help=False, exit_on_error=False)
-            parser.add_argument("--domain", choices=["ecommerce", "healthcare", "finance"])
-            parser.add_argument("--difficulty", choices=["beginner", "intermediate", "advanced"])
-            return parser
-        return self._execute_cli_command(list_projects, args, parser_creator)
-        
-    def _start_command(self, args: List[str]) -> str:
-        """Begins a learning project.\nUsage: start <project_id> --student <student_id> [--guidance <level>]"""
-        def parser_creator():
-            parser = argparse.ArgumentParser(prog="start", add_help=False, exit_on_error=False)
-            parser.add_argument("project_id")
-            parser.add_argument("--student", required=True)
-            parser.add_argument("--guidance", choices=["none", "basic", "detailed"], default="detailed")
-            return parser
-        
-        result_output = self._execute_cli_command(start_project, args, parser_creator)
-        
-        # If start was successful, update session state
-        if not result_output.startswith("Error:") and "Invalid arguments:" not in result_output:
-            try:
-                parser = parser_creator()
-                parsed_args = parser.parse_args(args)
-                self.current_student_id = parsed_args.student
+                self.console.print(f"Error: {result.error_message}", style="danger")
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
+    
+    def _start_command(self, args: List[str]):
+        parser = argparse.ArgumentParser(prog="start", add_help=False)
+        parser.add_argument("project_id")
+        parser.add_argument("--student", required=True)
+        try:
+            parsed_args = parser.parse_args(args)
+            result = start_project(dojo=self.dojo, project_id=parsed_args.project_id, student_id=parsed_args.student)
+            if result.success:
                 self.current_project_id = parsed_args.project_id
+                self.current_student_id = parsed_args.student
                 self.prompt_text = f"({self.current_project_id}) > "
-            except (SystemExit, Exception):
-                pass # Already handled by _execute_cli_command, just preventing duplicate error
-
-        return result_output
-
-    def _explain_command(self, args: List[str]) -> str:
-        """Get explanation of data preprocessing concept.\nUsage: explain <concept_id> [--detail <level>] [--examples]"""
-        def parser_creator():
-            parser = argparse.ArgumentParser(prog="explain", add_help=False, exit_on_error=False)
-            parser.add_argument("concept")
-            parser.add_argument("--detail", choices=["basic", "detailed", "expert"], default="basic")
-            parser.add_argument("--examples", action="store_true")
-            return parser
-        return self._execute_cli_command(explain_concept, args, parser_creator)
-
-    def _progress_command(self, args: List[str]) -> str:
-        """Show learning progress.\nUsage: progress [--student_id <student_id>] [--project <project_id>] [--format <format>]"""
-        def parser_creator():
-            parser = argparse.ArgumentParser(prog="progress", add_help=False, exit_on_error=False)
-            parser.add_argument("--student_id", help="Student identifier")
-            parser.add_argument("--project", help="Show progress for specific project only")
-            parser.add_argument("--format", choices=["summary", "detailed", "json"], default="summary")
-            return parser
-        
-        # Custom parsing for progress to allow defaulting to current_student/project
-        parser = parser_creator()
-        try:
-            parsed_args = parser.parse_args(args)
-            student_id = parsed_args.student_id or self.current_student_id
-            project_id = parsed_args.project or self.current_project_id
-
-            if not student_id:
-                return "Error: Student ID is required. Either specify with --student_id or start a project."
-            if not project_id and self.current_project_id:
-                 # If no project specified, and one is active, show progress for current project
-                project_id = self.current_project_id
-            elif not project_id:
-                return "Error: Project ID is required if no project is active. Specify with --project."
-
-            # Recreate parser to handle arguments for show_progress correctly
-            actual_args = []
-            if student_id:
-                actual_args.extend(["--student_id", student_id])
-            if project_id:
-                actual_args.extend(["--project", project_id])
-            if parsed_args.format:
-                actual_args.extend(["--format", parsed_args.format])
-
-            return self._execute_cli_command(show_progress, actual_args, parser_creator)
-
-        except SystemExit as e:
-            # Handle help output
-            sys.stderr.seek(0)
-            argparse_output = sys.stderr.read()
-            if e.code == 0:
-                return argparse_output
+                self.console.print(result.output)
             else:
-                return f"Invalid arguments for progress: {argparse_output.strip()}"
-        except Exception as e:
-            return f"Command execution error: {e}"
+                self.console.print(f"Error: {result.error_message}", style="danger")
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
 
-    def _complete_step_command(self, args: List[str]) -> str:
-        """Marks a step as complete.\nUsage: complete-step <step_id> [--student <student_id>] [--project <project_id>]"""
-        def parser_creator():
-            parser = argparse.ArgumentParser(prog="complete-step", add_help=False, exit_on_error=False)
-            parser.add_argument("step_id", help="The ID of the step to mark as complete")
-            parser.add_argument("--student", help="Student identifier for progress tracking")
-            parser.add_argument("--project", help="Project identifier")
-            return parser
-        
-        # Custom parsing for complete-step to allow defaulting to current_student/project
-        parser = parser_creator()
+    def _explain_command(self, args: List[str]):
+        parser = argparse.ArgumentParser(prog="explain", add_help=False)
+        parser.add_argument("concept")
         try:
             parsed_args = parser.parse_args(args)
-            student_id = parsed_args.student or self.current_student_id
+            result = explain_concept(dojo=self.dojo, concept_id=parsed_args.concept)
+            if result.success:
+                self.console.print(result.output)
+            else:
+                self.console.print(f"Error: {result.error_message}", style="danger")
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
+
+    def _progress_command(self, args: List[str]):
+        parser = argparse.ArgumentParser(prog="progress", add_help=False)
+        parser.add_argument("--project", help="Project ID")
+        try:
+            parsed_args = parser.parse_args(args)
             project_id = parsed_args.project or self.current_project_id
-            step_id = parsed_args.step_id
-            
-            if not student_id:
-                return "Error: Student ID is required. Either specify with --student or start a project."
+            if not self.current_student_id:
+                self.console.print("Please set a student ID first using 'set-student <name>'.", style="warning")
+                return
             if not project_id:
-                return "Error: Project ID is required. Either specify with --project or start a project."
-
-            # Recreate parser to handle arguments for complete_step correctly
-            actual_args = [step_id]
-            if student_id:
-                actual_args.extend(["--student", student_id])
-            if project_id:
-                actual_args.extend(["--project", project_id])
-
-            return self._execute_cli_command(complete_step, actual_args, parser_creator)
-
-        except SystemExit as e:
-            sys.stderr.seek(0)
-            argparse_output = sys.stderr.read()
-            if e.code == 0:
-                return argparse_output
+                self.console.print("Please start a project first or specify one with --project.", style="warning")
+                return
+            
+            result = show_progress(dojo=self.dojo, student_id=self.current_student_id, project_id=project_id)
+            if result.success:
+                self.console.print(result.output)
             else:
-                return f"Invalid arguments for complete-step: {argparse_output.strip()}"
-        except Exception as e:
-            return f"Command execution error: {e}"
-
-    def _practice_command(self, args: List[str]) -> str:
-        """Starts an interactive practice session for a concept.\nUsage: practice <concept_id>"""
-        if not args:
-            return "Usage: practice <concept_id>"
-
-        concept_id = args[0]
-        student_id = self.current_student_id
-        project_id = self.current_project_id
-
-        if not student_id:
-            return "Error: Student ID is required. Please start a project first."
-        if not project_id:
-            return "Error: Project ID is required. Please start a project first."
-
-        result = practice(
-            dojo=self.dojo,
-            student_id=student_id,
-            project_id=project_id,
-            concept_id=concept_id
-        )
-        return result.output if result.success else f"Error: {result.error_message}"
+                self.console.print(f"Error: {result.error_message}", style="danger")
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
+            
+    def _complete_step_command(self, args: List[str]):
+        parser = argparse.ArgumentParser(prog="complete-step", add_help=False)
+        parser.add_argument("step_id")
+        try:
+            parsed_args = parser.parse_args(args)
+            if not self.current_student_id:
+                self.console.print("Please set a student ID first using 'set-student <name>'.", style="warning")
+                return
+            if not self.current_project_id:
+                self.console.print("Please start a project first.", style="warning")
+                return
+            
+            result = complete_step(dojo=self.dojo, student_id=self.current_student_id, project_id=self.current_project_id, step_id=parsed_args.step_id)
+            if result.success:
+                self.console.print(result.output)
+            else:
+                self.console.print(f"Error: {result.error_message}", style="danger")
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
+            
+    def _practice_command(self, args: List[str]):
+        parser = argparse.ArgumentParser(prog="practice", add_help=False)
+        parser.add_argument("concept_id")
+        try:
+            parsed_args = parser.parse_args(args)
+            if not self.current_student_id:
+                self.console.print("Please set a student ID first using 'set-student <name>'.", style="warning")
+                return
+            if not self.current_project_id:
+                self.console.print("Please start a project first.", style="warning")
+                return
+                
+            result = practice(dojo=self.dojo, student_id=self.current_student_id, project_id=self.current_project_id, concept_id=parsed_args.concept_id)
+            if result.success:
+                self.console.print(result.output)
+            else:
+                self.console.print(f"Error: {result.error_message}", style="danger")
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
 
     def run(self):
-        print("Welcome to the DataDojo Interactive Session!")
-        print("Type 'help' for a list of commands, or 'exit' to quit.")
-
+        self.console.print(Panel("Welcome to the [title]DataDojo Interactive Session[/title]!\nType 'help' for commands or 'exit' to quit.", border_style="border"))
         while True:
             try:
                 user_input = prompt(self.prompt_text, completer=self.completer)
                 if not user_input.strip():
                     continue
-
                 parts = shlex.split(user_input)
                 command_name = parts[0]
                 command_args = parts[1:]
-
                 if command_name in self.commands:
-                    try:
-                        output = self.commands[command_name](command_args)
-                        if output:
-                            print(output)
-                    except EOFError: # Raised by _exit_command
-                        break
-                    except Exception as e:
-                        print(f"Command error: {e}")
+                    self.commands[command_name](command_args)
                 else:
-                    print(f"Unknown command: '{command_name}'. Type 'help' for available commands.")
-
+                    self.console.print(f"Unknown command: '{command_name}'. Type 'help'.", style="warning")
             except KeyboardInterrupt:
-                print("\nSession interrupted. Type 'exit' to quit.")
+                continue
             except EOFError:
                 break
-            except Exception as e:
-                print(f"An unexpected error occurred: {e}")
-
-        print("Exiting DataDojo session. Goodbye!")
-
+        self.console.print("Exiting DataDojo session. Goodbye!", style="info")
 
 def start_interactive_session(dojo_instance: Dojo):
-    """Initializes and runs the interactive Dojo session."""
     session = DojoSession(dojo_instance)
     session.run()
-
