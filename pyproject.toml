@@ -1,16 +1,13 @@
-[build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
-
-[project]
+[tool.poetry]
 name = "datadojo"
 version = "0.1.0"
 description = "AI-Powered Data Preparation Learning Framework"
+authors = ["DataDojo Team <team@datadojo.ai>"]
+license = "MIT"
 readme = "README.md"
-license = {file = "LICENSE"}
-authors = [
-    {name = "DataDojo Team", email = "team@datadojo.ai"}
-]
+homepage = "https://github.com/datadojo/datadojo"
+repository = "https://github.com/datadojo/datadojo"
+documentation = "https://datadojo.readthedocs.io"
 keywords = ["data", "preprocessing", "education", "machine-learning", "pandas"]
 classifiers = [
     "Development Status :: 3 - Alpha",
@@ -23,67 +20,50 @@ classifiers = [
     "Topic :: Education",
     "Topic :: Scientific/Engineering :: Artificial Intelligence",
 ]
-requires-python = ">=3.11"
 
-# Core dependencies for data processing and educational features
-dependencies = [
-    "pandas>=2.0.0",
-    "numpy>=1.24.0",
-    "scikit-learn>=1.3.0",
-    "matplotlib>=3.7.0",
-    "seaborn>=0.12.0",
-    "plotly>=5.15.0",
-    "jupyter>=1.0.0",
-    "rich>=13.0.0",  # For beautiful CLI output
-    "click>=8.1.0",  # For CLI commands
-    "pydantic>=2.0.0",  # For data validation
-    "pyyaml>=6.0.0",  # For configuration files
-]
+[tool.poetry.dependencies]
+python = ">=3.11"
+pandas = ">=2.0.0"
+numpy = ">=1.24.0"
+scikit-learn = ">=1.3.0"
+matplotlib = ">=3.7.0"
+seaborn = ">=0.12.0"
+plotly = ">=5.15.0"
+jupyter = ">=1.0.0"
+rich = ">=13.0.0"
+click = ">=8.1.0"
+pydantic = ">=2.0.0"
+pyyaml = ">=6.0.0"
+prompt-toolkit = ">=3.0.0"
 
-# Optional dependencies for advanced features
-[project.optional-dependencies]
-dev = [
-    "pytest>=7.4.0",
-    "pytest-cov>=4.1.0",
-    "pytest-asyncio>=0.21.0",
-    "pytest-mock>=3.11.0",
-    "pytest-timeout>=2.1.0",
-    "pytest-xdist>=3.3.0",  # For parallel test execution
-    "black>=23.7.0",
-    "ruff>=0.0.285",
-    "mypy>=1.5.0",
-    "pre-commit>=3.3.0",
-]
+[tool.poetry.group.dev.dependencies]
+pytest = ">=7.4.0"
+pytest-cov = ">=4.1.0"
+pytest-asyncio = ">=0.21.0"
+pytest-mock = ">=3.11.0"
+pytest-timeout = ">=2.1.0"
+pytest-xdist = ">=3.3.0"
+black = ">=23.7.0"
+ruff = ">=0.0.285"
+mypy = ">=1.5.0"
+pre-commit = ">=3.3.0"
 
-performance = [
-    "polars>=0.18.0",  # For large dataset processing
-    "pyarrow>=12.0.0",  # For efficient data formats
-]
+[tool.poetry.group.performance.dependencies]
+polars = ">=0.18.0"
+pyarrow = ">=12.0.0"
 
-docs = [
-    "mkdocs>=1.5.0",
-    "mkdocs-material>=9.1.0",
-    "mkdocstrings[python]>=0.22.0",
-]
+[tool.poetry.group.docs.dependencies]
+mkdocs = ">=1.5.0"
+mkdocs-material = ">=9.1.0"
+mkdocstrings = {version = ">=0.22.0", extras = ["python"]}
 
-[project.urls]
-Homepage = "https://github.com/datadojo/datadojo"
-Documentation = "https://datadojo.readthedocs.io"
-Repository = "https://github.com/datadojo/datadojo"
-"Bug Tracker" = "https://github.com/datadojo/datadojo/issues"
-
-# CLI entry points
-[project.scripts]
+[tool.poetry.scripts]
 datadojo = "datadojo.cli.__main__:main"
 
-# Package discovery
-[tool.hatch.build.targets.wheel]
-packages = ["src/datadojo"]
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
 
-[tool.hatch.version]
-path = "src/datadojo/__init__.py"
-
-# Black formatting configuration
 [tool.black]
 line-length = 88
 target-version = ['py311']
@@ -102,7 +82,6 @@ extend-exclude = '''
 )/
 '''
 
-# Ruff linting configuration (replaces flake8, isort, pyupgrade)
 [tool.ruff]
 select = [
     "E",   # pycodestyle errors
@@ -131,7 +110,6 @@ fix = true
 known-first-party = ["datadojo"]
 force-single-line = false
 
-# MyPy type checking configuration
 [tool.mypy]
 python_version = "3.11"
 warn_return_any = true

@@ -9,11 +9,13 @@ import pandas as pd
 
 from ..models.pipeline import Pipeline, ExecutionState, GuidanceLevel
 from ..models.processing_step import ProcessingStep, CompletionStatus
+from sklearn.preprocessing import MinMaxScaler
 
 
 class PipelineExecutionError(Exception):
     """Raised when pipeline execution fails."""
     pass
+
 
 
 class PipelineService:
@@ -91,13 +93,12 @@ class PipelineService:
         Returns:
             DataFrame with engineered features
         """
-        # Placeholder implementation
         result = data.copy()
 
-        if parameters.get("create_features"):
-            for feature_def in parameters["create_features"]:
-                # Simple feature creation logic
-                pass
+        if "interaction_features" in parameters:
+            for new_col, (col1, col2) in parameters["interaction_features"].items():
+                if col1 in result.columns and col2 in result.columns:
+                    result[new_col] = result[col1] * result[col2]
 
         return result
 
@@ -111,16 +112,18 @@ class PipelineService:
         Returns:
             Transformed DataFrame
         """
-        # Placeholder implementation
         result = data.copy()
 
-        if parameters.get("normalize"):
-            # Normalization logic
-            pass
+        if "normalize" in parameters:
+            cols_to_normalize = parameters["normalize"].get("columns")
+            if cols_to_normalize:
+                scaler = MinMaxScaler()
+                result[cols_to_normalize] = scaler.fit_transform(result[cols_to_normalize])
 
-        if parameters.get("encode_categorical"):
-            # Encoding logic
-            pass
+        if "encode_categorical" in parameters:
+            cols_to_encode = parameters["encode_categorical"].get("columns")
+            if cols_to_encode:
+                result = pd.get_dummies(result, columns=cols_to_encode)
 
         return result
 
@@ -137,13 +140,15 @@ class PipelineService:
         Raises:
             PipelineExecutionError: If validation fails
         """
-        # Placeholder implementation
-        if parameters.get("check_schema"):
-            # Schema validation logic
-            pass
+        if "check_schema" in parameters:
+            expected_cols = parameters["check_schema"].get("columns")
+            if expected_cols:
+                missing_cols = set(expected_cols) - set(data.columns)
+                if missing_cols:
+                    raise PipelineExecutionError(f"Missing columns: {', '.join(missing_cols)}")
 
-        if parameters.get("check_quality"):
-            # Quality validation logic
+        if "check_quality" in parameters:
+            # Placeholder for more complex quality checks
             pass
 
         return data
