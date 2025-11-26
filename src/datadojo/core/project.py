@@ -87,6 +87,11 @@ class Project(ProjectInterface):
         )
 
     @property
+    def dataset_path(self) -> str:
+        """Get the path to the raw dataset for this project."""
+        return self._project.dataset_path
+
+    @property
     def dataset(self) -> Any:
         """Get the raw dataset for this project.
 

@@ -41,13 +41,22 @@ def explain_concept(
         # Get concept explanation
         try:
             explanation = educational.get_concept_explanation(concept_id)
-        except KeyError as e:
-            return CLIResult(
-                success=False,
-                output="",
-                exit_code=1,
-                error_message=str(e)
-            )
+        except KeyError:
+            # If no exact match, search for concepts
+            search_results = educational.search_concepts(concept_id)
+            if not search_results:
+                return CLIResult(
+                    success=False,
+                    output=f"Sorry, no concepts found for '{concept_id}'.",
+                    exit_code=1
+                )
+            
+            output_lines = [f"No exact match found for '{concept_id}'. Did you mean one of these?"]
+            for i, concept in enumerate(search_results, 1):
+                output_lines.append(f"  {i}. {concept['title']} (ID: {concept['concept_id']})")
+            output_lines.append("\nYou can now run 'explain <ID>' for more information.")
+            return CLIResult(success=True, output="\n".join(output_lines), exit_code=0)
+
 
         # Format output based on detail level
         output_lines = []

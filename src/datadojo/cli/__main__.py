@@ -14,6 +14,7 @@ from .complete_step import complete_step
 from .complete_step import complete_step
 from .doctor import doctor
 from .interactive_session import start_interactive_session
+from .practice import practice
 
 
 def main():
@@ -199,6 +200,26 @@ def main():
         help="Start an interactive learning session"
     )
 
+    # practice command
+    practice_parser = subparsers.add_parser(
+        "practice",
+        help="Start an interactive practice session for a concept"
+    )
+    practice_parser.add_argument(
+        "concept_id",
+        help="The ID of the concept to practice"
+    )
+    practice_parser.add_argument(
+        "--student",
+        required=True,
+        help="Student identifier for progress tracking"
+    )
+    practice_parser.add_argument(
+        "--project",
+        required=True,
+        help="Project identifier"
+    )
+
     # Parse arguments
     args = parser.parse_args()
 
@@ -209,8 +230,22 @@ def main():
     
     if args.command == "doctor":
         result = doctor()
+        if result.success:
+            print(result.output)
+            sys.exit(result.exit_code)
+        else:
+            if result.error_message:
+                print(f"Error: {result.error_message}", file=sys.stderr)
+            sys.exit(result.exit_code)
+
     elif args.command == "learn":
-        start_interactive_session()
+        # Initialize Dojo even for learn command, so it can be passed to the session
+        try:
+            dojo = Dojo(educational_mode=True) # Interactive session is always educational
+        except Exception as e:
+            print(f"Error: Failed to initialize DataDojo: {e}", file=sys.stderr)
+            sys.exit(1)
+        start_interactive_session(dojo)
         sys.exit(0)
     else:
         # Initialize Dojo
@@ -283,11 +318,18 @@ def main():
                     project_id=args.project,
                     step_id=args.step_id
                 )
+            
+            elif args.command == "practice":
+                result = practice(
+                    dojo=dojo,
+                    student_id=args.student,
+                    project_id=args.project,
+                    concept_id=args.concept_id
+                )
 
             else:
                 print(f"Error: Unknown command: {args.command}", file=sys.stderr)
                 sys.exit(1)
-
         except KeyboardInterrupt:
             print("\nOperation cancelled by user.", file=sys.stderr)
             sys.exit(130)
@@ -307,6 +349,7 @@ def main():
     else:
         print("Error: Command did not return a result", file=sys.stderr)
         sys.exit(1)
+
 
 
 if __name__ == "__main__":

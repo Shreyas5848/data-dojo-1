@@ -146,3 +146,15 @@ class Educational(EducationalInterface):
 
         return guidance
 
+    def search_concepts(self, keyword: str) -> List[Dict[str, Any]]:
+        """Search for educational concepts.
+
+        Args:
+            keyword: The keyword to search for.
+
+        Returns:
+            A list of concept dictionaries.
+        """
+        concepts = self._educational_service.search_concepts(keyword)
+        return [concept.to_dict() for concept in concepts]
+

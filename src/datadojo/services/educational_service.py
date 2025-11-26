@@ -112,6 +112,22 @@ class EducationalService:
 
         return content
 
+    def search_concepts(self, keyword: str) -> List[EducationalContent]:
+        """Search for educational concepts by keyword.
+
+        Args:
+            keyword: The keyword to search for.
+
+        Returns:
+            A list of matching EducationalContent.
+        """
+        keyword = keyword.lower()
+        results = []
+        for concept in self._content_cache.values():
+            if keyword in concept.title.lower() or keyword in concept.explanation.lower():
+                results.append(concept)
+        return results
+
     def add_concept(self, content: EducationalContent) -> None:
         """Add educational content for a concept.
 

@@ -100,3 +100,7 @@ class EducationalInterface(ABC):
     @abstractmethod
     def get_step_guidance(self, step_context: Dict[str, Any]) -> Dict[str, Any]:
         pass
+
+    @abstractmethod
+    def search_concepts(self, keyword: str) -> List[Dict[str, Any]]:
+        pass
