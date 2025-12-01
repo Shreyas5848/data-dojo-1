@@ -1,0 +1,301 @@
+transaction_id,customer_id,product_id,product_name,category,unit_price,quantity,total_amount,discount_percent,transaction_date,payment_method,status,shipping_address_state,device,session_id,revenue,shipping_cost
+TXN000001,8,107,LED Desk Lamp,Electronics,42.99,1,42.99,0,2025-02-05 12:33:33,Credit Card,Completed,TX,Mobile,SES166240,12.9,3.31
+TXN000002,43,104,Python Programming Book,Books,40.5,2,81.0,10,2025-10-12 12:33:33,Debit Card,Completed,WA,Mobile,SES955244,24.3,4.91
+TXN000003,54,118,Hiking Backpack 40L,Sports,71.99,1,71.99,10,2025-09-01 12:33:33,Google Pay,Completed,WA,Desktop,SES324164,21.6,1.59
+TXN000004,81,111,Organic Protein Powder,Health,54.99,1,54.99,0,2025-01-16 12:33:33,Credit Card,Completed,TX,Mobile,SES169223,16.5,9.87
+TXN000005,12,109,Wireless Mouse,Electronics,26.99,1,26.99,10,2024-12-13 12:33:33,Credit Card,Completed,WA,Desktop,SES727959,8.1,7.49
+TXN000006,44,104,Python Programming Book,Books,40.5,2,81.0,10,2025-07-06 12:33:33,PayPal,Completed,TX,Tablet,SES830139,24.3,5.83
+TXN000007,82,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,2,49.98,0,2025-09-12 12:33:33,Apple Pay,Completed,TX,Desktop,SES713455,14.99,6.73
+TXN000008,129,117,Portable Charger 20000mAh,Electronics,35.99,1,35.99,10,2024-07-27 12:33:33,Google Pay,Refunded,NY,Desktop,SES746288,10.8,11.38
+TXN000009,63,104,Python Programming Book,Books,45.0,1,45.0,0,2025-02-12 12:33:33,Google Pay,Completed,CA,Desktop,SES622952,13.5,4.45
+TXN000010,10,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2025-09-19 12:33:33,Debit Card,Refunded,CO,Mobile,SES444656,7.5,2.01
+TXN000011,134,111,Organic Protein Powder,Health,49.49,1,49.49,10,2024-01-11 12:33:33,Apple Pay,Refunded,CA,Mobile,SES340134,14.85,12.7
+TXN000012,139,111,Organic Protein Powder,Health,54.99,2,109.98,0,2024-06-29 12:33:33,Credit Card,Refunded,CA,Mobile,SES830100,32.99,10.79
+TXN000013,83,120,Data Science Handbook,Books,50.99,1,50.99,15,2025-05-18 12:33:33,Debit Card,Completed,NY,Desktop,SES615524,15.3,1.05
+TXN000014,53,107,LED Desk Lamp,Electronics,42.99,1,42.99,0,2024-04-24 12:33:33,Debit Card,Completed,PA,Mobile,SES971598,12.9,11.93
+TXN000015,110,107,LED Desk Lamp,Electronics,42.99,1,42.99,0,2024-02-20 12:33:33,Apple Pay,Completed,PA,Mobile,SES356822,12.9,6.36
+TXN000016,148,120,Data Science Handbook,Books,59.99,1,59.99,0,2024-09-19 12:33:33,Apple Pay,Refunded,TX,Desktop,SES919240,18.0,7.22
+TXN000017,121,112,Mechanical Keyboard,Electronics,119.99,1,119.99,0,2024-05-21 12:33:33,Apple Pay,Completed,FL,Mobile,SES554484,36.0,11.4
+TXN000018,110,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2024-12-26 12:33:33,Credit Card,Cancelled,CA,Mobile,SES260221,30.0,8.29
+TXN000019,79,106,Yoga Mat Premium,Sports,35.99,1,35.99,0,2025-03-20 12:33:33,Apple Pay,Completed,MA,Mobile,SES604201,10.8,1.08
+TXN000020,40,105,Stainless Steel Water Bottle,Home & Kitchen,22.49,1,22.49,10,2024-06-19 12:33:33,Debit Card,Completed,NY,Mobile,SES865847,6.75,10.88
+TXN000021,102,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2025-01-30 12:33:33,PayPal,Completed,GA,Desktop,SES716886,30.0,1.07
+TXN000022,99,102,Organic Green Tea (50 bags),Groceries,9.37,1,9.37,25,2024-04-07 12:33:33,Google Pay,Completed,TX,Mobile,SES367657,2.81,11.57
+TXN000023,95,112,Mechanical Keyboard,Electronics,119.99,1,119.99,0,2025-04-15 12:33:33,Credit Card,Refunded,MA,Tablet,SES871399,36.0,3.7
+TXN000024,8,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2024-12-06 12:33:33,Debit Card,Completed,CO,Tablet,SES254525,30.0,3.81
+TXN000025,42,120,Data Science Handbook,Books,59.99,1,59.99,0,2025-10-10 12:33:33,Credit Card,Completed,IL,Mobile,SES503017,18.0,5.97
+TXN000026,133,119,Instant Pot 6-Quart,Home & Kitchen,67.49,1,67.49,25,2024-02-22 12:33:33,Debit Card,Completed,PA,Mobile,SES365154,20.25,10.38
+TXN000027,98,117,Portable Charger 20000mAh,Electronics,31.99,1,31.99,20,2025-10-06 12:33:33,Google Pay,Completed,WA,Mobile,SES862998,9.6,13.04
+TXN000028,37,104,Python Programming Book,Books,40.5,1,40.5,10,2024-11-18 12:33:33,PayPal,Refunded,TX,Tablet,SES517302,12.15,10.49
+TXN000029,1,101,Wireless Bluetooth Headphones,Electronics,59.99,1,59.99,25,2025-04-18 12:33:33,Credit Card,Completed,WA,Mobile,SES786315,18.0,4.33
+TXN000030,48,114,Resistance Bands Set,Sports,19.99,2,39.98,0,2024-12-19 12:33:33,Debit Card,Completed,GA,Desktop,SES215593,11.99,6.76
+TXN000031,47,107,LED Desk Lamp,Electronics,42.99,1,42.99,0,2024-01-31 12:33:33,Debit Card,Completed,WA,Mobile,SES754753,12.9,1.64
+TXN000032,97,106,Yoga Mat Premium,Sports,35.99,1,35.99,0,2024-02-27 12:33:33,Credit Card,Completed,IL,Desktop,SES714094,10.8,3.52
+TXN000033,3,116,Smart Home Speaker,Electronics,89.99,1,89.99,10,2024-03-14 12:33:33,Credit Card,Completed,NY,Mobile,SES927543,27.0,14.81
+TXN000034,97,104,Python Programming Book,Books,45.0,1,45.0,0,2023-12-09 12:33:33,Google Pay,Pending,TX,Tablet,SES596219,13.5,11.35
+TXN000035,88,120,Data Science Handbook,Books,59.99,1,59.99,0,2024-12-15 12:33:33,PayPal,Cancelled,CA,Tablet,SES797385,18.0,5.98
+TXN000036,85,120,Data Science Handbook,Books,59.99,1,59.99,0,2024-11-30 12:33:33,Credit Card,Completed,CO,Mobile,SES521326,18.0,10.88
+TXN000037,136,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2024-04-05 12:33:33,PayPal,Refunded,CA,Desktop,SES748388,7.5,10.29
+TXN000038,49,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2025-10-08 12:33:33,Credit Card,Refunded,TX,Desktop,SES477702,30.0,13.1
+TXN000039,125,111,Organic Protein Powder,Health,49.49,1,49.49,10,2024-07-28 12:33:33,Apple Pay,Refunded,IL,Desktop,SES599250,14.85,14.8
+TXN000040,50,104,Python Programming Book,Books,40.5,1,40.5,10,2024-09-27 12:33:33,Debit Card,Cancelled,FL,Mobile,SES922987,12.15,12.85
+TXN000041,23,117,Portable Charger 20000mAh,Electronics,39.99,1,39.99,0,2025-04-24 12:33:33,PayPal,Cancelled,MI,Tablet,SES589478,12.0,2.52
+TXN000042,139,115,Noise Cancelling Earbuds,Electronics,159.99,1,159.99,20,2025-04-08 12:33:33,Debit Card,Completed,TX,Desktop,SES791792,48.0,10.5
+TXN000043,42,104,Python Programming Book,Books,45.0,1,45.0,0,2023-12-31 12:33:33,PayPal,Completed,TX,Desktop,SES370143,13.5,9.99
+TXN000044,126,104,Python Programming Book,Books,40.5,1,40.5,10,2025-06-01 12:33:33,Credit Card,Cancelled,TX,Mobile,SES703950,12.15,11.5
+TXN000045,97,120,Data Science Handbook,Books,59.99,1,59.99,0,2024-11-17 12:33:33,Apple Pay,Refunded,MI,Tablet,SES558188,18.0,12.13
+TXN000046,23,108,Coffee Maker 12-Cup,Home & Kitchen,89.99,1,89.99,0,2024-09-24 12:33:33,Credit Card,Completed,TX,Mobile,SES297296,27.0,11.17
+TXN000047,81,104,Python Programming Book,Books,45.0,1,45.0,0,2024-04-10 12:33:33,Apple Pay,Pending,NY,Desktop,SES718722,13.5,8.03
+TXN000048,94,113,Air Purifier HEPA,Home & Kitchen,149.99,2,299.98,25,2024-10-24 12:33:33,Debit Card,Pending,CA,Desktop,SES109634,89.99,8.07
+TXN000049,57,115,Noise Cancelling Earbuds,Electronics,199.99,1,199.99,0,2024-09-30 12:33:33,Apple Pay,Refunded,CO,Desktop,SES397158,60.0,2.19
+TXN000050,129,102,Organic Green Tea (50 bags),Groceries,12.49,1,12.49,0,2024-10-13 12:33:33,Credit Card,Completed,GA,Mobile,SES326183,3.75,7.43
+TXN000051,40,113,Air Purifier HEPA,Home & Kitchen,199.99,1,199.99,0,2024-11-07 12:33:33,Debit Card,Cancelled,CA,Mobile,SES155119,60.0,13.85
+TXN000052,77,106,Yoga Mat Premium,Sports,30.59,1,30.59,15,2025-01-06 12:33:33,Debit Card,Completed,MI,Desktop,SES542957,9.18,10.17
+TXN000053,19,112,Mechanical Keyboard,Electronics,107.99,1,107.99,10,2025-01-05 12:33:33,Google Pay,Refunded,CA,Desktop,SES304568,32.4,10.52
+TXN000054,83,118,Hiking Backpack 40L,Sports,79.99,1,79.99,0,2024-04-14 12:33:33,Google Pay,Cancelled,CA,Mobile,SES844056,24.0,4.56
+TXN000055,124,106,Yoga Mat Premium,Sports,35.99,2,71.98,0,2025-02-26 12:33:33,PayPal,Completed,TX,Desktop,SES884735,21.59,2.93
+TXN000056,27,101,Wireless Bluetooth Headphones,Electronics,79.99,1,79.99,0,2025-07-13 12:33:33,Debit Card,Completed,WA,Mobile,SES276394,24.0,13.89
+TXN000057,46,104,Python Programming Book,Books,45.0,3,135.0,0,2025-03-31 12:33:33,Credit Card,Completed,FL,Mobile,SES722217,40.5,6.51
+TXN000058,63,105,Stainless Steel Water Bottle,Home & Kitchen,22.49,1,22.49,10,2025-01-18 12:33:33,Credit Card,Completed,CA,Desktop,SES417393,6.75,10.32
+TXN000059,23,106,Yoga Mat Premium,Sports,32.39,1,32.39,10,2024-12-20 12:33:33,Apple Pay,Cancelled,MA,Desktop,SES784925,9.72,6.68
+TXN000060,32,101,Wireless Bluetooth Headphones,Electronics,79.99,1,79.99,0,2024-02-24 12:33:33,Apple Pay,Refunded,FL,Desktop,SES715357,24.0,8.59
+TXN000061,25,119,Instant Pot 6-Quart,Home & Kitchen,89.99,2,179.98,0,2025-11-11 12:33:33,Google Pay,Completed,MA,Mobile,SES775908,53.99,10.54
+TXN000062,84,110,Fitness Tracker Watch,Electronics,149.99,1,149.99,0,2024-03-12 12:33:33,Credit Card,Refunded,MI,Desktop,SES952353,45.0,10.51
+TXN000063,136,113,Air Purifier HEPA,Home & Kitchen,199.99,2,399.98,0,2025-06-03 12:33:33,Apple Pay,Completed,FL,Mobile,SES665163,119.99,10.71
+TXN000064,31,104,Python Programming Book,Books,40.5,1,40.5,10,2024-07-01 12:33:33,Debit Card,Cancelled,PA,Desktop,SES568957,12.15,12.01
+TXN000065,53,104,Python Programming Book,Books,45.0,1,45.0,0,2025-07-12 12:33:33,Debit Card,Completed,MI,Desktop,SES889649,13.5,0.53
+TXN000066,140,104,Python Programming Book,Books,45.0,2,90.0,0,2024-12-08 12:33:33,Debit Card,Completed,NY,Desktop,SES148408,27.0,14.19
+TXN000067,137,117,Portable Charger 20000mAh,Electronics,31.99,1,31.99,20,2024-09-27 12:33:33,Apple Pay,Completed,GA,Mobile,SES648055,9.6,13.66
+TXN000068,54,112,Mechanical Keyboard,Electronics,107.99,1,107.99,10,2025-05-07 12:33:33,Credit Card,Refunded,CA,Desktop,SES297209,32.4,2.13
+TXN000069,142,107,LED Desk Lamp,Electronics,34.39,1,34.39,20,2025-08-09 12:33:33,Debit Card,Pending,FL,Desktop,SES864521,10.32,9.33
+TXN000070,98,103,Running Shoes - Nike Air,Sports,129.99,3,389.97,0,2024-08-24 12:33:33,Debit Card,Completed,CO,Desktop,SES366526,116.99,10.15
+TXN000071,69,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,2,49.98,0,2024-02-12 12:33:33,Debit Card,Refunded,FL,Mobile,SES779237,14.99,12.31
+TXN000072,81,120,Data Science Handbook,Books,59.99,1,59.99,0,2024-05-07 12:33:33,Apple Pay,Completed,NY,Tablet,SES359520,18.0,1.16
+TXN000073,141,104,Python Programming Book,Books,45.0,1,45.0,0,2025-11-01 12:33:33,Apple Pay,Completed,TX,Mobile,SES480443,13.5,13.64
+TXN000074,71,109,Wireless Mouse,Electronics,29.99,2,59.98,0,2024-07-20 12:33:33,Credit Card,Completed,MA,Tablet,SES333020,17.99,5.68
+TXN000075,45,104,Python Programming Book,Books,40.5,1,40.5,10,2024-04-06 12:33:33,Google Pay,Refunded,CA,Mobile,SES945989,12.15,7.34
+TXN000076,73,117,Portable Charger 20000mAh,Electronics,39.99,1,39.99,0,2025-07-09 12:33:33,Google Pay,Completed,TX,Mobile,SES279041,12.0,4.77
+TXN000077,137,113,Air Purifier HEPA,Home & Kitchen,199.99,2,399.98,0,2025-10-26 12:33:33,Google Pay,Pending,MA,Mobile,SES233769,119.99,3.89
+TXN000078,33,117,Portable Charger 20000mAh,Electronics,35.99,1,35.99,10,2025-10-05 12:33:33,Debit Card,Completed,TX,Desktop,SES860657,10.8,9.59
+TXN000079,108,112,Mechanical Keyboard,Electronics,107.99,1,107.99,10,2024-08-13 12:33:33,Apple Pay,Completed,CO,Tablet,SES937255,32.4,7.03
+TXN000080,134,110,Fitness Tracker Watch,Electronics,149.99,1,149.99,0,2025-02-12 12:33:33,Debit Card,Completed,IL,Tablet,SES526261,45.0,11.56
+TXN000081,62,103,Running Shoes - Nike Air,Sports,116.99,2,233.98,10,2024-02-18 12:33:33,Credit Card,Completed,CA,Desktop,SES399736,70.19,8.31
+TXN000082,109,116,Smart Home Speaker,Electronics,84.99,3,254.97,15,2023-12-12 12:33:33,Google Pay,Refunded,AZ,Mobile,SES640028,76.49,10.28
+TXN000083,4,118,Hiking Backpack 40L,Sports,71.99,2,143.98,10,2025-01-20 12:33:33,Google Pay,Completed,NY,Mobile,SES836720,43.19,8.01
+TXN000084,136,112,Mechanical Keyboard,Electronics,119.99,1,119.99,0,2025-10-09 12:33:33,Google Pay,Completed,CO,Tablet,SES807287,36.0,13.95
+TXN000085,20,117,Portable Charger 20000mAh,Electronics,31.99,2,63.98,20,2024-05-29 12:33:33,PayPal,Cancelled,AZ,Mobile,SES153379,19.19,6.34
+TXN000086,87,113,Air Purifier HEPA,Home & Kitchen,199.99,2,399.98,0,2024-03-26 12:33:33,Debit Card,Cancelled,MI,Mobile,SES999474,119.99,1.77
+TXN000087,55,110,Fitness Tracker Watch,Electronics,149.99,1,149.99,0,2024-08-29 12:33:33,Credit Card,Refunded,MA,Desktop,SES419626,45.0,13.94
+TXN000088,119,117,Portable Charger 20000mAh,Electronics,33.99,2,67.98,15,2024-01-07 12:33:33,Google Pay,Cancelled,GA,Desktop,SES106177,20.39,9.23
+TXN000089,2,111,Organic Protein Powder,Health,54.99,1,54.99,0,2024-03-20 12:33:33,PayPal,Refunded,PA,Mobile,SES109294,16.5,1.52
+TXN000090,132,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2025-05-26 12:33:33,Debit Card,Completed,TX,Tablet,SES107246,30.0,2.33
+TXN000091,96,109,Wireless Mouse,Electronics,29.99,1,29.99,0,2025-01-09 12:33:33,PayPal,Completed,WA,Mobile,SES662484,9.0,12.17
+TXN000092,113,104,Python Programming Book,Books,33.75,1,33.75,25,2025-10-04 12:33:33,Debit Card,Completed,FL,Mobile,SES106092,10.12,5.39
+TXN000093,11,107,LED Desk Lamp,Electronics,42.99,1,42.99,0,2024-09-18 12:33:33,Debit Card,Completed,WA,Mobile,SES133141,12.9,2.4
+TXN000094,69,107,LED Desk Lamp,Electronics,34.39,1,34.39,20,2025-10-13 12:33:33,Credit Card,Completed,GA,Mobile,SES938672,10.32,10.23
+TXN000095,129,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2025-01-14 12:33:33,Apple Pay,Completed,TX,Tablet,SES931219,7.5,0.32
+TXN000096,61,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2023-12-15 12:33:33,Credit Card,Refunded,TX,Mobile,SES726090,7.5,11.06
+TXN000097,125,114,Resistance Bands Set,Sports,19.99,1,19.99,0,2024-09-15 12:33:33,Credit Card,Cancelled,WA,Desktop,SES259903,6.0,10.94
+TXN000098,68,106,Yoga Mat Premium,Sports,35.99,1,35.99,0,2024-03-28 12:33:33,Debit Card,Refunded,WA,Desktop,SES840777,10.8,11.74
+TXN000099,47,104,Python Programming Book,Books,40.5,1,40.5,10,2025-04-29 12:33:33,Debit Card,Cancelled,AZ,Desktop,SES238722,12.15,6.02
+TXN000100,110,109,Wireless Mouse,Electronics,22.49,1,22.49,25,2024-04-29 12:33:33,Credit Card,Pending,TX,Desktop,SES153430,6.75,5.71
+TXN000101,60,117,Portable Charger 20000mAh,Electronics,39.99,1,39.99,0,2025-09-10 12:33:33,Debit Card,Completed,WA,Mobile,SES634630,12.0,6.41
+TXN000102,94,102,Organic Green Tea (50 bags),Groceries,12.49,1,12.49,0,2024-09-02 12:33:33,PayPal,Completed,WA,Desktop,SES149866,3.75,2.73
+TXN000103,55,101,Wireless Bluetooth Headphones,Electronics,79.99,2,159.98,0,2024-10-26 12:33:33,PayPal,Completed,TX,Tablet,SES205656,47.99,6.46
+TXN000104,86,109,Wireless Mouse,Electronics,23.99,1,23.99,20,2024-12-08 12:33:33,PayPal,Completed,TX,Mobile,SES816137,7.2,8.28
+TXN000105,151,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2024-12-06 12:33:33,Google Pay,Pending,FL,Desktop,SES389351,7.5,3.15
+TXN000106,34,113,Air Purifier HEPA,Home & Kitchen,199.99,1,199.99,0,2024-03-19 12:33:33,Google Pay,Completed,CA,Mobile,SES786141,60.0,12.26
+TXN000107,20,107,LED Desk Lamp,Electronics,38.69,2,77.38,10,2024-03-12 12:33:33,Google Pay,Pending,TX,Desktop,SES597233,23.21,14.84
+TXN000108,12,107,LED Desk Lamp,Electronics,42.99,1,42.99,0,2024-05-07 12:33:33,Debit Card,Completed,WA,Mobile,SES364792,12.9,13.37
+TXN000109,115,118,Hiking Backpack 40L,Sports,59.99,2,119.98,25,2024-12-10 12:33:33,Credit Card,Completed,IL,Mobile,SES649205,35.99,13.97
+TXN000110,154,117,Portable Charger 20000mAh,Electronics,35.99,1,35.99,10,2024-05-20 12:33:33,PayPal,Refunded,AZ,Desktop,SES693677,10.8,0.91
+TXN000111,127,107,LED Desk Lamp,Electronics,38.69,2,77.38,10,2025-01-12 12:33:33,Google Pay,Cancelled,FL,Tablet,SES273558,23.21,6.57
+TXN000112,103,117,Portable Charger 20000mAh,Electronics,39.99,1,39.99,0,2025-01-04 12:33:33,Google Pay,Completed,TX,Desktop,SES267775,12.0,8.58
+TXN000113,117,119,Instant Pot 6-Quart,Home & Kitchen,80.99,3,242.97,10,2025-05-10 12:33:33,Google Pay,Refunded,FL,Desktop,SES993884,72.89,3.31
+TXN000114,58,109,Wireless Mouse,Electronics,29.99,1,29.99,0,2024-05-25 12:33:33,Credit Card,Pending,CA,Desktop,SES770685,9.0,2.22
+TXN000115,14,109,Wireless Mouse,Electronics,23.99,1,23.99,20,2024-09-03 12:33:33,Debit Card,Cancelled,TX,Mobile,SES101467,7.2,9.73
+TXN000116,22,120,Data Science Handbook,Books,44.99,1,44.99,25,2024-10-29 12:33:33,Google Pay,Completed,AZ,Mobile,SES741185,13.5,4.42
+TXN000117,92,102,Organic Green Tea (50 bags),Groceries,11.24,1,11.24,10,2023-12-12 12:33:33,Debit Card,Refunded,TX,Desktop,SES116398,3.37,8.06
+TXN000118,98,119,Instant Pot 6-Quart,Home & Kitchen,89.99,1,89.99,0,2025-11-05 12:33:33,PayPal,Cancelled,MI,Desktop,SES563664,27.0,3.31
+TXN000119,102,109,Wireless Mouse,Electronics,29.99,2,59.98,0,2025-09-06 12:33:33,Debit Card,Completed,CA,Mobile,SES554980,17.99,5.53
+TXN000120,118,116,Smart Home Speaker,Electronics,99.99,3,299.97,0,2024-06-04 12:33:33,Debit Card,Cancelled,PA,Desktop,SES614345,89.99,14.15
+TXN000121,80,106,Yoga Mat Premium,Sports,32.39,1,32.39,10,2023-12-23 12:33:33,Debit Card,Completed,MA,Mobile,SES296972,9.72,1.04
+TXN000122,104,103,Running Shoes - Nike Air,Sports,129.99,1,129.99,0,2025-03-11 12:33:33,Credit Card,Refunded,FL,Desktop,SES886897,39.0,12.12
+TXN000123,6,120,Data Science Handbook,Books,59.99,1,59.99,0,2024-12-29 12:33:33,Credit Card,Cancelled,NY,Mobile,SES775788,18.0,14.02
+TXN000124,69,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2024-02-25 12:33:33,Debit Card,Refunded,NY,Mobile,SES109852,7.5,14.36
+TXN000125,22,104,Python Programming Book,Books,45.0,1,45.0,0,2024-11-12 12:33:33,Debit Card,Completed,GA,Mobile,SES565909,13.5,12.23
+TXN000126,63,110,Fitness Tracker Watch,Electronics,149.99,1,149.99,0,2024-05-08 12:33:33,Credit Card,Pending,TX,Mobile,SES229054,45.0,0.32
+TXN000127,27,102,Organic Green Tea (50 bags),Groceries,12.49,1,12.49,0,2024-09-30 12:33:33,Google Pay,Cancelled,WA,Desktop,SES335208,3.75,0.36
+TXN000128,74,114,Resistance Bands Set,Sports,19.99,1,19.99,0,2024-11-27 12:33:33,Debit Card,Refunded,MA,Mobile,SES849575,6.0,12.34
+TXN000129,58,104,Python Programming Book,Books,45.0,1,45.0,0,2024-03-23 12:33:33,Credit Card,Completed,FL,Desktop,SES449935,13.5,1.78
+TXN000130,39,103,Running Shoes - Nike Air,Sports,110.49,1,110.49,15,2025-08-12 12:33:33,Debit Card,Completed,FL,Desktop,SES290175,33.15,10.19
+TXN000131,78,105,Stainless Steel Water Bottle,Home & Kitchen,21.24,1,21.24,15,2025-11-04 12:33:33,Google Pay,Cancelled,CA,Desktop,SES208970,6.37,4.07
+TXN000132,20,116,Smart Home Speaker,Electronics,89.99,1,89.99,10,2024-08-29 12:33:33,Credit Card,Cancelled,AZ,Mobile,SES253709,27.0,4.8
+TXN000133,18,113,Air Purifier HEPA,Home & Kitchen,199.99,3,599.97,0,2025-04-04 12:33:33,Credit Card,Pending,WA,Tablet,SES392003,179.99,2.17
+TXN000134,99,111,Organic Protein Powder,Health,41.24,1,41.24,25,2024-06-05 12:33:33,PayPal,Completed,GA,Mobile,SES827104,12.37,14.59
+TXN000135,36,120,Data Science Handbook,Books,53.99,1,53.99,10,2024-11-07 12:33:33,Debit Card,Completed,WA,Mobile,SES664917,16.2,8.01
+TXN000136,99,118,Hiking Backpack 40L,Sports,79.99,1,79.99,0,2024-07-24 12:33:33,Credit Card,Pending,WA,Mobile,SES914316,24.0,10.4
+TXN000137,93,108,Coffee Maker 12-Cup,Home & Kitchen,80.99,1,80.99,10,2024-07-29 12:33:33,Credit Card,Completed,NY,Desktop,SES596947,24.3,14.36
+TXN000138,93,104,Python Programming Book,Books,45.0,2,90.0,0,2024-11-23 12:33:33,Debit Card,Completed,CO,Desktop,SES994762,27.0,8.27
+TXN000139,15,114,Resistance Bands Set,Sports,19.99,1,19.99,0,2024-07-18 12:33:33,Debit Card,Completed,AZ,Desktop,SES127626,6.0,10.44
+TXN000140,28,114,Resistance Bands Set,Sports,19.99,1,19.99,0,2025-11-19 12:33:33,Google Pay,Completed,GA,Mobile,SES265856,6.0,0.45
+TXN000141,20,112,Mechanical Keyboard,Electronics,119.99,1,119.99,0,2024-08-08 12:33:33,Credit Card,Pending,WA,Desktop,SES291285,36.0,7.05
+TXN000142,77,105,Stainless Steel Water Bottle,Home & Kitchen,22.49,2,44.98,10,2025-11-16 12:33:33,Apple Pay,Completed,TX,Mobile,SES776171,13.49,10.43
+TXN000143,9,110,Fitness Tracker Watch,Electronics,149.99,2,299.98,0,2024-02-01 12:33:33,Google Pay,Cancelled,PA,Mobile,SES111395,89.99,5.95
+TXN000144,142,114,Resistance Bands Set,Sports,17.99,1,17.99,10,2025-03-11 12:33:33,PayPal,Pending,FL,Desktop,SES338356,5.4,6.36
+TXN000145,134,106,Yoga Mat Premium,Sports,35.99,1,35.99,0,2024-03-05 12:33:33,Apple Pay,Completed,TX,Mobile,SES158716,10.8,3.28
+TXN000146,20,106,Yoga Mat Premium,Sports,30.59,1,30.59,15,2025-06-26 12:33:33,Apple Pay,Completed,TX,Mobile,SES524778,9.18,12.41
+TXN000147,109,106,Yoga Mat Premium,Sports,35.99,3,107.97,0,2024-12-16 12:33:33,Debit Card,Completed,TX,Desktop,SES480320,32.39,9.05
+TXN000148,42,111,Organic Protein Powder,Health,54.99,1,54.99,0,2024-09-15 12:33:33,Google Pay,Completed,IL,Desktop,SES111510,16.5,11.35
+TXN000149,9,110,Fitness Tracker Watch,Electronics,149.99,2,299.98,0,2024-06-25 12:33:33,Debit Card,Completed,IL,Tablet,SES692232,89.99,0.67
+TXN000150,24,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2024-10-19 12:33:33,PayPal,Completed,FL,Mobile,SES517476,30.0,7.5
+TXN000151,34,111,Organic Protein Powder,Health,49.49,1,49.49,10,2024-11-30 12:33:33,Credit Card,Completed,WA,Mobile,SES628040,14.85,1.52
+TXN000152,123,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2024-12-27 12:33:33,Google Pay,Cancelled,CA,Desktop,SES258898,7.5,10.24
+TXN000153,60,103,Running Shoes - Nike Air,Sports,110.49,1,110.49,15,2024-03-06 12:33:33,Debit Card,Cancelled,AZ,Mobile,SES268870,33.15,14.9
+TXN000154,134,117,Portable Charger 20000mAh,Electronics,39.99,1,39.99,0,2025-08-16 12:33:33,PayPal,Completed,AZ,Desktop,SES477819,12.0,9.35
+TXN000155,100,114,Resistance Bands Set,Sports,19.99,1,19.99,0,2025-11-30 12:33:33,Debit Card,Completed,IL,Tablet,SES694438,6.0,9.42
+TXN000156,37,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2023-12-17 12:33:33,PayPal,Pending,IL,Mobile,SES576900,30.0,4.71
+TXN000157,148,110,Fitness Tracker Watch,Electronics,149.99,1,149.99,0,2024-09-13 12:33:33,PayPal,Completed,IL,Desktop,SES845175,45.0,11.58
+TXN000158,114,109,Wireless Mouse,Electronics,22.49,1,22.49,25,2024-08-20 12:33:33,Debit Card,Completed,GA,Desktop,SES400548,6.75,6.01
+TXN000159,113,120,Data Science Handbook,Books,47.99,1,47.99,20,2024-04-12 12:33:33,PayPal,Pending,TX,Desktop,SES815339,14.4,6.2
+TXN000160,11,115,Noise Cancelling Earbuds,Electronics,199.99,3,599.97,0,2025-10-30 12:33:33,Google Pay,Refunded,CA,Mobile,SES356709,179.99,10.5
+TXN000161,75,118,Hiking Backpack 40L,Sports,79.99,2,159.98,0,2024-03-18 12:33:33,Apple Pay,Completed,MA,Mobile,SES333886,47.99,5.82
+TXN000162,120,115,Noise Cancelling Earbuds,Electronics,179.99,2,359.98,10,2024-11-23 12:33:33,Apple Pay,Refunded,MI,Tablet,SES587433,107.99,1.64
+TXN000163,111,106,Yoga Mat Premium,Sports,32.39,3,97.17,10,2025-01-11 12:33:33,Debit Card,Completed,TX,Desktop,SES459057,29.15,14.95
+TXN000164,30,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2025-04-02 12:33:33,PayPal,Completed,CA,Mobile,SES592796,30.0,2.18
+TXN000165,154,107,LED Desk Lamp,Electronics,42.99,1,42.99,0,2024-01-03 12:33:33,Apple Pay,Completed,FL,Mobile,SES596405,12.9,3.2
+TXN000166,109,107,LED Desk Lamp,Electronics,36.54,1,36.54,15,2025-11-01 12:33:33,PayPal,Completed,PA,Desktop,SES172623,10.96,4.11
+TXN000167,116,103,Running Shoes - Nike Air,Sports,129.99,1,129.99,0,2025-11-30 12:33:33,Apple Pay,Pending,TX,Mobile,SES372050,39.0,2.76
+TXN000168,88,102,Organic Green Tea (50 bags),Groceries,12.49,1,12.49,0,2025-02-12 12:33:33,PayPal,Completed,TX,Desktop,SES539459,3.75,7.22
+TXN000169,112,118,Hiking Backpack 40L,Sports,71.99,2,143.98,10,2024-05-14 12:33:33,PayPal,Refunded,MA,Mobile,SES688155,43.19,11.75
+TXN000170,149,120,Data Science Handbook,Books,59.99,1,59.99,0,2025-10-15 12:33:33,Google Pay,Completed,TX,Mobile,SES963506,18.0,14.08
+TXN000171,38,111,Organic Protein Powder,Health,54.99,1,54.99,0,2025-03-15 12:33:33,Apple Pay,Cancelled,TX,Desktop,SES806682,16.5,6.1
+TXN000172,33,117,Portable Charger 20000mAh,Electronics,35.99,1,35.99,10,2025-03-07 12:33:33,Apple Pay,Refunded,TX,Desktop,SES881931,10.8,14.69
+TXN000173,154,114,Resistance Bands Set,Sports,17.99,1,17.99,10,2024-05-20 12:33:33,Apple Pay,Completed,FL,Desktop,SES300444,5.4,14.58
+TXN000174,94,119,Instant Pot 6-Quart,Home & Kitchen,71.99,1,71.99,20,2024-12-15 12:33:33,Credit Card,Completed,CA,Mobile,SES230804,21.6,10.49
+TXN000175,91,115,Noise Cancelling Earbuds,Electronics,199.99,1,199.99,0,2024-11-26 12:33:33,Google Pay,Completed,FL,Tablet,SES452139,60.0,1.7
+TXN000176,46,106,Yoga Mat Premium,Sports,35.99,2,71.98,0,2024-12-18 12:33:33,Google Pay,Pending,PA,Mobile,SES500098,21.59,4.28
+TXN000177,26,114,Resistance Bands Set,Sports,17.99,1,17.99,10,2025-11-19 12:33:33,Credit Card,Cancelled,TX,Desktop,SES117224,5.4,9.24
+TXN000178,140,114,Resistance Bands Set,Sports,19.99,1,19.99,0,2025-08-31 12:33:33,Credit Card,Refunded,CO,Mobile,SES945016,6.0,0.49
+TXN000179,58,110,Fitness Tracker Watch,Electronics,127.49,2,254.98,15,2024-07-05 12:33:33,Apple Pay,Pending,MA,Desktop,SES997940,76.49,7.04
+TXN000180,106,104,Python Programming Book,Books,45.0,3,135.0,0,2025-03-21 12:33:33,Apple Pay,Completed,FL,Mobile,SES632216,40.5,4.25
+TXN000181,62,109,Wireless Mouse,Electronics,29.99,2,59.98,0,2025-01-29 12:33:33,Credit Card,Completed,CA,Desktop,SES260825,17.99,11.86
+TXN000182,82,117,Portable Charger 20000mAh,Electronics,33.99,2,67.98,15,2025-08-07 12:33:33,PayPal,Completed,WA,Desktop,SES510373,20.39,2.89
+TXN000183,110,113,Air Purifier HEPA,Home & Kitchen,169.99,1,169.99,15,2025-07-15 12:33:33,Debit Card,Refunded,MA,Tablet,SES282155,51.0,6.05
+TXN000184,60,111,Organic Protein Powder,Health,54.99,1,54.99,0,2025-02-21 12:33:33,Credit Card,Refunded,AZ,Mobile,SES762113,16.5,8.65
+TXN000185,67,113,Air Purifier HEPA,Home & Kitchen,169.99,1,169.99,15,2025-09-04 12:33:33,Google Pay,Completed,TX,Desktop,SES197795,51.0,0.38
+TXN000186,40,101,Wireless Bluetooth Headphones,Electronics,71.99,1,71.99,10,2025-07-31 12:33:33,Credit Card,Pending,MI,Tablet,SES182598,21.6,8.58
+TXN000187,117,101,Wireless Bluetooth Headphones,Electronics,71.99,1,71.99,10,2024-04-13 12:33:33,PayPal,Completed,CA,Mobile,SES332527,21.6,4.45
+TXN000188,67,118,Hiking Backpack 40L,Sports,67.99,1,67.99,15,2024-12-23 12:33:33,Credit Card,Completed,IL,Tablet,SES757916,20.4,0.35
+TXN000189,118,119,Instant Pot 6-Quart,Home & Kitchen,76.49,1,76.49,15,2024-03-24 12:33:33,Google Pay,Completed,TX,Desktop,SES374721,22.95,13.42
+TXN000190,54,103,Running Shoes - Nike Air,Sports,129.99,1,129.99,0,2024-12-06 12:33:33,Apple Pay,Completed,GA,Mobile,SES533843,39.0,1.1
+TXN000191,97,103,Running Shoes - Nike Air,Sports,129.99,1,129.99,0,2025-02-03 12:33:33,PayPal,Refunded,CO,Mobile,SES288540,39.0,4.48
+TXN000192,9,106,Yoga Mat Premium,Sports,32.39,1,32.39,10,2025-09-08 12:33:33,Credit Card,Completed,FL,Mobile,SES743830,9.72,9.0
+TXN000193,32,101,Wireless Bluetooth Headphones,Electronics,79.99,1,79.99,0,2024-08-18 12:33:33,Debit Card,Pending,NY,Mobile,SES643157,24.0,7.68
+TXN000194,30,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2024-12-09 12:33:33,Debit Card,Completed,TX,Desktop,SES187496,7.5,10.92
+TXN000195,52,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,2,49.98,0,2025-04-08 12:33:33,Credit Card,Completed,MI,Mobile,SES589730,14.99,11.18
+TXN000196,50,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2025-01-14 12:33:33,PayPal,Completed,TX,Mobile,SES852244,30.0,4.22
+TXN000197,80,113,Air Purifier HEPA,Home & Kitchen,199.99,1,199.99,0,2025-07-25 12:33:33,Debit Card,Cancelled,TX,Tablet,SES611528,60.0,6.5
+TXN000198,82,115,Noise Cancelling Earbuds,Electronics,199.99,1,199.99,0,2024-09-05 12:33:33,Google Pay,Completed,MA,Mobile,SES694691,60.0,5.29
+TXN000199,131,103,Running Shoes - Nike Air,Sports,129.99,2,259.98,0,2024-01-05 12:33:33,PayPal,Pending,WA,Desktop,SES966843,77.99,13.16
+TXN000200,30,117,Portable Charger 20000mAh,Electronics,39.99,1,39.99,0,2024-01-01 12:33:33,Debit Card,Cancelled,TX,Mobile,SES294945,12.0,5.37
+TXN000201,96,103,Running Shoes - Nike Air,Sports,129.99,1,129.99,0,2024-12-16 12:33:33,Debit Card,Cancelled,TX,Desktop,SES434064,39.0,10.32
+TXN000202,83,111,Organic Protein Powder,Health,54.99,1,54.99,0,2025-07-05 12:33:33,Debit Card,Pending,IL,Desktop,SES731035,16.5,3.18
+TXN000203,20,107,LED Desk Lamp,Electronics,42.99,1,42.99,0,2024-09-11 12:33:33,Google Pay,Refunded,WA,Mobile,SES556346,12.9,4.77
+TXN000204,127,111,Organic Protein Powder,Health,54.99,2,109.98,0,2024-01-21 12:33:33,Apple Pay,Completed,TX,Mobile,SES230120,32.99,6.79
+TXN000205,61,120,Data Science Handbook,Books,59.99,1,59.99,0,2024-12-28 12:33:33,Google Pay,Completed,CA,Desktop,SES921355,18.0,12.84
+TXN000206,34,101,Wireless Bluetooth Headphones,Electronics,63.99,1,63.99,20,2024-09-18 12:33:33,Apple Pay,Completed,MI,Tablet,SES141020,19.2,5.06
+TXN000207,107,101,Wireless Bluetooth Headphones,Electronics,79.99,2,159.98,0,2024-03-08 12:33:33,PayPal,Completed,TX,Mobile,SES519791,47.99,1.2
+TXN000208,101,111,Organic Protein Powder,Health,54.99,2,109.98,0,2024-01-19 12:33:33,PayPal,Refunded,CO,Mobile,SES772239,32.99,14.51
+TXN000209,27,104,Python Programming Book,Books,38.25,1,38.25,15,2025-08-25 12:33:33,Credit Card,Completed,CA,Mobile,SES245473,11.48,1.58
+TXN000210,58,111,Organic Protein Powder,Health,46.74,2,93.48,15,2025-02-20 12:33:33,Debit Card,Completed,TX,Mobile,SES951739,28.04,5.53
+TXN000211,14,118,Hiking Backpack 40L,Sports,59.99,1,59.99,25,2025-11-05 12:33:33,PayPal,Cancelled,CA,Desktop,SES419071,18.0,1.13
+TXN000212,70,111,Organic Protein Powder,Health,49.49,1,49.49,10,2024-12-24 12:33:33,Debit Card,Completed,CO,Desktop,SES434844,14.85,12.93
+TXN000213,115,119,Instant Pot 6-Quart,Home & Kitchen,76.49,1,76.49,15,2025-01-28 12:33:33,Credit Card,Pending,FL,Desktop,SES601142,22.95,9.92
+TXN000214,58,109,Wireless Mouse,Electronics,29.99,1,29.99,0,2025-04-09 12:33:33,Credit Card,Completed,CA,Mobile,SES470157,9.0,8.38
+TXN000215,20,108,Coffee Maker 12-Cup,Home & Kitchen,80.99,1,80.99,10,2024-06-29 12:33:33,Credit Card,Completed,CA,Desktop,SES803069,24.3,3.24
+TXN000216,88,113,Air Purifier HEPA,Home & Kitchen,199.99,2,399.98,0,2024-03-18 12:33:33,Debit Card,Cancelled,FL,Mobile,SES428580,119.99,11.41
+TXN000217,40,110,Fitness Tracker Watch,Electronics,134.99,2,269.98,10,2025-10-03 12:33:33,Google Pay,Completed,AZ,Desktop,SES481308,80.99,5.78
+TXN000218,52,115,Noise Cancelling Earbuds,Electronics,169.99,1,169.99,15,2025-05-10 12:33:33,Apple Pay,Completed,IL,Desktop,SES272172,51.0,10.29
+TXN000219,119,119,Instant Pot 6-Quart,Home & Kitchen,80.99,2,161.98,10,2024-04-30 12:33:33,Credit Card,Refunded,TX,Desktop,SES583232,48.59,2.81
+TXN000220,116,101,Wireless Bluetooth Headphones,Electronics,79.99,1,79.99,0,2025-05-28 12:33:33,PayPal,Completed,TX,Tablet,SES188150,24.0,5.32
+TXN000221,111,107,LED Desk Lamp,Electronics,42.99,1,42.99,0,2025-04-29 12:33:33,Google Pay,Completed,CA,Mobile,SES487743,12.9,1.47
+TXN000222,50,113,Air Purifier HEPA,Home & Kitchen,179.99,1,179.99,10,2025-02-06 12:33:33,PayPal,Completed,MA,Desktop,SES389329,54.0,7.94
+TXN000223,13,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2024-03-22 12:33:33,Debit Card,Completed,CA,Desktop,SES137421,30.0,8.63
+TXN000224,71,108,Coffee Maker 12-Cup,Home & Kitchen,89.99,2,179.98,0,2024-03-14 12:33:33,Debit Card,Pending,MA,Desktop,SES206225,53.99,3.3
+TXN000225,53,109,Wireless Mouse,Electronics,29.99,2,59.98,0,2024-05-25 12:33:33,PayPal,Refunded,CA,Mobile,SES401967,17.99,11.01
+TXN000226,123,104,Python Programming Book,Books,45.0,1,45.0,0,2025-11-18 12:33:33,PayPal,Cancelled,CA,Desktop,SES814544,13.5,1.04
+TXN000227,37,106,Yoga Mat Premium,Sports,35.99,1,35.99,0,2025-03-12 12:33:33,Credit Card,Refunded,GA,Mobile,SES121838,10.8,2.66
+TXN000228,3,109,Wireless Mouse,Electronics,25.49,1,25.49,15,2024-05-24 12:33:33,Google Pay,Completed,GA,Mobile,SES612027,7.65,13.1
+TXN000229,146,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2023-12-19 12:33:33,PayPal,Cancelled,CA,Mobile,SES275431,30.0,11.32
+TXN000230,116,104,Python Programming Book,Books,45.0,3,135.0,0,2024-11-09 12:33:33,Apple Pay,Refunded,FL,Tablet,SES369840,40.5,9.95
+TXN000231,91,109,Wireless Mouse,Electronics,29.99,1,29.99,0,2023-12-15 12:33:33,PayPal,Refunded,TX,Mobile,SES912149,9.0,9.96
+TXN000232,133,120,Data Science Handbook,Books,59.99,1,59.99,0,2024-09-03 12:33:33,Credit Card,Completed,WA,Mobile,SES791396,18.0,14.91
+TXN000233,148,112,Mechanical Keyboard,Electronics,119.99,1,119.99,0,2024-08-08 12:33:33,Apple Pay,Completed,TX,Mobile,SES303258,36.0,13.81
+TXN000234,140,113,Air Purifier HEPA,Home & Kitchen,179.99,1,179.99,10,2024-09-07 12:33:33,Apple Pay,Pending,PA,Desktop,SES812052,54.0,5.23
+TXN000235,71,111,Organic Protein Powder,Health,54.99,1,54.99,0,2025-02-01 12:33:33,PayPal,Completed,CA,Mobile,SES835928,16.5,5.15
+TXN000236,146,120,Data Science Handbook,Books,59.99,1,59.99,0,2025-03-11 12:33:33,PayPal,Completed,TX,Tablet,SES623162,18.0,13.91
+TXN000237,134,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2024-05-03 12:33:33,PayPal,Pending,MI,Mobile,SES418395,7.5,7.3
+TXN000238,117,103,Running Shoes - Nike Air,Sports,116.99,1,116.99,10,2023-12-17 12:33:33,Credit Card,Completed,CA,Mobile,SES229431,35.1,0.8
+TXN000239,1,110,Fitness Tracker Watch,Electronics,149.99,3,449.97,0,2024-11-26 12:33:33,Credit Card,Completed,AZ,Desktop,SES397025,134.99,11.78
+TXN000240,40,117,Portable Charger 20000mAh,Electronics,35.99,1,35.99,10,2025-06-28 12:33:33,Credit Card,Refunded,TX,Desktop,SES868661,10.8,2.95
+TXN000241,57,119,Instant Pot 6-Quart,Home & Kitchen,71.99,1,71.99,20,2024-09-24 12:33:33,Credit Card,Completed,FL,Desktop,SES811459,21.6,9.56
+TXN000242,67,114,Resistance Bands Set,Sports,19.99,2,39.98,0,2024-03-11 12:33:33,PayPal,Pending,CA,Desktop,SES556986,11.99,10.18
+TXN000243,52,111,Organic Protein Powder,Health,46.74,1,46.74,15,2024-04-22 12:33:33,PayPal,Completed,WA,Mobile,SES415686,14.02,4.57
+TXN000244,119,110,Fitness Tracker Watch,Electronics,149.99,2,299.98,0,2025-09-05 12:33:33,Google Pay,Completed,MA,Mobile,SES974357,89.99,6.55
+TXN000245,81,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2025-11-11 12:33:33,Google Pay,Refunded,FL,Mobile,SES548443,7.5,7.0
+TXN000246,7,114,Resistance Bands Set,Sports,19.99,1,19.99,0,2025-06-26 12:33:33,Apple Pay,Completed,AZ,Mobile,SES417078,6.0,11.8
+TXN000247,140,119,Instant Pot 6-Quart,Home & Kitchen,89.99,1,89.99,0,2024-04-10 12:33:33,Google Pay,Completed,CA,Mobile,SES511733,27.0,1.89
+TXN000248,118,101,Wireless Bluetooth Headphones,Electronics,79.99,1,79.99,0,2025-05-15 12:33:33,Credit Card,Completed,CA,Desktop,SES781448,24.0,1.61
+TXN000249,145,120,Data Science Handbook,Books,59.99,1,59.99,0,2024-09-24 12:33:33,Apple Pay,Refunded,TX,Mobile,SES227341,18.0,11.11
+TXN000250,53,117,Portable Charger 20000mAh,Electronics,35.99,1,35.99,10,2024-01-25 12:33:33,Google Pay,Completed,MI,Mobile,SES619364,10.8,2.05
+TXN000251,2,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2024-10-15 12:33:33,Apple Pay,Pending,TX,Desktop,SES100037,7.5,2.3
+TXN000252,53,104,Python Programming Book,Books,45.0,1,45.0,0,2024-08-11 12:33:33,Credit Card,Completed,NY,Mobile,SES565374,13.5,5.86
+TXN000253,48,104,Python Programming Book,Books,45.0,1,45.0,0,2025-04-10 12:33:33,Debit Card,Cancelled,MI,Desktop,SES742525,13.5,10.22
+TXN000254,6,120,Data Science Handbook,Books,59.99,2,119.98,0,2024-04-29 12:33:33,Debit Card,Completed,CA,Desktop,SES877691,35.99,10.49
+TXN000255,75,107,LED Desk Lamp,Electronics,42.99,3,128.97,0,2024-09-23 12:33:33,Credit Card,Pending,GA,Desktop,SES388548,38.69,5.87
+TXN000256,38,104,Python Programming Book,Books,45.0,3,135.0,0,2025-02-09 12:33:33,Credit Card,Completed,CO,Desktop,SES508346,40.5,0.17
+TXN000257,114,110,Fitness Tracker Watch,Electronics,149.99,1,149.99,0,2025-09-28 12:33:33,Credit Card,Completed,AZ,Mobile,SES858188,45.0,6.88
+TXN000258,129,101,Wireless Bluetooth Headphones,Electronics,59.99,1,59.99,25,2024-12-02 12:33:33,Google Pay,Completed,FL,Tablet,SES650560,18.0,5.86
+TXN000259,91,103,Running Shoes - Nike Air,Sports,129.99,1,129.99,0,2024-05-05 12:33:33,Google Pay,Completed,CO,Mobile,SES924911,39.0,2.1
+TXN000260,124,110,Fitness Tracker Watch,Electronics,119.99,1,119.99,20,2024-02-09 12:33:33,Apple Pay,Completed,PA,Mobile,SES631607,36.0,11.63
+TXN000261,83,117,Portable Charger 20000mAh,Electronics,39.99,1,39.99,0,2025-11-15 12:33:33,Google Pay,Pending,FL,Mobile,SES970198,12.0,6.06
+TXN000262,60,102,Organic Green Tea (50 bags),Groceries,12.49,1,12.49,0,2024-05-12 12:33:33,Credit Card,Refunded,TX,Mobile,SES812321,3.75,7.15
+TXN000263,27,108,Coffee Maker 12-Cup,Home & Kitchen,67.49,1,67.49,25,2024-07-31 12:33:33,Debit Card,Refunded,MA,Mobile,SES540460,20.25,13.84
+TXN000264,10,102,Organic Green Tea (50 bags),Groceries,11.24,1,11.24,10,2024-03-28 12:33:33,Credit Card,Completed,FL,Mobile,SES981516,3.37,0.44
+TXN000265,116,106,Yoga Mat Premium,Sports,35.99,1,35.99,0,2025-11-16 12:33:33,Apple Pay,Completed,MI,Desktop,SES364760,10.8,7.37
+TXN000266,112,110,Fitness Tracker Watch,Electronics,149.99,1,149.99,0,2024-05-15 12:33:33,Google Pay,Cancelled,TX,Desktop,SES125420,45.0,9.44
+TXN000267,2,104,Python Programming Book,Books,45.0,1,45.0,0,2024-04-23 12:33:33,PayPal,Cancelled,WA,Mobile,SES175460,13.5,5.11
+TXN000268,147,117,Portable Charger 20000mAh,Electronics,39.99,3,119.97,0,2024-07-01 12:33:33,Apple Pay,Pending,FL,Desktop,SES685836,35.99,12.8
+TXN000269,97,103,Running Shoes - Nike Air,Sports,129.99,1,129.99,0,2025-09-02 12:33:33,Credit Card,Pending,IL,Desktop,SES642372,39.0,4.47
+TXN000270,154,104,Python Programming Book,Books,45.0,1,45.0,0,2024-01-23 12:33:33,Google Pay,Completed,NY,Desktop,SES403978,13.5,13.83
+TXN000271,18,109,Wireless Mouse,Electronics,29.99,1,29.99,0,2024-12-02 12:33:33,Debit Card,Completed,IL,Mobile,SES353124,9.0,12.8
+TXN000272,15,120,Data Science Handbook,Books,59.99,1,59.99,0,2025-01-13 12:33:33,Google Pay,Refunded,TX,Mobile,SES375831,18.0,9.8
+TXN000273,52,102,Organic Green Tea (50 bags),Groceries,12.49,1,12.49,0,2024-08-25 12:33:33,PayPal,Cancelled,CA,Desktop,SES673662,3.75,12.25
+TXN000274,16,111,Organic Protein Powder,Health,43.99,1,43.99,20,2025-10-11 12:33:33,Debit Card,Completed,IL,Mobile,SES691246,13.2,13.56
+TXN000275,107,102,Organic Green Tea (50 bags),Groceries,12.49,1,12.49,0,2024-02-12 12:33:33,Google Pay,Refunded,IL,Mobile,SES602028,3.75,14.2
+TXN000276,10,109,Wireless Mouse,Electronics,26.99,1,26.99,10,2024-03-17 12:33:33,Apple Pay,Pending,CA,Mobile,SES552476,8.1,7.16
+TXN000277,7,108,Coffee Maker 12-Cup,Home & Kitchen,89.99,1,89.99,0,2024-01-27 12:33:33,Debit Card,Pending,MA,Mobile,SES873768,27.0,0.27
+TXN000278,33,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2024-12-22 12:33:33,Apple Pay,Refunded,WA,Mobile,SES221197,30.0,6.57
+TXN000279,91,120,Data Science Handbook,Books,44.99,3,134.97,25,2024-12-12 12:33:33,Debit Card,Completed,WA,Tablet,SES349739,40.49,3.48
+TXN000280,138,119,Instant Pot 6-Quart,Home & Kitchen,89.99,1,89.99,0,2025-01-27 12:33:33,Google Pay,Completed,NY,Mobile,SES362062,27.0,12.19
+TXN000281,47,103,Running Shoes - Nike Air,Sports,129.99,1,129.99,0,2025-02-23 12:33:33,PayPal,Completed,TX,Desktop,SES787036,39.0,13.36
+TXN000282,123,110,Fitness Tracker Watch,Electronics,149.99,2,299.98,0,2025-01-12 12:33:33,Credit Card,Refunded,IL,Desktop,SES670054,89.99,3.09
+TXN000283,114,112,Mechanical Keyboard,Electronics,101.99,1,101.99,15,2024-07-14 12:33:33,PayPal,Completed,MI,Desktop,SES785395,30.6,3.66
+TXN000284,129,109,Wireless Mouse,Electronics,29.99,1,29.99,0,2025-06-08 12:33:33,Credit Card,Completed,FL,Tablet,SES839772,9.0,14.26
+TXN000285,36,116,Smart Home Speaker,Electronics,99.99,1,99.99,0,2024-06-27 12:33:33,Google Pay,Completed,CA,Mobile,SES321007,30.0,1.84
+TXN000286,113,105,Stainless Steel Water Bottle,Home & Kitchen,24.99,1,24.99,0,2024-07-29 12:33:33,Apple Pay,Completed,NY,Mobile,SES135395,7.5,4.05
+TXN000287,16,119,Instant Pot 6-Quart,Home & Kitchen,89.99,3,269.97,0,2024-02-26 12:33:33,PayPal,Cancelled,MA,Mobile,SES501172,80.99,5.77
+TXN000288,48,102,Organic Green Tea (50 bags),Groceries,12.49,1,12.49,0,2024-12-24 12:33:33,Apple Pay,Pending,CA,Mobile,SES132826,3.75,8.12
+TXN000289,87,112,Mechanical Keyboard,Electronics,95.99,2,191.98,20,2025-08-16 12:33:33,PayPal,Cancelled,TX,Mobile,SES457506,57.59,10.89
+TXN000290,15,120,Data Science Handbook,Books,59.99,1,59.99,0,2025-02-11 12:33:33,Credit Card,Pending,MA,Tablet,SES810902,18.0,4.31
+TXN000291,146,118,Hiking Backpack 40L,Sports,79.99,1,79.99,0,2025-07-10 12:33:33,Google Pay,Completed,PA,Tablet,SES590033,24.0,11.18
+TXN000292,72,108,Coffee Maker 12-Cup,Home & Kitchen,89.99,1,89.99,0,2023-12-17 12:33:33,PayPal,Completed,CA,Mobile,SES410194,27.0,5.06
+TXN000293,93,113,Air Purifier HEPA,Home & Kitchen,199.99,1,199.99,0,2024-09-07 12:33:33,PayPal,Refunded,TX,Mobile,SES949618,60.0,11.57
+TXN000294,83,101,Wireless Bluetooth Headphones,Electronics,79.99,1,79.99,0,2025-07-06 12:33:33,PayPal,Cancelled,PA,Mobile,SES118105,24.0,6.6
+TXN000295,123,115,Noise Cancelling Earbuds,Electronics,199.99,2,399.98,0,2024-12-03 12:33:33,Google Pay,Completed,WA,Desktop,SES183410,119.99,4.15
+TXN000296,113,120,Data Science Handbook,Books,59.99,1,59.99,0,2024-02-05 12:33:33,Debit Card,Completed,TX,Desktop,SES618970,18.0,1.91
+TXN000297,13,106,Yoga Mat Premium,Sports,35.99,3,107.97,0,2025-08-25 12:33:33,Debit Card,Completed,CA,Desktop,SES631333,32.39,12.91
+TXN000298,59,119,Instant Pot 6-Quart,Home & Kitchen,89.99,1,89.99,0,2025-06-20 12:33:33,Credit Card,Refunded,TX,Tablet,SES116901,27.0,10.18
+TXN000299,154,112,Mechanical Keyboard,Electronics,119.99,2,239.98,0,2024-01-16 12:33:33,Debit Card,Completed,TX,Desktop,SES565371,71.99,1.7
+TXN000300,147,103,Running Shoes - Nike Air,Sports,129.99,1,129.99,0,2024-10-30 12:33:33,PayPal,Cancelled,WA,Desktop,SES547191,39.0,13.14

@@ -1,0 +1,28 @@
+# DataDojo Web Dashboard Requirements
+# Core dependencies for the Streamlit web interface
+
+# Web Framework
+streamlit>=1.28.0
+streamlit-option-menu>=0.3.6
+streamlit-aggrid>=0.3.4
+
+# Data Processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Visualization
+plotly>=5.15.0
+altair>=5.0.0
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# Machine Learning (optional for enhanced profiling)
+scikit-learn>=1.3.0
+
+# File Handling
+openpyxl>=3.1.0  # for Excel files
+xlsxwriter>=3.1.0  # for Excel export
+
+# Utilities
+python-dateutil>=2.8.0
+pytz>=2023.3

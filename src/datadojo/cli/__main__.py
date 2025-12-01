@@ -15,6 +15,7 @@ from .complete_step import complete_step
 from .doctor import doctor
 from .interactive_session import start_interactive_session
 from .practice import practice
+from .web_launch import launch_web_dashboard, check_web_status
 
 
 def main():
@@ -220,6 +221,32 @@ def main():
         help="Project identifier"
     )
 
+    # web command
+    web_parser = subparsers.add_parser(
+        "web",
+        help="Launch interactive web dashboard"
+    )
+    web_parser.add_argument(
+        "--port",
+        type=int,
+        help="Port to run web server on (auto-detected if not specified)"
+    )
+    web_parser.add_argument(
+        "--no-browser",
+        action="store_true",
+        help="Don't automatically open browser"
+    )
+    web_parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Enable debug mode"
+    )
+    web_parser.add_argument(
+        "--status",
+        action="store_true",
+        help="Check if web dashboard is running"
+    )
+
     # Parse arguments
     args = parser.parse_args()
 
@@ -326,6 +353,16 @@ def main():
                     project_id=args.project,
                     concept_id=args.concept_id
                 )
+
+            elif args.command == "web":
+                if args.status:
+                    result = check_web_status(args.port or 8501)
+                else:
+                    result = launch_web_dashboard(
+                        port=args.port,
+                        auto_open=not args.no_browser,
+                        debug=args.debug
+                    )
 
             else:
                 print(f"Error: Unknown command: {args.command}", file=sys.stderr)

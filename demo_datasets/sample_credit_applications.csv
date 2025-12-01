@@ -1,0 +1,101 @@
+application_id,customer_id,application_date,first_name,last_name,age,gender,marital_status,dependents,education,employment_status,employer,years_employed,annual_income,monthly_expenses,existing_debt,credit_score,credit_history_years,num_credit_accounts,num_late_payments,bankruptcies,loan_purpose,loan_amount_requested,loan_term_months,property_ownership,state,debt_to_income_ratio,approved,approval_score,interest_rate_offered,rejection_reason
+APP00001,CUST10001,2025-05-21,Lisa,Smith,24,Other,Married,2,Bachelor's,Full-time,Healthcare Corp,2,42777.63,1498.52,13489.38,674,6,3,0,0,Business,35480.22,84,Rent,MA,22.36,True,61,9.12,
+APP00002,CUST10002,2025-05-19,Jeffrey,Young,45,Other,Married,0,Bachelor's,Self-employed,,20,36146.51,1526.72,9144.12,666,5,3,0,0,Vacation,37789.9,60,Rent,MA,29.34,True,54,13.66,
+APP00003,CUST10003,2025-07-02,Betty,Garcia,57,Male,Married,0,Bachelor's,Full-time,Finance Corp,0,77607.96,5150.65,37001.91,697,6,3,0,0,Home Purchase,130809.39,180,Rent,TX,27.13,True,66,11.09,
+APP00004,CUST10004,2025-10-12,Kimberly,Walker,68,Other,Widowed,1,Master's,Full-time,Healthcare Corp,18,82781.46,4300.69,4728.35,649,24,5,1,0,Debt Consolidation,46616.98,48,Own,TX,15.98,True,64,20.49,
+APP00005,CUST10005,2024-12-12,Dorothy,King,27,Female,Married,2,Some College,Part-time,Manufacturing Corp,4,31707.17,1584.17,12338.78,599,9,1,2,0,Vacation,35717.06,60,Other,CA,35.5,False,27,,Low credit score
+APP00006,CUST10006,2025-08-16,Joshua,Taylor,24,Female,Married,1,Some College,Self-employed,,4,124352.39,5517.98,28871.37,610,3,2,3,0,Home Improvement,44633.58,24,Own,MI,25.69,True,54,21.41,
+APP00007,CUST10007,2025-06-08,Kathleen,Jones,67,Male,Single,0,Bachelor's,Full-time,Retail Corp,29,112251.46,7327.3,8645.94,813,19,4,1,0,Medical,23266.61,48,Own,TX,7.75,True,95,5.95,
+APP00008,CUST10008,2024-12-05,Sharon,Thomas,36,Male,Married,1,Bachelor's,Full-time,Tech Corp,4,132407.66,8791.15,39288.4,775,1,4,1,0,Education,52858.6,120,Rent,IL,13.88,True,82,3.75,
+APP00009,CUST10009,2025-01-21,Robert,Rodriguez,36,Male,Widowed,0,High School,Student,,0,9169.17,317.72,185.35,577,1,3,2,0,Education,141560.19,60,Rent,TX,309.45,False,-1,,High DTI ratio
+APP00010,CUST10010,2025-01-03,Lisa,Sanchez,70,Female,Married,2,Some College,Student,,0,2688.46,147.28,1118.13,622,23,6,1,0,Business,132701.14,60,Rent,AZ,1001.05,False,9,,Employment status
+APP00011,CUST10011,2025-07-03,Mark,Jackson,20,Male,Married,2,Master's,Full-time,Government Corp,1,33466.44,1350.42,6003.07,705,2,3,1,0,Debt Consolidation,36270.89,48,Own,MA,33.07,True,76,6.92,
+APP00012,CUST10012,2025-05-20,Karen,Williams,23,Other,Single,2,Some College,Full-time,Retail Corp,3,46878.54,2203.1,2955.92,633,5,6,3,0,Debt Consolidation,9845.35,48,Rent,CA,7.35,False,42,,Too many recent inquiries
+APP00013,CUST10013,2025-06-18,Joshua,Wilson,75,Male,Married,0,Bachelor's,Full-time,Retail Corp,25,52368.53,2983.51,1729.61,719,11,4,0,0,Debt Consolidation,22585.74,36,Rent,TX,15.48,True,71,8.52,
+APP00014,CUST10014,2025-02-14,Dorothy,Ramirez,60,Male,Divorced,2,Some College,Full-time,Manufacturing Corp,15,114084.53,7442.35,54434.84,745,7,3,1,0,Debt Consolidation,5334.74,24,Rent,TX,18.24,True,83,6.28,
+APP00015,CUST10015,2025-03-14,Rebecca,Williams,67,Male,Single,1,Bachelor's,Full-time,Government Corp,23,75250.93,3775.04,12686.55,612,17,3,1,0,Education,165036.51,120,Own,FL,27.55,True,53,17.86,
+APP00016,CUST10016,2024-12-23,Betty,Ramirez,67,Female,Single,1,Some College,Retired,,20,52011.18,3406.88,14228.26,719,3,4,0,0,Personal,48386.41,60,Rent,CO,27.72,True,72,8.99,
+APP00017,CUST10017,2025-03-28,Rebecca,Robinson,74,Other,Divorced,4,Some College,Part-time,Healthcare Corp,0,19618.9,1001.05,4407.1,590,2,2,2,0,Education,171090.38,84,Own,CA,132.07,False,4,,Employment status
+APP00018,CUST10018,2025-08-12,Donald,Sanchez,18,Other,Single,0,Bachelor's,Full-time,Healthcare Corp,0,48965.94,3028.11,400.14,764,0,4,0,0,Business,118670.09,180,Rent,CA,16.43,True,90,5.47,
+APP00019,CUST10019,2025-02-05,Kevin,Lopez,52,Other,Married,1,High School,Part-time,Healthcare Corp,21,15284.23,640.46,7233.86,664,6,3,0,0,Medical,8585.46,24,Rent,TX,43.86,False,20,,High DTI ratio
+APP00020,CUST10020,2024-12-02,Christopher,White,24,Male,Single,1,Bachelor's,Self-employed,,6,79092.35,5126.14,3014.44,660,6,4,1,0,Vacation,36120.09,12,Own,TX,46.94,False,44,,Employment status
+APP00021,CUST10021,2025-01-17,Carol,Davis,50,Female,Single,3,Master's,Self-employed,,17,162521.38,10536.48,54282.01,752,24,2,2,0,Personal,27985.08,48,Own,FL,15.44,True,88,5.46,
+APP00022,CUST10022,2025-01-23,Barbara,Jones,28,Other,Married,0,Some College,Full-time,Finance Corp,3,46413.59,2508.0,691.31,669,10,3,2,0,Vacation,13737.67,36,Rent,WA,10.36,True,62,12.96,
+APP00023,CUST10023,2024-12-19,William,Anderson,71,Female,Single,3,Bachelor's,Part-time,Tech Corp,21,33257.66,2143.92,6439.94,626,21,7,1,0,Personal,30085.6,48,Own,CA,29.07,True,50,16.95,
+APP00024,CUST10024,2025-05-24,James,Lee,73,Male,Married,1,High School,Full-time,Government Corp,10,59385.57,2466.56,17604.42,709,18,4,0,0,Auto Loan,53652.15,36,Rent,MI,40.0,True,75,7.48,
+APP00025,CUST10025,2025-01-08,Donna,Williams,72,Other,Single,0,Bachelor's,Full-time,Government Corp,9,115733.4,5427.4,57825.08,691,1,3,0,0,Debt Consolidation,36315.8,48,Other,WA,24.5,True,68,10.7,
+APP00026,CUST10026,2025-05-20,Dorothy,Lopez,63,Female,Divorced,2,High School,Full-time,Finance Corp,18,59619.73,3577.92,10807.03,610,8,1,1,0,Vacation,32130.79,12,Own,TX,59.94,False,28,,Insufficient income
+APP00027,CUST10027,2025-07-04,David,Scott,54,Male,Married,2,Some College,Unemployed,,0,8190.97,287.24,3666.79,636,3,3,1,0,Vacation,34605.49,12,Own,CA,437.41,False,1,,Incomplete application
+APP00028,CUST10028,2025-01-11,James,Miller,75,Female,Single,2,Bachelor's,Full-time,Manufacturing Corp,22,82845.62,5154.91,10947.31,580,21,4,1,0,Education,96048.02,60,Rent,CA,27.59,True,58,21.52,
+APP00029,CUST10029,2025-08-10,Jacob,Wilson,64,Other,Single,2,Some College,Self-employed,,19,58792.83,3266.69,155.4,610,7,4,1,0,Vacation,15736.39,48,Rent,TX,6.78,True,66,21.0,
+APP00030,CUST10030,2024-12-01,Donna,Thompson,26,Male,Married,0,High School,Full-time,Healthcare Corp,2,63630.81,3344.05,22490.45,593,8,4,4,0,Business,72138.04,60,Rent,GA,34.46,False,48,,Too many recent inquiries
+APP00031,CUST10031,2025-09-21,Ashley,Rodriguez,63,Male,Married,3,Bachelor's,Full-time,Government Corp,0,119870.15,5647.31,7969.09,758,11,5,0,0,Home Purchase,611876.74,360,Own,TX,19.23,True,86,4.19,
+APP00032,CUST10032,2025-07-16,Charles,Martinez,64,Other,Single,1,Bachelor's,Part-time,Finance Corp,12,17464.88,787.77,3307.19,618,22,4,2,0,Education,81894.53,180,Rent,TX,37.57,False,36,,Too many recent inquiries
+APP00033,CUST10033,2025-08-26,Ashley,Young,49,Female,Single,0,High School,Retired,,9,37498.03,1425.8,2973.69,658,9,1,1,0,Business,25535.04,180,Own,CO,7.18,False,36,,Low credit score
+APP00034,CUST10034,2025-03-23,Jacob,King,22,Female,Divorced,1,High School,Full-time,Finance Corp,3,33696.07,1555.17,14143.39,664,4,4,1,0,Home Improvement,25220.44,36,Rent,GA,38.94,True,52,10.35,
+APP00035,CUST10035,2025-04-03,Charles,Davis,35,Female,Single,2,Some College,Self-employed,,17,118744.8,7345.75,44315.73,800,17,3,0,0,Auto Loan,32667.79,60,Rent,TX,17.94,True,80,3.66,
+APP00036,CUST10036,2025-01-25,Nancy,Young,51,Other,Single,0,Bachelor's,Full-time,Healthcare Corp,22,117103.51,7044.14,33254.53,696,19,3,0,0,Education,159486.3,180,Own,PA,18.55,True,60,11.41,
+APP00037,CUST10037,2025-08-30,Stephanie,Hill,54,Female,Married,0,Some College,Full-time,Manufacturing Corp,0,56726.3,3195.07,9209.94,692,4,6,0,0,Personal,33107.87,24,Rent,CA,34.59,True,70,10.78,
+APP00038,CUST10038,2025-02-08,Sarah,Anderson,44,Male,Married,3,Some College,Unemployed,,0,3074.39,112.41,157.74,493,9,3,2,1,Medical,29074.13,12,Rent,CO,947.4,False,7,,Low credit score
+APP00039,CUST10039,2025-10-19,Emily,Nguyen,74,Male,Single,0,Bachelor's,Full-time,Manufacturing Corp,5,64635.91,3570.7,3022.06,700,23,6,0,0,Education,186624.25,60,Rent,MI,59.3,True,53,8.37,
+APP00040,CUST10040,2025-06-01,Gary,Wilson,68,Female,Married,0,High School,Full-time,Government Corp,3,73152.09,4829.76,33825.93,605,19,6,1,0,Auto Loan,47740.53,48,Own,FL,31.73,True,58,14.0,
+APP00041,CUST10041,2025-05-01,Emily,Gonzalez,29,Female,Single,1,Some College,Self-employed,,9,69817.32,2640.29,28879.15,670,4,3,1,0,Home Purchase,612708.16,240,Rent,AZ,57.67,False,41,,Too many recent inquiries
+APP00042,CUST10042,2025-02-26,Anthony,White,58,Female,Single,1,High School,Self-employed,,26,159385.74,10056.71,66433.54,744,4,7,1,0,Medical,11926.83,12,Own,NY,21.38,True,75,7.42,
+APP00043,CUST10043,2025-11-12,Christopher,Wilson,22,Other,Divorced,4,Master's,Full-time,Manufacturing Corp,2,27710.99,1742.46,3687.5,593,4,2,4,0,Home Improvement,36485.94,24,Rent,MI,70.27,False,21,,Incomplete application
+APP00044,CUST10044,2025-06-11,Margaret,Lewis,45,Other,Married,0,High School,Full-time,Manufacturing Corp,3,135302.1,8102.8,41015.57,789,5,6,0,0,Personal,17562.89,36,Rent,CA,14.43,True,80,3.99,
+APP00045,CUST10045,2024-12-26,Sandra,Wright,72,Other,Divorced,0,Bachelor's,Full-time,Tech Corp,7,83552.52,4286.25,22518.46,667,3,1,1,0,Debt Consolidation,7377.43,24,Own,CA,13.4,True,67,12.99,
+APP00046,CUST10046,2025-03-23,Barbara,Taylor,34,Other,Married,2,Bachelor's,Full-time,Manufacturing Corp,14,45447.2,1623.12,19320.63,600,16,3,1,0,Debt Consolidation,6980.84,48,Rent,AZ,18.01,False,46,,Low credit score
+APP00047,CUST10047,2025-01-12,Dorothy,Robinson,28,Female,Single,0,Bachelor's,Part-time,Government Corp,9,34855.04,1256.02,13594.29,542,10,4,3,0,Education,30243.02,60,Own,NY,30.35,False,20,,Low credit score
+APP00048,CUST10048,2025-10-27,Jeffrey,Wright,59,Female,Married,0,Some College,Full-time,Tech Corp,17,105122.6,6352.09,16443.49,755,20,3,0,0,Home Purchase,603457.79,300,Rent,FL,28.18,True,83,5.49,
+APP00049,CUST10049,2024-12-21,Kathleen,Jackson,49,Other,Married,2,High School,Full-time,Manufacturing Corp,1,129118.84,4315.99,32371.09,627,9,3,2,0,Debt Consolidation,12907.62,36,Rent,GA,11.69,True,51,16.51,
+APP00050,CUST10050,2025-02-15,Timothy,Thompson,58,Female,Married,2,Doctorate,Full-time,Healthcare Corp,21,75302.67,2633.08,15255.69,744,10,2,0,0,Vacation,17378.57,24,Rent,WA,18.29,True,88,6.37,
+APP00051,CUST10051,2024-12-09,Timothy,Williams,53,Other,Married,1,Doctorate,Self-employed,,27,136252.87,8741.27,27944.34,677,6,1,0,0,Home Purchase,384712.33,240,Own,FL,20.95,True,79,11.79,
+APP00052,CUST10052,2025-04-13,Linda,Moore,69,Other,Married,4,Doctorate,Full-time,Government Corp,5,58568.73,3021.13,3639.01,713,16,4,0,0,Medical,16376.68,60,Rent,NY,7.66,True,87,8.75,
+APP00053,CUST10053,2025-11-22,Ashley,King,30,Female,Married,1,Some College,Full-time,Finance Corp,8,70554.11,3695.67,9447.18,730,12,8,0,0,Vacation,34148.42,48,Rent,AZ,16.56,True,74,8.02,
+APP00054,CUST10054,2025-05-08,Michelle,Clark,37,Female,Single,1,Master's,Full-time,Retail Corp,9,81844.46,5307.48,15069.88,628,19,7,1,0,Medical,39041.58,24,Own,TX,29.99,True,66,17.45,
+APP00055,CUST10055,2025-04-30,Amanda,White,66,Male,Widowed,1,Master's,Full-time,Tech Corp,21,111142.69,4018.2,40073.84,735,13,2,0,0,Debt Consolidation,23147.56,24,Own,PA,22.43,True,81,7.02,
+APP00056,CUST10056,2025-11-23,Emily,Jackson,50,Other,Married,0,Master's,Full-time,Healthcare Corp,10,107030.54,6156.02,41315.76,823,5,6,0,0,Vacation,46232.35,12,Rent,MI,56.06,True,58,4.42,
+APP00057,CUST10057,2025-04-11,Linda,Perez,20,Other,Single,0,Bachelor's,Full-time,Retail Corp,2,40977.03,1668.97,4280.81,711,2,1,1,0,Business,66792.99,84,Rent,FL,26.77,True,71,6.58,
+APP00058,CUST10058,2025-08-10,Barbara,Miller,63,Male,Single,2,Bachelor's,Full-time,Finance Corp,1,86834.8,5448.54,10467.78,733,2,2,1,0,Auto Loan,50384.56,48,Rent,TX,18.52,True,72,7.89,
+APP00059,CUST10059,2025-08-26,David,Flores,66,Male,Single,2,High School,Full-time,Tech Corp,25,103087.88,3537.28,23798.51,694,4,6,0,0,Education,198498.84,60,Own,MI,46.21,True,56,13.29,
+APP00060,CUST10060,2025-04-25,Rebecca,Davis,53,Other,Single,1,Bachelor's,Full-time,Retail Corp,29,91803.77,3069.53,15324.43,692,20,5,0,0,Home Purchase,271070.09,360,Rent,TX,15.41,True,80,12.51,
+APP00061,CUST10061,2025-01-25,Ronald,White,57,Other,Single,1,Some College,Self-employed,,16,52767.47,2598.53,21331.61,682,1,10,0,0,Home Purchase,153376.36,180,Rent,CA,32.85,True,76,12.2,
+APP00062,CUST10062,2025-05-22,Edward,Gonzalez,28,Female,Single,3,Some College,Self-employed,,0,56805.28,3210.29,4200.25,630,10,2,2,0,Home Improvement,32295.58,60,Own,TX,13.84,True,57,17.61,
+APP00063,CUST10063,2025-01-29,Edward,Williams,71,Other,Single,2,Bachelor's,Full-time,Tech Corp,30,51487.79,1788.61,11035.62,719,7,6,0,0,Education,66588.51,180,Rent,TX,15.77,True,71,7.56,
+APP00064,CUST10064,2025-01-21,Linda,King,74,Male,Married,0,Some College,Full-time,Healthcare Corp,11,77341.28,2712.24,14937.85,733,14,3,0,0,Auto Loan,68181.2,36,Rent,TX,35.82,True,84,6.22,
+APP00065,CUST10065,2025-04-15,Nancy,Ramirez,54,Female,Married,2,High School,Full-time,Finance Corp,9,93846.48,5932.23,30225.65,655,1,4,1,0,Personal,24101.31,60,Rent,FL,15.87,True,64,12.11,
+APP00066,CUST10066,2025-10-11,Laura,Gonzalez,39,Other,Single,1,High School,Full-time,Healthcare Corp,14,102919.82,5801.62,7024.03,755,1,3,0,0,Vacation,38149.62,60,Rent,FL,9.69,True,81,4.03,
+APP00067,CUST10067,2025-04-10,Michael,Allen,41,Other,Married,3,Some College,Student,,0,14521.09,773.42,4168.19,550,19,2,3,0,Auto Loan,67213.62,60,Rent,CO,102.14,False,-10,,Too many recent inquiries
+APP00068,CUST10068,2025-06-06,Rebecca,Flores,54,Other,Single,1,Doctorate,Self-employed,,7,177828.6,6798.58,7971.58,584,19,3,4,0,Business,170299.38,180,Own,MI,7.88,True,56,16.36,
+APP00069,CUST10069,2025-07-09,John,Allen,74,Female,Married,0,Doctorate,Full-time,Tech Corp,13,93314.85,5045.9,5055.56,689,1,2,1,0,Home Improvement,47897.98,24,Other,AZ,27.47,True,67,10.47,
+APP00070,CUST10070,2025-05-08,Jacob,Martinez,43,Other,Divorced,1,Bachelor's,Part-time,Manufacturing Corp,19,24143.63,982.16,7749.33,678,22,3,0,0,Medical,48755.42,12,Rent,TX,212.64,False,20,,Insufficient income
+APP00071,CUST10071,2025-11-05,Ashley,King,26,Male,Widowed,3,Master's,Part-time,Manufacturing Corp,6,26223.07,1172.47,10856.53,670,8,5,0,0,Home Purchase,685179.87,300,Rent,WA,118.32,False,26,,High DTI ratio
+APP00072,CUST10072,2025-06-27,Stephanie,Nguyen,66,Other,Single,1,Master's,Full-time,Tech Corp,17,97358.79,4809.29,38145.22,727,14,2,0,0,Medical,34741.34,12,Own,FL,48.74,True,62,7.72,
+APP00073,CUST10073,2025-09-27,Charles,Gonzalez,69,Female,Married,1,Some College,Full-time,Tech Corp,27,90005.49,3088.55,34976.97,658,6,5,1,0,Auto Loan,31375.49,48,Rent,CA,21.67,True,72,11.71,
+APP00074,CUST10074,2025-06-17,Mark,Smith,18,Other,Single,1,High School,Part-time,Finance Corp,0,25277.97,1536.53,791.26,626,0,3,2,0,Medical,45830.26,48,Own,TX,46.37,False,11,,Low credit score
+APP00075,CUST10075,2025-07-21,Timothy,King,21,Female,Married,3,Master's,Part-time,Manufacturing Corp,1,20584.94,1284.39,8829.26,520,3,1,1,0,Business,135225.85,60,Rent,CA,145.68,False,5,,Too many recent inquiries
+APP00076,CUST10076,2024-12-30,Charles,Brown,64,Other,Divorced,1,Master's,Full-time,Government Corp,12,94625.2,5560.7,20848.28,708,14,4,0,0,Business,27943.13,180,Rent,PA,9.31,True,89,6.84,
+APP00077,CUST10077,2025-09-16,Sarah,Thompson,19,Other,Divorced,2,High School,Full-time,Healthcare Corp,0,27301.74,1271.6,12597.42,474,1,4,1,0,Personal,37624.47,48,Own,PA,49.83,False,11,,High DTI ratio
+APP00078,CUST10078,2025-01-10,Betty,Gonzalez,47,Female,Single,2,Master's,Full-time,Finance Corp,21,144351.75,5300.87,14624.17,773,20,6,0,0,Education,87628.81,84,Own,MI,12.05,True,92,3.77,
+APP00079,CUST10079,2025-06-11,Timothy,Davis,32,Male,Single,0,Some College,Self-employed,,14,70455.41,3917.03,4662.61,634,10,5,0,0,Vacation,49079.49,36,Own,FL,25.43,True,65,18.37,
+APP00080,CUST10080,2025-04-21,Michael,Hernandez,73,Female,Widowed,2,Some College,Full-time,Finance Corp,21,53344.99,2222.93,25954.43,657,4,6,0,0,Medical,18230.74,12,Own,WA,50.39,False,38,,Incomplete application
+APP00081,CUST10081,2025-09-28,Susan,Martinez,75,Other,Married,0,High School,Full-time,Finance Corp,8,105365.58,5336.5,3960.62,767,14,3,1,0,Vacation,12664.32,24,Own,GA,7.26,True,85,5.1,
+APP00082,CUST10082,2025-08-21,Carol,Young,68,Male,Married,0,Doctorate,Self-employed,,13,133103.99,4566.16,58215.24,833,8,4,3,0,Home Improvement,39104.53,24,Rent,TX,29.27,True,97,4.11,
+APP00083,CUST10083,2025-03-31,Laura,Johnson,49,Female,Married,1,Master's,Self-employed,,27,130063.97,7770.91,29496.8,719,12,3,0,0,Medical,23125.16,12,Rent,GA,25.34,True,71,7.21,
+APP00084,CUST10084,2025-11-13,Timothy,Wright,27,Other,Single,0,Bachelor's,Full-time,Manufacturing Corp,7,73627.23,4754.01,12070.84,658,9,6,0,0,Debt Consolidation,15075.87,36,Own,MA,12.29,True,65,9.43,
+APP00085,CUST10085,2025-10-01,Karen,Jones,51,Male,Married,2,Bachelor's,Part-time,Government Corp,8,33741.34,1389.27,5523.33,651,20,5,2,0,Auto Loan,78810.63,48,Rent,CO,63.85,False,27,,Insufficient income
+APP00086,CUST10086,2025-10-03,John,Hernandez,26,Other,Married,1,Bachelor's,Unemployed,,0,566.82,24.41,187.71,602,5,4,2,0,Education,164717.39,84,Own,WA,4162.45,False,17,,Incomplete application
+APP00087,CUST10087,2025-11-21,Carol,Flores,50,Other,Married,2,Some College,Full-time,Finance Corp,7,54621.21,3450.6,17098.24,691,13,6,0,0,Auto Loan,33431.79,72,Rent,CA,20.64,True,76,11.29,
+APP00088,CUST10088,2025-10-18,Kathleen,Gonzalez,52,Other,Widowed,1,Bachelor's,Self-employed,,17,141643.54,7046.63,19468.91,724,18,4,2,0,Home Purchase,753733.05,360,Own,IL,22.32,True,72,8.89,
+APP00089,CUST10089,2025-05-12,Sharon,Allen,49,Other,Married,2,Some College,Self-employed,,5,56165.6,3149.65,5508.54,599,8,4,2,0,Debt Consolidation,19405.23,60,Own,MI,10.18,False,41,,Too many recent inquiries
+APP00090,CUST10090,2024-12-16,Paul,Johnson,60,Other,Single,0,Some College,Unemployed,,0,5405.36,277.79,896.96,618,25,3,3,0,Medical,22142.26,60,Rent,CA,87.46,False,14,,Insufficient income
+APP00091,CUST10091,2025-03-06,Paul,Taylor,29,Other,Single,1,Doctorate,Retired,,10,35726.93,1825.29,14763.59,624,11,3,2,0,Medical,13824.83,36,Rent,CA,26.67,False,44,,Employment status
+APP00092,CUST10092,2025-08-30,Mark,Gonzalez,52,Female,Married,1,Master's,Retired,,5,56950.85,3633.38,7424.35,648,11,4,0,0,Auto Loan,37112.09,48,Own,PA,20.64,False,45,,Incomplete application
+APP00093,CUST10093,2025-06-08,Lisa,Sanchez,55,Female,Single,5,Bachelor's,Full-time,Manufacturing Corp,8,98621.84,6431.0,5040.6,751,18,4,0,0,Education,117704.66,120,Own,MA,13.64,True,96,3.77,
+APP00094,CUST10094,2025-09-22,Dorothy,Young,67,Male,Divorced,2,High School,Part-time,Retail Corp,19,31497.24,1558.32,9892.15,550,2,3,4,0,Home Improvement,5342.1,36,Own,FL,16.12,False,23,,Too many recent inquiries
+APP00095,CUST10095,2025-05-17,Kevin,Nguyen,33,Male,Single,1,Bachelor's,Full-time,Healthcare Corp,6,41507.62,2514.72,1830.64,671,15,6,1,0,Education,61782.53,120,Rent,TX,16.35,True,59,11.27,
+APP00096,CUST10096,2025-04-25,Richard,Thomas,69,Male,Single,0,Some College,Full-time,Retail Corp,12,109609.15,5903.25,52214.0,749,4,1,0,0,Home Purchase,111239.73,300,Rent,TX,19.94,True,74,8.09,
+APP00097,CUST10097,2025-09-12,Jacob,Scott,21,Female,Married,0,Master's,Part-time,Healthcare Corp,3,31698.24,1496.24,2056.83,647,3,2,5,0,Personal,5302.69,36,Rent,FL,7.74,False,46,,Incomplete application
+APP00098,CUST10098,2025-10-20,Rebecca,Lewis,52,Female,Married,0,Some College,Full-time,Healthcare Corp,25,70905.51,4412.2,18088.29,593,23,2,4,0,Debt Consolidation,11219.86,36,Rent,MI,13.78,False,48,,Insufficient income
+APP00099,CUST10099,2024-12-21,Daniel,Allen,26,Male,Single,0,Some College,Full-time,Government Corp,3,64575.3,3414.59,31815.8,680,8,6,0,0,Auto Loan,77896.24,72,Own,NY,36.53,True,50,9.68,
+APP00100,CUST10100,2025-05-24,Donald,Rodriguez,59,Female,Single,1,Some College,Unemployed,,0,13246.26,721.04,458.6,619,18,8,1,0,Auto Loan,66955.29,60,Rent,TX,102.25,False,0,,Too many recent inquiries
