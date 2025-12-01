@@ -1,6 +1,51 @@
-transaction_id,account_id,amount,transaction_date,description
-1,1001,-50.25,2023-01-15,Groceries
-2,1001,1000.00,2023-01-16,Paycheck
-3,1002,-10.00,2023-01-16,Coffee
-4,1002,-25.50,2023-01-17,Lunch
-5,1001,-150.00,2023-01-18,Utilities Bill
+transaction_id,account_id,customer_name,amount,balance_after,transaction_type,category,transaction_date,description,merchant,location
+TXN001,ACC1001,John Smith,2500.00,15420.50,credit,salary,2023-01-01 09:00:00,Monthly Salary,TechCorp Inc,New York
+TXN002,ACC1001,John Smith,-85.50,15335.00,debit,groceries,2023-01-02 14:23:15,Weekly Groceries,Whole Foods Market,New York
+TXN003,ACC1001,John Smith,-45.00,15290.00,debit,utilities,2023-01-03 10:15:00,Internet Bill,Spectrum,New York
+TXN004,ACC1002,Sarah Johnson,3200.00,22150.75,credit,salary,2023-01-01 09:00:00,Monthly Salary,FinanceHub LLC,Chicago
+TXN005,ACC1002,Sarah Johnson,-120.00,22030.75,debit,shopping,2023-01-02 16:45:30,Clothing Purchase,Nordstrom,Chicago
+TXN006,ACC1001,John Smith,-12.99,15277.01,debit,subscription,2023-01-04 00:00:00,Netflix Subscription,Netflix,Online
+TXN007,ACC1003,Michael Chen,-250.00,8450.25,debit,transfer,2023-01-02 11:30:00,Transfer to Savings,Internal Transfer,San Francisco
+TXN008,ACC1003,Michael Chen,1800.00,10250.25,credit,salary,2023-01-01 09:00:00,Bi-weekly Pay,StartupXYZ,San Francisco
+TXN009,ACC1002,Sarah Johnson,-65.00,21965.75,debit,dining,2023-01-03 19:30:45,Dinner with Friends,The Capital Grille,Chicago
+TXN010,ACC1001,John Smith,-35.00,15242.01,debit,transportation,2023-01-05 08:15:00,Uber Rides,Uber,New York
+TXN011,ACC1004,Emily Davis,2800.00,18920.30,credit,salary,2023-01-01 09:00:00,Monthly Salary,HealthCare Plus,Boston
+TXN012,ACC1004,Emily Davis,-150.00,18770.30,debit,healthcare,2023-01-03 14:00:00,Doctor Visit Copay,Boston Medical,Boston
+TXN013,ACC1003,Michael Chen,-42.50,10207.75,debit,groceries,2023-01-04 17:20:00,Grocery Shopping,Trader Joes,San Francisco
+TXN014,ACC1005,Robert Wilson,-500.00,5230.00,debit,rent,2023-01-01 00:00:00,Rent Payment - January,Apartment Complex,Austin
+TXN015,ACC1005,Robert Wilson,1500.00,6730.00,credit,freelance,2023-01-05 15:00:00,Freelance Project Payment,Client ABC,Austin
+TXN016,ACC1001,John Smith,-200.00,15042.01,debit,shopping,2023-01-06 12:30:00,Electronics Purchase,Best Buy,New York
+TXN017,ACC1002,Sarah Johnson,-9.99,21955.76,debit,subscription,2023-01-05 00:00:00,Spotify Premium,Spotify,Online
+TXN018,ACC1004,Emily Davis,-75.00,18695.30,debit,entertainment,2023-01-06 20:00:00,Concert Tickets,Ticketmaster,Boston
+TXN019,ACC1003,Michael Chen,-28.00,10179.75,debit,dining,2023-01-05 12:45:00,Lunch Meeting,Chipotle,San Francisco
+TXN020,ACC1005,Robert Wilson,-60.00,6670.00,debit,utilities,2023-01-06 10:00:00,Electric Bill,Austin Energy,Austin
+TXN021,ACC1001,John Smith,150.00,15192.01,credit,refund,2023-01-07 11:00:00,Product Return Refund,Best Buy,New York
+TXN022,ACC1002,Sarah Johnson,-180.00,21775.76,debit,travel,2023-01-07 14:30:00,Flight Booking,United Airlines,Chicago
+TXN023,ACC1004,Emily Davis,-95.00,18600.30,debit,groceries,2023-01-07 16:15:00,Weekly Groceries,Stop & Shop,Boston
+TXN024,ACC1003,Michael Chen,-15.99,10163.76,debit,subscription,2023-01-07 00:00:00,Cloud Storage,Google One,Online
+TXN025,ACC1005,Robert Wilson,-25.00,6645.00,debit,entertainment,2023-01-07 21:00:00,Movie Night,AMC Theatres,Austin
+TXN026,ACC1006,Lisa Wang,4500.00,32100.50,credit,salary,2023-01-01 09:00:00,Monthly Salary,BigTech Corp,Seattle
+TXN027,ACC1006,Lisa Wang,-1200.00,30900.50,debit,rent,2023-01-01 00:00:00,Rent Payment,Apartment Living,Seattle
+TXN028,ACC1006,Lisa Wang,-89.00,30811.50,debit,groceries,2023-01-03 15:30:00,Grocery Shopping,QFC,Seattle
+TXN029,ACC1007,James Brown,2100.00,11250.00,credit,salary,2023-01-01 09:00:00,Bi-weekly Pay,RetailMart,Denver
+TXN030,ACC1007,James Brown,-450.00,10800.00,debit,insurance,2023-01-02 00:00:00,Car Insurance Premium,State Farm,Denver
+TXN031,ACC1006,Lisa Wang,-55.00,30756.50,debit,dining,2023-01-04 19:00:00,Dinner Out,PF Changs,Seattle
+TXN032,ACC1007,James Brown,-32.00,10768.00,debit,transportation,2023-01-04 07:30:00,Gas Station,Shell,Denver
+TXN033,ACC1001,John Smith,-110.00,15082.01,debit,healthcare,2023-01-08 09:00:00,Pharmacy Purchase,CVS,New York
+TXN034,ACC1002,Sarah Johnson,500.00,22275.76,credit,bonus,2023-01-08 12:00:00,Performance Bonus,FinanceHub LLC,Chicago
+TXN035,ACC1003,Michael Chen,-350.00,9813.76,debit,shopping,2023-01-08 14:00:00,New Laptop Accessories,Apple Store,San Francisco
+TXN036,ACC1004,Emily Davis,-40.00,18560.30,debit,transportation,2023-01-08 17:30:00,Monthly Transit Pass,MBTA,Boston
+TXN037,ACC1005,Robert Wilson,800.00,7445.00,credit,freelance,2023-01-09 10:00:00,Side Project Payment,Client XYZ,Austin
+TXN038,ACC1006,Lisa Wang,-200.00,30556.50,debit,shopping,2023-01-08 13:00:00,Home Decor,IKEA,Seattle
+TXN039,ACC1007,James Brown,-28.50,10739.50,debit,dining,2023-01-08 12:00:00,Lunch,Panera Bread,Denver
+TXN040,ACC1001,John Smith,-75.00,15007.01,debit,entertainment,2023-01-09 20:30:00,Streaming Services Bundle,Disney+,Online
+TXN041,ACC1002,Sarah Johnson,-42.00,22233.76,debit,groceries,2023-01-09 18:00:00,Quick Grocery Run,Target,Chicago
+TXN042,ACC1003,Michael Chen,1800.00,11613.76,credit,salary,2023-01-15 09:00:00,Bi-weekly Pay,StartupXYZ,San Francisco
+TXN043,ACC1004,Emily Davis,-125.00,18435.30,debit,utilities,2023-01-10 10:00:00,Heating Bill,National Grid,Boston
+TXN044,ACC1005,Robert Wilson,-18.99,7426.01,debit,subscription,2023-01-10 00:00:00,Gaming Subscription,Xbox Game Pass,Online
+TXN045,ACC1006,Lisa Wang,-65.00,30491.50,debit,healthcare,2023-01-10 11:30:00,Prescription Medication,Walgreens,Seattle
+TXN046,ACC1007,James Brown,-85.00,10654.50,debit,groceries,2023-01-10 17:00:00,Weekly Groceries,King Soopers,Denver
+TXN047,ACC1001,John Smith,2500.00,17507.01,credit,salary,2023-01-15 09:00:00,Monthly Salary,TechCorp Inc,New York
+TXN048,ACC1002,Sarah Johnson,3200.00,25433.76,credit,salary,2023-01-15 09:00:00,Monthly Salary,FinanceHub LLC,Chicago
+TXN049,ACC1004,Emily Davis,2800.00,21235.30,credit,salary,2023-01-15 09:00:00,Monthly Salary,HealthCare Plus,Boston
+TXN050,ACC1006,Lisa Wang,4500.00,34991.50,credit,salary,2023-01-15 09:00:00,Monthly Salary,BigTech Corp,Seattle

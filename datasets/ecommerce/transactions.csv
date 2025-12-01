@@ -1,6 +1,51 @@
-transaction_id,customer_id,product_id,amount,transaction_date
-1,1,101,10.50,2023-01-15
-2,2,102,20.00,2023-01-16
-3,1,103,5.25,2023-01-17
-4,3,101,10.50,2023-01-18
-5,2,104,15.00,2023-01-19
+transaction_id,customer_id,product_id,product_name,category,amount,quantity,transaction_date,payment_method,status
+1,1,101,Wireless Bluetooth Headphones,Electronics,79.99,1,2023-01-15 10:23:45,Credit Card,Completed
+2,2,102,Organic Green Tea (50 bags),Groceries,12.49,2,2023-01-15 14:30:12,PayPal,Completed
+3,1,103,Running Shoes - Nike Air,Sports,129.99,1,2023-01-16 09:15:33,Credit Card,Completed
+4,3,101,Python Programming Book,Books,45.00,1,2023-01-16 11:42:08,Debit Card,Completed
+5,2,104,Stainless Steel Water Bottle,Home & Kitchen,24.99,3,2023-01-17 16:55:21,Credit Card,Completed
+6,1,105,Yoga Mat - Premium,Sports,35.99,1,2023-01-18 08:10:45,PayPal,Completed
+7,4,106,Wireless Mouse,Electronics,29.99,1,2023-01-18 13:22:17,Credit Card,Refunded
+8,8,107,Ceramic Coffee Mug Set,Home & Kitchen,32.50,1,2023-01-19 10:05:33,Debit Card,Completed
+9,6,108,Vitamin D Supplements,Health,18.99,2,2023-01-19 15:40:28,Credit Card,Completed
+10,10,109,Leather Wallet,Fashion,55.00,1,2023-01-20 11:30:00,PayPal,Completed
+11,3,110,Instant Pot Pressure Cooker,Home & Kitchen,89.99,1,2023-01-20 14:15:42,Credit Card,Completed
+12,12,111,Wireless Bluetooth Headphones,Electronics,79.99,1,2023-01-21 09:45:18,Debit Card,Completed
+13,9,112,Chess Set - Wooden,Games,42.00,1,2023-01-21 12:20:55,Credit Card,Completed
+14,11,113,Organic Honey (500g),Groceries,15.99,3,2023-01-22 10:33:27,PayPal,Completed
+15,14,114,Desk Lamp - LED,Home & Kitchen,38.50,1,2023-01-22 16:48:12,Credit Card,Completed
+16,5,115,Fitness Tracker Band,Electronics,64.99,1,2023-01-23 08:55:40,Credit Card,Completed
+17,16,116,Organic Green Tea (50 bags),Groceries,12.49,4,2023-01-23 11:10:22,Debit Card,Completed
+18,13,117,Backpack - Travel,Fashion,75.00,1,2023-01-24 14:25:38,PayPal,Completed
+19,15,118,Bluetooth Speaker,Electronics,49.99,1,2023-01-24 17:30:15,Credit Card,Completed
+20,18,119,Running Shoes - Nike Air,Sports,129.99,1,2023-01-25 09:12:48,Credit Card,Pending
+21,1,120,Resistance Bands Set,Sports,22.99,1,2023-01-25 13:45:30,PayPal,Completed
+22,20,121,Scented Candles (3-pack),Home & Kitchen,28.00,2,2023-01-26 10:20:17,Credit Card,Completed
+23,7,122,Mechanical Keyboard,Electronics,109.99,1,2023-01-26 15:35:42,Debit Card,Completed
+24,4,123,Cookbook - Mediterranean,Books,32.00,1,2023-01-27 11:50:25,Credit Card,Completed
+25,19,124,Umbrella - Windproof,Fashion,19.99,1,2023-01-27 14:08:33,PayPal,Completed
+26,2,125,External Hard Drive 1TB,Electronics,59.99,1,2023-01-28 09:30:18,Credit Card,Completed
+27,17,126,Protein Powder (2lb),Health,34.99,1,2023-01-28 12:45:50,Debit Card,Completed
+28,6,127,Plant Pot - Ceramic,Home & Kitchen,16.50,4,2023-01-29 10:15:22,Credit Card,Completed
+29,8,128,Sunglasses - Polarized,Fashion,65.00,1,2023-01-29 14:55:40,PayPal,Completed
+30,10,129,Board Game - Strategy,Games,48.99,1,2023-01-30 11:22:35,Credit Card,Completed
+31,1,130,Wireless Earbuds,Electronics,89.99,1,2023-01-30 16:40:18,Credit Card,Completed
+32,3,131,Olive Oil - Extra Virgin,Groceries,22.99,2,2023-01-31 09:05:45,Debit Card,Completed
+33,5,132,Dumbbell Set (20lb),Sports,45.00,1,2023-01-31 13:30:27,PayPal,Completed
+34,12,133,USB-C Hub,Electronics,39.99,1,2023-02-01 10:48:12,Credit Card,Completed
+35,9,134,Puzzle 1000 Pieces,Games,18.99,2,2023-02-01 15:20:38,Credit Card,Completed
+36,14,135,Throw Blanket - Fleece,Home & Kitchen,29.99,1,2023-02-02 11:35:50,PayPal,Completed
+37,11,136,Multivitamin Tablets,Health,24.99,1,2023-02-02 14:10:25,Debit Card,Completed
+38,16,137,Winter Jacket,Fashion,120.00,1,2023-02-03 09:55:18,Credit Card,Completed
+39,13,138,Notebook Set (5-pack),Office,14.99,2,2023-02-03 12:42:33,Credit Card,Completed
+40,15,139,Smart Watch,Electronics,199.99,1,2023-02-04 10:30:45,Credit Card,Completed
+41,18,140,Tennis Racket,Sports,85.00,1,2023-02-04 15:15:22,PayPal,Completed
+42,20,141,Essential Oils Set,Health,42.50,1,2023-02-05 11:05:38,Credit Card,Completed
+43,7,142,Monitor Stand,Office,34.99,1,2023-02-05 14:50:17,Debit Card,Completed
+44,4,143,Science Fiction Novel,Books,16.99,1,2023-02-06 09:25:42,Credit Card,Completed
+45,19,144,Wallet - RFID Blocking,Fashion,38.00,1,2023-02-06 13:40:28,PayPal,Completed
+46,2,145,Webcam HD 1080p,Electronics,54.99,1,2023-02-07 10:18:55,Credit Card,Completed
+47,17,146,Foam Roller,Sports,26.99,1,2023-02-07 15:33:12,Debit Card,Completed
+48,6,147,Picture Frame Set,Home & Kitchen,45.00,1,2023-02-08 11:45:30,Credit Card,Completed
+49,8,148,Hand Cream Set,Health,19.99,2,2023-02-08 14:20:45,PayPal,Completed
+50,10,149,Card Game - Party,Games,24.99,1,2023-02-09 10:55:18,Credit Card,Completed

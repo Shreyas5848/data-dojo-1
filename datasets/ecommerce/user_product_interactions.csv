@@ -1,6 +1,62 @@
-user_id,product_id,rating,timestamp
-1,101,5,2023-01-15T10:00:00Z
-2,102,4,2023-01-16T11:00:00Z
-1,103,3,2023-01-17T12:00:00Z
-3,101,5,2023-01-18T13:00:00Z
-2,104,2,2023-01-19T14:00:00Z
+user_id,product_id,interaction_type,rating,review_text,timestamp,device,session_duration_seconds
+1,501,purchase,5,Excellent sound quality and battery life!,2023-01-15 10:23:45,Mobile,324
+1,501,review,5,Excellent sound quality and battery life!,2023-01-20 14:30:00,Desktop,180
+3,502,purchase,4,Good tea but packaging could be better,2023-01-15 14:30:12,Desktop,256
+3,502,view,,, 2023-01-14 09:15:00,Mobile,45
+5,503,purchase,5,Perfect fit and very comfortable for running,2023-01-16 09:15:33,Mobile,412
+5,503,view,,,2023-01-15 18:20:00,Mobile,120
+5,515,wishlist,,,2023-01-16 09:20:00,Mobile,30
+2,504,purchase,4,Comprehensive guide great for beginners,2023-01-16 11:42:08,Desktop,523
+7,505,purchase,5,Love these bottles! Great for the gym,2023-01-17 16:55:21,Tablet,287
+1,506,purchase,4,Good quality but slightly thin,2023-01-18 08:10:45,Mobile,198
+1,518,view,,,2023-01-18 08:15:00,Mobile,60
+4,507,purchase,2,Mouse stopped working after a week,2023-01-18 13:22:17,Desktop,345
+4,507,review,2,Mouse stopped working after a week,2023-01-25 10:00:00,Desktop,120
+8,508,purchase,5,Beautiful design and perfect size,2023-01-19 10:05:33,Mobile,267
+6,509,purchase,4,Good supplements reasonable price,2023-01-19 15:40:28,Desktop,189
+10,510,purchase,5,High quality leather excellent craftsmanship,2023-01-20 11:30:00,Mobile,234
+3,511,purchase,5,Game changer for meal prep!,2023-01-20 14:15:42,Desktop,445
+3,511,view,,,2023-01-19 20:30:00,Mobile,90
+12,501,purchase,4,Good headphones minor connectivity issues,2023-01-21 09:45:18,Mobile,312
+9,512,purchase,5,Beautiful wooden set great for beginners,2023-01-21 12:20:55,Desktop,278
+11,513,purchase,5,Best honey I have ever tasted!,2023-01-22 10:33:27,Tablet,156
+14,514,purchase,4,Bright light good for reading,2023-01-22 16:48:12,Desktop,234
+5,515,purchase,5,Accurate tracking and comfortable to wear,2023-01-23 08:55:40,Mobile,389
+16,502,purchase,4,Love this tea ordering more,2023-01-23 11:10:22,Desktop,145
+13,516,purchase,5,Spacious and comfortable for travel,2023-01-24 14:25:38,Mobile,356
+15,517,purchase,4,Good sound but bass could be stronger,2023-01-24 17:30:15,Desktop,267
+18,503,view,,,2023-01-24 20:00:00,Mobile,180
+18,503,cart,,,2023-01-25 08:00:00,Mobile,45
+18,503,purchase,,Waiting for delivery,2023-01-25 09:12:48,Mobile,234
+1,518,purchase,5,Great for home workouts,2023-01-25 13:45:30,Mobile,178
+20,519,purchase,4,Nice scents but burn quickly,2023-01-26 10:20:17,Desktop,223
+7,520,purchase,5,Perfect mechanical keyboard love the feel,2023-01-26 15:35:42,Desktop,445
+4,521,purchase,5,Delicious recipes and easy to follow,2023-01-27 11:50:25,Tablet,312
+19,522,purchase,4,Sturdy umbrella handles wind well,2023-01-27 14:08:33,Mobile,167
+2,523,purchase,5,Fast transfer speeds reliable storage,2023-01-28 09:30:18,Desktop,289
+17,524,purchase,4,Good protein tastes decent,2023-01-28 12:45:50,Mobile,198
+6,525,purchase,5,Beautiful pots perfect for succulents,2023-01-29 10:15:22,Desktop,234
+8,526,purchase,5,Great quality and stylish design,2023-01-29 14:55:40,Mobile,312
+10,527,purchase,4,Fun game but complex rules,2023-01-30 11:22:35,Desktop,267
+1,528,purchase,5,Amazing sound quality compact design,2023-01-30 16:40:18,Mobile,345
+1,501,view,,,2023-01-30 16:30:00,Mobile,60
+3,529,purchase,5,Authentic Italian olive oil delicious,2023-01-31 09:05:45,Desktop,178
+5,530,purchase,4,Good dumbbells but grip could be better,2023-01-31 13:30:27,Mobile,234
+12,531,purchase,5,Works perfectly with my laptop,2023-02-01 10:48:12,Desktop,289
+9,532,purchase,4,Challenging puzzle great quality,2023-02-01 15:20:38,Tablet,312
+14,533,purchase,5,So soft and cozy perfect for winter,2023-02-02 11:35:50,Mobile,198
+11,534,purchase,4,Good vitamins easy to swallow,2023-02-02 14:10:25,Desktop,156
+16,535,purchase,5,Warm and stylish love it!,2023-02-03 09:55:18,Mobile,423
+13,536,purchase,4,Good quality notebooks great value,2023-02-03 12:42:33,Desktop,167
+15,537,purchase,5,Best smartwatch I have owned,2023-02-04 10:30:45,Mobile,534
+15,537,view,,,2023-02-03 19:00:00,Mobile,300
+18,538,purchase,4,Good racket for intermediate players,2023-02-04 15:15:22,Tablet,278
+20,539,purchase,5,Relaxing scents help with sleep,2023-02-05 11:05:38,Desktop,234
+7,540,purchase,4,Sturdy stand but assembly tricky,2023-02-05 14:50:17,Desktop,189
+4,541,purchase,5,Couldnt put it down great read!,2023-02-06 09:25:42,Mobile,267
+19,542,purchase,4,Good wallet slim design,2023-02-06 13:40:28,Desktop,198
+2,543,purchase,5,Crystal clear video quality,2023-02-07 10:18:55,Desktop,345
+17,544,purchase,4,Helps with muscle recovery,2023-02-07 15:33:12,Mobile,178
+6,545,purchase,5,Beautiful frames perfect for photos,2023-02-08 11:45:30,Desktop,234
+8,546,purchase,4,Moisturizing and smells great,2023-02-08 14:20:45,Mobile,156
+10,547,purchase,5,Hilarious party game highly recommend,2023-02-09 10:55:18,Tablet,289

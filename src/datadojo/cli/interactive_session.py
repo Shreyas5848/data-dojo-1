@@ -15,17 +15,22 @@ from rich.text import Text
 from ..core.dojo import Dojo
 from ..utils.claude_theme import claude_theme
 from ..utils.theme import default_theme
+from ..utils.synthetic_data_generator import SyntheticDataGenerator
+from ..utils.intelligent_profiler import IntelligentProfiler, quick_profile
 from .list_projects import list_projects
+from .list_datasets import list_datasets, discover_datasets
 from .start_project import start_project
 from .show_progress import show_progress
 from .explain_concept import explain_concept
 from .complete_step import complete_step
 from .practice import practice
+import pandas as pd
+from pathlib import Path
 
 ASCII_ART = """
 [bold #FF9900]
 ██████╗  █████╗ ████████╗ █████╗     ██████╗  ██████╗      ██╗ ██████╗ 
-██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗    ██╔══██╗██╔═══██╗     ██║██╔═══██╗
+██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗    ██║  ██║██╔═══██╗     ██║██╔═══██╗
 ██║  ██║███████║   ██║   ███████║    ██║  ██║██║   ██║     ██║██║   ██║
 ██║  ██║██╔══██║   ██║   ██╔══██║    ██║  ██║██║   ██║██   ██║██║   ██║
 ██████╔╝██║  ██║   ██║   ██║  ██║    ██████╔╝╚██████╔╝╚█████╔╝╚██████╔╝
@@ -77,6 +82,10 @@ class DojoSession:
             "back": self._back_command,
             "set-student": self._set_student_command,
             "theme": self._theme_command,
+            "generate-data": self._generate_data_command,
+            "profile-data": self._profile_data_command,
+            "list-datasets": self._list_datasets_command,
+            "profile-all": self._profile_all_command,
         }
         self.command_args = {
             "list-projects": ["--domain", "--difficulty"],
@@ -85,6 +94,10 @@ class DojoSession:
             "progress": ["--project", "--format"],
             "complete-step": [], "practice": [], "help": [],
             "exit": [], "quit": [], "back": [], "set-student": [], "theme": ["default", "claude"],
+            "generate-data": ["--domain", "--size", "--output"],
+            "profile-data": ["--file", "--output", "--format"],
+            "list-datasets": ["--domain", "--format", "--min-size"],
+            "profile-all": ["--domain", "--output-dir", "--format"],
         }
         self.completer = DojoCompleter(self)
 
@@ -249,6 +262,293 @@ Usage: theme [default|claude]"""
                 self.console.print(f"Error: {result.error_message}", style="danger")
         except SystemExit:
             self.console.print(parser.format_help(), style="warning")
+
+    def _generate_data_command(self, args: List[str]):
+        """Generate synthetic datasets for learning.
+Usage: generate-data [--domain <healthcare|ecommerce|finance>] [--size <small|medium|large>] [--output <path>]"""
+        parser = argparse.ArgumentParser(prog="generate-data", add_help=False)
+        parser.add_argument("--domain", choices=["healthcare", "ecommerce", "finance"], help="Specific domain to generate")
+        parser.add_argument("--size", choices=["small", "medium", "large"], default="medium", help="Dataset size")
+        parser.add_argument("--output", default="datasets", help="Output directory")
+        
+        try:
+            parsed_args = parser.parse_args(args)
+            
+            self.console.print("🚀 [title]Generating Synthetic Data[/title]", style="bold")
+            
+            generator = SyntheticDataGenerator(seed=42)
+            
+            # Size configurations
+            size_configs = {
+                "small": {"patients": 500, "transactions": 2000, "bank_txns": 1000, "credit_apps": 500},
+                "medium": {"patients": 1000, "transactions": 5000, "bank_txns": 3000, "credit_apps": 1000},
+                "large": {"patients": 2000, "transactions": 10000, "bank_txns": 8000, "credit_apps": 2000}
+            }
+            config = size_configs[parsed_args.size]
+            
+            output_path = Path(parsed_args.output)
+            output_path.mkdir(parents=True, exist_ok=True)
+            
+            if parsed_args.domain:
+                # Generate specific domain
+                if parsed_args.domain == "healthcare":
+                    self.console.print("🏥 Generating Healthcare datasets...")
+                    patients = generator.generate_patient_demographics(config["patients"])
+                    lab_results = generator.generate_lab_results(config["patients"] * 3, patients['patient_id'].tolist())
+                    
+                    healthcare_path = output_path / "healthcare"
+                    healthcare_path.mkdir(exist_ok=True)
+                    
+                    patients.to_csv(healthcare_path / "patient_demographics.csv", index=False)
+                    lab_results.to_csv(healthcare_path / "lab_results.csv", index=False)
+                    
+                    self.console.print(f"✅ Healthcare data saved to {healthcare_path}")
+                    
+                elif parsed_args.domain == "ecommerce":
+                    self.console.print("🛒 Generating E-commerce datasets...")
+                    customers = generator.generate_customers(config["patients"])
+                    transactions = generator.generate_transactions(config["transactions"], customers['customer_id'].tolist())
+                    
+                    ecommerce_path = output_path / "ecommerce"
+                    ecommerce_path.mkdir(exist_ok=True)
+                    
+                    customers.to_csv(ecommerce_path / "customers_messy.csv", index=False)
+                    transactions.to_csv(ecommerce_path / "transactions.csv", index=False)
+                    
+                    self.console.print(f"✅ E-commerce data saved to {ecommerce_path}")
+                    
+                elif parsed_args.domain == "finance":
+                    self.console.print("💰 Generating Finance datasets...")
+                    bank_txns = generator.generate_bank_transactions(config["bank_txns"])
+                    credit_apps = generator.generate_credit_applications(config["credit_apps"])
+                    
+                    finance_path = output_path / "finance"
+                    finance_path.mkdir(exist_ok=True)
+                    
+                    bank_txns.to_csv(finance_path / "bank_transactions.csv", index=False)
+                    credit_apps.to_csv(finance_path / "credit_applications.csv", index=False)
+                    
+                    self.console.print(f"✅ Finance data saved to {finance_path}")
+                    
+            else:
+                # Generate all domains
+                generator.save_datasets(str(output_path))
+            
+            self.console.print(f"🎉 [success]Data generation completed![/success] Check the '{output_path}' directory.")
+            
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
+        except Exception as e:
+            self.console.print(f"❌ Error generating data: {str(e)}", style="danger")
+
+    def _profile_data_command(self, args: List[str]):
+        """Profile and analyze datasets with AI-powered insights.
+Usage: profile-data --file <path> [--output <report_path>] [--format <text|json>]"""
+        parser = argparse.ArgumentParser(prog="profile-data", add_help=False)
+        parser.add_argument("--file", required=True, help="Path to CSV file to profile")
+        parser.add_argument("--output", help="Output path for report")
+        parser.add_argument("--format", choices=["text", "json"], default="text", help="Report format")
+        
+        try:
+            parsed_args = parser.parse_args(args)
+            
+            file_path = Path(parsed_args.file)
+            if not file_path.exists():
+                self.console.print(f"❌ File not found: {file_path}", style="danger")
+                return
+                
+            if not file_path.suffix.lower() == '.csv':
+                self.console.print("❌ Only CSV files are supported", style="danger")
+                return
+            
+            self.console.print(f"🔍 [title]Profiling Data: {file_path.name}[/title]")
+            
+            # Load and profile the data
+            try:
+                df = pd.read_csv(file_path)
+                self.console.print(f"📊 Loaded {len(df):,} rows × {len(df.columns)} columns")
+                
+                profiler = IntelligentProfiler()
+                profile = profiler.profile_dataset(df, file_path.stem)
+                
+                # Generate report
+                if parsed_args.format == "json":
+                    output_path = parsed_args.output or f"{file_path.stem}_profile.json"
+                    profiler.export_profile_json(profile, output_path)
+                else:
+                    report = profiler.generate_report(profile, parsed_args.output)
+                    if not parsed_args.output:
+                        self.console.print(report)
+                    else:
+                        self.console.print(f"📄 Report saved to: {parsed_args.output}")
+                
+                # Show quick summary in console
+                quality_emoji = "🟢" if profile.overall_quality_score > 0.8 else "🟡" if profile.overall_quality_score > 0.6 else "🔴"
+                self.console.print(f"\n{quality_emoji} [title]Overall Quality Score: {profile.overall_quality_score:.1%}[/title]")
+                
+                if profile.recommendations:
+                    self.console.print(f"\n🚀 [title]Top Recommendations:[/title]")
+                    for i, rec in enumerate(profile.recommendations[:3], 1):
+                        self.console.print(f"   {i}. {rec}", style="info")
+                        
+            except Exception as e:
+                self.console.print(f"❌ Error loading CSV: {str(e)}", style="danger")
+                
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
+        except Exception as e:
+            self.console.print(f"❌ Error profiling data: {str(e)}", style="danger")
+
+    def _list_datasets_command(self, args: List[str]):
+        """List all available datasets in the workspace.
+Usage: list-datasets [--domain <healthcare|ecommerce|finance>] [--format <table|json|paths>] [--min-size <MB>]"""
+        parser = argparse.ArgumentParser(prog="list-datasets", add_help=False)
+        parser.add_argument("--domain", choices=["healthcare", "ecommerce", "finance"], help="Filter by domain")
+        parser.add_argument("--format", choices=["table", "json", "paths"], default="table", help="Output format")
+        parser.add_argument("--min-size", type=float, help="Minimum file size in MB")
+        
+        try:
+            parsed_args = parser.parse_args(args)
+            
+            result = list_datasets(
+                domain_filter=parsed_args.domain,
+                min_size_mb=parsed_args.min_size,
+                format_type=parsed_args.format
+            )
+            
+            if result.success:
+                self.console.print(result.output)
+            else:
+                self.console.print(f"❌ Error: {result.error_message}", style="danger")
+                
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
+        except Exception as e:
+            self.console.print(f"❌ Error listing datasets: {str(e)}", style="danger")
+
+    def _profile_all_command(self, args: List[str]):
+        """Profile all datasets in the workspace and generate summary reports.
+Usage: profile-all [--domain <healthcare|ecommerce|finance>] [--output-dir <path>] [--format <text|json>]"""
+        parser = argparse.ArgumentParser(prog="profile-all", add_help=False)
+        parser.add_argument("--domain", choices=["healthcare", "ecommerce", "finance"], help="Filter by domain")
+        parser.add_argument("--output-dir", default="profiles", help="Output directory for reports")
+        parser.add_argument("--format", choices=["text", "json"], default="text", help="Report format")
+        
+        try:
+            parsed_args = parser.parse_args(args)
+            
+            self.console.print("🔍 [title]Profiling All Datasets[/title]", style="bold")
+            
+            # Discover datasets
+            datasets = discover_datasets()
+            
+            if parsed_args.domain:
+                datasets = [d for d in datasets if d.domain.lower() == parsed_args.domain.lower()]
+            
+            if not datasets:
+                self.console.print("No datasets found to profile.", style="warning")
+                return
+            
+            # Create output directory
+            output_path = Path(parsed_args.output_dir)
+            output_path.mkdir(parents=True, exist_ok=True)
+            
+            profiled_count = 0
+            total_datasets = len(datasets)
+            
+            self.console.print(f"📊 Found {total_datasets} datasets to profile...")
+            
+            for i, dataset_info in enumerate(datasets, 1):
+                try:
+                    self.console.print(f"[{i}/{total_datasets}] Profiling {dataset_info.name}...")
+                    
+                    # Load and profile dataset
+                    df = pd.read_csv(dataset_info.path)
+                    profiler = IntelligentProfiler()
+                    profile = profiler.profile_dataset(df, dataset_info.name)
+                    
+                    # Generate report
+                    if parsed_args.format == "json":
+                        output_file = output_path / f"{dataset_info.name.replace('.csv', '_profile.json')}"
+                        profiler.export_profile_json(profile, str(output_file))
+                    else:
+                        output_file = output_path / f"{dataset_info.name.replace('.csv', '_profile.txt')}"
+                        profiler.generate_report(profile, str(output_file))
+                    
+                    # Show quick summary
+                    quality_emoji = "🟢" if profile.overall_quality_score > 0.8 else "🟡" if profile.overall_quality_score > 0.6 else "🔴"
+                    self.console.print(f"   {quality_emoji} Quality: {profile.overall_quality_score:.1%} | {profile.shape[0]:,} rows × {profile.shape[1]} cols")
+                    
+                    profiled_count += 1
+                    
+                except Exception as e:
+                    self.console.print(f"   ❌ Failed to profile {dataset_info.name}: {str(e)}", style="danger")
+                    continue
+            
+            # Generate summary report
+            summary_file = output_path / "summary_report.txt"
+            self._generate_summary_report(datasets, summary_file)
+            
+            self.console.print(f"\n🎉 [success]Profiling completed![/success]")
+            self.console.print(f"📁 Reports saved to: {output_path.absolute()}")
+            self.console.print(f"✅ Successfully profiled: {profiled_count}/{total_datasets} datasets")
+            
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
+        except Exception as e:
+            self.console.print(f"❌ Error during batch profiling: {str(e)}", style="danger")
+
+    def _generate_summary_report(self, datasets, output_file):
+        """Generate a summary report of all datasets."""
+        try:
+            lines = []
+            lines.append("=" * 80)
+            lines.append("📊 DATADOJO WORKSPACE SUMMARY REPORT")
+            lines.append("=" * 80)
+            lines.append(f"Generated: {pd.Timestamp.now().strftime('%Y-%m-%d %H:%M:%S')}")
+            lines.append("")
+            
+            # Group by domain
+            domains = {}
+            total_size = 0
+            total_rows = 0
+            
+            for ds in datasets:
+                if ds.domain not in domains:
+                    domains[ds.domain] = []
+                domains[ds.domain].append(ds)
+                total_size += ds.size_mb
+                total_rows += ds.rows
+            
+            lines.append("🏷️  DATASETS BY DOMAIN")
+            lines.append("-" * 40)
+            for domain, domain_datasets in domains.items():
+                lines.append(f"{domain.upper()}: {len(domain_datasets)} datasets")
+                domain_size = sum(ds.size_mb for ds in domain_datasets)
+                domain_rows = sum(ds.rows for ds in domain_datasets)
+                lines.append(f"  • Total size: {domain_size:.1f}MB")
+                lines.append(f"  • Total rows: {domain_rows:,}")
+                lines.append("")
+            
+            lines.append(f"📈 WORKSPACE TOTALS")
+            lines.append(f"  • Total datasets: {len(datasets)}")
+            lines.append(f"  • Total size: {total_size:.1f}MB")  
+            lines.append(f"  • Total rows: {total_rows:,}")
+            lines.append("")
+            
+            lines.append("📋 DATASET DETAILS")
+            lines.append("-" * 40)
+            for ds in sorted(datasets, key=lambda x: (x.domain, x.name)):
+                lines.append(f"• {ds.name}")
+                lines.append(f"  Domain: {ds.domain} | Rows: {ds.rows:,} | Size: {ds.size_mb:.1f}MB")
+                lines.append(f"  Path: {ds.path}")
+                lines.append("")
+            
+            with open(output_file, 'w', encoding='utf-8') as f:
+                f.write('\n'.join(lines))
+                
+        except Exception as e:
+            self.console.print(f"Warning: Could not generate summary report: {str(e)}", style="warning")
 
     def run(self):
         self.console.print(ASCII_ART)
