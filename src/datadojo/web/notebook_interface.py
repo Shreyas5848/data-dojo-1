@@ -214,16 +214,50 @@ def list_saved_notebooks() -> list:
 
 
 def render_notebook_templates():
-    """Render the Notebook Templates interface."""
-    st.title("📓 Notebook Templates")
-    st.markdown("""
-    **Transform your data profiling results into interactive Jupyter notebooks!**
+    """Render the Notebook Templates interface with modern styling."""
     
-    ✅ **Smart Templates** - Generated based on your data characteristics  
-    ✅ **Ready-to-Run** - Pre-populated with analysis code  
-    ✅ **Educational** - Learn data science through hands-on examples  
-    ✅ **Customizable** - Modify templates for your specific needs
-    """)
+    # Professional header
+    st.markdown("""
+    <h1 style="color: #F8FAFC; font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">
+    Notebook Templates
+    </h1>
+    <p style="color: #94A3B8; font-size: 1rem; margin-bottom: 1.5rem;">
+    Generate interactive Jupyter notebooks from your data
+    </p>
+    """, unsafe_allow_html=True)
+    
+    # Feature cards - Clean design
+    col1, col2, col3, col4 = st.columns(4)
+    with col1:
+        st.markdown("""
+        <div style="background: #1E293B; padding: 1rem; border-radius: 8px; text-align: center; border: 1px solid #334155;">
+            <span style="color: #3B82F6; font-size: 1.25rem; font-weight: 600;">{}</span>
+            <p style="color: #CBD5E1; margin: 0.5rem 0 0 0; font-size: 0.8rem;">Smart Templates</p>
+        </div>
+        """, unsafe_allow_html=True)
+    with col2:
+        st.markdown("""
+        <div style="background: #1E293B; padding: 1rem; border-radius: 8px; text-align: center; border: 1px solid #334155;">
+            <span style="color: #14B8A6; font-size: 1.25rem; font-weight: 600;">></span>
+            <p style="color: #CBD5E1; margin: 0.5rem 0 0 0; font-size: 0.8rem;">Ready-to-Run</p>
+        </div>
+        """, unsafe_allow_html=True)
+    with col3:
+        st.markdown("""
+        <div style="background: #1E293B; padding: 1rem; border-radius: 8px; text-align: center; border: 1px solid #334155;">
+            <span style="color: #8B5CF6; font-size: 1.25rem; font-weight: 600;">?</span>
+            <p style="color: #CBD5E1; margin: 0.5rem 0 0 0; font-size: 0.8rem;">Educational</p>
+        </div>
+        """, unsafe_allow_html=True)
+    with col4:
+        st.markdown("""
+        <div style="background: #1E293B; padding: 1rem; border-radius: 8px; text-align: center; border: 1px solid #334155;">
+            <span style="color: #22C55E; font-size: 1.25rem; font-weight: 600;">+</span>
+            <p style="color: #CBD5E1; margin: 0.5rem 0 0 0; font-size: 0.8rem;">Customizable</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
     
     # Initialize session state
     if 'notebook_engine' not in st.session_state:
@@ -240,7 +274,11 @@ def render_notebook_templates():
         st.session_state.profile_results = None
 
     # Step 1: Data Input
-    st.header("1. 📁 Provide Your Data")
+    st.markdown("""
+    <h3 style="color: #F8FAFC; margin: 1.5rem 0 1rem 0; font-size: 1.125rem; font-weight: 600;">
+    <span style="color: #3B82F6;">1.</span> Provide Your Data
+    </h3>
+    """, unsafe_allow_html=True)
     
     col1, col2 = st.columns([2, 1])
     
@@ -252,7 +290,7 @@ def render_notebook_templates():
         )
     
     with col2:
-        use_demo = st.button("🎲 Use Demo Data", help="Load sample dataset for testing")
+        use_demo = st.button("Use Demo Data", help="Load sample dataset for testing", type="primary")
     
     # Load data
     if uploaded_file is not None:
@@ -304,7 +342,11 @@ def render_notebook_templates():
             st.metric("Memory", f"{df.memory_usage(deep=True).sum() / 1024**2:.1f} MB")
     
     # Step 2: Generate Profile Results
-    st.header("2. 🔍 Analyze Data Characteristics")
+    st.markdown("""
+    <h3 style="color: #F8FAFC; margin: 1.5rem 0 1rem 0; font-size: 1.125rem; font-weight: 600;">
+    <span style="color: #14B8A6;">2.</span> Analyze Data Characteristics
+    </h3>
+    """, unsafe_allow_html=True)
     
     # Generate or use cached profile results
     if st.session_state.profile_results is None:
@@ -315,7 +357,7 @@ def render_notebook_templates():
         profile_results = st.session_state.profile_results
     
     # Display analysis results
-    with st.expander("📊 Data Analysis Results", expanded=True):
+    with st.expander("Data Analysis Results", expanded=True):
         col1, col2, col3, col4 = st.columns(4)
         
         with col1:
@@ -346,7 +388,11 @@ def render_notebook_templates():
         st.dataframe(pd.DataFrame(col_info), use_container_width=True)
     
     # Step 3: Template Selection
-    st.header("3. 📝 Choose Template Type")
+    st.markdown("""
+    <h3 style="color: #F8FAFC; margin: 1.5rem 0 1rem 0; font-size: 1.125rem; font-weight: 600;">
+    <span style="color: #8B5CF6;">3.</span> Choose Template Type
+    </h3>
+    """, unsafe_allow_html=True)
     
     available_templates = get_available_templates()
     
@@ -354,7 +400,7 @@ def render_notebook_templates():
     recommended_template = recommend_template(profile_results, df)
     recommendation_reason = get_recommendation_reason(recommended_template, profile_results, df)
     
-    st.info(f"💡 **Recommended:** {available_templates[recommended_template]}\n\n*Reason: {recommendation_reason}*")
+    st.info(f"**Recommended:** {available_templates[recommended_template]}\n\n*{recommendation_reason}*")
     
     col1, col2 = st.columns([2, 1])
     
@@ -373,9 +419,13 @@ def render_notebook_templates():
             st.write(f"• {feature}")
     
     # Step 3.5: Template Customization
-    st.header("3.5 ⚙️ Customize Template (Optional)")
+    st.markdown("""
+    <h3 style="color: #F8FAFC; margin: 1.5rem 0 1rem 0; font-size: 1.125rem; font-weight: 600;">
+    <span style="color: #8B5CF6;">3.5</span> Customize Template (Optional)
+    </h3>
+    """, unsafe_allow_html=True)
     
-    with st.expander("🔧 Advanced Options", expanded=False):
+    with st.expander("Advanced Options", expanded=False):
         st.write("**Select sections to include in your notebook:**")
         
         # Get sections for selected template
@@ -425,31 +475,35 @@ def render_notebook_templates():
         st.write(f"**Selected:** {selected_count}/{len(template_sections)} sections")
         
         if selected_count == 0:
-            st.warning("⚠️ Please select at least one section!")
+            st.warning("Please select at least one section!")
 
     # Step 4: Generate Notebook
-    st.header("4. ⚡ Generate Notebook")
+    st.markdown("""
+    <h3 style="color: #F8FAFC; margin: 1.5rem 0 1rem 0; font-size: 1.125rem; font-weight: 600;">
+    <span style="color: #22C55E;">4.</span> Generate Notebook
+    </h3>
+    """, unsafe_allow_html=True)
     
     # Auto-save option
-    auto_save = st.checkbox("💾 Auto-save to workspace", value=True, 
+    auto_save = st.checkbox("Auto-save to workspace", value=True, 
                             help="Automatically save generated notebooks to the generated_notebooks/ folder")
     
     col1, col2, col3 = st.columns([1, 1, 1])
     
     with col1:
-        generate_btn = st.button("🚀 Generate Notebook", type="primary")
+        generate_btn = st.button("Generate Notebook", type="primary")
     
     with col2:
         if st.session_state.generated_notebook:
-            preview_btn = st.button("👁️ Preview Notebook")
+            preview_btn = st.button("Preview")
         else:
-            preview_btn = st.button("👁️ Preview Notebook", disabled=True)
+            preview_btn = st.button("Preview", disabled=True)
     
     with col3:
         if st.session_state.generated_notebook:
-            download_btn = st.button("💾 Download Notebook")
+            download_btn = st.button("Download")
         else:
-            download_btn = st.button("💾 Download Notebook", disabled=True)
+            download_btn = st.button("Download", disabled=True)
     
     # Generate notebook
     if generate_btn and dataset_name and profile_results:
@@ -497,7 +551,11 @@ def render_notebook_templates():
     
     # Preview notebook
     if st.session_state.generated_notebook and preview_btn:
-        st.header("📖 Notebook Preview")
+        st.markdown("""
+        <h3 style="color: white; margin: 1.5rem 0 1rem 0;">
+        📖 Notebook Preview
+        </h3>
+        """, unsafe_allow_html=True)
         
         notebook = st.session_state.generated_notebook
         
@@ -578,12 +636,16 @@ def render_notebook_templates():
     
     # Step 5: Saved Notebooks (optional section)
     st.markdown("---")
-    st.header("5. 📁 Saved Notebooks")
+    st.markdown("""
+    <h3 style="color: #F8FAFC; margin: 1.5rem 0 1rem 0; font-size: 1.125rem; font-weight: 600;">
+    <span style="color: #14B8A6;">5.</span> Saved Notebooks
+    </h3>
+    """, unsafe_allow_html=True)
     
     saved_notebooks = list_saved_notebooks()
     
     if saved_notebooks:
-        st.success(f"📂 Found {len(saved_notebooks)} saved notebooks in workspace")
+        st.success(f"Found {len(saved_notebooks)} saved notebooks in workspace")
         
         # Group by template type
         templates_used = set(nb["template"] for nb in saved_notebooks)
@@ -591,7 +653,7 @@ def render_notebook_templates():
         for template_type in templates_used:
             template_notebooks = [nb for nb in saved_notebooks if nb["template"] == template_type]
             
-            with st.expander(f"📓 {template_type.replace('_', ' ').title()} ({len(template_notebooks)} notebooks)", expanded=False):
+            with st.expander(f"{template_type.replace('_', ' ').title()} ({len(template_notebooks)} notebooks)", expanded=False):
                 for nb in template_notebooks[:5]:  # Show max 5 per category
                     col1, col2, col3 = st.columns([3, 1, 1])
                     with col1:

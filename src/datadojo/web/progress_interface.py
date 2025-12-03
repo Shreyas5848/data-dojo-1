@@ -230,12 +230,17 @@ def update_streak(progress):
 
 
 def render_progress_dashboard():
-    """Render the Progress Tracking Dashboard."""
-    st.title("📊 Progress Tracking Dashboard")
+    """Render the Progress Tracking Dashboard with modern styling."""
     
+    # Professional header
     st.markdown("""
-    Track your data science learning journey! Earn XP, level up skills, and unlock achievements.
-    """)
+    <h1 style="color: #F8FAFC; font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">
+    Progress Dashboard
+    </h1>
+    <p style="color: #94A3B8; font-size: 1rem; margin-bottom: 2rem;">
+    Track your learning journey and achievements
+    </p>
+    """, unsafe_allow_html=True)
     
     # Load progress
     if 'progress_data' not in st.session_state:
@@ -249,20 +254,20 @@ def render_progress_dashboard():
     save_progress_data(progress)
     
     # User Profile Section
-    st.header("👤 Your Profile")
+    st.markdown("<h2 style='color: #F8FAFC; font-size: 1.25rem; font-weight: 600;'>Your Profile</h2>", unsafe_allow_html=True)
     
     col1, col2, col3, col4 = st.columns(4)
     
     level, current_xp, next_level_xp = calculate_level(progress["user_info"]["xp"])
     
     with col1:
-        st.metric("🎯 Level", level)
+        st.metric("Level", level)
     with col2:
-        st.metric("⭐ Total XP", progress["user_info"]["xp"])
+        st.metric("Total XP", progress["user_info"]["xp"])
     with col3:
-        st.metric("🔥 Streak", f"{progress['streak_days']} days")
+        st.metric("Streak", f"{progress['streak_days']} days")
     with col4:
-        st.metric("🏆 Achievements", len(progress["achievements"]))
+        st.metric("Achievements", len(progress["achievements"]))
     
     # XP Progress bar
     xp_progress = current_xp / next_level_xp
@@ -272,17 +277,17 @@ def render_progress_dashboard():
     st.markdown("---")
     
     # Skills Overview
-    st.header("🎓 Skills")
+    st.markdown("<h2 style='color: #F8FAFC; font-size: 1.25rem; font-weight: 600;'>Skills</h2>", unsafe_allow_html=True)
     
     skill_names = {
-        "data_exploration": "📊 Data Exploration",
-        "data_cleaning": "🧹 Data Cleaning",
-        "visualization": "📈 Visualization",
-        "classification": "🎯 Classification",
-        "regression": "📉 Regression",
-        "clustering": "🔮 Clustering",
-        "feature_engineering": "🔧 Feature Engineering",
-        "time_series": "📅 Time Series"
+        "data_exploration": "Data Exploration",
+        "data_cleaning": "Data Cleaning",
+        "visualization": "Visualization",
+        "classification": "Classification",
+        "regression": "Regression",
+        "clustering": "Clustering",
+        "feature_engineering": "Feature Engineering",
+        "time_series": "Time Series"
     }
     
     # Create skill cards in 2 columns
@@ -305,14 +310,14 @@ def render_progress_dashboard():
     st.markdown("---")
     
     # Skills Radar Chart
-    st.header("📈 Skill Distribution")
+    st.markdown("<h2 style='color: #F8FAFC; font-size: 1.25rem; font-weight: 600;'>Skill Distribution</h2>", unsafe_allow_html=True)
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
         # Create radar chart
         skill_levels = [progress["skills"][k]["level"] for k in skill_names.keys()]
-        skill_labels = [v.split(" ", 1)[1] for v in skill_names.values()]
+        skill_labels = list(skill_names.values())
         
         fig = go.Figure()
         
@@ -321,8 +326,8 @@ def render_progress_dashboard():
             theta=skill_labels + [skill_labels[0]],
             fill='toself',
             name='Your Skills',
-            line_color='#FF9900',
-            fillcolor='rgba(255, 153, 0, 0.3)'
+            line_color='#3B82F6',
+            fillcolor='rgba(59, 130, 246, 0.3)'
         ))
         
         fig.update_layout(
@@ -330,8 +335,11 @@ def render_progress_dashboard():
                 radialaxis=dict(
                     visible=True,
                     range=[0, max(skill_levels) + 1] if skill_levels else [0, 5]
-                )
+                ),
+                bgcolor='#1E293B'
             ),
+            paper_bgcolor='#0F172A',
+            font=dict(color='#F8FAFC'),
             showlegend=False,
             height=400
         )
@@ -339,16 +347,16 @@ def render_progress_dashboard():
         st.plotly_chart(fig, use_container_width=True)
     
     with col2:
-        st.markdown("### 📊 Stats")
-        st.metric("📓 Notebooks Generated", progress["notebooks_generated"])
-        st.metric("🔍 Datasets Profiled", progress["datasets_profiled"])
-        st.metric("📁 Datasets Explored", progress["datasets_explored"])
-        st.metric("🎮 Total Sessions", progress["total_sessions"])
+        st.markdown("### Stats")
+        st.metric("Notebooks Generated", progress["notebooks_generated"])
+        st.metric("Datasets Profiled", progress["datasets_profiled"])
+        st.metric("Datasets Explored", progress["datasets_explored"])
+        st.metric("Total Sessions", progress["total_sessions"])
     
     st.markdown("---")
     
     # Achievements Section
-    st.header("🏆 Achievements")
+    st.markdown("<h2 style='color: #F8FAFC; font-size: 1.25rem; font-weight: 600;'>Achievements</h2>", unsafe_allow_html=True)
     
     if progress["achievements"]:
         # Show achievements in a grid

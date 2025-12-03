@@ -1,6 +1,6 @@
 """
 DataDojo Web Dashboard - Main Streamlit Application
-Professional web interface for interactive data exploration and profiling.
+Professional UI with Clean Design & High Contrast
 """
 
 import streamlit as st
@@ -28,56 +28,30 @@ from datadojo.cli.generate_data import generate_data
 from datadojo.utils.intelligent_profiler import IntelligentProfiler, quick_profile
 from datadojo.utils.synthetic_data_generator import SyntheticDataGenerator
 from datadojo.web.visualizations import DataVisualizationEngine, create_data_quality_summary_card
-from datadojo.web.config import apply_theme
 from datadojo.web.notebook_interface import render_notebook_templates
 from datadojo.web.help_interface import render_help_page
 from datadojo.web.progress_interface import render_progress_dashboard
+from datadojo.web.styles import (
+    get_modern_css, 
+    create_hero_header,
+    create_metric_card,
+    create_feature_card,
+    create_glass_card,
+    create_badge,
+    create_divider,
+    create_stat_card
+)
 
 # Page configuration
 st.set_page_config(
-    page_title="DataDojo Dashboard",
+    page_title="DataDojo - Master Your Data",
     page_icon="🥋",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Custom CSS for better styling
-st.markdown("""
-<style>
-    .main-header {
-        font-size: 3rem;
-        color: #FF9900;
-        text-align: center;
-        margin-bottom: 2rem;
-        font-weight: bold;
-    }
-    
-    .metric-card {
-        background: linear-gradient(135deg, #FF9900, #FFB366);
-        padding: 1rem;
-        border-radius: 10px;
-        color: white;
-        text-align: center;
-        margin: 0.5rem 0;
-    }
-    
-    .dataset-card {
-        border: 2px solid #FF9900;
-        border-radius: 10px;
-        padding: 1rem;
-        margin: 1rem 0;
-        background: #FFFAF0;
-    }
-    
-    .quality-high { color: #4CAF50; font-weight: bold; }
-    .quality-medium { color: #FF9800; font-weight: bold; }
-    .quality-low { color: #F44336; font-weight: bold; }
-    
-    .sidebar .sidebar-content {
-        background: linear-gradient(180deg, #FFE0B2, #FFCC80);
-    }
-</style>
-""", unsafe_allow_html=True)
+# Apply modern styles
+st.markdown(get_modern_css(), unsafe_allow_html=True)
 
 def init_session_state():
     """Initialize session state variables."""
@@ -87,6 +61,8 @@ def init_session_state():
         st.session_state.selected_dataset = None
     if 'profile_cache' not in st.session_state:
         st.session_state.profile_cache = {}
+    if 'theme' not in st.session_state:
+        st.session_state.theme = 'dark'
 
 def load_datasets():
     """Load and cache available datasets."""
@@ -95,14 +71,6 @@ def load_datasets():
             st.session_state.datasets = discover_datasets(['datasets', 'test_datasets'])
     return st.session_state.datasets
 
-def get_quality_class(score):
-    """Get CSS class based on quality score."""
-    if score >= 0.8:
-        return "quality-high"
-    elif score >= 0.6:
-        return "quality-medium"
-    else:
-        return "quality-low"
 
 def format_size(size_mb):
     """Format file size nicely."""
@@ -113,162 +81,244 @@ def format_size(size_mb):
     else:
         return f"{size_mb/1024:.1f} GB"
 
-def create_overview_metrics(datasets):
-    """Create overview metrics cards."""
-    if not datasets:
-        return
-        
-    total_datasets = len(datasets)
-    total_rows = sum(d.rows for d in datasets)
-    total_size = sum(d.size_mb for d in datasets)
-    
-    domains = {}
-    for d in datasets:
-        domains[d.domain] = domains.get(d.domain, 0) + 1
-    
-    col1, col2, col3, col4 = st.columns(4)
-    
-    with col1:
-        st.markdown(f"""
-        <div class="metric-card">
-            <h3>📊 Total Datasets</h3>
-            <h2>{total_datasets}</h2>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    with col2:
-        st.markdown(f"""
-        <div class="metric-card">
-            <h3>📈 Total Records</h3>
-            <h2>{total_rows:,}</h2>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    with col3:
-        st.markdown(f"""
-        <div class="metric-card">
-            <h3>💾 Total Size</h3>
-            <h2>{format_size(total_size)}</h2>
-        </div>
-        """, unsafe_allow_html=True)
-    
-    with col4:
-        st.markdown(f"""
-        <div class="metric-card">
-            <h3>🏷️ Domains</h3>
-            <h2>{len(domains)}</h2>
-        </div>
-        """, unsafe_allow_html=True)
 
 def show_home_page():
-    """Display the home page with overview."""
-    st.markdown('<h1 class="main-header">🥋 DataDojo Dashboard</h1>', unsafe_allow_html=True)
+    """Display the modern home page with overview."""
     
-    st.markdown("""
-    <div style="text-align: center; font-size: 1.2rem; color: #666; margin-bottom: 2rem;">
-    Your AI-powered data exploration and profiling platform
-    </div>
-    """, unsafe_allow_html=True)
+    # Hero Section - Clean, professional
+    st.markdown(create_hero_header(
+        "DataDojo",
+        "Master data science with intelligent exploration, profiling, and analysis tools"
+    ), unsafe_allow_html=True)
     
+    # Load datasets
     datasets = load_datasets()
     
-    if not datasets:
-        st.warning("No datasets found. Generate some data using the Data Generator page!")
-        return
+    # Quick Stats Row
+    if datasets:
+        total_datasets = len(datasets)
+        total_rows = sum(d.rows for d in datasets)
+        total_size = sum(d.size_mb for d in datasets)
+        domains = len(set(d.domain for d in datasets))
+        
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.markdown(create_metric_card("#", str(total_datasets), "Datasets"), unsafe_allow_html=True)
+        with col2:
+            st.markdown(create_metric_card("~", f"{total_rows:,}", "Records"), unsafe_allow_html=True)
+        with col3:
+            st.markdown(create_metric_card("&gt;", format_size(total_size), "Volume"), unsafe_allow_html=True)
+        with col4:
+            st.markdown(create_metric_card("@", str(domains), "Domains"), unsafe_allow_html=True)
     
-    create_overview_metrics(datasets)
+    st.markdown("<br>", unsafe_allow_html=True)
     
-    # New Feature: Notebook Templates
-    st.markdown("---")
-    st.subheader("🎉 NEW: Notebook Templates")
+    # Feature Cards Section
+    st.markdown("""
+    <h2 style="text-align: center; margin: 2rem 0 1.5rem; color: #F8FAFC; font-size: 1.5rem; font-weight: 600;">
+    Features
+    </h2>
+    """, unsafe_allow_html=True)
     
-    col1, col2 = st.columns([2, 1])
+    col1, col2, col3 = st.columns(3)
+    
     with col1:
-        st.markdown("""
-        **📓 Transform data insights into interactive Jupyter notebooks!**
-        
-        **Option 3 is now LIVE** - Generate professional analysis notebooks:
-        • **Smart Templates** - EDA, Data Cleaning, Classification, Regression
-        • **Auto-Generated** - Pre-populated with your data characteristics
-        • **Ready-to-Run** - Complete analysis code included
-        • **Educational** - Learn data science through hands-on examples
-        • **Customizable** - Modify templates for your specific needs
-        
-        Perfect bridge between data profiling and advanced analysis!
-        """)
+        st.markdown(create_feature_card(
+            "{}",
+            "Smart Profiling",
+            "AI-powered data analysis with quality assessment and pattern detection."
+        ), unsafe_allow_html=True)
     
     with col2:
+        st.markdown(create_feature_card(
+            "[]",
+            "Notebook Templates",
+            "Generate ready-to-run Jupyter notebooks for EDA, ML, and data cleaning."
+        ), unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown(create_feature_card(
+            "++",
+            "Progress Tracking",
+            "Track your learning with XP, achievements, and skill progression."
+        ), unsafe_allow_html=True)
+    
+    st.markdown("<br>", unsafe_allow_html=True)
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.markdown(create_feature_card(
+            "&lt;&gt;",
+            "Data Generation",
+            "Create realistic synthetic datasets for healthcare, finance, and e-commerce."
+        ), unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown(create_feature_card(
+            "||",
+            "Visualizations",
+            "Intelligent chart recommendations based on your data types."
+        ), unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown(create_feature_card(
+            "?!",
+            "Learning Hub",
+            "Interactive tutorials and guided workflows for all skill levels."
+        ), unsafe_allow_html=True)
+    
+    st.markdown(create_divider(), unsafe_allow_html=True)
+    
+    # Charts Section
+    if datasets:
         st.markdown("""
-        <div style="margin-top: 2rem;">
-        <p style="text-align: center; color: #FF6B35; font-weight: bold;">
-        👈 Try "📓 Notebook Templates" now!
-        </p>
-        </div>
+        <h2 style="text-align: center; margin: 2rem 0 1rem; color: #F8FAFC; font-size: 1.25rem; font-weight: 600;">
+        Data Overview
+        </h2>
         """, unsafe_allow_html=True)
-    
-    st.markdown("---")
-    
-    # Domain distribution chart
-    col1, col2 = st.columns(2)
-    
-    with col1:
-        st.subheader("📊 Datasets by Domain")
-        domain_counts = {}
-        for d in datasets:
-            domain_counts[d.domain.title()] = domain_counts.get(d.domain.title(), 0) + 1
         
-        if domain_counts:
-            fig = px.pie(
-                values=list(domain_counts.values()),
-                names=list(domain_counts.keys()),
-                color_discrete_sequence=px.colors.sequential.Oranges_r
-            )
-            fig.update_traces(textposition='inside', textinfo='percent+label')
-            st.plotly_chart(fig, width='stretch')
-    
-    with col2:
-        st.subheader("📈 Dataset Sizes")
-        size_data = []
-        for d in datasets:
-            size_data.append({
-                'Dataset': d.name[:20] + ('...' if len(d.name) > 20 else ''),
-                'Size (MB)': d.size_mb,
-                'Domain': d.domain.title()
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            # Domain distribution - Modern donut chart
+            domain_counts = {}
+            for d in datasets:
+                domain_counts[d.domain.title()] = domain_counts.get(d.domain.title(), 0) + 1
+            
+            if domain_counts:
+                fig = go.Figure(data=[go.Pie(
+                    labels=list(domain_counts.keys()),
+                    values=list(domain_counts.values()),
+                    hole=0.6,
+                    marker=dict(
+                        colors=['#3B82F6', '#14B8A6', '#8B5CF6', '#22C55E', '#F59E0B'],
+                        line=dict(color='#0F172A', width=2)
+                    ),
+                    textinfo='label+percent',
+                    textfont=dict(size=12, color='#F8FAFC'),
+                    hovertemplate="<b>%{label}</b><br>Count: %{value}<br>Percentage: %{percent}<extra></extra>"
+                )])
+                
+                fig.update_layout(
+                    title=dict(text="Datasets by Domain", font=dict(size=18, color='white')),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    font=dict(color='white'),
+                    showlegend=True,
+                    legend=dict(
+                        font=dict(color='white'),
+                        bgcolor='rgba(0,0,0,0)'
+                    ),
+                    annotations=[dict(
+                        text=f'<b>{len(datasets)}</b><br>Total',
+                        x=0.5, y=0.5,
+                        font_size=20,
+                        font_color='white',
+                        showarrow=False
+                    )],
+                    margin=dict(t=60, b=20, l=20, r=20)
+                )
+                st.plotly_chart(fig, use_container_width=True)
+        
+        with col2:
+            # Size distribution - Modern bar chart
+            size_data = []
+            for d in sorted(datasets, key=lambda x: x.size_mb, reverse=True)[:8]:
+                size_data.append({
+                    'Dataset': d.name[:15] + ('...' if len(d.name) > 15 else ''),
+                    'Size (MB)': d.size_mb,
+                    'Domain': d.domain.title()
+                })
+            
+            if size_data:
+                df_sizes = pd.DataFrame(size_data)
+                fig = px.bar(
+                    df_sizes, 
+                    x='Dataset', 
+                    y='Size (MB)',
+                    color='Domain',
+                    color_discrete_sequence=['#FF6B35', '#00D9FF', '#A855F7', '#10B981']
+                )
+                
+                fig.update_layout(
+                    title=dict(text="Dataset Sizes", font=dict(size=18, color='white')),
+                    paper_bgcolor='rgba(0,0,0,0)',
+                    plot_bgcolor='rgba(0,0,0,0)',
+                    font=dict(color='white'),
+                    xaxis=dict(
+                        tickangle=45,
+                        tickfont=dict(color='rgba(255,255,255,0.7)'),
+                        gridcolor='rgba(255,255,255,0.1)'
+                    ),
+                    yaxis=dict(
+                        tickfont=dict(color='rgba(255,255,255,0.7)'),
+                        gridcolor='rgba(255,255,255,0.1)'
+                    ),
+                    legend=dict(
+                        font=dict(color='white'),
+                        bgcolor='rgba(0,0,0,0)'
+                    ),
+                    margin=dict(t=60, b=80, l=50, r=20)
+                )
+                
+                fig.update_traces(
+                    marker=dict(
+                        line=dict(width=0),
+                        opacity=0.9
+                    )
+                )
+                st.plotly_chart(fig, use_container_width=True)
+        
+        # Recent Datasets Table
+        st.markdown("""
+        <h3 style="color: white; margin: 2rem 0 1rem 0;">
+        📋 Recent Datasets
+        </h3>
+        """, unsafe_allow_html=True)
+        
+        recent_datasets = sorted(datasets, key=lambda x: x.size_mb, reverse=True)[:10]
+        
+        table_data = []
+        for d in recent_datasets:
+            table_data.append({
+                '📊 Name': d.name,
+                '🏷️ Domain': d.domain.title(),
+                '📈 Rows': f"{d.rows:,}",
+                '📋 Columns': d.columns,
+                '💾 Size': format_size(d.size_mb)
             })
         
-        if size_data:
-            df_sizes = pd.DataFrame(size_data)
-            fig = px.bar(
-                df_sizes, 
-                x='Dataset', 
-                y='Size (MB)',
-                color='Domain',
-                color_discrete_sequence=px.colors.sequential.Oranges_r
+        if table_data:
+            st.dataframe(
+                pd.DataFrame(table_data), 
+                use_container_width=True,
+                hide_index=True
             )
-            fig.update_xaxes(tickangle=45)
-            st.plotly_chart(fig, width='stretch')
-    
-    # Recent datasets table
-    st.subheader("📋 Recent Datasets")
-    recent_datasets = sorted(datasets, key=lambda x: x.size_mb, reverse=True)[:10]
-    
-    table_data = []
-    for d in recent_datasets:
-        table_data.append({
-            'Name': d.name,
-            'Domain': d.domain.title(),
-            'Rows': f"{d.rows:,}",
-            'Columns': d.columns,
-            'Size': format_size(d.size_mb),
-            'Path': d.path
-        })
-    
-    if table_data:
-        st.dataframe(pd.DataFrame(table_data), width='stretch')
+    else:
+        # Empty state
+        st.markdown("""
+        <div class="glass-card" style="text-align: center; padding: 4rem 2rem;">
+            <div style="font-size: 4rem; margin-bottom: 1rem;">🚀</div>
+            <h2 style="color: white; margin-bottom: 1rem;">Ready to Get Started?</h2>
+            <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem;">
+                Generate your first dataset and begin your data science journey!
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
 
 def show_dataset_explorer():
-    """Display the dataset explorer page."""
-    st.title("📁 Dataset Explorer")
+    """Display the dataset explorer page with modern UI."""
+    
+    st.markdown("""
+    <h1 style="color: #F8FAFC; font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">
+    Dataset Explorer
+    </h1>
+    <p style="color: #94A3B8; font-size: 1rem; margin-bottom: 1.5rem;">
+    Browse, filter, and preview your datasets
+    </p>
+    """, unsafe_allow_html=True)
     
     datasets = load_datasets()
     
@@ -281,13 +331,13 @@ def show_dataset_explorer():
     
     with col1:
         domains = ['All'] + sorted(list(set(d.domain.title() for d in datasets)))
-        selected_domain = st.selectbox("🏷️ Filter by Domain", domains)
+        selected_domain = st.selectbox("Filter by Domain", domains)
     
     with col2:
-        min_rows = st.number_input("📊 Minimum Rows", min_value=0, value=0)
+        min_rows = st.number_input("Minimum Rows", min_value=0, value=0)
     
     with col3:
-        min_size = st.number_input("💾 Minimum Size (MB)", min_value=0.0, value=0.0, step=0.1)
+        min_size = st.number_input("Minimum Size (MB)", min_value=0.0, value=0.0, step=0.1)
     
     # Apply filters
     filtered_datasets = datasets
@@ -298,7 +348,11 @@ def show_dataset_explorer():
     if min_size > 0:
         filtered_datasets = [d for d in filtered_datasets if d.size_mb >= min_size]
     
-    st.write(f"Found **{len(filtered_datasets)}** datasets matching your criteria")
+    st.markdown(f"""
+    <p style="color: #CBD5E1; margin: 1rem 0;">
+    Found <span style="color: #3B82F6; font-weight: 600;">{len(filtered_datasets)}</span> datasets matching your criteria
+    </p>
+    """, unsafe_allow_html=True)
     
     # Dataset cards
     for dataset in filtered_datasets:
@@ -355,8 +409,16 @@ def show_dataset_explorer():
                         st.error(f"Error loading dataset: {str(e)}")
 
 def show_data_profiler():
-    """Display the data profiler page."""
-    st.title("🔍 Data Profiler")
+    """Display the data profiler page with modern UI."""
+    
+    st.markdown("""
+    <h1 style="color: #F8FAFC; font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">
+    Data Profiler
+    </h1>
+    <p style="color: #94A3B8; font-size: 1rem; margin-bottom: 1.5rem;">
+    AI-powered data quality assessment and insights
+    </p>
+    """, unsafe_allow_html=True)
     
     datasets = load_datasets()
     
@@ -372,10 +434,10 @@ def show_data_profiler():
         format_func=lambda x: dataset_names[x]
     )
     
-    if st.button("🚀 Profile Dataset", type="primary"):
+    if st.button("Profile Dataset", type="primary"):
         dataset = datasets[selected_idx]
         
-        with st.spinner(f"Profiling {dataset.name}... This may take a moment."):
+        with st.spinner(f"Profiling {dataset.name}..."):
             try:
                 # Load and profile the dataset
                 df = pd.read_csv(dataset.path)
@@ -387,7 +449,7 @@ def show_data_profiler():
                 st.session_state.profile_cache[dataset.path] = profile
                 
                 # Display results
-                st.success(f"✅ Profile completed for {dataset.name}")
+                st.success(f"Profile completed for {dataset.name}")
                 
                 # Enhanced quality dashboard
                 st.markdown(create_data_quality_summary_card(profile), unsafe_allow_html=True)
@@ -552,15 +614,26 @@ def show_data_profiler():
                 st.error(f"Error profiling dataset: {str(e)}")
 
 def show_data_generator():
-    """Display the data generator page."""
-    st.title("⚡ Data Generator")
+    """Display the data generator page with modern UI."""
     
-    st.markdown("Generate realistic synthetic datasets for learning and testing purposes.")
+    st.markdown("""
+    <h1 style="color: #F8FAFC; font-size: 1.75rem; font-weight: 700; margin-bottom: 0.5rem;">
+    Data Generator
+    </h1>
+    <p style="color: #94A3B8; font-size: 1rem; margin-bottom: 1.5rem;">
+    Create realistic synthetic datasets for learning and testing
+    </p>
+    """, unsafe_allow_html=True)
     
     col1, col2 = st.columns(2)
     
     with col1:
-        st.subheader("🎛️ Generation Settings")
+        st.markdown("""
+        <div style="background: #1E293B; border: 1px solid #334155; 
+        border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem;">
+            <h4 style="color: #3B82F6; margin-bottom: 0.5rem; font-size: 1rem;">Generation Settings</h4>
+        </div>
+        """, unsafe_allow_html=True)
         
         domain = st.selectbox(
             "Select Domain",
@@ -588,25 +661,39 @@ def show_data_generator():
         )
     
     with col2:
-        st.subheader("📋 What You'll Get")
+        st.markdown("""
+        <div style="background: #1E293B; border: 1px solid #334155; 
+        border-radius: 8px; padding: 1.25rem; margin-bottom: 1rem;">
+            <h4 style="color: #14B8A6; margin-bottom: 0.5rem; font-size: 1rem;">What You'll Get</h4>
+        </div>
+        """, unsafe_allow_html=True)
         
         if domain == "All Domains" or domain == "Healthcare":
-            st.write("**🏥 Healthcare:**")
-            st.write("• Patient Demographics (age, gender, medical history)")
-            st.write("• Lab Results (blood tests, reference ranges)")
+            st.markdown("""
+            <div style="background: #1E293B; padding: 0.875rem; border-radius: 6px; margin-bottom: 0.75rem; border-left: 3px solid #22C55E;">
+            <strong style="color: #F8FAFC;">Healthcare</strong><br>
+            <span style="color: #94A3B8; font-size: 0.85rem;">Patient demographics, lab results, medical records</span>
+            </div>
+            """, unsafe_allow_html=True)
             
         if domain == "All Domains" or domain == "E-commerce":
-            st.write("**🛒 E-commerce:**")
-            st.write("• Customer Profiles (demographics, preferences)")
-            st.write("• Transaction Records (purchases, payments)")
+            st.markdown("""
+            <div style="background: #1E293B; padding: 0.875rem; border-radius: 6px; margin-bottom: 0.75rem; border-left: 3px solid #3B82F6;">
+            <strong style="color: #F8FAFC;">E-commerce</strong><br>
+            <span style="color: #94A3B8; font-size: 0.85rem;">Customer profiles, transactions, interactions</span>
+            </div>
+            """, unsafe_allow_html=True)
             
         if domain == "All Domains" or domain == "Finance":
-            st.write("**💰 Finance:**")
-            st.write("• Bank Transactions (deposits, withdrawals)")
-            st.write("• Credit Applications (income, credit scores)")
+            st.markdown("""
+            <div style="background: #1E293B; padding: 0.875rem; border-radius: 6px; margin-bottom: 0.75rem; border-left: 3px solid #8B5CF6;">
+            <strong style="color: #F8FAFC;">Finance</strong><br>
+            <span style="color: #94A3B8; font-size: 0.85rem;">Bank transactions, credit applications, stock data</span>
+            </div>
+            """, unsafe_allow_html=True)
     
-    if st.button("🚀 Generate Data", type="primary"):
-        with st.spinner("Generating synthetic data... This may take a moment."):
+    if st.button("Generate Data", type="primary"):
+        with st.spinner("Generating synthetic data..."):
             try:
                 # Convert domain selection
                 domain_param = None if domain == "All Domains" else domain.lower()
@@ -634,86 +721,96 @@ def show_data_generator():
 
 def main():
     """Main application function."""
-    # Apply dark theme
-    apply_theme()
-    
-    # Apply additional dark theme CSS
-    st.markdown("""
-    <style>
-        .stApp {
-            background-color: #0E1117 !important;
-        }
-        .stApp > div {
-            background-color: #0E1117 !important;
-        }
-        /* Make all text light colored */
-        .stMarkdown, .stText, p, h1, h2, h3, h4, h5, h6, span, div {
-            color: #FAFAFA !important;
-        }
-        /* Style dataframes for dark theme */
-        .stDataFrame {
-            background-color: #262730 !important;
-        }
-        /* Orange glow effects for buttons and interactive elements */
-        .stButton > button {
-            background: linear-gradient(135deg, #FF9900, #FFB366) !important;
-            color: white !important;
-            border: none !important;
-            box-shadow: 0 4px 8px rgba(255, 153, 0, 0.3) !important;
-        }
-        .stButton > button:hover {
-            box-shadow: 0 6px 12px rgba(255, 153, 0, 0.5) !important;
-            transform: translateY(-2px);
-        }
-    </style>
-    """, unsafe_allow_html=True)
-    
     init_session_state()
     
-    # Sidebar navigation
-    st.sidebar.markdown("## 🥋 DataDojo")
-    st.sidebar.markdown("---")
+    # Sidebar - Clean Professional Design
+    with st.sidebar:
+        st.markdown("""
+        <div style="text-align: center; padding: 1.25rem 0; border-bottom: 1px solid #334155; margin-bottom: 1rem;">
+            <h2 style="color: #F8FAFC; font-size: 1.5rem; margin: 0; font-weight: 700;">
+            DataDojo
+            </h2>
+            <p style="color: #94A3B8; font-size: 0.75rem; margin-top: 0.25rem;">
+            Data Science Platform
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        page = st.selectbox(
+            "Navigation",
+            [
+                "Home",
+                "Dataset Explorer", 
+                "Data Profiler",
+                "Data Generator",
+                "Notebook Templates",
+                "Progress Dashboard",
+                "Tutorial & Help"
+            ],
+            label_visibility="collapsed"
+        )
+        
+        st.markdown("<div style='margin: 1rem 0; border-top: 1px solid #334155;'></div>", unsafe_allow_html=True)
+        
+        # Quick Stats in Sidebar
+        datasets = load_datasets()
+        if datasets:
+            st.markdown("""
+            <p style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; 
+            letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 500;">Statistics</p>
+            """, unsafe_allow_html=True)
+            
+            st.markdown(f"""
+            <div style="background: #1E293B; padding: 0.625rem; border-radius: 6px; margin-bottom: 0.5rem; border: 1px solid #334155;">
+                <span style="color: #3B82F6; font-weight: 600;">{len(datasets)}</span>
+                <span style="color: #CBD5E1;"> datasets</span>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            total_rows = sum(d.rows for d in datasets)
+            st.markdown(f"""
+            <div style="background: #1E293B; padding: 0.625rem; border-radius: 6px; margin-bottom: 0.5rem; border: 1px solid #334155;">
+                <span style="color: #14B8A6; font-weight: 600;">{total_rows:,}</span>
+                <span style="color: #CBD5E1;"> records</span>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        st.markdown("<div style='margin: 1rem 0; border-top: 1px solid #334155;'></div>", unsafe_allow_html=True)
+        
+        # Tips
+        st.markdown("""
+        <p style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; 
+        letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 500;">Tips</p>
+        <ul style="color: #94A3B8; font-size: 0.8rem; padding-left: 1rem; margin: 0;">
+            <li style="margin-bottom: 0.25rem;">Use Notebook Templates for quick starts</li>
+            <li style="margin-bottom: 0.25rem;">Track progress to unlock achievements</li>
+            <li>Generate synthetic data for practice</li>
+        </ul>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("<br>" * 2, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div style="text-align: center; color: #64748B; font-size: 0.7rem;">
+        v2.0
+        </div>
+        """, unsafe_allow_html=True)
     
-    page = st.sidebar.selectbox(
-        "Navigate to:",
-        [
-            "🏠 Home",
-            "📁 Dataset Explorer", 
-            "🔍 Data Profiler",
-            "⚡ Data Generator",
-            "📓 Notebook Templates",
-            "📊 Progress Dashboard",
-            "📚 Tutorial & Help"
-        ]
-    )
-    
-    # Navigation routing
-    if page == "🏠 Home":
+    # Page routing
+    if page == "Home":
         show_home_page()
-    elif page == "📁 Dataset Explorer":
+    elif page == "Dataset Explorer":
         show_dataset_explorer()
-    elif page == "🔍 Data Profiler":
+    elif page == "Data Profiler":
         show_data_profiler()
-    elif page == "⚡ Data Generator":
+    elif page == "Data Generator":
         show_data_generator()
-    elif page == "📓 Notebook Templates":
+    elif page == "Notebook Templates":
         render_notebook_templates()
-    elif page == "📊 Progress Dashboard":
+    elif page == "Progress Dashboard":
         render_progress_dashboard()
-    elif page == "📚 Tutorial & Help":
+    elif page == "Tutorial & Help":
         render_help_page()
-    
-    # Sidebar info
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("### 💡 Quick Tips")
-    st.sidebar.markdown("• Use **Data Generator** to create sample datasets")
-    st.sidebar.markdown("• **Profile** datasets to understand data quality")
-    st.sidebar.markdown("• Generate **Notebook Templates** for analysis")
-    st.sidebar.markdown("• Track your learning in **Progress Dashboard**")
-    st.sidebar.markdown("• Check **Tutorial & Help** for guidance")
-    
-    st.sidebar.markdown("---")
-    st.sidebar.markdown("**Built with ❤️ using Streamlit**")
 
 if __name__ == "__main__":
     main()
