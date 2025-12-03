@@ -209,7 +209,7 @@ class TestProgressStorage:
     @pytest.fixture
     def progress_storage(self, temp_storage):
         """Create ProgressStorage instance."""
-        return ProgressStorage(base_path=temp_storage)
+        return ProgressStorage(storage_path=temp_storage)
 
     def test_save_progress(self, progress_storage):
         """Test saving progress."""

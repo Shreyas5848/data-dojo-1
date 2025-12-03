@@ -29,6 +29,9 @@ from datadojo.utils.intelligent_profiler import IntelligentProfiler, quick_profi
 from datadojo.utils.synthetic_data_generator import SyntheticDataGenerator
 from datadojo.web.visualizations import DataVisualizationEngine, create_data_quality_summary_card
 from datadojo.web.config import apply_theme
+from datadojo.web.notebook_interface import render_notebook_templates
+from datadojo.web.help_interface import render_help_page
+from datadojo.web.progress_interface import render_progress_dashboard
 
 # Page configuration
 st.set_page_config(
@@ -174,6 +177,36 @@ def show_home_page():
         return
     
     create_overview_metrics(datasets)
+    
+    # New Feature: Notebook Templates
+    st.markdown("---")
+    st.subheader("🎉 NEW: Notebook Templates")
+    
+    col1, col2 = st.columns([2, 1])
+    with col1:
+        st.markdown("""
+        **📓 Transform data insights into interactive Jupyter notebooks!**
+        
+        **Option 3 is now LIVE** - Generate professional analysis notebooks:
+        • **Smart Templates** - EDA, Data Cleaning, Classification, Regression
+        • **Auto-Generated** - Pre-populated with your data characteristics
+        • **Ready-to-Run** - Complete analysis code included
+        • **Educational** - Learn data science through hands-on examples
+        • **Customizable** - Modify templates for your specific needs
+        
+        Perfect bridge between data profiling and advanced analysis!
+        """)
+    
+    with col2:
+        st.markdown("""
+        <div style="margin-top: 2rem;">
+        <p style="text-align: center; color: #FF6B35; font-weight: bold;">
+        👈 Try "📓 Notebook Templates" now!
+        </p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    st.markdown("---")
     
     # Domain distribution chart
     col1, col2 = st.columns(2)
@@ -647,7 +680,10 @@ def main():
             "🏠 Home",
             "📁 Dataset Explorer", 
             "🔍 Data Profiler",
-            "⚡ Data Generator"
+            "⚡ Data Generator",
+            "📓 Notebook Templates",
+            "📊 Progress Dashboard",
+            "📚 Tutorial & Help"
         ]
     )
     
@@ -660,13 +696,21 @@ def main():
         show_data_profiler()
     elif page == "⚡ Data Generator":
         show_data_generator()
+    elif page == "📓 Notebook Templates":
+        render_notebook_templates()
+    elif page == "📊 Progress Dashboard":
+        render_progress_dashboard()
+    elif page == "📚 Tutorial & Help":
+        render_help_page()
     
     # Sidebar info
     st.sidebar.markdown("---")
     st.sidebar.markdown("### 💡 Quick Tips")
-    st.sidebar.markdown("• Use the **Data Generator** to create sample datasets")
+    st.sidebar.markdown("• Use **Data Generator** to create sample datasets")
     st.sidebar.markdown("• **Profile** datasets to understand data quality")
-    st.sidebar.markdown("• **Explore** datasets with interactive filters")
+    st.sidebar.markdown("• Generate **Notebook Templates** for analysis")
+    st.sidebar.markdown("• Track your learning in **Progress Dashboard**")
+    st.sidebar.markdown("• Check **Tutorial & Help** for guidance")
     
     st.sidebar.markdown("---")
     st.sidebar.markdown("**Built with ❤️ using Streamlit**")

@@ -13,6 +13,9 @@ An educational framework that teaches data preprocessing skills through hands-on
 - 🌐 **Multi-Domain**: E-commerce, healthcare, and finance datasets
 - 📈 **Progress Tracking**: Visual dashboards and skill assessments
 - ⚡ **High Performance**: <500ms guidance, scalable to 1M+ rows
+- 📓 **Notebook Templates**: 8 template types for all data science tasks (NEW!)
+- 🎯 **Smart Recommendations**: Auto-detect best analysis for your data (NEW!)
+- 🏆 **Gamified Learning**: XP, levels, and achievements (NEW!)
 
 ## 🚀 Quick Start
 
@@ -88,6 +91,27 @@ datadojo validate-data input.csv --checks missing,duplicates,outliers
 datadojo pipeline execute pipeline-id --input data.csv --output results.csv
 ```
 
+### Web Dashboard (NEW!)
+
+Launch the interactive web interface:
+
+```bash
+# Start the Streamlit dashboard
+streamlit run app.py
+
+# Or use a specific port
+streamlit run app.py --server.port 8501
+```
+
+**Dashboard Features:**
+- 🏠 **Home**: Overview of datasets and quick stats
+- 📁 **Dataset Explorer**: Browse and preview datasets
+- 🔍 **Data Profiler**: Intelligent data quality analysis
+- ⚡ **Data Generator**: Create synthetic datasets
+- 📓 **Notebook Templates**: Generate Jupyter notebooks
+- 📊 **Progress Dashboard**: Track your learning journey
+- 📚 **Tutorial & Help**: Comprehensive guides and FAQ
+
 ## 📚 Learning Paths
 
 ### Beginner (Data Cleaning Fundamentals)
@@ -131,6 +155,33 @@ datadojo pipeline execute pipeline-id --input data.csv --output results.csv
 ## 📊 Educational Content
 
 DataDojo includes comprehensive explanations for key concepts:
+
+## 📓 Notebook Templates (NEW!)
+
+Generate professional Jupyter notebooks with a click:
+
+### Available Templates
+| Template | Algorithms/Techniques |
+|----------|----------------------|
+| 📊 EDA | Statistical analysis, distributions, correlations |
+| 🧹 Data Cleaning | Missing values, duplicates, outliers |
+| 🎯 Classification | 8 algorithms (Logistic Regression → XGBoost) |
+| 📉 Regression | 7 algorithms (Linear → Gradient Boosting) |
+| 📅 Time Series | ARIMA, Exponential Smoothing, Decomposition |
+| 🔮 Clustering | K-Means, DBSCAN, Hierarchical |
+| 📐 Dimensionality Reduction | PCA, t-SNE, UMAP |
+| 🔧 Feature Engineering | Encoding, scaling, feature selection |
+
+### Smart Features
+- **Auto-Detect**: Analyzes your data and recommends best templates
+- **Customization**: Select only the sections you need
+- **Educational**: Each cell includes explanations for learning
+
+📖 See [NOTEBOOK_TEMPLATES_README.md](NOTEBOOK_TEMPLATES_README.md) for complete documentation.
+
+---
+
+## 📚 Core Concepts
 
 ### Data Quality
 - **Missing Values**: Strategies for handling gaps in data (imputation, deletion)

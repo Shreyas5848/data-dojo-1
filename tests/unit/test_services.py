@@ -165,7 +165,7 @@ class TestPipelineService:
     @pytest.fixture
     def pipeline_service(self, temp_storage):
         """Create PipelineService with temporary storage."""
-        return PipelineService(storage_path=temp_storage)
+        return PipelineService()
 
     def test_create_pipeline(self, pipeline_service):
         """Test creating a pipeline."""
@@ -263,7 +263,10 @@ class TestEducationalService:
     @pytest.fixture
     def educational_service(self, temp_storage):
         """Create EducationalService with temporary storage."""
-        return EducationalService(storage_path=temp_storage)
+        import os
+        content_path = os.path.join(temp_storage, "content")
+        progress_path = os.path.join(temp_storage, "progress")
+        return EducationalService(content_path=content_path, progress_path=progress_path)
 
     def test_get_concept(self, educational_service):
         """Test retrieving a concept."""
@@ -415,10 +418,14 @@ class TestServiceIntegration:
     @pytest.fixture
     def services(self, temp_storage):
         """Create all services with shared storage."""
+        import os
         return {
             'project': ProjectService(storage_path=temp_storage),
-            'pipeline': PipelineService(storage_path=temp_storage),
-            'educational': EducationalService(storage_path=temp_storage),
+            'pipeline': PipelineService(),
+            'educational': EducationalService(
+                content_path=os.path.join(temp_storage, "content"),
+                progress_path=os.path.join(temp_storage, "progress")
+            ),
             'domain': DomainService()
         }
 

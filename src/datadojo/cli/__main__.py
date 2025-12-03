@@ -16,6 +16,7 @@ from .doctor import doctor
 from .interactive_session import start_interactive_session
 from .practice import practice
 from .web_launch import launch_web_dashboard, check_web_status
+from .ml_pipeline import ml_pipeline
 
 
 def main():
@@ -226,6 +227,12 @@ def main():
         "web",
         help="Launch interactive web dashboard"
     )
+    
+    # ml-pipeline command
+    ml_pipeline_parser = subparsers.add_parser(
+        "ml-pipeline",
+        help="Launch ML Pipeline Builder interface"
+    )
     web_parser.add_argument(
         "--port",
         type=int,
@@ -245,6 +252,18 @@ def main():
         "--status",
         action="store_true",
         help="Check if web dashboard is running"
+    )
+    
+    ml_pipeline_parser.add_argument(
+        "--port",
+        type=int,
+        default=8505,
+        help="Port to run ML Pipeline interface on (default: 8505)"
+    )
+    ml_pipeline_parser.add_argument(
+        "--no-browser",
+        action="store_true", 
+        help="Don't automatically open browser"
     )
 
     # Parse arguments
@@ -363,6 +382,23 @@ def main():
                         auto_open=not args.no_browser,
                         debug=args.debug
                     )
+            
+            elif args.command == "ml-pipeline":
+                # Launch ML Pipeline Builder
+                print("🤖 Launching ML Pipeline Builder...")
+                print("")
+                print("📚 What you can do:")
+                print("   • Build ML models visually")
+                print("   • Learn as you go with explanations")
+                print("   • Use pre-built templates")
+                print("   • No coding required!")
+                print("")
+                
+                result = launch_web_dashboard(
+                    port=args.port,
+                    auto_open=not args.no_browser
+                )
+                return
 
             else:
                 print(f"Error: Unknown command: {args.command}", file=sys.stderr)

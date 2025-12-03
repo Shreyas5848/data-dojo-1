@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataDojo ML Pipeline</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e1e2e, #2d3748);
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            color: #ff9500;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.2em;
+            color: #cbd5e0;
+        }
+
+        .upload-section {
+            background: #2d3748;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 2px solid #4a5568;
+        }
+
+        .upload-section h3 {
+            color: #ff9500;
+            margin-bottom: 15px;
+        }
+
+        .upload-area {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .file-input-wrapper {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+        }
+
+        .file-input {
+            position: absolute;
+            left: -9999px;
+        }
+
+        .file-label, .btn {
+            background: linear-gradient(135deg, #ff9500, #ffb366);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .file-label:hover, .btn:hover {
+            background: linear-gradient(135deg, #ffb366, #ff9500);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(255, 149, 0, 0.3);
+        }
+
+        .data-info {
+            background: #1a202c;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #ff9500;
+            display: none;
+        }
+
+        .target-selection {
+            background: #2d3748;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            display: none;
+        }
+
+        .target-selection select {
+            background: #1a202c;
+            color: #e2e8f0;
+            border: 1px solid #4a5568;
+            padding: 10px;
+            border-radius: 4px;
+            width: 200px;
+        }
+
+        .pipeline-container {
+            background: #2d3748;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            display: none;
+        }
+
+        .pipeline-container h3 {
+            color: #ff9500;
+            margin-bottom: 20px;
+        }
+
+        .step {
+            background: #1a202c;
+            border: 1px solid #4a5568;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .step-title {
+            font-weight: bold;
+            font-size: 1.1em;
+        }
+
+        .step-status {
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.9em;
+            font-weight: bold;
+        }
+
+        .status-pending {
+            background: #4a5568;
+            color: #e2e8f0;
+        }
+
+        .status-running {
+            background: #3182ce;
+            color: white;
+        }
+
+        .status-completed {
+            background: #38a169;
+            color: white;
+        }
+
+        .status-failed {
+            background: #e53e3e;
+            color: white;
+        }
+
+        .step-content {
+            margin-top: 15px;
+        }
+
+        .step-result {
+            background: #0f1419;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            border-left: 3px solid #ff9500;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 8px;
+            background: #4a5568;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #ff9500, #ffb366);
+            border-radius: 4px;
+            transition: width 0.5s ease;
+        }
+
+        .metrics {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .metric {
+            background: #1a202c;
+            padding: 15px;
+            border-radius: 6px;
+            text-align: center;
+            border: 1px solid #4a5568;
+            min-width: 120px;
+        }
+
+        .metric-value {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #ff9500;
+        }
+
+        .metric-label {
+            font-size: 0.9em;
+            color: #cbd5e0;
+            margin-top: 5px;
+        }
+
+        .alert {
+            padding: 15px;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .alert-success {
+            background: #22543d;
+            border-left: 4px solid #38a169;
+        }
+
+        .alert-error {
+            background: #742a2a;
+            border-left: 4px solid #e53e3e;
+        }
+
+        .loading {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 3px solid #4a5568;
+            border-radius: 50%;
+            border-top-color: #ff9500;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        .completion-celebration {
+            text-align: center;
+            padding: 30px;
+            background: linear-gradient(135deg, #22543d, #38a169);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .completion-celebration h2 {
+            color: white;
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🥋 DataDojo ML Pipeline</h1>
+            <p>Build machine learning models step-by-step - No TypedDict issues!</p>
+        </div>
+
+        <div class="upload-section">
+            <h3>📁 Upload Your Data</h3>
+            <div class="upload-area">
+                <div class="file-input-wrapper">
+                    <input type="file" id="csvFile" class="file-input" accept=".csv">
+                    <label for="csvFile" class="file-label">Choose CSV File</label>
+                </div>
+                <span>or</span>
+                <button class="btn" onclick="loadDemoData()">📊 Use Demo Data</button>
+            </div>
+        </div>
+
+        <div id="alerts"></div>
+
+        <div id="dataInfo" class="data-info">
+            <h4>✅ Data Loaded Successfully!</h4>
+            <div id="dataStats"></div>
+        </div>
+
+        <div id="targetSelection" class="target-selection">
+            <h4>🎯 Select Target Column</h4>
+            <p>Choose the column you want to predict:</p>
+            <select id="targetColumn">
+                <option value="">Select target column...</option>
+            </select>
+        </div>
+
+        <div id="pipelineContainer" class="pipeline-container">
+            <h3>🚀 ML Pipeline Steps</h3>
+            <div class="progress-bar">
+                <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+            </div>
+            <div id="pipelineSteps"></div>
+        </div>
+
+        <div id="completionCelebration" class="completion-celebration hidden">
+            <h2>🎉 Pipeline Complete!</h2>
+            <p>Your machine learning model is trained and ready to use!</p>
+            <button class="btn" onclick="resetPipeline()" style="margin-top: 15px;">🔄 Start New Pipeline</button>
+        </div>
+    </div>
+
+    <script>
+        let currentData = null;
+        let pipelineSteps = [];
+        let selectedTarget = null;
+
+        // File upload handler
+        document.getElementById('csvFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                uploadFile(file);
+            }
+        });
+
+        // Target column selection handler
+        document.getElementById('targetColumn').addEventListener('change', function(e) {
+            selectedTarget = e.target.value;
+            if (selectedTarget) {
+                loadPipeline();
+            }
+        });
+
+        function showAlert(message, type = 'success') {
+            const alerts = document.getElementById('alerts');
+            const alertDiv = document.createElement('div');
+            alertDiv.className = `alert alert-${type}`;
+            alertDiv.innerHTML = message;
+            alerts.appendChild(alertDiv);
+            
+            setTimeout(() => {
+                alertDiv.remove();
+            }, 5000);
+        }
+
+        function uploadFile(file) {
+            const formData = new FormData();
+            formData.append('file', file);
+
+            fetch('/upload', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    currentData = data;
+                    showDataInfo(data);
+                    showAlert('Data uploaded successfully!');
+                } else {
+                    showAlert(data.error, 'error');
+                }
+            })
+            .catch(error => {
+                showAlert('Upload failed: ' + error.message, 'error');
+            });
+        }
+
+        function loadDemoData() {
+            fetch('/demo-data', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    currentData = data;
+                    showDataInfo(data);
+                    showAlert('Demo data loaded successfully!');
+                } else {
+                    showAlert(data.error, 'error');
+                }
+            })
+            .catch(error => {
+                showAlert('Failed to load demo data: ' + error.message, 'error');
+            });
+        }
+
+        function showDataInfo(data) {
+            const dataInfo = document.getElementById('dataInfo');
+            const dataStats = document.getElementById('dataStats');
+            
+            dataStats.innerHTML = `
+                <div class="metrics">
+                    <div class="metric">
+                        <div class="metric-value">${data.rows.toLocaleString()}</div>
+                        <div class="metric-label">Rows</div>
+                    </div>
+                    <div class="metric">
+                        <div class="metric-value">${data.columns.length}</div>
+                        <div class="metric-label">Columns</div>
+                    </div>
+                </div>
+                <p><strong>Columns:</strong> ${data.columns.join(', ')}</p>
+            `;
+            
+            // Populate target column dropdown
+            const targetSelect = document.getElementById('targetColumn');
+            targetSelect.innerHTML = '<option value="">Select target column...</option>';
+            data.columns.forEach(col => {
+                targetSelect.innerHTML += `<option value="${col}">${col}</option>`;
+            });
+            
+            dataInfo.style.display = 'block';
+            document.getElementById('targetSelection').style.display = 'block';
+        }
+
+        function loadPipeline() {
+            fetch('/pipeline-status')
+            .then(response => response.json())
+            .then(data => {
+                pipelineSteps = data.steps;
+                renderPipeline();
+                document.getElementById('pipelineContainer').style.display = 'block';
+            })
+            .catch(error => {
+                showAlert('Failed to load pipeline: ' + error.message, 'error');
+            });
+        }
+
+        function renderPipeline() {
+            const container = document.getElementById('pipelineSteps');
+            const completed = pipelineSteps.filter(step => step.status === 'completed').length;
+            const progress = (completed / pipelineSteps.length) * 100;
+            
+            document.getElementById('progressFill').style.width = progress + '%';
+            
+            container.innerHTML = '';
+            
+            pipelineSteps.forEach((step, index) => {
+                const stepDiv = document.createElement('div');
+                stepDiv.className = 'step';
+                stepDiv.innerHTML = `
+                    <div class="step-header">
+                        <div class="step-title">Step ${index + 1}: ${step.description}</div>
+                        <div class="step-status status-${step.status}">
+                            ${step.status === 'running' ? '<span class="loading"></span>' : ''}
+                            ${step.status.charAt(0).toUpperCase() + step.status.slice(1)}
+                        </div>
+                    </div>
+                    <div class="step-content">
+                        ${step.status === 'pending' && (index === 0 || pipelineSteps[index - 1].status === 'completed') ? 
+                            `<button class="btn" onclick="runStep(${index})">▶️ Run Step</button>` : ''}
+                        ${step.result && step.result.explanation ? 
+                            `<div class="step-result">${step.result.explanation.replace(/\n/g, '<br>')}</div>` : ''}
+                        ${renderStepMetrics(step)}
+                    </div>
+                `;
+                container.appendChild(stepDiv);
+            });
+            
+            // Check if pipeline is complete
+            if (completed === pipelineSteps.length && pipelineSteps.length > 0) {
+                document.getElementById('completionCelebration').classList.remove('hidden');
+            }
+        }
+
+        function renderStepMetrics(step) {
+            if (!step.result) return '';
+            
+            let metrics = '';
+            
+            if (step.name === 'load_data') {
+                metrics = `
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">${step.result.rows?.toLocaleString() || 'N/A'}</div>
+                            <div class="metric-label">Rows</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">${step.result.columns || 'N/A'}</div>
+                            <div class="metric-label">Columns</div>
+                        </div>
+                    </div>
+                `;
+            } else if (step.name === 'train_model') {
+                metrics = `
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">${(step.result.train_accuracy * 100).toFixed(1)}%</div>
+                            <div class="metric-label">Training Accuracy</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">${(step.result.test_accuracy * 100).toFixed(1)}%</div>
+                            <div class="metric-label">Test Accuracy</div>
+                        </div>
+                    </div>
+                `;
+            } else if (step.name === 'evaluate_model') {
+                metrics = `
+                    <div class="metrics">
+                        <div class="metric">
+                            <div class="metric-value">${(step.result.accuracy * 100).toFixed(1)}%</div>
+                            <div class="metric-label">Final Accuracy</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">${step.result.correct_predictions}</div>
+                            <div class="metric-label">Correct</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">${step.result.total_predictions}</div>
+                            <div class="metric-label">Total</div>
+                        </div>
+                    </div>
+                `;
+            }
+            
+            return metrics;
+        }
+
+        function runStep(stepIndex) {
+            const step = pipelineSteps[stepIndex];
+            step.status = 'running';
+            renderPipeline();
+            
+            const requestData = {
+                step_index: stepIndex,
+                target_column: selectedTarget
+            };
+            
+            fetch('/run-step', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(requestData)
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    step.status = data.step_status;
+                    step.result = data.result;
+                    renderPipeline();
+                    if (data.result.error) {
+                        showAlert(`Step ${stepIndex + 1} failed: ${data.result.error}`, 'error');
+                    } else {
+                        showAlert(`Step ${stepIndex + 1} completed successfully!`);
+                    }
+                } else {
+                    step.status = 'failed';
+                    renderPipeline();
+                    showAlert(`Step ${stepIndex + 1} failed: ${data.error}`, 'error');
+                }
+            })
+            .catch(error => {
+                step.status = 'failed';
+                renderPipeline();
+                showAlert(`Step ${stepIndex + 1} failed: ${error.message}`, 'error');
+            });
+        }
+
+        function resetPipeline() {
+            fetch('/reset', {
+                method: 'POST'
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    // Reset UI
+                    document.getElementById('dataInfo').style.display = 'none';
+                    document.getElementById('targetSelection').style.display = 'none';
+                    document.getElementById('pipelineContainer').style.display = 'none';
+                    document.getElementById('completionCelebration').classList.add('hidden');
+                    document.getElementById('csvFile').value = '';
+                    document.getElementById('targetColumn').value = '';
+                    currentData = null;
+                    selectedTarget = null;
+                    pipelineSteps = [];
+                    showAlert('Pipeline reset successfully!');
+                }
+            })
+            .catch(error => {
+                showAlert('Failed to reset pipeline: ' + error.message, 'error');
+            });
+        }
+    </script>
+</body>
+</html>

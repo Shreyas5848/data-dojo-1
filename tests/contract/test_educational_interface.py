@@ -9,6 +9,7 @@ TDD Note: These tests MUST FAIL until EducationalInterface is implemented in Pha
 
 import pytest
 from typing import Dict, List, Any
+from unittest.mock import Mock, MagicMock
 
 from datadojo.dojo_api import EducationalInterface
 
@@ -22,8 +23,17 @@ class TestEducationalInterfaceContract:
 
         TDD: This will fail until Educational class is implemented
         """
+        import tempfile
         from datadojo.core.educational import Educational
-        return Educational()
+        from datadojo.services.educational_service import EducationalService
+        
+        # Create temp directory for storage
+        temp_dir = tempfile.mkdtemp()
+        service = EducationalService(
+            content_path=f"{temp_dir}/content",
+            progress_path=f"{temp_dir}/progress"
+        )
+        return Educational(service)
 
     def test_educational_implements_interface(self, educational_instance):
         """Verify Educational class implements EducationalInterface"""
@@ -209,7 +219,16 @@ class TestEducationalInterfaceIntegration:
     def educational_instance(self):
         """Get educational instance"""
         from datadojo.core.educational import Educational
-        return Educational()
+        from datadojo.services.educational_service import EducationalService
+        from unittest.mock import Mock
+        
+        # Create mock storage and service
+        storage = Mock()
+        storage.load_progress.return_value = None
+        storage.save_progress.return_value = None
+        
+        service = EducationalService()
+        return Educational(service)
 
     def test_concept_explanation_and_guidance_workflow(self, educational_instance):
         """Test workflow: get concept explanation, then step guidance"""

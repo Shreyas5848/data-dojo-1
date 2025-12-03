@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+  datadojo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: datadojo-app
+    ports:
+      - "8501:8501"
+    volumes:
+      # Mount local directories for persistence
+      - ./datasets:/app/datasets
+      - ./demo_datasets:/app/demo_datasets
+      - ./generated_notebooks:/app/generated_notebooks
+      - ./user_progress.json:/app/user_progress.json
+    environment:
+      - PYTHONUNBUFFERED=1
+      - STREAMLIT_SERVER_PORT=8501
+      - STREAMLIT_SERVER_ADDRESS=0.0.0.0
+      - STREAMLIT_BROWSER_GATHER_USAGE_STATS=false
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8501/_stcore/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 10s
+
+  # Optional: Jupyter Lab for notebook editing
+  jupyter:
+    image: jupyter/scipy-notebook:latest
+    container_name: datadojo-jupyter
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./generated_notebooks:/home/jovyan/notebooks
+      - ./datasets:/home/jovyan/datasets
+    environment:
+      - JUPYTER_ENABLE_LAB=yes
+    command: start-notebook.sh --NotebookApp.token='' --NotebookApp.password=''
+    profiles:
+      - jupyter  # Only starts if explicitly requested
+
+networks:
+  default:
+    name: datadojo-network

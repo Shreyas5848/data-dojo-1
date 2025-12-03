@@ -1,0 +1,90 @@
+{
+  "user_info": {
+    "name": "Data Scientist",
+    "started": "2025-12-03T12:36:23.599872",
+    "level": 1,
+    "xp": 55
+  },
+  "skills": {
+    "data_exploration": {
+      "level": 0,
+      "xp": 30,
+      "max_xp": 100
+    },
+    "data_cleaning": {
+      "level": 0,
+      "xp": 0,
+      "max_xp": 100
+    },
+    "visualization": {
+      "level": 0,
+      "xp": 25,
+      "max_xp": 100
+    },
+    "classification": {
+      "level": 0,
+      "xp": 0,
+      "max_xp": 100
+    },
+    "regression": {
+      "level": 0,
+      "xp": 0,
+      "max_xp": 100
+    },
+    "clustering": {
+      "level": 0,
+      "xp": 0,
+      "max_xp": 100
+    },
+    "feature_engineering": {
+      "level": 0,
+      "xp": 0,
+      "max_xp": 100
+    },
+    "time_series": {
+      "level": 0,
+      "xp": 0,
+      "max_xp": 100
+    }
+  },
+  "achievements": [
+    {
+      "name": "First Notebook",
+      "description": "Generated your first analysis notebook",
+      "date": "2025-12-03T12:36:37.271729",
+      "icon": "\ud83d\udcd3"
+    },
+    {
+      "name": "Data Detective",
+      "description": "Profiled your first dataset",
+      "date": "2025-12-03T12:36:39.768537",
+      "icon": "\ud83d\udd0d"
+    }
+  ],
+  "activities": [
+    {
+      "name": "Profiled Dataset",
+      "skill": "data_exploration",
+      "xp": 20,
+      "date": "2025-12-03T12:36:39.768516"
+    },
+    {
+      "name": "Created Notebook",
+      "skill": "visualization",
+      "xp": 25,
+      "date": "2025-12-03T12:36:37.271714"
+    },
+    {
+      "name": "Practice Session",
+      "skill": "data_exploration",
+      "xp": 10,
+      "date": "2025-12-03T12:36:32.154354"
+    }
+  ],
+  "notebooks_generated": 1,
+  "datasets_profiled": 1,
+  "datasets_explored": 0,
+  "total_sessions": 7,
+  "streak_days": 1,
+  "last_active": "2025-12-03T12:36:39.988417"
+}
