@@ -272,6 +272,8 @@ def render_notebook_templates():
         st.session_state.dataset_name = None
     if 'profile_results' not in st.session_state:
         st.session_state.profile_results = None
+    if 'uploaded_file_key' not in st.session_state:
+        st.session_state.uploaded_file_key = None
 
     # Step 1: Data Input
     st.markdown("""
@@ -286,25 +288,37 @@ def render_notebook_templates():
         uploaded_file = st.file_uploader(
             "Upload your CSV file",
             type=['csv'],
-            help="Upload the dataset you want to create a notebook template for"
+            help="Upload the dataset you want to create a notebook template for",
+            key="notebook_file_uploader"
         )
     
     with col2:
         use_demo = st.button("Use Demo Data", help="Load sample dataset for testing", type="primary")
     
-    # Load data
+    # Load data - only process new uploads, keep existing data in session
     if uploaded_file is not None:
         try:
-            df = pd.read_csv(uploaded_file)
-            dataset_name = uploaded_file.name.replace('.csv', '')
-            st.session_state.current_df = df
-            st.session_state.dataset_name = dataset_name
-            st.success(f"✅ Loaded {len(df)} rows with {len(df.columns)} columns")
+            # Create unique key for this file
+            file_key = f"{uploaded_file.name}_{uploaded_file.size}"
+            
+            # Only reload if this is a different file
+            if st.session_state.get('uploaded_file_key') != file_key:
+                df = pd.read_csv(uploaded_file)
+                st.session_state.current_df = df
+                st.session_state.dataset_name = uploaded_file.name.replace('.csv', '')
+                st.session_state.uploaded_file_key = file_key
+                st.session_state.profile_results = None  # Reset profile for new data
+                st.success(f"Loaded {len(df)} rows with {len(df.columns)} columns")
+            # else: data already in session state, no need to reload
         except Exception as e:
-            st.error(f"❌ Error loading file: {str(e)}")
+            st.error(f"Error loading file: {str(e)}")
             st.stop()
     
     elif use_demo:
+        # Reset profile cache for demo dataset
+        if st.session_state.dataset_name != "customer_demo":
+            st.session_state.profile_results = None
+        
         # Create demo dataset
         demo_data = {
             'customer_id': range(1, 101),
@@ -316,10 +330,9 @@ def render_notebook_templates():
             'is_premium': np.random.choice([0, 1], 100)
         }
         df = pd.DataFrame(demo_data)
-        dataset_name = "customer_demo"
         st.session_state.current_df = df
-        st.session_state.dataset_name = dataset_name
-        st.success("✅ Loaded demo customer dataset")
+        st.session_state.dataset_name = "customer_demo"
+        st.success("Loaded demo customer dataset")
     
     # Use data from session state if available
     df = st.session_state.current_df

@@ -19,11 +19,54 @@ from .web_launch import launch_web_dashboard, check_web_status
 from .ml_pipeline import ml_pipeline
 
 
+def show_welcome_banner(console=None):
+    """Show a welcome banner with tips for new users."""
+    from rich.console import Console
+    from rich.panel import Panel
+    from rich.text import Text
+    from ..utils.claude_theme import claude_theme
+    
+    if console is None:
+        console = Console(theme=claude_theme)
+    
+    # ASCII Art logo with orange color matching interactive session
+    ascii_art = """[bold #FF9900]
+██████╗  █████╗ ████████╗ █████╗     ██████╗  ██████╗      ██╗ ██████╗ 
+██╔══██╗██╔══██╗╚══██╔══╝██╔══██╗    ██║  ██║██╔═══██╗     ██║██╔═══██╗
+██║  ██║███████║   ██║   ███████║    ██║  ██║██║   ██║     ██║██║   ██║
+██║  ██║██╔══██║   ██║   ██╔══██║    ██║  ██║██║   ██║██   ██║██║   ██║
+██████╔╝██║  ██║   ██║   ██║  ██║    ██████╔╝╚██████╔╝╚█████╔╝╚██████╔╝
+╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝    ╚═════╝  ╚═════╝  ╚════╝  ╚═════╝ 
+[/bold #FF9900]"""
+    
+    console.print(ascii_art)
+    
+    # Welcome panel with web tip
+    welcome_text = """[bold]AI-Powered Data Science Learning Framework[/bold]
+
+[dim]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/dim]
+
+[bold cyan]💡 TIP: Try the Web Dashboard for a visual experience![/bold cyan]
+
+Type [bold green]web[/bold green] to launch the interactive dashboard featuring:
+  • [blue]📊 Interactive data exploration & profiling[/blue]
+  • [blue]📓 Auto-generated learning notebooks[/blue]
+  • [blue]🏆 Progress tracking with XP & achievements[/blue]
+  • [blue]🎓 9 guided projects across 3 domains[/blue]
+
+[dim]━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━[/dim]
+
+Type [bold green]help[/bold green] for available commands or [bold green]exit[/bold green] to quit."""
+    
+    console.print(Panel(welcome_text, border_style="bright_blue", title="[bold]🥋 Welcome to DataDojo[/bold]"))
+
+
 def main():
     """Main CLI entry point with argument parsing."""
     parser = argparse.ArgumentParser(
         prog="datadojo",
-        description="DataDojo - AI-Powered Data Preparation Learning Framework"
+        description="DataDojo - AI-Powered Data Preparation Learning Framework",
+        epilog="💡 TIP: Run 'datadojo web' for an interactive visual experience!"
     )
 
     # Add global options
@@ -269,9 +312,56 @@ def main():
     # Parse arguments
     args = parser.parse_args()
 
-    # Show help if no command specified
+    # If no command specified, show welcome banner and launch interactive session
     if not args.command:
-        parser.print_help()
+        try:
+            dojo = Dojo(educational_mode=True)
+        except Exception as e:
+            print(f"Error: Failed to initialize DataDojo: {e}", file=sys.stderr)
+            sys.exit(1)
+        
+        # Import here to get access to the rich console
+        from rich.console import Console
+        from ..utils.claude_theme import claude_theme
+        console = Console(theme=claude_theme)
+        
+        # Show the welcome banner with web tips
+        show_welcome_banner(console)
+        
+        # Start interactive session (without the duplicate ASCII art)
+        from .interactive_session import DojoSession
+        session = DojoSession(dojo)
+        session.console = console  # Use the same console
+        
+        # Run the session loop directly (skip the session.run() welcome)
+        from prompt_toolkit import prompt
+        while True:
+            try:
+                user_input = prompt(session.prompt_text, completer=session.completer)
+                if not user_input.strip():
+                    continue
+                import shlex
+                parts = shlex.split(user_input)
+                command_name = parts[0]
+                command_args = parts[1:]
+                
+                # Handle 'web' command specially
+                if command_name == "web":
+                    console.print("\n🌐 Launching web dashboard...\n", style="bold cyan")
+                    result = launch_web_dashboard(auto_open=True)
+                    if result and result.success:
+                        console.print(result.output)
+                    elif result and result.error_message:
+                        console.print(f"Error: {result.error_message}", style="bold red")
+                elif command_name in session.commands:
+                    session.commands[command_name](command_args)
+                else:
+                    console.print(f"Unknown command: '{command_name}'. Type 'help'.", style="warning")
+            except KeyboardInterrupt:
+                continue
+            except EOFError:
+                break
+        console.print("Exiting DataDojo session. Goodbye!", style="info")
         sys.exit(0)
     
     if args.command == "doctor":

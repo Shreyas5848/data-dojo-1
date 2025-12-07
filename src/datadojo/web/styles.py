@@ -136,8 +136,11 @@ def get_modern_css():
     color: var(--text-secondary) !important;
     font-weight: 400;
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 auto !important;
     line-height: 1.6;
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
 }
 
 /* ============================================

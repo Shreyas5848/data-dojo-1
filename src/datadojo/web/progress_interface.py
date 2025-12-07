@@ -675,6 +675,14 @@ def generate_html_report(progress, skill_names):
         .skill-name {{
             font-weight: bold;
             margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }}
+        .skill-level {{
+            color: #FF9900;
+            font-weight: bold;
+            font-size: 0.9rem;
         }}
         .skill-progress {{
             background: #eee;
@@ -686,13 +694,6 @@ def generate_html_report(progress, skill_names):
             background: linear-gradient(90deg, #FF9900, #FFB366);
             height: 100%;
             border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            padding-right: 10px;
-            color: white;
-            font-weight: bold;
-            font-size: 0.8rem;
         }}
         .achievement {{
             display: inline-block;
@@ -776,11 +777,12 @@ def generate_html_report(progress, skill_names):
         <h2>🎓 Skills</h2>
         {''.join(f'''
         <div class="skill-bar">
-            <div class="skill-name">{name}</div>
+            <div class="skill-name">
+                <span>{name}</span>
+                <span class="skill-level">Level {level}</span>
+            </div>
             <div class="skill-progress">
-                <div class="skill-fill" style="width: {max(5, min(100, (level * 10 + 5)))}%">
-                    Level {level}
-                </div>
+                <div class="skill-fill" style="width: {max(5, min(100, (level * 10 + 5)))}%"></div>
             </div>
         </div>
         ''' for name, level in skill_levels)}

@@ -1,0 +1,47 @@
+============================================================
+📊 DATADOJO PROGRESS REPORT
+============================================================
+Generated: 2025-12-06 18:15
+
+👤 USER PROFILE
+----------------------------------------
+Level: 1
+Total XP: 90
+Started: 2025-12-03
+Current Streak: 1 days
+Total Sessions: 13
+
+📈 STATISTICS
+----------------------------------------
+Notebooks Generated: 2
+Datasets Profiled: 1
+Datasets Explored: 0
+
+🎓 SKILL LEVELS
+----------------------------------------
+Data Exploration: Level 0 (40 XP)
+Data Cleaning: Level 0 (0 XP)
+Visualization: Level 0 (25 XP)
+Classification: Level 0 (0 XP)
+Regression: Level 0 (0 XP)
+Clustering: Level 0 (0 XP)
+Feature Engineering: Level 0 (0 XP)
+Time Series: Level 0 (25 XP)
+
+🏆 ACHIEVEMENTS
+----------------------------------------
+• 📓 First Notebook: Generated your first analysis notebook
+• 🔍 Data Detective: Profiled your first dataset
+• 🌟 Well-Rounded: Practiced 3 different skills
+
+📜 RECENT ACTIVITY (Last 10)
+----------------------------------------
+• Practice Session (+10 XP) - 2025-12-06
+• Generated Time Series Analysis notebook for patient_demographics (+25 XP) - 2025-12-06
+• Profiled Dataset (+20 XP) - 2025-12-03
+• Created Notebook (+25 XP) - 2025-12-03
+• Practice Session (+10 XP) - 2025-12-03
+
+============================================================
+Keep learning and growing! 🚀
+============================================================

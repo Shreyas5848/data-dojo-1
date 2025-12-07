@@ -195,6 +195,18 @@ def _format_all_progress(student_id: str, progress_data, detail_level: str) -> s
         lines.append("")
 
     lines.append("=" * 80)
+    
+    # Add web tip
+    lines.append("")
+    lines.append("─" * 60)
+    lines.append("💡 TIP: View your progress with charts & achievements!")
+    lines.append("   Run: datadojo web")
+    lines.append("   Then go to 'Progress Dashboard' for:")
+    lines.append("   • XP tracking & level progression")
+    lines.append("   • Skill radar charts")
+    lines.append("   • Achievement badges")
+    lines.append("   • Downloadable progress reports")
+    lines.append("─" * 60)
 
     return "\n".join(lines)
 

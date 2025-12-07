@@ -17,7 +17,8 @@ class CLIResult:
 def list_projects(
     dojo,
     domain: Optional[str] = None,
-    difficulty: Optional[str] = None
+    difficulty: Optional[str] = None,
+    format_output: str = "table"
 ) -> CLIResult:
     """Gets a list of available learning projects."""
     try:
@@ -27,10 +28,21 @@ def list_projects(
         projects = dojo.list_projects(domain=domain_filter, difficulty=difficulty_filter)
         
         if not projects:
-            return CLIResult(success=True, output=[], exit_code=0, error_message="No projects found matching criteria.")
+            return CLIResult(success=True, output="No projects found matching criteria.", exit_code=0)
         
-        # Return the raw list of projects
-        return CLIResult(success=True, output=projects, exit_code=0)
+        # Return raw projects for internal use (e.g., interactive session)
+        if format_output == "raw":
+            return CLIResult(success=True, output=projects, exit_code=0)
+        
+        # Format output based on preference
+        if format_output == "json":
+            output = _format_json(projects)
+        elif format_output == "csv":
+            output = _format_csv(projects)
+        else:
+            output = _format_table(projects)
+        
+        return CLIResult(success=True, output=output, exit_code=0)
 
     except ValueError as e: # Handles invalid domain/difficulty strings
         return CLIResult(success=False, output=None, exit_code=1, error_message=str(e))
@@ -61,6 +73,15 @@ def _format_table(projects) -> str:
 
     lines.append("=" * 100)
     lines.append(f"\nTotal projects: {len(projects)}")
+    
+    # Add web tip
+    lines.append("")
+    lines.append("─" * 60)
+    lines.append("💡 TIP: Try the web interface for a better experience!")
+    lines.append("   Run: datadojo web")
+    lines.append("   Features: Visual project browser, auto-generated notebooks,")
+    lines.append("             progress tracking, interactive data exploration")
+    lines.append("─" * 60)
 
     return "\n".join(lines)
 

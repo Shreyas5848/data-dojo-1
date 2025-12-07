@@ -1,0 +1,265 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataDojo Progress Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+            color: #333;
+        }
+        .header {
+            background: linear-gradient(135deg, #FF9900, #FFB366);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .section {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .section h2 {
+            color: #FF9900;
+            border-bottom: 2px solid #FF9900;
+            padding-bottom: 10px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+        .stat-card {
+            background: linear-gradient(135deg, #FF9900, #FFB366);
+            color: white;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .stat-card .number {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+        .stat-card .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        .skill-bar {
+            margin: 10px 0;
+        }
+        .skill-name {
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .skill-level {
+            color: #FF9900;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        .skill-progress {
+            background: #eee;
+            border-radius: 10px;
+            height: 20px;
+            overflow: hidden;
+        }
+        .skill-fill {
+            background: linear-gradient(90deg, #FF9900, #FFB366);
+            height: 100%;
+            border-radius: 10px;
+        }
+        .achievement {
+            display: inline-block;
+            background: linear-gradient(135deg, #FF9900, #FFB366);
+            color: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            margin: 5px;
+            font-size: 0.9rem;
+        }
+        .activity {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
+        }
+        .activity:last-child {
+            border-bottom: none;
+        }
+        .footer {
+            text-align: center;
+            color: #666;
+            margin-top: 30px;
+            padding: 20px;
+        }
+        @media print {
+            body { background: white; }
+            .section { box-shadow: none; border: 1px solid #ddd; }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🥋 DataDojo Progress Report</h1>
+        <p>Generated on December 06, 2025 at 18:23</p>
+    </div>
+    
+    <div class="section">
+        <h2>📊 Overview</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">1</div>
+                <div class="label">Level</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">90</div>
+                <div class="label">Total XP</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">1</div>
+                <div class="label">Day Streak</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">3</div>
+                <div class="label">Achievements</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>📈 Activity Stats</h2>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="number">2</div>
+                <div class="label">Notebooks</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">1</div>
+                <div class="label">Datasets Profiled</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">0</div>
+                <div class="label">Datasets Explored</div>
+            </div>
+            <div class="stat-card">
+                <div class="number">16</div>
+                <div class="label">Sessions</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>🎓 Skills</h2>
+        
+        <div class="skill-bar">
+            <div class="skill-name">
+                <span>Data Exploration</span>
+                <span class="skill-level">Level 0</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 5%"></div>
+            </div>
+        </div>
+        
+        <div class="skill-bar">
+            <div class="skill-name">
+                <span>Data Cleaning</span>
+                <span class="skill-level">Level 0</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 5%"></div>
+            </div>
+        </div>
+        
+        <div class="skill-bar">
+            <div class="skill-name">
+                <span>Visualization</span>
+                <span class="skill-level">Level 0</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 5%"></div>
+            </div>
+        </div>
+        
+        <div class="skill-bar">
+            <div class="skill-name">
+                <span>Classification</span>
+                <span class="skill-level">Level 0</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 5%"></div>
+            </div>
+        </div>
+        
+        <div class="skill-bar">
+            <div class="skill-name">
+                <span>Regression</span>
+                <span class="skill-level">Level 0</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 5%"></div>
+            </div>
+        </div>
+        
+        <div class="skill-bar">
+            <div class="skill-name">
+                <span>Clustering</span>
+                <span class="skill-level">Level 0</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 5%"></div>
+            </div>
+        </div>
+        
+        <div class="skill-bar">
+            <div class="skill-name">
+                <span>Feature Engineering</span>
+                <span class="skill-level">Level 0</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 5%"></div>
+            </div>
+        </div>
+        
+        <div class="skill-bar">
+            <div class="skill-name">
+                <span>Time Series</span>
+                <span class="skill-level">Level 0</span>
+            </div>
+            <div class="skill-progress">
+                <div class="skill-fill" style="width: 5%"></div>
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="section">
+        <h2>🏆 Achievements</h2>
+        <span class='achievement'>📓 First Notebook</span><span class='achievement'>🔍 Data Detective</span><span class='achievement'>🌟 Well-Rounded</span>
+    </div>
+    
+    <div class="section">
+        <h2>📜 Recent Activity</h2>
+        <div class='activity'>• <strong>Practice Session</strong> (+10 XP) - 2025-12-06</div><div class='activity'>• <strong>Generated Time Series Analysis notebook for patient_demographics</strong> (+25 XP) - 2025-12-06</div><div class='activity'>• <strong>Profiled Dataset</strong> (+20 XP) - 2025-12-03</div><div class='activity'>• <strong>Created Notebook</strong> (+25 XP) - 2025-12-03</div><div class='activity'>• <strong>Practice Session</strong> (+10 XP) - 2025-12-03</div>
+    </div>
+    
+    <div class="footer">
+        <p>🚀 Keep learning and growing with DataDojo!</p>
+        <p><small>This report was generated automatically.</small></p>
+    </div>
+</body>
+</html>

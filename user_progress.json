@@ -2,13 +2,13 @@
   "user_info": {
     "name": "Data Scientist",
     "started": "2025-12-03T12:36:23.599872",
-    "level": 1,
-    "xp": 55
+    "level": 2,
+    "xp": 115
   },
   "skills": {
     "data_exploration": {
       "level": 0,
-      "xp": 30,
+      "xp": 40,
       "max_xp": 100
     },
     "data_cleaning": {
@@ -43,7 +43,7 @@
     },
     "time_series": {
       "level": 0,
-      "xp": 0,
+      "xp": 50,
       "max_xp": 100
     }
   },
@@ -59,9 +59,33 @@
       "description": "Profiled your first dataset",
       "date": "2025-12-03T12:36:39.768537",
       "icon": "\ud83d\udd0d"
+    },
+    {
+      "name": "Well-Rounded",
+      "description": "Practiced 3 different skills",
+      "date": "2025-12-06T18:15:04.282336",
+      "icon": "\ud83c\udf1f"
     }
   ],
   "activities": [
+    {
+      "name": "Generated Time Series Analysis notebook for ehr_records",
+      "skill": "time_series",
+      "xp": 25,
+      "date": "2025-12-06T18:40:01.767239"
+    },
+    {
+      "name": "Practice Session",
+      "skill": "data_exploration",
+      "xp": 10,
+      "date": "2025-12-06T18:15:37.625515"
+    },
+    {
+      "name": "Generated Time Series Analysis notebook for patient_demographics",
+      "skill": "time_series",
+      "xp": 25,
+      "date": "2025-12-06T14:58:18.883273"
+    },
     {
       "name": "Profiled Dataset",
       "skill": "data_exploration",
@@ -81,10 +105,10 @@
       "date": "2025-12-03T12:36:32.154354"
     }
   ],
-  "notebooks_generated": 1,
+  "notebooks_generated": 3,
   "datasets_profiled": 1,
   "datasets_explored": 0,
-  "total_sessions": 10,
+  "total_sessions": 18,
   "streak_days": 1,
-  "last_active": "2025-12-03T15:51:31.346234"
+  "last_active": "2025-12-06T19:34:02.503655"
 }

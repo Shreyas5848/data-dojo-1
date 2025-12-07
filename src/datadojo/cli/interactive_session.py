@@ -24,6 +24,7 @@ from .show_progress import show_progress
 from .explain_concept import explain_concept
 from .complete_step import complete_step
 from .practice import practice
+from .web_launch import launch_web_dashboard
 import pandas as pd
 from pathlib import Path
 
@@ -86,6 +87,7 @@ class DojoSession:
             "profile-data": self._profile_data_command,
             "list-datasets": self._list_datasets_command,
             "profile-all": self._profile_all_command,
+            "web": self._web_command,
         }
         self.command_args = {
             "list-projects": ["--domain", "--difficulty"],
@@ -98,6 +100,7 @@ class DojoSession:
             "profile-data": ["--file", "--output", "--format"],
             "list-datasets": ["--domain", "--format", "--min-size"],
             "profile-all": ["--domain", "--output-dir", "--format"],
+            "web": ["--port", "--no-browser"],
         }
         self.completer = DojoCompleter(self)
 
@@ -142,16 +145,42 @@ Usage: theme [default|claude]"""
         self.console.theme = self.themes[args[0]]
         self.console.print(f"Theme changed to [info]{args[0]}[/info].")
 
+    def _web_command(self, args: List[str]):
+        """Launch the interactive web dashboard.
+Usage: web [--port PORT] [--no-browser]
+
+The web dashboard provides:
+  • Interactive data exploration & profiling
+  • Auto-generated learning notebooks  
+  • Progress tracking with XP & achievements
+  • 9 guided projects across 3 domains"""
+        parser = argparse.ArgumentParser(prog="web", add_help=False)
+        parser.add_argument("--port", type=int, help="Port to run on")
+        parser.add_argument("--no-browser", action="store_true", help="Don't auto-open browser")
+        try:
+            parsed_args = parser.parse_args(args)
+            self.console.print("\n🌐 [bold cyan]Launching web dashboard...[/bold cyan]\n")
+            result = launch_web_dashboard(
+                port=parsed_args.port,
+                auto_open=not parsed_args.no_browser
+            )
+            if result and result.success:
+                self.console.print(result.output)
+            elif result and result.error_message:
+                self.console.print(f"Error: {result.error_message}", style="danger")
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
+
     def _list_projects_command(self, args: List[str]):
         parser = argparse.ArgumentParser(prog="list-projects", add_help=False)
         parser.add_argument("--domain", choices=["ecommerce", "healthcare", "finance"])
         parser.add_argument("--difficulty", choices=["beginner", "intermediate", "advanced"])
         try:
             parsed_args = parser.parse_args(args)
-            result = list_projects(dojo=self.dojo, domain=parsed_args.domain, difficulty=parsed_args.difficulty)
+            result = list_projects(dojo=self.dojo, domain=parsed_args.domain, difficulty=parsed_args.difficulty, format_output="raw")
             if result.success:
                 projects = result.output
-                if not projects:
+                if not projects or isinstance(projects, str):
                     self.console.print(result.error_message or "No projects found.", style="info")
                     return
                 table = Table(title="[title]Available Projects[/title]", border_style="border")

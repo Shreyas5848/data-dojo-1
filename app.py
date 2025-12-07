@@ -31,6 +31,7 @@ from datadojo.web.visualizations import DataVisualizationEngine, create_data_qua
 from datadojo.web.notebook_interface import render_notebook_templates
 from datadojo.web.help_interface import render_help_page
 from datadojo.web.progress_interface import render_progress_dashboard
+from datadojo.web.projects_interface import render_projects_page
 from datadojo.web.styles import (
     get_modern_css, 
     create_hero_header,
@@ -740,6 +741,7 @@ def main():
             "Navigation",
             [
                 "Home",
+                "Learning Projects",
                 "Dataset Explorer", 
                 "Data Profiler",
                 "Data Generator",
@@ -799,6 +801,8 @@ def main():
     # Page routing
     if page == "Home":
         show_home_page()
+    elif page == "Learning Projects":
+        render_projects_page()
     elif page == "Dataset Explorer":
         show_dataset_explorer()
     elif page == "Data Profiler":
