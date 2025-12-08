@@ -1,0 +1,331 @@
+================================================================================
+📊 DATA PROFILE REPORT: ehr_records.csv
+================================================================================
+Generated: 2025-12-08 10:15:40
+
+📈 DATASET OVERVIEW
+----------------------------------------
+Shape: 50 rows × 32 columns
+Memory Usage: 0.1 MB
+Duplicate Rows: 0 (0.0%)
+
+🎯 DATA QUALITY SCORES
+----------------------------------------
+Overall Quality: 95.6% 🟢
+Completeness: 98.2%
+Consistency: 90.6%
+Uniqueness: 100.0%
+
+📋 COLUMN ANALYSIS
+----------------------------------------
+
+🔸 record_id (object)
+   • Missing: 0 (0.0%)
+   • Unique: 50 (100.0%)
+   • Quality Score: 90.0%
+   • Length: 6-6 chars (avg: 6.0)
+   ⚠️  Issues: Very high cardinality: 100.0% unique values
+   • Top values: EHR001: 1, EHR002: 1, EHR003: 1
+
+🔸 patient_id (object)
+   • Missing: 0 (0.0%)
+   • Unique: 49 (98.0%)
+   • Quality Score: 90.0%
+   • Length: 4-4 chars (avg: 4.0)
+   ⚠️  Issues: Very high cardinality: 98.0% unique values
+   • Top values: P001: 2, P002: 1, P003: 1
+
+🔸 mrn (object)
+   • Missing: 0 (0.0%)
+   • Unique: 49 (98.0%)
+   • Quality Score: 90.0%
+   • Length: 8-8 chars (avg: 8.0)
+   ⚠️  Issues: Very high cardinality: 98.0% unique values
+   • Top values: MRN10001: 2, MRN10002: 1, MRN10003: 1
+
+🔸 admission_date (object)
+   • Missing: 0 (0.0%)
+   • Unique: 50 (100.0%)
+   • Quality Score: 90.0%
+   • Length: 10-10 chars (avg: 10.0)
+   ⚠️  Issues: Very high cardinality: 100.0% unique values
+   • Top values: 2024-01-05: 1, 2024-01-08: 1, 2024-01-10: 1
+
+🔸 admission_time (object)
+   • Missing: 0 (0.0%)
+   • Unique: 41 (82.0%)
+   • Quality Score: 100.0%
+   • Length: 8-8 chars (avg: 8.0)
+   • Top values: 08:00:00: 4, 10:30:00: 2, 11:00:00: 2
+
+🔸 discharge_date (object)
+   • Missing: 0 (0.0%)
+   • Unique: 48 (96.0%)
+   • Quality Score: 90.0%
+   • Length: 10-10 chars (avg: 10.0)
+   ⚠️  Issues: Very high cardinality: 96.0% unique values
+   • Top values: 2024-04-17: 2, 2024-02-21: 2, 2024-01-09: 1
+
+🔸 discharge_time (object)
+   • Missing: 0 (0.0%)
+   • Unique: 15 (30.0%)
+   • Quality Score: 100.0%
+   • Length: 8-8 chars (avg: 8.0)
+   • Top values: 10:00:00: 8, 14:00:00: 6, 11:00:00: 4
+
+🔸 length_of_stay_days (int64)
+   • Missing: 0 (0.0%)
+   • Unique: 7 (14.0%)
+   • Quality Score: 100.0%
+   • Range: 1.00 - 8.00
+   • Mean: 3.42, Median: 2.00
+   • Skewness: 0.83
+   • Top values: 2: 21, 7: 11, 1: 7
+
+🔸 admission_type (object)
+   • Missing: 0 (0.0%)
+   • Unique: 4 (8.0%)
+   • Quality Score: 100.0%
+   • Length: 6-11 chars (avg: 8.4)
+   • Top values: Emergency: 25, Elective: 14, Urgent: 8
+
+🔸 admission_source (object)
+   • Missing: 0 (0.0%)
+   • Unique: 4 (8.0%)
+   • Quality Score: 100.0%
+   • Length: 14-22 chars (avg: 16.2)
+   • Top values: Emergency Room: 24, Physician Referral: 22, Transfer from SNF: 2
+
+🔸 discharge_disposition (object)
+   • Missing: 0 (0.0%)
+   • Unique: 5 (10.0%)
+   • Quality Score: 100.0%
+   • Length: 4-24 chars (avg: 9.5)
+   • Top values: Home: 32, Home Health Care: 6, Rehabilitation Facility: 5
+
+🔸 attending_physician (object)
+   • Missing: 0 (0.0%)
+   • Unique: 9 (18.0%)
+   • Quality Score: 100.0%
+   • Length: 13-19 chars (avg: 16.0)
+   • Top values: Dr. Emily Chen: 7, Dr. Sarah Williams: 6, Dr. James Wilson: 6
+
+🔸 department (object)
+   • Missing: 0 (0.0%)
+   • Unique: 21 (42.0%)
+   • Quality Score: 100.0%
+   • Length: 7-18 chars (avg: 11.8)
+   • Top values: Cardiology: 12, Pulmonology: 6, Gastroenterology: 5
+
+🔸 primary_diagnosis_code (object)
+   • Missing: 0 (0.0%)
+   • Unique: 50 (100.0%)
+   • Quality Score: 90.0%
+   • Length: 3-8 chars (avg: 5.4)
+   ⚠️  Issues: Very high cardinality: 100.0% unique values
+   • Top values: I21.0: 1, M17.11: 1, J18.9: 1
+
+🔸 primary_diagnosis_description (object)
+   • Missing: 0 (0.0%)
+   • Unique: 50 (100.0%)
+   • Quality Score: 90.0%
+   • Length: 9-51 chars (avg: 28.1)
+   ⚠️  Issues: Very high cardinality: 100.0% unique values
+   • Top values: ST elevation myocardial infarction of anterior wall: 1, Primary osteoarthritis right knee: 1, Pneumonia unspecified organism: 1
+
+🔸 secondary_diagnosis_codes (object)
+   • Missing: 0 (0.0%)
+   • Unique: 48 (96.0%)
+   • Quality Score: 90.0%
+   • Length: 5-20 chars (avg: 11.7)
+   ⚠️  Issues: Very high cardinality: 96.0% unique values
+   • Top values: K65.0: 2, I10;I25.10: 2, I10;I25.10;E11.9: 1
+
+🔸 secondary_diagnosis_descriptions (object)
+   • Missing: 0 (0.0%)
+   • Unique: 48 (96.0%)
+   • Quality Score: 90.0%
+   • Length: 17-68 chars (avg: 36.9)
+   ⚠️  Issues: Very high cardinality: 96.0% unique values
+   • Top values: Generalized peritonitis: 2, Hypertension;Coronary artery disease: 2, Essential hypertension;Atherosclerotic heart disease;Type 2 diabetes: 1
+
+🔸 procedure_codes (object)
+   • Missing: 0 (0.0%)
+   • Unique: 48 (96.0%)
+   • Quality Score: 90.0%
+   • Length: 5-11 chars (avg: 9.2)
+   ⚠️  Issues: Very high cardinality: 96.0% unique values
+   • Top values: 93000;93306: 2, 94003;31622: 2, 92928;93458: 1
+
+🔸 procedure_descriptions (object)
+   • Missing: 0 (0.0%)
+   • Unique: 48 (96.0%)
+   • Quality Score: 90.0%
+   • Length: 4-54 chars (avg: 27.0)
+   ⚠️  Issues: Very high cardinality: 96.0% unique values
+   • Top values: ECG;Echocardiogram: 2, Ventilation management;Bronchoscopy: 2, Percutaneous coronary stent;Left heart catheterization: 1
+
+🔸 drg_code (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 48 (96.0%)
+   • Quality Score: 80.0%
+   • Range: 23.00 - 18500.00
+   • Mean: 886.92, Median: 308.50
+   • Skewness: 5.71
+   ⚠️  Issues: Very high cardinality: 96.0% unique values; High skewness: 5.71
+   • Top values: 190.0: 2, 23.0: 2, 193.0: 1
+
+🔸 drg_description (object)
+   • Missing: 0 (0.0%)
+   • Unique: 49 (98.0%)
+   • Quality Score: 90.0%
+   • Length: 7-36 chars (avg: 20.7)
+   ⚠️  Issues: Very high cardinality: 98.0% unique values
+   • Top values: COPD with MCC: 2, Acute Myocardial Infarction: 1, Major Hip and Knee Joint Replacement: 1
+
+🔸 total_charges (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 39 (78.0%)
+   • Quality Score: 100.0%
+   • Range: 850.00 - 195000.00
+   • Mean: 58848.00, Median: 42000.00
+   • Skewness: 1.18
+   • Top values: 28000.0: 3, 32000.0: 2, 38000.0: 2
+
+🔸 insurance_billed (object)
+   • Missing: 0 (0.0%)
+   • Unique: 38 (76.0%)
+   • Quality Score: 100.0%
+   • Length: 2-9 chars (avg: 7.8)
+   • Top values: 25200.00: 3, No: 2, 11250.00: 2
+
+🔸 patient_responsibility (object)
+   • Missing: 0 (0.0%)
+   • Unique: 38 (76.0%)
+   • Quality Score: 100.0%
+   • Length: 2-8 chars (avg: 6.9)
+   • Top values: 2800.00: 3, No: 2, 1250.00: 2
+
+🔸 readmission_flag (object)
+   • Missing: 0 (0.0%)
+   • Unique: 2 (4.0%)
+   • Quality Score: 100.0%
+   • Length: 2-3 chars (avg: 2.2)
+   • Top values: No: 39, Yes: 11
+
+🔸 readmission_within_30_days (object)
+   • Missing: 0 (0.0%)
+   • Unique: 3 (6.0%)
+   • Quality Score: 100.0%
+   • Length: 1-3 chars (avg: 2.0)
+   • Top values: No: 44, Yes: 4, 0: 2
+
+🔸 icu_stay (object)
+   • Missing: 0 (0.0%)
+   • Unique: 2 (4.0%)
+   • Quality Score: 100.0%
+   • Length: 2-3 chars (avg: 2.4)
+   • Top values: No: 32, Yes: 18
+
+🔸 icu_days (object)
+   • Missing: 0 (0.0%)
+   • Unique: 9 (18.0%)
+   • Quality Score: 100.0%
+   • Length: 1-3 chars (avg: 1.1)
+   • Top values: 0: 30, 1: 6, 2: 4
+
+🔸 ventilator_used (object)
+   • Missing: 2 (4.0%)
+   • Unique: 2 (4.0%)
+   • Quality Score: 98.8%
+   • Length: 2-3 chars (avg: 2.2)
+   • Top values: No: 39, Yes: 9
+
+🔸 surgery_performed (object)
+   • Missing: 0 (0.0%)
+   • Unique: 2 (4.0%)
+   • Quality Score: 100.0%
+   • Length: 2-3 chars (avg: 2.4)
+   • Top values: No: 32, Yes: 18
+
+🔸 complications (object)
+   • Missing: 24 (48.0%)
+   • Unique: 26 (52.0%)
+   • Quality Score: 75.6%
+   • Length: 4-30 chars (avg: 15.8)
+   ⚠️  Issues: High missing data: 48.0%
+   • Top values: Respiratory failure: 1, Acute kidney injury;Shock: 1, Dysphagia;Hemiparesis: 1
+
+🔸 mortality_flag (object)
+   • Missing: 2 (4.0%)
+   • Unique: 1 (2.0%)
+   • Quality Score: 98.8%
+   • Length: 2-2 chars (avg: 2.0)
+   • Top values: No: 48
+
+🔗 HIGH CORRELATIONS
+----------------------------------------
+   • length_of_stay_days ↔ total_charges: 0.793
+   • total_charges ↔ length_of_stay_days: 0.793
+
+⏰ TEMPORAL ANALYSIS
+----------------------------------------
+   • admission_date: Spans 121 days from 2024-01-05 to 2024-05-05
+   • admission_date: Most common date is 2024-01-05 (1 occurrences)
+   • admission_time: Spans 0 days from 2025-12-08 to 2025-12-08
+   • discharge_date: Spans 124 days from 2024-01-09 to 2024-05-12
+   • discharge_date: Most common date is 2024-04-17 (2 occurrences)
+   • discharge_time: Spans 0 days from 2025-12-08 to 2025-12-08
+
+💡 BUSINESS INSIGHTS
+----------------------------------------
+   • Small dataset with only 50 records - may need more data for reliable analysis
+   • Columns with significant missing data: complications
+   • Potential identifier columns detected: record_id, patient_id, mrn, admission_date, discharge_date, primary_diagnosis_code, primary_diagnosis_description, secondary_diagnosis_codes, secondary_diagnosis_descriptions, procedure_codes, procedure_descriptions, drg_code, drg_description
+   • Data composition: 32 categorical, 32 numeric columns
+
+🚀 RECOMMENDATIONS
+----------------------------------------
+   1. Convert to integer type: drg_code, total_charges
+
+🔧 COLUMN-SPECIFIC RECOMMENDATIONS
+----------------------------------------
+   1. record_id: This appears to be an ID column - consider using for indexing or dropping if not needed
+   2. patient_id: This appears to be an ID column - consider using for indexing or dropping if not needed
+   3. mrn: This appears to be an ID column - consider using for indexing or dropping if not needed
+   4. admission_date: This appears to be an ID column - consider using for indexing or dropping if not needed
+   5. discharge_date: This appears to be an ID column - consider using for indexing or dropping if not needed
+   6. admission_type: Consider standardizing case with .str.lower() or .str.title()
+   7. admission_source: Consider standardizing case with .str.lower() or .str.title()
+   8. discharge_disposition: Consider standardizing case with .str.lower() or .str.title()
+   9. attending_physician: Consider standardizing case with .str.lower() or .str.title()
+   10. department: Consider standardizing case with .str.lower() or .str.title()
+   11. primary_diagnosis_code: This appears to be an ID column - consider using for indexing or dropping if not needed
+   12. primary_diagnosis_description: This appears to be an ID column - consider using for indexing or dropping if not needed
+   13. primary_diagnosis_description: Consider standardizing case with .str.lower() or .str.title()
+   14. secondary_diagnosis_codes: This appears to be an ID column - consider using for indexing or dropping if not needed
+   15. secondary_diagnosis_descriptions: This appears to be an ID column - consider using for indexing or dropping if not needed
+   16. secondary_diagnosis_descriptions: Consider standardizing case with .str.lower() or .str.title()
+   17. procedure_codes: This appears to be an ID column - consider using for indexing or dropping if not needed
+   18. procedure_descriptions: This appears to be an ID column - consider using for indexing or dropping if not needed
+   19. procedure_descriptions: Consider standardizing case with .str.lower() or .str.title()
+   20. drg_code: This appears to be an ID column - consider using for indexing or dropping if not needed
+   21. drg_code: Consider log transformation to reduce skewness
+   22. drg_code: Investigate and potentially handle outliers
+   23. drg_code: Consider converting to integer type for memory efficiency
+   24. drg_description: This appears to be an ID column - consider using for indexing or dropping if not needed
+   25. drg_description: Consider standardizing case with .str.lower() or .str.title()
+   26. total_charges: Consider converting to integer type for memory efficiency
+   27. insurance_billed: Consider standardizing case with .str.lower() or .str.title()
+   28. patient_responsibility: Consider standardizing case with .str.lower() or .str.title()
+   29. readmission_flag: Consider standardizing case with .str.lower() or .str.title()
+   30. readmission_within_30_days: Consider standardizing case with .str.lower() or .str.title()
+   31. icu_stay: Consider standardizing case with .str.lower() or .str.title()
+   32. icu_days: Consider standardizing case with .str.lower() or .str.title()
+   33. ventilator_used: Consider standardizing case with .str.lower() or .str.title()
+   34. surgery_performed: Consider standardizing case with .str.lower() or .str.title()
+   35. complications: Consider imputing missing values with mode or 'Unknown'
+   36. complications: Consider standardizing case with .str.lower() or .str.title()
+   37. mortality_flag: Consider standardizing case with .str.lower() or .str.title()
+
+================================================================================

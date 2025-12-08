@@ -53,11 +53,25 @@ def discover_datasets(search_paths: List[str] = None) -> List[DatasetInfo]:
                         
                         # Determine domain from path
                         path_parts = Path(file_path).parts
-                        domain = "unknown"
+                        domain = None
                         for part in path_parts:
                             if part.lower() in ["healthcare", "finance", "ecommerce", "financial"]:
                                 domain = part.lower()
+                                if domain == "financial":
+                                    domain = "finance"
                                 break
+                        
+                        # If no domain from path, try to infer from filename
+                        if domain is None:
+                            filename_lower = file.lower()
+                            if any(term in filename_lower for term in ["patient", "lab", "health", "medical", "ehr", "diagnosis"]):
+                                domain = "healthcare"
+                            elif any(term in filename_lower for term in ["bank", "transaction", "credit", "loan", "stock", "finance"]):
+                                domain = "finance"
+                            elif any(term in filename_lower for term in ["customer", "order", "product", "sales", "ecommerce", "shop"]):
+                                domain = "ecommerce"
+                            else:
+                                domain = "other"
                         
                         # Quick peek at dataset size (read just first few rows for speed)
                         try:

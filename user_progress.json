@@ -3,7 +3,7 @@
     "name": "Data Scientist",
     "started": "2025-12-03T12:36:23.599872",
     "level": 2,
-    "xp": 115
+    "xp": 140
   },
   "skills": {
     "data_exploration": {
@@ -43,7 +43,7 @@
     },
     "time_series": {
       "level": 0,
-      "xp": 50,
+      "xp": 75,
       "max_xp": 100
     }
   },
@@ -68,6 +68,12 @@
     }
   ],
   "activities": [
+    {
+      "name": "Generated Time Series Analysis notebook for stock_prices",
+      "skill": "time_series",
+      "xp": 25,
+      "date": "2025-12-08T11:57:12.508250"
+    },
     {
       "name": "Generated Time Series Analysis notebook for ehr_records",
       "skill": "time_series",
@@ -105,10 +111,10 @@
       "date": "2025-12-03T12:36:32.154354"
     }
   ],
-  "notebooks_generated": 3,
+  "notebooks_generated": 4,
   "datasets_profiled": 1,
   "datasets_explored": 0,
-  "total_sessions": 18,
+  "total_sessions": 22,
   "streak_days": 1,
-  "last_active": "2025-12-06T19:34:02.503655"
+  "last_active": "2025-12-08T12:12:03.919154"
 }

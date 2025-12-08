@@ -113,7 +113,7 @@ def render_simple_ml_pipeline():
                 'Count': target_counts.values,
                 'Percentage': (target_counts.values / len(df) * 100).round(1)
             })
-            st.dataframe(target_df, use_container_width=True)
+            st.dataframe(target_df)
         else:
             st.write("**Target Statistics:**")
             st.write(df[target_col].describe())
@@ -217,7 +217,7 @@ def render_simple_ml_pipeline():
                                 scores_df = pd.DataFrame(list(result["all_scores"].items()), 
                                                        columns=["Model", "Score"])
                                 scores_df["Score"] = scores_df["Score"].apply(lambda x: f"{x:.1%}")
-                                st.dataframe(scores_df, use_container_width=True)
+                                st.dataframe(scores_df)
                         
                         elif step.name == "evaluate_performance":
                             if result.get("problem_type") == "classification":
@@ -235,7 +235,7 @@ def render_simple_ml_pipeline():
                                 if "confusion_matrix" in result:
                                     st.write("**Confusion Matrix:**")
                                     cm_df = pd.DataFrame(result["confusion_matrix"])
-                                    st.dataframe(cm_df, use_container_width=True)
+                                    st.dataframe(cm_df)
                             
                             else:  # regression
                                 col1, col2, col3 = st.columns(3)
@@ -259,7 +259,7 @@ def render_simple_ml_pipeline():
                                 features = result["feature_importance"]["top_features"]
                                 feat_df = pd.DataFrame(features, columns=["Feature", "Importance"])
                                 feat_df["Importance"] = feat_df["Importance"].apply(lambda x: f"{x:.1%}")
-                                st.dataframe(feat_df, use_container_width=True)
+                                st.dataframe(feat_df)
         
         # Final Summary
         completed_steps = len(st.session_state.simple_ml_results)

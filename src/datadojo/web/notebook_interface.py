@@ -398,7 +398,7 @@ def render_notebook_templates():
                 'Sample': str(df[col].dropna().iloc[0]) if len(df[col].dropna()) > 0 else "N/A"
             })
         
-        st.dataframe(pd.DataFrame(col_info), use_container_width=True)
+        st.dataframe(pd.DataFrame(col_info))
     
     # Step 3: Template Selection
     st.markdown("""

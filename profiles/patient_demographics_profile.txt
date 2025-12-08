@@ -1,0 +1,322 @@
+================================================================================
+📊 DATA PROFILE REPORT: patient_demographics.csv
+================================================================================
+Generated: 2025-12-08 10:15:45
+
+📈 DATASET OVERVIEW
+----------------------------------------
+Shape: 525 rows × 34 columns
+Memory Usage: 0.8 MB
+Duplicate Rows: 0 (0.0%)
+
+🎯 DATA QUALITY SCORES
+----------------------------------------
+Overall Quality: 96.7% 🟢
+Completeness: 97.5%
+Consistency: 94.1%
+Uniqueness: 100.0%
+
+📋 COLUMN ANALYSIS
+----------------------------------------
+
+🔸 patient_id (object)
+   • Missing: 0 (0.0%)
+   • Unique: 525 (100.0%)
+   • Quality Score: 90.0%
+   • Length: 7-7 chars (avg: 7.0)
+   ⚠️  Issues: Very high cardinality: 100.0% unique values
+
+🔸 mrn (object)
+   • Missing: 0 (0.0%)
+   • Unique: 500 (95.2%)
+   • Quality Score: 90.0%
+   • Length: 8-8 chars (avg: 8.0)
+   ⚠️  Issues: Very high cardinality: 95.2% unique values
+
+🔸 first_name (object)
+   • Missing: 0 (0.0%)
+   • Unique: 84 (16.0%)
+   • Quality Score: 90.0%
+   • Length: 3-11 chars (avg: 6.2)
+   ⚠️  Issues: Contains leading/trailing whitespace
+
+🔸 last_name (object)
+   • Missing: 0 (0.0%)
+   • Unique: 47 (9.0%)
+   • Quality Score: 90.0%
+   • Length: 3-9 chars (avg: 6.1)
+   ⚠️  Issues: Contains leading/trailing whitespace
+   • Top values: Thomas: 18, Smith: 18, Rodriguez: 18
+
+🔸 date_of_birth (object)
+   • Missing: 0 (0.0%)
+   • Unique: 497 (94.7%)
+   • Quality Score: 100.0%
+   • Length: 10-10 chars (avg: 10.0)
+
+🔸 age (int64)
+   • Missing: 0 (0.0%)
+   • Unique: 78 (14.9%)
+   • Quality Score: 100.0%
+   • Range: -1.00 - 150.00
+   • Mean: 61.56, Median: 63.00
+   • Skewness: 0.28
+
+🔸 gender (object)
+   • Missing: 0 (0.0%)
+   • Unique: 3 (0.6%)
+   • Quality Score: 100.0%
+   • Length: 4-6 chars (avg: 5.0)
+   • Top values: Female: 185, Other: 172, Male: 168
+
+🔸 race (object)
+   • Missing: 0 (0.0%)
+   • Unique: 7 (1.3%)
+   • Quality Score: 100.0%
+   • Length: 5-25 chars (avg: 10.0)
+   • Top values: White: 321, Hispanic or Latino: 93, Black or African American: 61
+
+🔸 ethnicity (object)
+   • Missing: 0 (0.0%)
+   • Unique: 2 (0.4%)
+   • Quality Score: 100.0%
+   • Length: 18-22 chars (avg: 19.9)
+   • Top values: Hispanic or Latino: 278, Not Hispanic or Latino: 247
+
+🔸 marital_status (object)
+   • Missing: 0 (0.0%)
+   • Unique: 5 (1.0%)
+   • Quality Score: 100.0%
+   • Length: 6-9 chars (avg: 6.9)
+   • Top values: Married: 255, Single: 147, Divorced: 80
+
+🔸 language (object)
+   • Missing: 0 (0.0%)
+   • Unique: 5 (1.0%)
+   • Quality Score: 100.0%
+   • Length: 6-10 chars (avg: 7.6)
+   • Top values: Spanish: 119, Vietnamese: 112, Korean: 107
+
+🔸 ssn_last_four (int64)
+   • Missing: 0 (0.0%)
+   • Unique: 491 (93.5%)
+   • Quality Score: 100.0%
+   • Range: 1003.00 - 9964.00
+   • Mean: 5360.70, Median: 5144.00
+   • Skewness: 0.08
+
+🔸 address (object)
+   • Missing: 0 (0.0%)
+   • Unique: 500 (95.2%)
+   • Quality Score: 90.0%
+   • Length: 10-15 chars (avg: 12.9)
+   ⚠️  Issues: Very high cardinality: 95.2% unique values
+
+🔸 city (object)
+   • Missing: 0 (0.0%)
+   • Unique: 31 (5.9%)
+   • Quality Score: 100.0%
+   • Length: 5-12 chars (avg: 7.8)
+   • Top values: Phoenix: 39, Philadelphia: 33, Detroit: 33
+
+🔸 state (object)
+   • Missing: 0 (0.0%)
+   • Unique: 12 (2.3%)
+   • Quality Score: 100.0%
+   • Length: 2-2 chars (avg: 2.0)
+   • Top values: TX: 113, CA: 79, FL: 56
+
+🔸 zip_code (int64)
+   • Missing: 0 (0.0%)
+   • Unique: 426 (81.1%)
+   • Quality Score: 100.0%
+   • Range: 2114.00 - 98196.00
+   • Mean: 59704.19, Median: 75292.00
+   • Skewness: -0.49
+
+🔸 phone (object)
+   • Missing: 13 (2.5%)
+   • Unique: 487 (92.8%)
+   • Quality Score: 99.3%
+   • Length: 15-15 chars (avg: 15.0)
+
+🔸 email (object)
+   • Missing: 63 (12.0%)
+   • Unique: 437 (83.2%)
+   • Quality Score: 86.4%
+   • Length: 15-30 chars (avg: 21.2)
+   ⚠️  Issues: High missing data: 12.0%
+
+🔸 emergency_contact_name (object)
+   • Missing: 0 (0.0%)
+   • Unique: 466 (88.8%)
+   • Quality Score: 100.0%
+   • Length: 7-19 chars (avg: 13.2)
+
+🔸 emergency_contact_phone (object)
+   • Missing: 0 (0.0%)
+   • Unique: 500 (95.2%)
+   • Quality Score: 90.0%
+   • Length: 15-15 chars (avg: 15.0)
+   ⚠️  Issues: Very high cardinality: 95.2% unique values
+
+🔸 emergency_contact_relationship (object)
+   • Missing: 0 (0.0%)
+   • Unique: 5 (1.0%)
+   • Quality Score: 100.0%
+   • Length: 5-7 chars (avg: 6.0)
+   • Top values: Parent: 114, Friend: 110, Child: 109
+
+🔸 insurance_provider (object)
+   • Missing: 0 (0.0%)
+   • Unique: 9 (1.7%)
+   • Quality Score: 100.0%
+   • Length: 5-22 chars (avg: 10.6)
+   • Top values: Aetna: 76, UnitedHealthcare: 65, Medicare: 63
+
+🔸 insurance_id (object)
+   • Missing: 0 (0.0%)
+   • Unique: 500 (95.2%)
+   • Quality Score: 90.0%
+   • Length: 12-12 chars (avg: 12.0)
+   ⚠️  Issues: Very high cardinality: 95.2% unique values
+
+🔸 primary_care_physician (object)
+   • Missing: 0 (0.0%)
+   • Unique: 9 (1.7%)
+   • Quality Score: 100.0%
+   • Length: 13-19 chars (avg: 16.2)
+   • Top values: Dr. David Lee: 76, Dr. Sarah Williams: 66, Dr. Robert Kim: 62
+
+🔸 registration_date (object)
+   • Missing: 0 (0.0%)
+   • Unique: 475 (90.5%)
+   • Quality Score: 100.0%
+   • Length: 10-10 chars (avg: 10.0)
+
+🔸 last_visit_date (object)
+   • Missing: 0 (0.0%)
+   • Unique: 434 (82.7%)
+   • Quality Score: 100.0%
+   • Length: 10-10 chars (avg: 10.0)
+
+🔸 blood_type (object)
+   • Missing: 0 (0.0%)
+   • Unique: 8 (1.5%)
+   • Quality Score: 100.0%
+   • Length: 2-3 chars (avg: 2.0)
+   • Top values: O+: 194, A+: 187, B+: 48
+
+🔸 height_inches (int64)
+   • Missing: 0 (0.0%)
+   • Unique: 19 (3.6%)
+   • Quality Score: 100.0%
+   • Range: 58.00 - 76.00
+   • Mean: 65.82, Median: 66.00
+   • Skewness: 0.20
+   • Top values: 70: 47, 65: 47, 67: 46
+
+🔸 weight_lbs (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 407 (77.5%)
+   • Quality Score: 100.0%
+   • Range: 91.40 - 328.10
+   • Mean: 169.00, Median: 163.70
+   • Skewness: 0.78
+
+🔸 bmi (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 174 (33.1%)
+   • Quality Score: 100.0%
+   • Range: 18.50 - 44.50
+   • Mean: 27.26, Median: 27.10
+   • Skewness: 0.66
+
+🔸 smoking_status (object)
+   • Missing: 0 (0.0%)
+   • Unique: 4 (0.8%)
+   • Quality Score: 100.0%
+   • Length: 5-7 chars (avg: 5.7)
+   • Top values: Never: 301, Former: 106, Current: 72
+
+🔸 alcohol_use (object)
+   • Missing: 140 (26.7%)
+   • Unique: 3 (0.6%)
+   • Quality Score: 82.0%
+   • Length: 5-8 chars (avg: 6.4)
+   ⚠️  Issues: High missing data: 26.7%
+   • Top values: Social: 139, Moderate: 137, Heavy: 109
+
+🔸 allergies (object)
+   • Missing: 0 (0.0%)
+   • Unique: 105 (20.0%)
+   • Quality Score: 100.0%
+   • Length: 4-41 chars (avg: 15.7)
+
+🔸 chronic_conditions (object)
+   • Missing: 225 (42.9%)
+   • Unique: 185 (35.2%)
+   • Quality Score: 77.1%
+   • Length: 4-105 chars (avg: 31.9)
+   ⚠️  Issues: High missing data: 42.9%
+
+🔗 HIGH CORRELATIONS
+----------------------------------------
+   • weight_lbs ↔ bmi: 0.820
+   • bmi ↔ weight_lbs: 0.820
+
+⏰ TEMPORAL ANALYSIS
+----------------------------------------
+   • date_of_birth: Spans 27962 days from 1930-12-29 to 2007-07-20
+   • date_of_birth: Most common date is 1934-12-17 (3 occurrences)
+   • date_of_birth: Peak activity in Dec
+   • registration_date: Spans 3602 days from 2015-12-06 to 2025-10-16
+   • registration_date: Most common date is 2023-06-16 (3 occurrences)
+   • registration_date: Peak activity in Oct
+   • last_visit_date: Spans 3538 days from 2016-03-24 to 2025-11-30
+   • last_visit_date: Most common date is 2025-10-18 (4 occurrences)
+   • last_visit_date: Peak activity in Aug
+
+💡 BUSINESS INSIGHTS
+----------------------------------------
+   • Columns with significant missing data: alcohol_use, chronic_conditions
+   • Potential identifier columns detected: patient_id, mrn, address, emergency_contact_phone, insurance_id
+   • Data composition: 15 categorical, 34 numeric columns
+
+🔧 COLUMN-SPECIFIC RECOMMENDATIONS
+----------------------------------------
+   1. patient_id: This appears to be an ID column - consider using for indexing or dropping if not needed
+   2. mrn: This appears to be an ID column - consider using for indexing or dropping if not needed
+   3. first_name: Apply .str.strip() to remove leading/trailing whitespace
+   4. first_name: Consider standardizing case with .str.lower() or .str.title()
+   5. last_name: Apply .str.strip() to remove leading/trailing whitespace
+   6. last_name: Consider standardizing case with .str.lower() or .str.title()
+   7. age: Investigate and potentially handle outliers
+   8. gender: Consider standardizing case with .str.lower() or .str.title()
+   9. race: Consider standardizing case with .str.lower() or .str.title()
+   10. ethnicity: Consider standardizing case with .str.lower() or .str.title()
+   11. marital_status: Consider standardizing case with .str.lower() or .str.title()
+   12. language: Consider standardizing case with .str.lower() or .str.title()
+   13. address: This appears to be an ID column - consider using for indexing or dropping if not needed
+   14. address: Consider standardizing case with .str.lower() or .str.title()
+   15. city: Consider standardizing case with .str.lower() or .str.title()
+   16. phone: This appears to be a phone column - standardize phone number format
+   17. email: Consider imputing missing values with mode or 'Unknown'
+   18. email: This appears to be an email column - validate email format
+   19. emergency_contact_name: Consider standardizing case with .str.lower() or .str.title()
+   20. emergency_contact_phone: This appears to be an ID column - consider using for indexing or dropping if not needed
+   21. emergency_contact_phone: This appears to be a phone column - standardize phone number format
+   22. emergency_contact_relationship: Consider standardizing case with .str.lower() or .str.title()
+   23. insurance_provider: Consider standardizing case with .str.lower() or .str.title()
+   24. insurance_id: This appears to be an ID column - consider using for indexing or dropping if not needed
+   25. primary_care_physician: Consider standardizing case with .str.lower() or .str.title()
+   26. weight_lbs: Investigate and potentially handle outliers
+   27. bmi: Investigate and potentially handle outliers
+   28. smoking_status: Consider standardizing case with .str.lower() or .str.title()
+   29. alcohol_use: Consider imputing missing values with mode or 'Unknown'
+   30. alcohol_use: Consider standardizing case with .str.lower() or .str.title()
+   31. allergies: Consider standardizing case with .str.lower() or .str.title()
+   32. chronic_conditions: Consider imputing missing values with mode or 'Unknown'
+   33. chronic_conditions: Consider standardizing case with .str.lower() or .str.title()
+
+================================================================================

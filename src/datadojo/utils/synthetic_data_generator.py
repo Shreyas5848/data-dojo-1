@@ -201,33 +201,52 @@ class SyntheticDataGenerator:
                 "chronic_conditions": ";".join(conditions) if conditions else "None"
             }
             
-            # Introduce data quality issues for learning (15% of records)
-            if random.random() < 0.15:
+            # Introduce data quality issues for learning (30% of records now - increased from 15%)
+            if random.random() < 0.30:
                 issue_type = random.choice([
                     "missing_email", "missing_phone", "invalid_age", 
-                    "duplicate_prone", "inconsistent_case", "whitespace"
+                    "duplicate_prone", "inconsistent_case", "whitespace",
+                    "missing_bmi", "missing_insurance", "typo_state",
+                    "outlier_bmi", "invalid_date", "mixed_formats"
                 ])
                 
                 if issue_type == "missing_email":
-                    patient["email"] = ""
+                    patient["email"] = "" if random.random() < 0.7 else np.nan
                 elif issue_type == "missing_phone":
-                    patient["phone"] = ""
+                    patient["phone"] = "" if random.random() < 0.5 else np.nan
                 elif issue_type == "invalid_age":
-                    patient["age"] = -1 if random.random() < 0.5 else 150
+                    patient["age"] = random.choice([-1, 0, 150, 999, None])
+                elif issue_type == "missing_bmi":
+                    patient["bmi"] = np.nan
+                elif issue_type == "missing_insurance":
+                    patient["insurance_provider"] = np.nan
+                    patient["insurance_id"] = ""
+                elif issue_type == "typo_state":
+                    patient["state"] = patient["state"][0] if len(patient["state"]) > 1 else patient["state"] + "X"
+                elif issue_type == "outlier_bmi":
+                    patient["bmi"] = random.choice([5.5, 70.2, 99.9])
+                elif issue_type == "invalid_date":
+                    patient["last_visit_date"] = "2099-12-31"  # Future date
+                elif issue_type == "mixed_formats":
+                    patient["phone"] = patient["phone"].replace("+1-", "").replace("-", "") if random.random() < 0.5 else patient["phone"]
                 elif issue_type == "inconsistent_case":
-                    patient["first_name"] = patient["first_name"].upper()
-                    patient["city"] = patient["city"].lower()
+                    patient["first_name"] = patient["first_name"].upper() if random.random() < 0.5 else patient["first_name"].lower()
+                    patient["city"] = patient["city"].lower() if random.random() < 0.5 else patient["city"].upper()
                 elif issue_type == "whitespace":
                     patient["first_name"] = f"  {patient['first_name']}  "
                     patient["last_name"] = f" {patient['last_name']} "
+                    patient["city"] = f"\t{patient['city']}\t"
                     
             patients.append(patient)
         
-        # Add some exact duplicates (5% of records) for learning
-        num_duplicates = int(num_patients * 0.05)
+        # Add some exact duplicates (8% of records for learning - increased from 5%)
+        num_duplicates = int(num_patients * 0.08)
         for _ in range(num_duplicates):
             dup = random.choice(patients).copy()
             dup["patient_id"] = f"P{len(patients)+1:06d}"
+            # Sometimes duplicate with slight variations
+            if random.random() < 0.3:
+                dup["phone"] = self._generate_phone()  # Same person, different phone
             patients.append(dup)
         
         return pd.DataFrame(patients)
@@ -409,38 +428,52 @@ class SyntheticDataGenerator:
                 )[0]
             }
             
-            # Introduce data quality issues (20% of records)
-            if random.random() < 0.20:
+            # Introduce data quality issues (30% of records - increased from 20%)
+            if random.random() < 0.30:
                 issue = random.choice([
                     "missing_email", "missing_age", "invalid_phone", 
                     "duplicate_name", "inconsistent_case", "whitespace",
-                    "invalid_zip", "future_date"
+                    "invalid_zip", "future_date", "negative_spending",
+                    "invalid_tier", "special_chars", "missing_state"
                 ])
                 
                 if issue == "missing_email":
-                    customer["email"] = "" if random.random() < 0.7 else None
+                    customer["email"] = random.choice(["", None, "N/A", "null"])
                 elif issue == "missing_age":
-                    customer["age"] = None
+                    customer["age"] = random.choice([None, 0, -1])
+                elif issue == "missing_state":
+                    customer["state"] = random.choice(["", None, "XX"])
                 elif issue == "invalid_phone":
-                    customer["phone"] = random.choice(["N/A", "unknown", "555-FAKE", ""])
+                    customer["phone"] = random.choice(["N/A", "unknown", "555-FAKE", "", "123456", "(000) 000-0000"])
+                elif issue == "negative_spending":
+                    customer["total_spent"] = -abs(customer["total_spent"])
+                elif issue == "invalid_tier":
+                    customer["loyalty_tier"] = random.choice(["", None, "Unknown", "diamond", "BRONZE"])  # Mixed case
+                elif issue == "special_chars":
+                    customer["first_name"] = customer["first_name"] + "@#"
+                    customer["last_name"] = "O'" + customer["last_name"]  # Common name issue
                 elif issue == "inconsistent_case":
-                    customer["first_name"] = customer["first_name"].upper()
-                    customer["city"] = customer["city"].lower()
+                    customer["first_name"] = customer["first_name"].upper() if random.random() < 0.5 else customer["first_name"].lower()
+                    customer["city"] = customer["city"].lower() if random.random() < 0.5 else customer["city"].upper()
                 elif issue == "whitespace":
                     customer["first_name"] = f"  {customer['first_name']}  "
                     customer["city"] = f" {customer['city']} "
+                    customer["email"] = f" {customer['email']} "
                 elif issue == "invalid_zip":
-                    customer["zip_code"] = "00000"
+                    customer["zip_code"] = random.choice(["00000", "99999", "ABCDE", ""])
                 elif issue == "future_date":
-                    customer["registration_date"] = (datetime.now() + timedelta(days=30)).strftime("%Y-%m-%d")
+                    customer["registration_date"] = (datetime.now() + timedelta(days=random.randint(1, 365))).strftime("%Y-%m-%d")
             
             customers.append(customer)
         
-        # Add exact duplicates (3% of records)
-        num_duplicates = int(num_customers * 0.03)
+        # Add exact duplicates (7% of records - increased from 3%)
+        num_duplicates = int(num_customers * 0.07)
         for _ in range(num_duplicates):
             dup = random.choice(customers).copy()
             dup["customer_id"] = len(customers) + 1
+            # Sometimes with slight variations
+            if random.random() < 0.4:
+                dup["email"] = self._generate_email(dup["first_name"], dup["last_name"])
             customers.append(dup)
         
         return pd.DataFrame(customers)

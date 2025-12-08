@@ -589,12 +589,12 @@ def render_project_detail(project_id: str):
             </div>
             """, unsafe_allow_html=True)
             
-            if st.button("📂 Open Notebook Location", key="open_nb_loc", use_container_width=True):
+            if st.button("📂 Open Notebook Location", key="open_nb_loc"):
                 folder = os.path.dirname(os.path.abspath(notebook_path))
                 st.info(f"Open this folder in VS Code or Jupyter:\n`{folder}`")
         else:
             # Generate notebook button
-            if st.button("📓 Generate Notebook", key="gen_notebook", type="primary", use_container_width=True):
+            if st.button("📓 Generate Notebook", key="gen_notebook", type="primary"):
                 try:
                     nb_path = generate_project_notebook(project)
                     # Update project data with notebook path
@@ -608,7 +608,7 @@ def render_project_detail(project_id: str):
                     st.error(f"Error generating notebook: {e}")
         
         # Load dataset button
-        if st.button("📊 Explore Dataset", key="explore_data", use_container_width=True):
+        if st.button("📊 Explore Dataset", key="explore_data"):
             st.session_state.explore_dataset = project.dataset_path
             st.session_state.page = "Dataset Explorer"
             st.info("Navigate to Dataset Explorer to view this dataset!")
@@ -618,7 +618,7 @@ def render_project_detail(project_id: str):
             st.markdown("<br>", unsafe_allow_html=True)
             current_step = len(project_data.get("completed_steps", []))
             if current_step < len(project.expected_outcomes):
-                if st.button(f"✅ Complete Step {current_step + 1}", key="complete_step", use_container_width=True):
+                if st.button(f"✅ Complete Step {current_step + 1}", key="complete_step"):
                     if "completed_steps" not in project_data:
                         project_data["completed_steps"] = []
                     project_data["completed_steps"].append(current_step + 1)

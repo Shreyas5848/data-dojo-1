@@ -110,10 +110,22 @@ class IntelligentProfiler:
             'outlier_zscore': 3.0  # Z-score for outlier detection
         }
     
-    def profile_dataset(self, df: pd.DataFrame, dataset_name: str = "Dataset") -> DatasetProfile:
-        """Create comprehensive profile of a dataset."""
-        print(f"🔍 Profiling dataset: {dataset_name}")
-        print(f"📊 Shape: {df.shape[0]:,} rows × {df.shape[1]} columns")
+    def profile_dataset(self, df: pd.DataFrame, dataset_name: str = "Dataset", verbose: bool = True) -> DatasetProfile:
+        """Create comprehensive profile of a dataset.
+        
+        Args:
+            df: DataFrame to profile
+            dataset_name: Name for the dataset
+            verbose: If True, print progress messages. Set to False in web environments.
+        """
+        if verbose:
+            try:
+                print(f"Profiling dataset: {dataset_name}")
+                print(f"Shape: {df.shape[0]:,} rows x {df.shape[1]} columns")
+            except (UnicodeEncodeError, UnicodeDecodeError):
+                # Fallback for systems that can't handle emojis
+                print(f"Profiling dataset: {dataset_name}")
+                print(f"Shape: {df.shape[0]:,} rows x {df.shape[1]} columns")
         
         # Basic dataset metrics
         memory_usage_mb = df.memory_usage(deep=True).sum() / (1024 * 1024)
@@ -121,7 +133,11 @@ class IntelligentProfiler:
         # Profile each column
         column_profiles = {}
         for col in df.columns:
-            print(f"   Analyzing column: {col}")
+            if verbose:
+                try:
+                    print(f"   Analyzing column: {col}")
+                except (UnicodeEncodeError, UnicodeDecodeError):
+                    print(f"   Analyzing column: {col}")
             column_profiles[col] = self._profile_column(df, col)
         
         # Cross-column analysis
@@ -201,6 +217,10 @@ class IntelligentProfiler:
     
     def _analyze_numeric_column(self, series: pd.Series, profile: ColumnProfile) -> ColumnProfile:
         """Analyze numeric column specifics."""
+        # Skip boolean columns - they should be treated as categorical
+        if series.dtype == 'bool':
+            return profile
+            
         numeric_series = pd.to_numeric(series, errors='coerce').dropna()
         
         if len(numeric_series) > 0:
@@ -214,15 +234,26 @@ class IntelligentProfiler:
             
             # Calculate skewness and kurtosis if enough data
             if len(numeric_series) >= 3:
-                profile.skewness = float(numeric_series.skew())
-                profile.kurtosis = float(numeric_series.kurtosis())
+                try:
+                    profile.skewness = float(numeric_series.skew())
+                    profile.kurtosis = float(numeric_series.kurtosis())
+                except:
+                    pass
             
             # Identify patterns
+            outliers_count = 0
+            if numeric_series.std() > 0:
+                try:
+                    z_scores = abs((numeric_series - numeric_series.mean()) / numeric_series.std())
+                    outliers_count = int((z_scores > self.quality_thresholds['outlier_zscore']).sum())
+                except:
+                    outliers_count = 0
+            
             profile.patterns = {
-                'has_negatives': (numeric_series < 0).any(),
-                'has_zeros': (numeric_series == 0).any(),
-                'is_integer_like': numeric_series.apply(lambda x: x == int(x)).all() if len(numeric_series) > 0 else False,
-                'outliers_count': len(numeric_series[abs((numeric_series - numeric_series.mean()) / numeric_series.std()) > self.quality_thresholds['outlier_zscore']]) if numeric_series.std() > 0 else 0
+                'has_negatives': bool((numeric_series < 0).any()),
+                'has_zeros': bool((numeric_series == 0).any()),
+                'is_integer_like': bool(numeric_series.apply(lambda x: x == int(x)).all()) if len(numeric_series) > 0 else False,
+                'outliers_count': outliers_count
             }
         
         return profile
@@ -265,12 +296,32 @@ class IntelligentProfiler:
             profile.max_value = datetime_series.max().isoformat()
             
             # Temporal patterns
+            date_range_days = (datetime_series.max() - datetime_series.min()).days
+            future_dates_count = int((datetime_series > pd.Timestamp.now()).sum())
+            weekend_count = int(datetime_series.dt.weekday.isin([5, 6]).sum())
+            
+            # Check if datetime has time component (not just date)
+            has_time = False
+            try:
+                has_time = bool((datetime_series.dt.time != pd.Timestamp('2000-01-01').time()).any())
+            except:
+                has_time = False
+            
+            # Business hours (9-17) - only if has time component
+            business_hours_count = 0
+            if has_time:
+                try:
+                    hours = datetime_series.dt.hour
+                    business_hours_count = int(((hours >= 9) & (hours <= 17)).sum())
+                except:
+                    business_hours_count = 0
+            
             profile.patterns = {
-                'date_range_days': (datetime_series.max() - datetime_series.min()).days,
-                'future_dates': (datetime_series > pd.Timestamp.now()).sum(),
-                'weekend_dates': datetime_series.dt.weekday.isin([5, 6]).sum(),
-                'business_hours': datetime_series.dt.hour.between(9, 17).sum(),
-                'has_time_component': (datetime_series.dt.time != pd.Timestamp('2000-01-01').time()).any()
+                'date_range_days': date_range_days,
+                'future_dates': future_dates_count,
+                'weekend_dates': weekend_count,
+                'business_hours': business_hours_count,
+                'has_time_component': has_time
             }
         
         return profile

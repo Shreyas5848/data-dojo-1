@@ -1,0 +1,60 @@
+================================================================================
+📊 DATA PROFILE REPORT: umath-validation-set-exp2.csv
+================================================================================
+Generated: 2025-12-08 10:15:48
+
+📈 DATASET OVERVIEW
+----------------------------------------
+Shape: 1,428 rows × 4 columns
+Memory Usage: 0.3 MB
+Duplicate Rows: 0 (0.0%)
+
+🎯 DATA QUALITY SCORES
+----------------------------------------
+Overall Quality: 98.0% 🟢
+Completeness: 100.0%
+Consistency: 95.0%
+Uniqueness: 100.0%
+
+📋 COLUMN ANALYSIS
+----------------------------------------
+
+🔸 dtype (object)
+   • Missing: 0 (0.0%)
+   • Unique: 2 (0.1%)
+   • Quality Score: 100.0%
+   • Length: 10-10 chars (avg: 10.0)
+   • Top values: np.float32: 714, np.float64: 714
+
+🔸 input (object)
+   • Missing: 0 (0.0%)
+   • Unique: 1,426 (99.9%)
+   • Quality Score: 90.0%
+   • Length: 3-18 chars (avg: 13.6)
+   ⚠️  Issues: Very high cardinality: 99.9% unique values
+
+🔸 output (object)
+   • Missing: 0 (0.0%)
+   • Unique: 613 (42.9%)
+   • Quality Score: 100.0%
+   • Length: 3-18 chars (avg: 12.4)
+
+🔸 ulperrortol (int64)
+   • Missing: 0 (0.0%)
+   • Unique: 2 (0.1%)
+   • Quality Score: 100.0%
+   • Range: 1.00 - 2.00
+   • Mean: 1.50, Median: 1.50
+   • Skewness: 0.00
+   • Top values: 2: 714, 1: 714
+
+💡 BUSINESS INSIGHTS
+----------------------------------------
+   • Potential identifier columns detected: input
+   • Data composition: 2 categorical, 4 numeric columns
+
+🔧 COLUMN-SPECIFIC RECOMMENDATIONS
+----------------------------------------
+   1. input: This appears to be an ID column - consider using for indexing or dropping if not needed
+
+================================================================================

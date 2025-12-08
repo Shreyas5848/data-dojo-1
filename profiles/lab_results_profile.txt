@@ -1,0 +1,220 @@
+================================================================================
+📊 DATA PROFILE REPORT: lab_results.csv
+================================================================================
+Generated: 2025-12-08 10:15:42
+
+📈 DATASET OVERVIEW
+----------------------------------------
+Shape: 1,500 rows × 22 columns
+Memory Usage: 1.6 MB
+Duplicate Rows: 0 (0.0%)
+
+🎯 DATA QUALITY SCORES
+----------------------------------------
+Overall Quality: 96.6% 🟢
+Completeness: 95.9%
+Consistency: 95.5%
+Uniqueness: 100.0%
+
+📋 COLUMN ANALYSIS
+----------------------------------------
+
+🔸 result_id (object)
+   • Missing: 0 (0.0%)
+   • Unique: 1,500 (100.0%)
+   • Quality Score: 90.0%
+   • Length: 8-8 chars (avg: 8.0)
+   ⚠️  Issues: Very high cardinality: 100.0% unique values
+
+🔸 patient_id (object)
+   • Missing: 0 (0.0%)
+   • Unique: 500 (33.3%)
+   • Quality Score: 100.0%
+   • Length: 7-7 chars (avg: 7.0)
+
+🔸 order_id (object)
+   • Missing: 0 (0.0%)
+   • Unique: 1,500 (100.0%)
+   • Quality Score: 90.0%
+   • Length: 8-8 chars (avg: 8.0)
+   ⚠️  Issues: Very high cardinality: 100.0% unique values
+
+🔸 ordering_physician (object)
+   • Missing: 0 (0.0%)
+   • Unique: 6 (0.4%)
+   • Quality Score: 100.0%
+   • Length: 14-19 chars (avg: 16.4)
+   • Top values: Dr. Michael Roberts: 266, Dr. James Wilson: 265, Dr. Emily Chen: 260
+
+🔸 test_date (object)
+   • Missing: 0 (0.0%)
+   • Unique: 645 (43.0%)
+   • Quality Score: 100.0%
+   • Length: 10-10 chars (avg: 10.0)
+
+🔸 collection_time (object)
+   • Missing: 0 (0.0%)
+   • Unique: 653 (43.5%)
+   • Quality Score: 100.0%
+   • Length: 8-8 chars (avg: 8.0)
+
+🔸 received_time (object)
+   • Missing: 0 (0.0%)
+   • Unique: 717 (47.8%)
+   • Quality Score: 100.0%
+   • Length: 8-8 chars (avg: 8.0)
+
+🔸 result_time (object)
+   • Missing: 0 (0.0%)
+   • Unique: 736 (49.1%)
+   • Quality Score: 100.0%
+   • Length: 8-8 chars (avg: 8.0)
+
+🔸 test_code (object)
+   • Missing: 0 (0.0%)
+   • Unique: 19 (1.3%)
+   • Quality Score: 100.0%
+   • Length: 3-8 chars (avg: 6.3)
+   • Top values: VITD: 94, CBC-HCT: 93, LIP-HDL: 90
+
+🔸 test_name (object)
+   • Missing: 0 (0.0%)
+   • Unique: 19 (1.3%)
+   • Quality Score: 100.0%
+   • Length: 6-27 chars (avg: 15.6)
+   • Top values: Vitamin D 25-Hydroxy: 94, Hematocrit: 93, HDL Cholesterol: 90
+
+🔸 test_category (object)
+   • Missing: 0 (0.0%)
+   • Unique: 7 (0.5%)
+   • Quality Score: 100.0%
+   • Length: 7-14 chars (avg: 10.1)
+   • Top values: Hematology: 395, Chemistry: 377, Lipid Panel: 324
+
+🔸 value (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 1,344 (89.6%)
+   • Quality Score: 100.0%
+   • Range: -77.65 - 511.40
+   • Mean: 59.27, Median: 28.01
+   • Skewness: 1.85
+
+🔸 unit (object)
+   • Missing: 0 (0.0%)
+   • Unique: 9 (0.6%)
+   • Quality Score: 100.0%
+   • Length: 1-7 chars (avg: 4.6)
+   • Top values: mg/dL: 543, %: 179, mEq/L: 158
+
+🔸 reference_range_low (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 16 (1.1%)
+   • Quality Score: 100.0%
+   • Range: 0.00 - 150.00
+   • Mean: 28.12, Median: 7.00
+   • Skewness: 1.90
+   • Top values: 0.0: 234, 7.0: 148, 30.0: 94
+
+🔸 reference_range_high (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 17 (1.1%)
+   • Quality Score: 80.0%
+   • Range: 1.30 - 400.00
+   • Mean: 78.87, Median: 50.00
+   • Skewness: 2.07
+   ⚠️  Issues: High skewness: 2.07; Many outliers detected: 82 (5.5%)
+   • Top values: 100.0: 257, 50.0: 93, 60.0: 90
+
+🔸 flag (object)
+   • Missing: 0 (0.0%)
+   • Unique: 3 (0.2%)
+   • Quality Score: 100.0%
+   • Length: 3-6 chars (avg: 4.9)
+   • Top values: Normal: 842, High: 388, Low: 270
+
+🔸 critical_flag (object)
+   • Missing: 0 (0.0%)
+   • Unique: 2 (0.1%)
+   • Quality Score: 100.0%
+   • Length: 2-3 chars (avg: 2.1)
+   • Top values: No: 1325, Yes: 175
+
+🔸 specimen_type (object)
+   • Missing: 0 (0.0%)
+   • Unique: 4 (0.3%)
+   • Quality Score: 100.0%
+   • Length: 5-6 chars (avg: 5.2)
+   • Top values: Blood: 398, Serum: 383, Plasma: 361
+
+🔸 fasting_status (object)
+   • Missing: 0 (0.0%)
+   • Unique: 3 (0.2%)
+   • Quality Score: 100.0%
+   • Length: 2-7 chars (avg: 4.0)
+   • Top values: Yes: 515, No: 500, Unknown: 485
+
+🔸 lab_location (object)
+   • Missing: 0 (0.0%)
+   • Unique: 4 (0.3%)
+   • Quality Score: 100.0%
+   • Length: 7-20 chars (avg: 13.9)
+   • Top values: LabCorp: 388, Regional Medical Lab: 376, Hospital Lab: 368
+
+🔸 performing_lab (object)
+   • Missing: 0 (0.0%)
+   • Unique: 4 (0.3%)
+   • Quality Score: 100.0%
+   • Length: 7-20 chars (avg: 13.8)
+   • Top values: LabCorp: 395, Hospital Lab: 377, Regional Medical Lab: 367
+
+🔸 notes (object)
+   • Missing: 1,339 (89.3%)
+   • Unique: 5 (0.3%)
+   • Quality Score: 63.2%
+   • Length: 14-25 chars (avg: 19.0)
+   ⚠️  Issues: High missing data: 89.3%
+   • Top values: Repeat recommended: 37, Sample hemolyzed: 36, Quantity not sufficient: 30
+
+🔗 HIGH CORRELATIONS
+----------------------------------------
+   • value ↔ reference_range_high: 0.826
+   • reference_range_low ↔ reference_range_high: 0.711
+   • reference_range_high ↔ value: 0.826
+   • reference_range_high ↔ reference_range_low: 0.711
+
+⏰ TEMPORAL ANALYSIS
+----------------------------------------
+   • test_date: Spans 730 days from 2023-12-02 to 2025-12-01
+   • test_date: Most common date is 2025-01-28 (8 occurrences)
+   • test_date: Peak activity in Jan
+   • collection_time: Spans 0 days from 2025-12-08 to 2025-12-08
+   • received_time: Spans 0 days from 2025-12-08 to 2025-12-08
+   • result_time: Spans 0 days from 2025-12-08 to 2025-12-08
+
+💡 BUSINESS INSIGHTS
+----------------------------------------
+   • Columns with significant missing data: notes
+   • Potential identifier columns detected: result_id, order_id
+   • Data composition: 14 categorical, 22 numeric columns
+
+🔧 COLUMN-SPECIFIC RECOMMENDATIONS
+----------------------------------------
+   1. result_id: This appears to be an ID column - consider using for indexing or dropping if not needed
+   2. order_id: This appears to be an ID column - consider using for indexing or dropping if not needed
+   3. ordering_physician: Consider standardizing case with .str.lower() or .str.title()
+   4. test_name: Consider standardizing case with .str.lower() or .str.title()
+   5. test_category: Consider standardizing case with .str.lower() or .str.title()
+   6. value: Investigate and potentially handle outliers
+   7. unit: Consider standardizing case with .str.lower() or .str.title()
+   8. reference_range_high: Consider log transformation to reduce skewness
+   9. reference_range_high: Investigate and potentially handle outliers
+   10. flag: Consider standardizing case with .str.lower() or .str.title()
+   11. critical_flag: Consider standardizing case with .str.lower() or .str.title()
+   12. specimen_type: Consider standardizing case with .str.lower() or .str.title()
+   13. fasting_status: Consider standardizing case with .str.lower() or .str.title()
+   14. lab_location: Consider standardizing case with .str.lower() or .str.title()
+   15. performing_lab: Consider standardizing case with .str.lower() or .str.title()
+   16. notes: Consider dropping this column due to excessive missing data
+   17. notes: Consider standardizing case with .str.lower() or .str.title()
+
+================================================================================

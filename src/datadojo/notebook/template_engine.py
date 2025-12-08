@@ -4,7 +4,7 @@ Generates Jupyter notebooks from data profiling results
 """
 
 import pandas as pd
-from typing import Dict
+from typing import Dict, Optional, Optional
 from datetime import datetime
 import nbformat as nbf
 
@@ -24,19 +24,32 @@ class NotebookTemplateEngine:
             'feature_engineering': self._create_feature_engineering_template
         }
     
-    def generate_notebook(self, profile_results: Dict, template_type: str, dataset_name: str = "dataset") -> nbf.NotebookNode:
-        """Generate a notebook from profiling results."""
+    def generate_notebook(self, profile_results: Dict, template_type: str, dataset_name: str = "dataset", dataset_path: Optional[str] = None) -> nbf.NotebookNode:
+        """Generate a notebook from profiling results.
+        
+        Args:
+            profile_results: Data profiling results
+            template_type: Type of template to generate
+            dataset_name: Name of the dataset
+            dataset_path: Path to the dataset file (relative or absolute)
+        """
         if template_type not in self.templates:
             raise ValueError(f"Unknown template type: {template_type}")
         
-        return self.templates[template_type](profile_results, dataset_name)
+        return self.templates[template_type](profile_results, dataset_name, dataset_path)
     
-    def _create_eda_template(self, profile_results: Dict, dataset_name: str) -> nbf.NotebookNode:
+    def _create_eda_template(self, profile_results: Dict, dataset_name: str, dataset_path: Optional[str] = None) -> nbf.NotebookNode:
         """Create Exploratory Data Analysis template."""
         nb = nbf.v4.new_notebook()
         nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}}
         
         cells = []
+        
+        # Determine the dataset path to use
+        if dataset_path:
+            data_load_path = dataset_path
+        else:
+            data_load_path = f"{dataset_name}.csv"  # Default fallback
         
         # Title
         cells.append(nbf.v4.new_markdown_cell(f"""# 📊 Exploratory Data Analysis: {dataset_name}
@@ -63,8 +76,8 @@ sns.set_palette("husl")
         
         # Load data
         cells.append(nbf.v4.new_markdown_cell("## 1. 📁 Data Loading"))
-        cells.append(nbf.v4.new_code_cell("""# Load your dataset - REPLACE 'your_file.csv' with your actual file path
-df = pd.read_csv('your_file.csv')
+        cells.append(nbf.v4.new_code_cell(f"""# Load your dataset
+df = pd.read_csv('{data_load_path}')
 
 print(f"Dataset shape: {df.shape}")
 print(f"Memory usage: {df.memory_usage(deep=True).sum() / 1024**2:.2f} MB")
@@ -192,12 +205,18 @@ if len(numeric_df.columns) > 1:
         nb.cells = cells
         return nb
     
-    def _create_cleaning_template(self, profile_results: Dict, dataset_name: str) -> nbf.NotebookNode:
+    def _create_cleaning_template(self, profile_results: Dict, dataset_name: str, dataset_path: Optional[str] = None) -> nbf.NotebookNode:
         """Create Data Cleaning template."""
         nb = nbf.v4.new_notebook()
         nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}}
         
         cells = []
+        
+        # Determine the dataset path to use
+        if dataset_path:
+            data_load_path = dataset_path
+        else:
+            data_load_path = f"{dataset_name}.csv"  # Default fallback
         cells.append(nbf.v4.new_markdown_cell(f"""# 🧹 Data Cleaning Workflow: {dataset_name}
 
 **Generated:** {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}  
@@ -205,16 +224,16 @@ if len(numeric_df.columns) > 1:
 
 This notebook provides a comprehensive data cleaning workflow."""))
         
-        cells.append(nbf.v4.new_code_cell("""# Import libraries
+        cells.append(nbf.v4.new_code_cell(f"""# Import libraries
 import pandas as pd
 import numpy as np
 from sklearn.preprocessing import StandardScaler
 
 # Load dataset
-df = pd.read_csv('your_file.csv')
+df = pd.read_csv('{data_load_path}')
 df_original = df.copy()  # Keep backup
 
-print(f"Original shape: {df.shape}")
+print(f"Original shape: {{df.shape}}")
 print("Starting data cleaning workflow...")"""))
         
         # Missing values
@@ -275,12 +294,18 @@ print("\\nCleaned dataset saved as 'cleaned_dataset.csv'")"""))
         nb.cells = cells
         return nb
     
-    def _create_classification_template(self, profile_results: Dict, dataset_name: str) -> nbf.NotebookNode:
+    def _create_classification_template(self, profile_results: Dict, dataset_name: str, dataset_path: Optional[str] = None) -> nbf.NotebookNode:
         """Create Classification template."""
         nb = nbf.v4.new_notebook()
         nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}}
         
         cells = []
+        
+        # Determine the dataset path to use
+        if dataset_path:
+            data_load_path = dataset_path
+        else:
+            data_load_path = f"{dataset_name}.csv"  # Default fallback
         
         # Title and overview
         cells.append(nbf.v4.new_markdown_cell(f"""# 🎯 Classification Analysis: {dataset_name}
@@ -330,12 +355,12 @@ print("✅ All libraries imported successfully!")"""))
         
         # Data loading
         cells.append(nbf.v4.new_markdown_cell("## 1. 📁 Data Loading & Initial Exploration"))
-        cells.append(nbf.v4.new_code_cell("""# Load your dataset - REPLACE 'your_file.csv' with your actual file path
-df = pd.read_csv('your_file.csv')
+        cells.append(nbf.v4.new_code_cell(f"""# Load your dataset - REPLACE '{data_load_path}' with your actual file path
+df = pd.read_csv('{data_load_path}')
 
 print("=== DATASET OVERVIEW ===")
-print(f"Dataset shape: {df.shape}")
-print(f"Memory usage: {df.memory_usage(deep=True).sum() / 1024**2:.2f} MB")
+print(f"Dataset shape: {{df.shape}}")
+print(f"Memory usage: {{df.memory_usage(deep=True).sum() / 1024**2:.2f}} MB")
 
 print("\\n=== BASIC INFO ===")
 print(df.info())
@@ -861,12 +886,18 @@ print("\\n🎉 Classification analysis workflow completed!")"""))
         nb.cells = cells
         return nb
     
-    def _create_regression_template(self, profile_results: Dict, dataset_name: str) -> nbf.NotebookNode:
+    def _create_regression_template(self, profile_results: Dict, dataset_name: str, dataset_path: Optional[str] = None) -> nbf.NotebookNode:
         """Create Regression template."""
         nb = nbf.v4.new_notebook()
         nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}}
         
         cells = []
+        
+        # Determine the dataset path to use
+        if dataset_path:
+            data_load_path = dataset_path
+        else:
+            data_load_path = f"{dataset_name}.csv"  # Default fallback
         
         # Title and overview
         cells.append(nbf.v4.new_markdown_cell(f"""# 📈 Regression Analysis: {dataset_name}
@@ -916,12 +947,12 @@ print("✅ All libraries imported successfully!")"""))
         
         # Data loading
         cells.append(nbf.v4.new_markdown_cell("## 1. 📁 Data Loading & Initial Exploration"))
-        cells.append(nbf.v4.new_code_cell("""# Load your dataset - REPLACE 'your_file.csv' with your actual file path
-df = pd.read_csv('your_file.csv')
+        cells.append(nbf.v4.new_code_cell(f"""# Load your dataset - REPLACE '{data_load_path}' with your actual file path
+df = pd.read_csv('{data_load_path}')
 
 print("=== DATASET OVERVIEW ===")
-print(f"Dataset shape: {df.shape}")
-print(f"Memory usage: {df.memory_usage(deep=True).sum() / 1024**2:.2f} MB")
+print(f"Dataset shape: {{df.shape}}")
+print(f"Memory usage: {{df.memory_usage(deep=True).sum() / 1024**2:.2f}} MB")
 
 print("\\n=== DATA TYPES ===")
 print(df.dtypes)
@@ -1517,12 +1548,18 @@ print("\\n🎉 Regression analysis workflow completed!")"""))
         nb.cells = cells
         return nb
     
-    def _create_timeseries_template(self, profile_results: Dict, dataset_name: str) -> nbf.NotebookNode:
+    def _create_timeseries_template(self, profile_results: Dict, dataset_name: str, dataset_path: Optional[str] = None) -> nbf.NotebookNode:
         """Create Time Series template."""
         nb = nbf.v4.new_notebook()
         nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}}
         
         cells = []
+        
+        # Determine the dataset path to use
+        if dataset_path:
+            data_load_path = dataset_path
+        else:
+            data_load_path = f"{dataset_name}.csv"  # Default fallback
         
         # Title and overview
         cells.append(nbf.v4.new_markdown_cell(f"""# 📅 Time Series Analysis: {dataset_name}
@@ -1577,13 +1614,13 @@ print("• Prophet (if installed)")"""))
         
         # Data loading
         cells.append(nbf.v4.new_markdown_cell("## 1. 📁 Data Loading & Date Parsing"))
-        cells.append(nbf.v4.new_code_cell("""# Load your dataset - REPLACE 'your_file.csv' with your actual file path
-df = pd.read_csv('your_file.csv')
+        cells.append(nbf.v4.new_code_cell(f"""# Load your dataset
+df = pd.read_csv('{data_load_path}')
 
 print("=== DATASET OVERVIEW ===")
-print(f"Dataset shape: {df.shape}")
-print(f"\\nColumn names: {list(df.columns)}")
-print(f"\\nData types:\\n{df.dtypes}")
+print(f"Dataset shape: {{df.shape}}")
+print(f"\\nColumn names: {{list(df.columns)}}")
+print(f"\\nData types:\\n{{df.dtypes}}")
 
 display(df.head(10))
 
@@ -1593,8 +1630,8 @@ date_column = 'date'      # ⚠️ UPDATE: Column containing dates/timestamps
 value_column = 'value'    # ⚠️ UPDATE: Column containing values to forecast
 
 print(f"\\n⚠️  Please update the following variables:")
-print(f"   date_column = '{date_column}'")
-print(f"   value_column = '{value_column}'")"""))
+print(f"   date_column = '{{date_column}}'")
+print(f"   value_column = '{{value_column}}'")"""))
         
         # Parse dates
         cells.append(nbf.v4.new_code_cell("""# Parse dates and set as index
@@ -2228,12 +2265,18 @@ print("\\n🎉 Time series analysis workflow completed!")"""))
         nb.cells = cells
         return nb
 
-    def _create_clustering_template(self, profile_results: Dict, dataset_name: str) -> nbf.NotebookNode:
+    def _create_clustering_template(self, profile_results: Dict, dataset_name: str, dataset_path: Optional[str] = None) -> nbf.NotebookNode:
         """Create Clustering Analysis template."""
         nb = nbf.v4.new_notebook()
         nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}}
         
         cells = []
+        
+        # Determine the dataset path to use
+        if dataset_path:
+            data_load_path = dataset_path
+        else:
+            data_load_path = f"{dataset_name}.csv"  # Default fallback
         
         # Title
         cells.append(nbf.v4.new_markdown_cell(f"""# 🎯 Clustering Analysis: {dataset_name}
@@ -2289,13 +2332,13 @@ print("• DBSCAN")"""))
         
         # Data loading
         cells.append(nbf.v4.new_markdown_cell("## 1. 📁 Data Loading & Exploration"))
-        cells.append(nbf.v4.new_code_cell("""# Load your dataset - REPLACE 'your_file.csv' with your actual file path
-df = pd.read_csv('your_file.csv')
+        cells.append(nbf.v4.new_code_cell(f"""# Load your dataset - REPLACE '{data_load_path}' with your actual file path
+df = pd.read_csv('{data_load_path}')
 
 print("=== DATASET OVERVIEW ===")
-print(f"Shape: {df.shape[0]} rows × {df.shape[1]} columns")
-print(f"\\nColumn names: {list(df.columns)}")
-print(f"\\nData types:\\n{df.dtypes}")
+print(f"Shape: {{df.shape[0]}} rows × {{df.shape[1]}} columns")
+print(f"\\nColumn names: {{list(df.columns)}}")
+print(f"\\nData types:\\n{{df.dtypes}}")
 
 display(df.head(10))
 display(df.describe())
@@ -2766,12 +2809,18 @@ print("\\n🎉 Clustering analysis workflow completed!")"""))
         nb.cells = cells
         return nb
 
-    def _create_dimensionality_template(self, profile_results: Dict, dataset_name: str) -> nbf.NotebookNode:
+    def _create_dimensionality_template(self, profile_results: Dict, dataset_name: str, dataset_path: Optional[str] = None) -> nbf.NotebookNode:
         """Create Dimensionality Reduction template."""
         nb = nbf.v4.new_notebook()
         nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}}
         
         cells = []
+        
+        # Determine the dataset path to use
+        if dataset_path:
+            data_load_path = dataset_path
+        else:
+            data_load_path = f"{dataset_name}.csv"  # Default fallback
         
         # Title
         cells.append(nbf.v4.new_markdown_cell(f"""# 🔬 Dimensionality Reduction: {dataset_name}
@@ -2825,22 +2874,22 @@ print("\\n💡 Tip: Install umap-learn for UMAP: pip install umap-learn")"""))
         
         # Data loading
         cells.append(nbf.v4.new_markdown_cell("## 1. 📁 Data Loading & Exploration"))
-        cells.append(nbf.v4.new_code_cell("""# Load your dataset - REPLACE 'your_file.csv' with your actual file path
-df = pd.read_csv('your_file.csv')
+        cells.append(nbf.v4.new_code_cell(f"""# Load your dataset - REPLACE '{data_load_path}' with your actual file path
+df = pd.read_csv('{data_load_path}')
 
 print("=== DATASET OVERVIEW ===")
-print(f"Shape: {df.shape[0]} rows × {df.shape[1]} columns")
-print(f"\\nColumn names: {list(df.columns)}")
-print(f"\\nData types:\\n{df.dtypes}")
+print(f"Shape: {{df.shape[0]}} rows × {{df.shape[1]}} columns")
+print(f"\\nColumn names: {{list(df.columns)}}")
+print(f"\\nData types:\\n{{df.dtypes}}")
 
 display(df.head(10))
 
 # Check dimensionality
 n_features = len(df.select_dtypes(include=[np.number]).columns)
 print(f"\\n📊 DIMENSIONALITY ASSESSMENT:")
-print(f"   Total features: {len(df.columns)}")
-print(f"   Numeric features: {n_features}")
-print(f"   Categorical features: {len(df.columns) - n_features}")
+print(f"   Total features: {{len(df.columns)}}")
+print(f"   Numeric features: {{n_features}}")
+print(f"   Categorical features: {{len(df.columns) - n_features}}")
 
 if n_features > 10:
     print(f"\\n✅ High dimensionality detected - reduction recommended!")
@@ -3266,12 +3315,18 @@ print("\\n🎉 Dimensionality reduction workflow completed!")"""))
         nb.cells = cells
         return nb
 
-    def _create_feature_engineering_template(self, profile_results: Dict, dataset_name: str) -> nbf.NotebookNode:
+    def _create_feature_engineering_template(self, profile_results: Dict, dataset_name: str, dataset_path: Optional[str] = None) -> nbf.NotebookNode:
         """Create Feature Engineering template."""
         nb = nbf.v4.new_notebook()
         nb.metadata = {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}}
         
         cells = []
+        
+        # Determine the dataset path to use
+        if dataset_path:
+            data_load_path = dataset_path
+        else:
+            data_load_path = f"{dataset_name}.csv"  # Default fallback
         
         # Title
         cells.append(nbf.v4.new_markdown_cell(f"""# 🔧 Feature Engineering: {dataset_name}
@@ -3335,12 +3390,12 @@ print("• Feature Selection (Filter, Wrapper, Embedded)")"""))
         
         # Data loading
         cells.append(nbf.v4.new_markdown_cell("## 1. 📁 Data Loading & Exploration"))
-        cells.append(nbf.v4.new_code_cell("""# Load your dataset - REPLACE 'your_file.csv' with your actual file path
-df = pd.read_csv('your_file.csv')
+        cells.append(nbf.v4.new_code_cell(f"""# Load your dataset - REPLACE '{data_load_path}' with your actual file path
+df = pd.read_csv('{data_load_path}')
 
 print("=== DATASET OVERVIEW ===")
-print(f"Shape: {df.shape[0]} rows × {df.shape[1]} columns")
-print(f"\\nColumn names: {list(df.columns)}")
+print(f"Shape: {{df.shape[0]}} rows × {{df.shape[1]}} columns")
+print(f"\\nColumn names: {{list(df.columns)}}")
 
 # Categorize columns
 numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
@@ -3348,9 +3403,9 @@ categorical_cols = df.select_dtypes(include=['object', 'category']).columns.toli
 datetime_cols = df.select_dtypes(include=['datetime64']).columns.tolist()
 
 print(f"\\n📊 COLUMN TYPES:")
-print(f"   Numeric: {len(numeric_cols)} - {numeric_cols[:5]}{'...' if len(numeric_cols) > 5 else ''}")
-print(f"   Categorical: {len(categorical_cols)} - {categorical_cols[:5]}{'...' if len(categorical_cols) > 5 else ''}")
-print(f"   Datetime: {len(datetime_cols)} - {datetime_cols}")
+print(f"   Numeric: {{len(numeric_cols)}} - {{numeric_cols[:5]}}{{'...' if len(numeric_cols) > 5 else ''}}")
+print(f"   Categorical: {{len(categorical_cols)}} - {{categorical_cols[:5]}}{{'...' if len(categorical_cols) > 5 else ''}}")
+print(f"   Datetime: {{len(datetime_cols)}} - {{datetime_cols}}")
 
 display(df.head())
 display(df.describe())

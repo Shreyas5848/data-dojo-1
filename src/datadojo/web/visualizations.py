@@ -33,16 +33,22 @@ class DataVisualizationEngine:
         recommendations = []
         
         numeric_cols = df.select_dtypes(include=[np.number]).columns.tolist()
-        categorical_cols = df.select_dtypes(include=['object']).columns.tolist()
+        categorical_cols = df.select_dtypes(include=['object', 'category']).columns.tolist()
         datetime_cols = []
         
         # Detect datetime columns
         for col in df.columns:
-            try:
-                pd.to_datetime(df[col].head(100), errors='raise')
+            if pd.api.types.is_datetime64_any_dtype(df[col]):
                 datetime_cols.append(col)
-            except:
-                continue
+            elif df[col].dtype == 'object':
+                try:
+                    # Try to parse a sample
+                    sample = df[col].dropna().head(100)
+                    if len(sample) > 0:
+                        pd.to_datetime(sample, errors='raise')
+                        datetime_cols.append(col)
+                except:
+                    continue
         
         # Univariate recommendations
         for col in numeric_cols:

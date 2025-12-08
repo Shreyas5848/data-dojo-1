@@ -1,0 +1,77 @@
+================================================================================
+📊 DATA PROFILE REPORT: wine_data.csv
+================================================================================
+Generated: 2025-12-08 10:15:49
+
+📈 DATASET OVERVIEW
+----------------------------------------
+Shape: 178 rows × 5 columns
+Memory Usage: 0.0 MB
+Duplicate Rows: 0 (0.0%)
+
+🎯 DATA QUALITY SCORES
+----------------------------------------
+Overall Quality: 100.0% 🟢
+Completeness: 100.0%
+Consistency: 100.0%
+Uniqueness: 100.0%
+
+📋 COLUMN ANALYSIS
+----------------------------------------
+
+🔸 178 (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 132 (74.2%)
+   • Quality Score: 100.0%
+   • Range: 1.28 - 13.00
+   • Mean: 5.06, Median: 4.69
+   • Skewness: 0.87
+
+🔸 13 (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 78 (43.8%)
+   • Quality Score: 100.0%
+   • Range: 0.48 - 1.71
+   • Mean: 0.96, Median: 0.96
+   • Skewness: 0.02
+
+🔸 class_0 (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 122 (68.5%)
+   • Quality Score: 100.0%
+   • Range: 1.27 - 4.00
+   • Mean: 2.61, Median: 2.78
+   • Skewness: -0.31
+
+🔸 class_1 (int64)
+   • Missing: 0 (0.0%)
+   • Unique: 121 (68.0%)
+   • Quality Score: 100.0%
+   • Range: 278.00 - 1680.00
+   • Mean: 746.89, Median: 673.50
+   • Skewness: 0.77
+
+🔸 class_2 (int64)
+   • Missing: 0 (0.0%)
+   • Unique: 3 (1.7%)
+   • Quality Score: 100.0%
+   • Range: 0.00 - 2.00
+   • Mean: 0.94, Median: 1.00
+   • Skewness: 0.11
+   • Top values: 1: 71, 0: 59, 2: 48
+
+🔗 HIGH CORRELATIONS
+----------------------------------------
+   • class_0 ↔ class_2: -0.788
+   • class_2 ↔ class_0: -0.788
+
+💡 BUSINESS INSIGHTS
+----------------------------------------
+   • Data composition: 1 categorical, 5 numeric columns
+
+🔧 COLUMN-SPECIFIC RECOMMENDATIONS
+----------------------------------------
+   1. 178: Investigate and potentially handle outliers
+   2. 13: Investigate and potentially handle outliers
+
+================================================================================

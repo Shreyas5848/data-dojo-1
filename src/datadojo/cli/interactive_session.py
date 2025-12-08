@@ -105,6 +105,11 @@ class DojoSession:
         self.completer = DojoCompleter(self)
 
     def _help_command(self, args: List[str]):
+        """Show available commands and their descriptions.
+Usage: help [command_name]
+
+Without arguments, lists all commands. 
+With a command name, shows detailed help for that command."""
         if not args:
             table = Table(title="[title]Available Commands[/title]", border_style="border")
             table.add_column("Command", style="command", no_wrap=True)
@@ -122,14 +127,18 @@ class DojoSession:
                 self.console.print(f"Unknown command: '{cmd_name}'.", style="danger")
 
     def _exit_command(self, args: List[str]):
+        """Exit the interactive session."""
         raise EOFError
 
     def _back_command(self, args: List[str]):
+        """Return to the main dojo prompt from a project context."""
         self.current_project_id = None
         self.prompt_text = "(dojo) > "
         self.console.print("Returned to the main dojo prompt.", style="info")
 
     def _set_student_command(self, args: List[str]):
+        """Set the current student ID for progress tracking.
+Usage: set-student <student_name>"""
         if not args:
             self.console.print("Usage: set-student <student_name>", style="warning")
             return
@@ -172,6 +181,8 @@ The web dashboard provides:
             self.console.print(parser.format_help(), style="warning")
 
     def _list_projects_command(self, args: List[str]):
+        """List available learning projects across different domains.
+Usage: list-projects [--domain <ecommerce|healthcare|finance>] [--difficulty <beginner|intermediate|advanced>]"""
         parser = argparse.ArgumentParser(prog="list-projects", add_help=False)
         parser.add_argument("--domain", choices=["ecommerce", "healthcare", "finance"])
         parser.add_argument("--difficulty", choices=["beginner", "intermediate", "advanced"])
@@ -197,6 +208,8 @@ The web dashboard provides:
             self.console.print(parser.format_help(), style="warning")
     
     def _start_command(self, args: List[str]):
+        """Start a learning project and track your progress.
+Usage: start <project_id> [--student <student_name>]"""
         parser = argparse.ArgumentParser(prog="start", add_help=False)
         parser.add_argument("project_id")
         parser.add_argument("--student")
@@ -219,6 +232,10 @@ The web dashboard provides:
             self.console.print(parser.format_help(), style="warning")
 
     def _explain_command(self, args: List[str]):
+        """Get detailed explanations of data science concepts.
+Usage: explain <concept_id>
+
+Example concepts: missing_values, outliers, normalization, encoding"""
         parser = argparse.ArgumentParser(prog="explain", add_help=False)
         parser.add_argument("concept")
         try:
@@ -232,6 +249,8 @@ The web dashboard provides:
             self.console.print(parser.format_help(), style="warning")
 
     def _progress_command(self, args: List[str]):
+        """View your learning progress, XP, and achievements.
+Usage: progress [--project <project_id>]"""
         parser = argparse.ArgumentParser(prog="progress", add_help=False)
         parser.add_argument("--project", help="Project ID")
         try:
@@ -253,6 +272,8 @@ The web dashboard provides:
             self.console.print(parser.format_help(), style="warning")
             
     def _complete_step_command(self, args: List[str]):
+        """Mark a project step as completed to track progress.
+Usage: complete-step <step_id>"""
         parser = argparse.ArgumentParser(prog="complete-step", add_help=False)
         parser.add_argument("step_id")
         try:
@@ -273,6 +294,8 @@ The web dashboard provides:
             self.console.print(parser.format_help(), style="warning")
             
     def _practice_command(self, args: List[str]):
+        """Practice a specific data science concept with guided exercises.
+Usage: practice <concept_id>"""
         parser = argparse.ArgumentParser(prog="practice", add_help=False)
         parser.add_argument("concept_id")
         try:
@@ -321,49 +344,101 @@ Usage: generate-data [--domain <healthcare|ecommerce|finance>] [--size <small|me
             if parsed_args.domain:
                 # Generate specific domain
                 if parsed_args.domain == "healthcare":
-                    self.console.print("🏥 Generating Healthcare datasets...")
+                    self.console.print("🏥 [bold cyan]Generating Healthcare datasets...[/bold cyan]")
                     patients = generator.generate_patient_demographics(config["patients"])
                     lab_results = generator.generate_lab_results(config["patients"] * 3, patients['patient_id'].tolist())
                     
                     healthcare_path = output_path / "healthcare"
-                    healthcare_path.mkdir(exist_ok=True)
+                    healthcare_path.mkdir(exist_ok=True, parents=True)
                     
-                    patients.to_csv(healthcare_path / "patient_demographics.csv", index=False)
-                    lab_results.to_csv(healthcare_path / "lab_results.csv", index=False)
+                    patient_file = healthcare_path / "patient_demographics.csv"
+                    lab_file = healthcare_path / "lab_results.csv"
                     
-                    self.console.print(f"✅ Healthcare data saved to {healthcare_path}")
+                    patients.to_csv(patient_file, index=False)
+                    lab_results.to_csv(lab_file, index=False)
+                    
+                    self.console.print(f"\n✅ [bold green]Healthcare datasets created:[/bold green]")
+                    self.console.print(f"   📄 {patient_file.name} ({len(patients):,} rows)")
+                    self.console.print(f"   📄 {lab_file.name} ({len(lab_results):,} rows)")
+                    self.console.print(f"   📁 Location: {patient_file.parent.resolve()}")
                     
                 elif parsed_args.domain == "ecommerce":
-                    self.console.print("🛒 Generating E-commerce datasets...")
+                    self.console.print("🛒 [bold cyan]Generating E-commerce datasets...[/bold cyan]")
                     customers = generator.generate_customers(config["patients"])
                     transactions = generator.generate_transactions(config["transactions"], customers['customer_id'].tolist())
                     
                     ecommerce_path = output_path / "ecommerce"
-                    ecommerce_path.mkdir(exist_ok=True)
+                    ecommerce_path.mkdir(exist_ok=True, parents=True)
                     
-                    customers.to_csv(ecommerce_path / "customers_messy.csv", index=False)
-                    transactions.to_csv(ecommerce_path / "transactions.csv", index=False)
+                    customer_file = ecommerce_path / "customers_messy.csv"
+                    transaction_file = ecommerce_path / "transactions.csv"
                     
-                    self.console.print(f"✅ E-commerce data saved to {ecommerce_path}")
+                    customers.to_csv(customer_file, index=False)
+                    transactions.to_csv(transaction_file, index=False)
+                    
+                    self.console.print(f"\n✅ [bold green]E-commerce datasets created:[/bold green]")
+                    self.console.print(f"   📄 {customer_file.name} ({len(customers):,} rows)")
+                    self.console.print(f"   📄 {transaction_file.name} ({len(transactions):,} rows)")
+                    self.console.print(f"   📁 Location: {customer_file.parent.resolve()}")
                     
                 elif parsed_args.domain == "finance":
-                    self.console.print("💰 Generating Finance datasets...")
+                    self.console.print("💰 [bold cyan]Generating Finance datasets...[/bold cyan]")
                     bank_txns = generator.generate_bank_transactions(config["bank_txns"])
                     credit_apps = generator.generate_credit_applications(config["credit_apps"])
                     
                     finance_path = output_path / "finance"
-                    finance_path.mkdir(exist_ok=True)
+                    finance_path.mkdir(exist_ok=True, parents=True)
                     
-                    bank_txns.to_csv(finance_path / "bank_transactions.csv", index=False)
-                    credit_apps.to_csv(finance_path / "credit_applications.csv", index=False)
+                    bank_file = finance_path / "bank_transactions.csv"
+                    credit_file = finance_path / "credit_applications.csv"
                     
-                    self.console.print(f"✅ Finance data saved to {finance_path}")
+                    bank_txns.to_csv(bank_file, index=False)
+                    credit_apps.to_csv(credit_file, index=False)
+                    
+                    self.console.print(f"\n✅ [bold green]Finance datasets created:[/bold green]")
+                    self.console.print(f"   📄 {bank_file.name} ({len(bank_txns):,} rows)")
+                    self.console.print(f"   📄 {credit_file.name} ({len(credit_apps):,} rows)")
+                    self.console.print(f"   📁 Location: {bank_file.parent.resolve()}")
                     
             else:
                 # Generate all domains
-                generator.save_datasets(str(output_path))
+                self.console.print("🌐 [bold cyan]Generating datasets for ALL domains...[/bold cyan]\n")
+                
+                # Healthcare
+                self.console.print("🏥 Healthcare...")
+                patients = generator.generate_patient_demographics(config["patients"])
+                lab_results = generator.generate_lab_results(config["patients"] * 3, patients['patient_id'].tolist())
+                healthcare_path = output_path / "healthcare"
+                healthcare_path.mkdir(exist_ok=True, parents=True)
+                patients.to_csv(healthcare_path / "patient_demographics.csv", index=False)
+                lab_results.to_csv(healthcare_path / "lab_results.csv", index=False)
+                
+                # E-commerce
+                self.console.print("🛒 E-commerce...")
+                customers = generator.generate_customers(config["patients"])
+                transactions = generator.generate_transactions(config["transactions"], customers['customer_id'].tolist())
+                ecommerce_path = output_path / "ecommerce"
+                ecommerce_path.mkdir(exist_ok=True, parents=True)
+                customers.to_csv(ecommerce_path / "customers_messy.csv", index=False)
+                transactions.to_csv(ecommerce_path / "transactions.csv", index=False)
+                
+                # Finance
+                self.console.print("💰 Finance...")
+                bank_txns = generator.generate_bank_transactions(config["bank_txns"])
+                credit_apps = generator.generate_credit_applications(config["credit_apps"])
+                finance_path = output_path / "finance"
+                finance_path.mkdir(exist_ok=True, parents=True)
+                bank_txns.to_csv(finance_path / "bank_transactions.csv", index=False)
+                credit_apps.to_csv(finance_path / "credit_applications.csv", index=False)
+                
+                self.console.print(f"\n✅ [bold green]All datasets created:[/bold green]")
+                self.console.print(f"   🏥 Healthcare: patient_demographics.csv, lab_results.csv")
+                self.console.print(f"   🛒 E-commerce: customers_messy.csv, transactions.csv")
+                self.console.print(f"   💰 Finance: bank_transactions.csv, credit_applications.csv")
+                self.console.print(f"   📁 Location: {output_path.resolve()}")
             
-            self.console.print(f"🎉 [success]Data generation completed![/success] Check the '{output_path}' directory.")
+            self.console.print(f"\n🎉 [success]Generation completed![/success]")
+            self.console.print(f"💡 [info]Tip: Use 'profile-data --file <path>' to analyze the datasets[/info]")
             
         except SystemExit:
             self.console.print(parser.format_help(), style="warning")
@@ -381,9 +456,11 @@ Usage: profile-data --file <path> [--output <report_path>] [--format <text|json>
         try:
             parsed_args = parser.parse_args(args)
             
-            file_path = Path(parsed_args.file)
+            # Resolve path properly, handling relative paths
+            file_path = Path(parsed_args.file).resolve()
             if not file_path.exists():
                 self.console.print(f"❌ File not found: {file_path}", style="danger")
+                self.console.print(f"💡 Current directory: {Path.cwd()}", style="info")
                 return
                 
             if not file_path.suffix.lower() == '.csv':
@@ -587,7 +664,8 @@ Usage: profile-all [--domain <healthcare|ecommerce|finance>] [--output-dir <path
                 user_input = prompt(self.prompt_text, completer=self.completer)
                 if not user_input.strip():
                     continue
-                parts = shlex.split(user_input)
+                # Use shlex.split with posix=False for Windows path compatibility
+                parts = shlex.split(user_input, posix=False)
                 command_name = parts[0]
                 command_args = parts[1:]
                 if command_name in self.commands:

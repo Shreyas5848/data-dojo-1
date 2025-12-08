@@ -1,0 +1,71 @@
+================================================================================
+📊 DATA PROFILE REPORT: umath-validation-set-log.csv
+================================================================================
+Generated: 2025-12-08 10:15:48
+
+📈 DATASET OVERVIEW
+----------------------------------------
+Shape: 270 rows × 4 columns
+Memory Usage: 0.0 MB
+Duplicate Rows: 1 (0.4%)
+
+🎯 DATA QUALITY SCORES
+----------------------------------------
+Overall Quality: 92.9% 🟢
+Completeness: 97.5%
+Consistency: 85.0%
+Uniqueness: 99.6%
+
+📋 COLUMN ANALYSIS
+----------------------------------------
+
+🔸 dtype (object)
+   • Missing: 0 (0.0%)
+   • Unique: 11 (4.1%)
+   • Quality Score: 100.0%
+   • Length: 8-24 chars (avg: 10.2)
+   • Top values: np.float64: 147, np.float32: 113, ## +/-0.0f: 2
+
+🔸 input (object)
+   • Missing: 8 (3.0%)
+   • Unique: 261 (96.7%)
+   • Quality Score: 79.1%
+   • Length: 4-25 chars (avg: 14.5)
+   ⚠️  Issues: Very high cardinality: 96.7% unique values; Contains leading/trailing whitespace
+
+🔸 output (object)
+   • Missing: 9 (3.3%)
+   • Unique: 245 (90.7%)
+   • Quality Score: 89.0%
+   • Length: 6-18 chars (avg: 14.5)
+   ⚠️  Issues: Contains leading/trailing whitespace
+
+🔸 ulperrortol (float64)
+   • Missing: 10 (3.7%)
+   • Unique: 2 (0.7%)
+   • Quality Score: 98.9%
+   • Range: 1.00 - 4.00
+   • Mean: 2.30, Median: 1.00
+   • Skewness: 0.27
+   • Top values: 1.0: 147, 4.0: 113
+
+💡 BUSINESS INSIGHTS
+----------------------------------------
+   • Potential identifier columns detected: input
+   • Data composition: 2 categorical, 4 numeric columns
+
+🚀 RECOMMENDATIONS
+----------------------------------------
+   1. Remove 1 duplicate rows
+   2. Convert to integer type: ulperrortol
+
+🔧 COLUMN-SPECIFIC RECOMMENDATIONS
+----------------------------------------
+   1. input: This appears to be an ID column - consider using for indexing or dropping if not needed
+   2. input: Apply .str.strip() to remove leading/trailing whitespace
+   3. input: Consider standardizing case with .str.lower() or .str.title()
+   4. output: Apply .str.strip() to remove leading/trailing whitespace
+   5. output: Consider standardizing case with .str.lower() or .str.title()
+   6. ulperrortol: Consider converting to integer type for memory efficiency
+
+================================================================================

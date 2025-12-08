@@ -1,0 +1,49 @@
+================================================================================
+📊 DATA PROFILE REPORT: sfc64-testset-1.csv
+================================================================================
+Generated: 2025-12-08 10:15:47
+
+📈 DATASET OVERVIEW
+----------------------------------------
+Shape: 1,000 rows × 2 columns
+Memory Usage: 0.1 MB
+Duplicate Rows: 0 (0.0%)
+
+🎯 DATA QUALITY SCORES
+----------------------------------------
+Overall Quality: 88.0% 🟢
+Completeness: 100.0%
+Consistency: 70.0%
+Uniqueness: 100.0%
+
+📋 COLUMN ANALYSIS
+----------------------------------------
+
+🔸 seed (int64)
+   • Missing: 0 (0.0%)
+   • Unique: 1,000 (100.0%)
+   • Quality Score: 90.0%
+   • Range: 0.00 - 999.00
+   • Mean: 499.50, Median: 499.50
+   • Skewness: 0.00
+   ⚠️  Issues: Very high cardinality: 100.0% unique values
+
+🔸  0xdeadbeaf (object)
+   • Missing: 0 (0.0%)
+   • Unique: 1,000 (100.0%)
+   • Quality Score: 80.0%
+   • Length: 17-19 chars (avg: 18.9)
+   ⚠️  Issues: Very high cardinality: 100.0% unique values; Contains leading/trailing whitespace
+
+💡 BUSINESS INSIGHTS
+----------------------------------------
+   • Potential identifier columns detected: seed,  0xdeadbeaf
+   • Data composition: 0 categorical, 2 numeric columns
+
+🔧 COLUMN-SPECIFIC RECOMMENDATIONS
+----------------------------------------
+   1. seed: This appears to be an ID column - consider using for indexing or dropping if not needed
+   2.  0xdeadbeaf: This appears to be an ID column - consider using for indexing or dropping if not needed
+   3.  0xdeadbeaf: Apply .str.strip() to remove leading/trailing whitespace
+
+================================================================================

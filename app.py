@@ -221,7 +221,7 @@ def show_home_page():
                     )],
                     margin=dict(t=60, b=20, l=20, r=20)
                 )
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
         
         with col2:
             # Size distribution - Modern bar chart
@@ -270,7 +270,7 @@ def show_home_page():
                         opacity=0.9
                     )
                 )
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
         
         # Recent Datasets Table
         st.markdown("""
@@ -293,8 +293,7 @@ def show_home_page():
         
         if table_data:
             st.dataframe(
-                pd.DataFrame(table_data), 
-                use_container_width=True,
+                pd.DataFrame(table_data),
                 hide_index=True
             )
     else:
@@ -384,7 +383,7 @@ def show_dataset_explorer():
                     try:
                         df = pd.read_csv(dataset.path)
                         st.subheader(f"Data Preview: {dataset.name}")
-                        st.dataframe(df.head(100), width='stretch')
+                        st.dataframe(df.head(100), use_container_width=True)
                         
                         # Quick stats
                         st.subheader("Quick Statistics")
@@ -393,7 +392,7 @@ def show_dataset_explorer():
                             st.write("**Numeric Columns:**")
                             numeric_cols = df.select_dtypes(include=['number']).columns
                             if len(numeric_cols) > 0:
-                                st.dataframe(df[numeric_cols].describe(), width='stretch')
+                                st.dataframe(df[numeric_cols].describe(), use_container_width=True)
                             else:
                                 st.write("No numeric columns found")
                         
@@ -402,7 +401,7 @@ def show_dataset_explorer():
                             missing_data = df.isnull().sum()
                             missing_data = missing_data[missing_data > 0]
                             if len(missing_data) > 0:
-                                st.dataframe(missing_data.to_frame("Missing Count"), width='stretch')
+                                st.dataframe(missing_data.to_frame("Missing Count"), use_container_width=True)
                             else:
                                 st.success("No missing values found!")
                                 
@@ -462,10 +461,10 @@ def show_data_profiler():
                     col1, col2 = st.columns(2)
                     with col1:
                         if len(quality_figs) > 0:
-                            st.plotly_chart(quality_figs[0], width='stretch')
+                            st.plotly_chart(quality_figs[0], use_container_width=True)
                     with col2:
                         if len(quality_figs) > 1:
-                            st.plotly_chart(quality_figs[1], width='stretch')
+                            st.plotly_chart(quality_figs[1], use_container_width=True)
                 
                 # Quality metrics
                 col1, col2, col3 = st.columns(3)
@@ -508,7 +507,7 @@ def show_data_profiler():
                                         st.write(rec['description'])
                                         try:
                                             fig = viz_engine.create_visualization(df, rec)
-                                            st.plotly_chart(fig, width='stretch')
+                                            st.plotly_chart(fig, use_container_width=True)
                                         except Exception as e:
                                             st.error(f"Could not create visualization: {str(e)}")
                     
@@ -532,7 +531,7 @@ def show_data_profiler():
                     })
                 
                 col_df = pd.DataFrame(col_data)
-                st.dataframe(col_df, width='stretch')
+                st.dataframe(col_df, use_container_width=True)
                 
                 # Recommendations
                 if profile.recommendations:
@@ -572,7 +571,7 @@ def show_data_profiler():
                             xaxis_title="Columns",
                             yaxis_title="Missing Percentage (%)"
                         )
-                        st.plotly_chart(fig, width='stretch')
+                        st.plotly_chart(fig, use_container_width=True)
                 
                 # Export options
                 st.subheader("📤 Export Profile")

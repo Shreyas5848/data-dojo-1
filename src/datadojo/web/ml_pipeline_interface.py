@@ -339,7 +339,7 @@ def render_pipeline_progress(steps: List[MLPipelineStep], current_step: int):
         plot_bgcolor='rgba(0,0,0,0)'
     )
     
-    st.plotly_chart(fig, use_container_width=True)
+    st.plotly_chart(fig)
     
     # Progress bar
     completed_steps = sum(1 for step in steps if step.status == "completed")
@@ -490,7 +490,7 @@ def render_step_results(step: MLPipelineStep, step_index: int):
                 
                 fig = px.bar(scores_df, x="Model", y="Score", 
                            title="Model Comparison")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
         
         elif step.name == "model_explanation" and step.result:
             if "feature_importance" in step.result:
@@ -505,7 +505,7 @@ def render_step_results(step: MLPipelineStep, step_index: int):
                 
                 fig = px.bar(importance_df.tail(10), x="Importance", y="Feature",
                            orientation='h', title="Top 10 Most Important Features")
-                st.plotly_chart(fig, use_container_width=True)
+                st.plotly_chart(fig)
     
     # Next step button
     if step_index + 1 < len(st.session_state.pipeline_steps):
@@ -589,7 +589,7 @@ def render_data_exploration_charts(result: Dict):
             
             fig = px.bar(df_missing, x="Missing %", y="Column", 
                         orientation='h', title="Missing Data by Column")
-            st.plotly_chart(fig, use_container_width=True)
+            st.plotly_chart(fig)
 
 
 def render_model_comparison_charts(result: Dict):
@@ -603,7 +603,7 @@ def render_model_comparison_charts(result: Dict):
                     title="Model Performance Comparison",
                     color="Score", color_continuous_scale="viridis")
         fig.update_layout(showlegend=False)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig)
 
 
 def render_model_explanation_charts(result: Dict):
@@ -625,7 +625,7 @@ def render_model_explanation_charts(result: Dict):
                     orientation='h', title="Feature Importance",
                     color="Importance", color_continuous_scale="blues")
         fig.update_layout(showlegend=False)
-        st.plotly_chart(fig, use_container_width=True)
+        st.plotly_chart(fig)
 
 
 def render_ml_templates():

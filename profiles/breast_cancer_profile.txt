@@ -1,0 +1,69 @@
+================================================================================
+📊 DATA PROFILE REPORT: breast_cancer.csv
+================================================================================
+Generated: 2025-12-08 10:15:45
+
+📈 DATASET OVERVIEW
+----------------------------------------
+Shape: 569 rows × 4 columns
+Memory Usage: 0.6 MB
+Duplicate Rows: 0 (0.0%)
+
+🎯 DATA QUALITY SCORES
+----------------------------------------
+Overall Quality: 100.0% 🟢
+Completeness: 100.0%
+Consistency: 100.0%
+Uniqueness: 100.0%
+
+📋 COLUMN ANALYSIS
+----------------------------------------
+
+🔸 569 (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 492 (86.5%)
+   • Quality Score: 100.0%
+   • Range: 0.00 - 0.29
+   • Mean: 0.11, Median: 0.10
+   • Skewness: 0.49
+
+🔸 30 (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 500 (87.9%)
+   • Quality Score: 100.0%
+   • Range: 0.16 - 0.66
+   • Mean: 0.29, Median: 0.28
+   • Skewness: 1.43
+
+🔸 malignant (float64)
+   • Missing: 0 (0.0%)
+   • Unique: 535 (94.0%)
+   • Quality Score: 100.0%
+   • Range: 0.06 - 0.21
+   • Mean: 0.08, Median: 0.08
+   • Skewness: 1.66
+
+🔸 benign (int64)
+   • Missing: 0 (0.0%)
+   • Unique: 2 (0.4%)
+   • Quality Score: 100.0%
+   • Range: 0.00 - 1.00
+   • Mean: 0.63, Median: 1.00
+   • Skewness: -0.53
+   • Top values: 1: 357, 0: 212
+
+🔗 HIGH CORRELATIONS
+----------------------------------------
+   • 569 ↔ benign: -0.794
+   • benign ↔ 569: -0.794
+
+💡 BUSINESS INSIGHTS
+----------------------------------------
+   • Data composition: 1 categorical, 4 numeric columns
+
+🔧 COLUMN-SPECIFIC RECOMMENDATIONS
+----------------------------------------
+   1. 30: Investigate and potentially handle outliers
+   2. malignant: Investigate and potentially handle outliers
+
+================================================================================
