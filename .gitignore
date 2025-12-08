@@ -175,3 +175,6 @@ LINKEDIN_TEASER.md
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# Generated profile reports
+profiles/
