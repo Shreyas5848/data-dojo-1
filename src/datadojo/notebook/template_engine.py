@@ -79,9 +79,9 @@ sns.set_palette("husl")
         cells.append(nbf.v4.new_code_cell(f"""# Load your dataset
 df = pd.read_csv('{data_load_path}')
 
-print(f"Dataset shape: {df.shape}")
-print(f"Memory usage: {df.memory_usage(deep=True).sum() / 1024**2:.2f} MB")
-print(f"Columns: {list(df.columns)}")"""))
+print(f"Dataset shape: {{df.shape}}")
+print(f"Memory usage: {{df.memory_usage(deep=True).sum() / 1024**2:.2f}} MB")
+print(f"Columns: {{list(df.columns)}}")"""))
         
         # Overview
         cells.append(nbf.v4.new_markdown_cell("## 2. 🔍 Data Overview"))
@@ -377,7 +377,7 @@ else:
     
 print("\\n=== DUPLICATE ROWS ===")
 duplicates = df.duplicated().sum()
-print(f"Duplicate rows: {duplicates}")"""))
+print(f"Duplicate rows: {{duplicates}}")"""))
         
         # Target variable analysis
         cells.append(nbf.v4.new_markdown_cell("## 2. 🎯 Target Variable Analysis"))

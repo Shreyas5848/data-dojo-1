@@ -25,16 +25,10 @@ class DatasetInfo:
         self.columns = columns
 
 def discover_datasets(search_paths: List[str] = None) -> List[DatasetInfo]:
-    """Discover all CSV datasets in specified paths."""
+    """Discover all CSV datasets in specified paths (optimized for speed)."""
     
     if search_paths is None:
-        # Default search paths
-        search_paths = [
-            "datasets",
-            "test_datasets", 
-            "data",
-            "."  # Current directory
-        ]
+        search_paths = ["datasets", "test_datasets", "generated_datasets", "demo_datasets"]
     
     datasets = []
     
@@ -43,12 +37,15 @@ def discover_datasets(search_paths: List[str] = None) -> List[DatasetInfo]:
             continue
             
         for root, dirs, files in os.walk(search_path):
+            # Skip hidden directories and __pycache__
+            dirs[:] = [d for d in dirs if not d.startswith('.') and d != '__pycache__']
+            
             for file in files:
                 if file.endswith('.csv'):
                     file_path = os.path.join(root, file)
                     
                     try:
-                        # Get file info
+                        # Get file info - fast operation
                         size_mb = os.path.getsize(file_path) / (1024 * 1024)
                         
                         # Determine domain from path
@@ -73,17 +70,16 @@ def discover_datasets(search_paths: List[str] = None) -> List[DatasetInfo]:
                             else:
                                 domain = "other"
                         
-                        # Quick peek at dataset size (read just first few rows for speed)
+                        # FAST: Estimate rows from file size instead of counting lines
+                        # Average CSV row is ~100-200 bytes
+                        estimated_rows = max(1, int(size_mb * 1024 * 1024 / 150))  # ~150 bytes per row estimate
+                        
+                        # FAST: Get column count by reading just the header
                         try:
-                            df_sample = pd.read_csv(file_path, nrows=0)  # Just get columns
-                            columns = len(df_sample.columns)
-                            
-                            # Get actual row count efficiently
-                            with open(file_path, 'r') as f:
-                                rows = sum(1 for line in f) - 1  # Subtract header
-                                
+                            with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                                header = f.readline()
+                                columns = len(header.split(','))
                         except Exception:
-                            rows = 0
                             columns = 0
                         
                         dataset_info = DatasetInfo(
@@ -91,7 +87,7 @@ def discover_datasets(search_paths: List[str] = None) -> List[DatasetInfo]:
                             path=file_path,
                             domain=domain,
                             size_mb=size_mb,
-                            rows=rows,
+                            rows=estimated_rows,
                             columns=columns
                         )
                         

@@ -88,6 +88,7 @@ class DojoSession:
             "list-datasets": self._list_datasets_command,
             "profile-all": self._profile_all_command,
             "web": self._web_command,
+            "notebook": self._notebook_command,
         }
         self.command_args = {
             "list-projects": ["--domain", "--difficulty"],
@@ -101,6 +102,7 @@ class DojoSession:
             "list-datasets": ["--domain", "--format", "--min-size"],
             "profile-all": ["--domain", "--output-dir", "--format"],
             "web": ["--port", "--no-browser"],
+            "notebook": ["--template", "--output", "--open", "--list-templates"],
         }
         self.completer = DojoCompleter(self)
 
@@ -177,6 +179,58 @@ The web dashboard provides:
                 self.console.print(result.output)
             elif result and result.error_message:
                 self.console.print(f"Error: {result.error_message}", style="danger")
+        except SystemExit:
+            self.console.print(parser.format_help(), style="warning")
+
+    def _notebook_command(self, args: List[str]):
+        """Generate a Jupyter notebook from a dataset file.
+Usage: notebook <dataset.csv> [--template TYPE] [--output DIR] [--open]
+       notebook --list-templates
+
+Templates: exploratory_data_analysis, data_cleaning, classification_analysis,
+           regression_analysis, time_series_analysis, clustering_analysis,
+           dimensionality_reduction, feature_engineering
+
+Example: notebook datasets/healthcare/patient_demographics.csv --template data_cleaning"""
+        from .generate_notebook import generate_notebook, list_templates
+        
+        parser = argparse.ArgumentParser(prog="notebook", add_help=False)
+        parser.add_argument("dataset", nargs="?", help="Path to CSV dataset")
+        parser.add_argument("--template", "-t", default="exploratory_data_analysis",
+                          choices=['exploratory_data_analysis', 'data_cleaning', 'classification_analysis',
+                                   'regression_analysis', 'time_series_analysis', 'clustering_analysis',
+                                   'dimensionality_reduction', 'feature_engineering'])
+        parser.add_argument("--output", "-o", help="Output directory")
+        parser.add_argument("--open", action="store_true", help="Open notebook after creation")
+        parser.add_argument("--list-templates", action="store_true", help="List available templates")
+        
+        try:
+            parsed_args = parser.parse_args(args)
+            
+            if parsed_args.list_templates:
+                result = list_templates()
+                self.console.print(result.output)
+                return
+            
+            if not parsed_args.dataset:
+                self.console.print("Usage: notebook <dataset.csv> [--template TYPE]", style="warning")
+                self.console.print("       notebook --list-templates", style="warning")
+                return
+            
+            self.console.print(f"\n📓 [bold cyan]Generating notebook for {parsed_args.dataset}...[/bold cyan]\n")
+            
+            result = generate_notebook(
+                dataset_path=parsed_args.dataset,
+                template_type=parsed_args.template,
+                output_dir=parsed_args.output,
+                open_notebook=parsed_args.open
+            )
+            
+            if result.success:
+                self.console.print(result.output)
+            else:
+                self.console.print(f"Error: {result.error_message}", style="danger")
+                
         except SystemExit:
             self.console.print(parser.format_help(), style="warning")
 

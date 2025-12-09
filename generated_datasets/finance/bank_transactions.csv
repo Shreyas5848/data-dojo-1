@@ -1,0 +1,1001 @@
+transaction_id,account_id,customer_name,account_type,amount,balance_after,transaction_type,category,transaction_date,description,merchant,location,is_recurring,flagged_suspicious,channel
+TXN000001,ACC1264,Deborah Johnson,Savings,-479.36,10308.04,debit,Healthcare,2025-02-25 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"New York, FL",False,False,Mobile
+TXN000002,ACC1271,Edward Jackson,Savings,-80.0,19888.96,debit,ATM Withdrawal,2025-11-05 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Denver, TX",False,False,Online
+TXN000003,ACC1004,Donald Scott,Savings,-36.53,19865.61,debit,Groceries,2024-12-14 23:33:24,Groceries - Safeway,Safeway,"Miami, WA",False,False,ATM
+TXN000004,ACC1286,Charles Young,Business,-241.32,16998.46,debit,Online Purchase,2025-07-13 23:33:24,Online Purchase - Online Purchase,Online Purchase,"New York, IL",False,False,Branch
+TXN000005,ACC1321,Edward Flores,Checking,-126.11,39262.74,debit,Shopping,2025-06-25 23:33:24,Shopping - Amazon,Amazon,"San Jose, CO",False,False,Online
+TXN000006,ACC1017,Ashley Brown,Savings,-480.32,31438.72,debit,Subscription,2025-02-24 23:33:24,Subscription - Subscription,Subscription,"Los Angeles, CA",True,False,Branch
+TXN000007,ACC1030,Barbara Wright,Checking,-395.19,22703.86,debit,Subscription,2025-03-15 23:33:24,Subscription - Subscription,Subscription,"Atlanta, MA",True,False,Mobile
+TXN000008,ACC1194,Sarah Brown,Checking,-235.01,2809.41,debit,Shopping,2025-06-08 23:33:24,Shopping - Macy's,Macy's,"New York, CO",False,False,Online
+TXN000009,ACC1193,Linda King,Business,-430.36,18455.91,debit,Gas Station,2025-07-02 23:33:24,Gas Station - Gas Station,Gas Station,"New York, FL",False,False,ATM
+TXN000010,ACC1500,Anthony Flores,Savings,-100.0,5063.12,debit,ATM Withdrawal,2025-05-23 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Seattle, TX",False,False,Online
+TXN000011,ACC1346,Susan Hill,Savings,-180.67,26519.48,debit,Healthcare,2025-04-26 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Denver, IL",False,False,ATM
+TXN000012,ACC1327,Cynthia Hill,Savings,-207.17,14446.77,debit,Pharmacy,2025-09-20 23:33:24,Pharmacy - Pharmacy,Pharmacy,"New York, PA",False,False,Online
+TXN000013,ACC1051,Deborah Ramirez,Business,-285.92,10289.41,debit,Shopping,2025-01-14 23:33:24,Shopping - Apple Store,Apple Store,"Atlanta, FL",False,False,Online
+TXN000014,ACC1489,Sarah Walker,Savings,-402.91,22119.97,debit,Pharmacy,2025-04-28 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Dallas, FL",False,False,Online
+TXN000015,ACC1129,Steven Johnson,Business,-171.44,20836.14,debit,Utilities,2025-05-08 23:33:24,Utilities - Con Edison,Con Edison,"Dallas, WA",True,False,Online
+TXN000016,ACC1132,Emily Perez,Savings,-286.06,2363.3,debit,Subscription,2025-07-24 23:33:24,Subscription - Subscription,Subscription,"Boston, MA",True,False,Phone
+TXN000017,ACC1400,Jessica Taylor,Business,-235.72,28817.35,debit,Subscription,2025-07-02 23:33:24,Subscription - Subscription,Subscription,"Atlanta, MI",True,False,ATM
+TXN000018,ACC1111,David Young,Checking,495.01,1541.07,credit,Refund,2025-07-26 23:33:24,Refund - Refund,Refund,"San Diego, CA",False,False,Mobile
+TXN000019,ACC1488,Barbara Jones,Savings,-376.24,5020.1,debit,Subscription,2025-10-14 23:33:24,Subscription - Subscription,Subscription,"Philadelphia, CA",True,False,ATM
+TXN000020,ACC1049,Richard Miller,Checking,-61.56,47183.72,debit,Gas Station,2024-12-25 23:33:24,Gas Station - Gas Station,Gas Station,"Los Angeles, MA",False,False,Online
+TXN000021,ACC1284,Matthew Gonzalez,Business,-329.04,25410.26,debit,Healthcare,2025-01-13 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"San Jose, TX",False,False,ATM
+TXN000022,ACC1023,Daniel Sanchez,Savings,-1971.21,4351.6,debit,Rent/Mortgage,2025-08-07 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Phoenix, CA",True,False,Branch
+TXN000023,ACC1124,Barbara Brown,Business,-229.56,31375.02,debit,Gas Station,2025-07-13 23:33:24,Gas Station - Gas Station,Gas Station,"Chicago, TX",False,False,Online
+TXN000024,ACC1004,Donald Scott,Savings,-200.0,19379.88,debit,ATM Withdrawal,2024-12-12 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"San Jose, WA",False,False,Branch
+TXN000025,ACC1405,Brian Lee,Checking,-200.0,43611.31,debit,ATM Withdrawal,2025-08-22 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"San Antonio, CA",False,False,Online
+TXN000026,ACC1056,Michelle Lopez,Checking,-184.84,26098.66,debit,Insurance,2025-07-28 23:33:24,Insurance - Insurance,Insurance,"Chicago, CO",False,False,Phone
+TXN000027,ACC1387,Rebecca White,Savings,-85.45,24165.49,debit,Insurance,2025-02-02 23:33:24,Insurance - Insurance,Insurance,"Boston, FL",False,False,ATM
+TXN000028,ACC1424,Karen Hernandez,Savings,-446.98,41520.41,debit,Insurance,2025-01-22 23:33:24,Insurance - Insurance,Insurance,"San Jose, TX",False,False,ATM
+TXN000029,ACC1103,Robert Smith,Business,-324.35,40991.67,debit,Online Purchase,2025-01-17 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Phoenix, WA",False,False,Mobile
+TXN000030,ACC1013,Rebecca Martin,Savings,-101.1,25670.07,debit,Transportation,2025-06-20 23:33:24,Transportation - Lyft,Lyft,"Dallas, NY",False,False,Mobile
+TXN000031,ACC1171,Susan Rodriguez,Checking,-484.76,2661.31,debit,Dining,2025-06-16 23:33:24,Dining - Chipotle,Chipotle,"Detroit, IL",False,False,ATM
+TXN000032,ACC1453,Timothy King,Business,-1277.83,3414.09,debit,Rent/Mortgage,2025-01-27 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Antonio, CA",True,False,Online
+TXN000033,ACC1053,Ashley Jackson,Business,-124.01,31415.69,debit,Utilities,2025-01-11 23:33:24,Utilities - Con Edison,Con Edison,"Dallas, AZ",True,False,Online
+TXN000034,ACC1275,Daniel Taylor,Business,-205.31,15000.01,debit,Online Purchase,2025-10-31 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Chicago, FL",False,False,Online
+TXN000035,ACC1390,Ashley Lopez,Savings,-196.92,29961.23,debit,Healthcare,2025-08-01 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Houston, AZ",False,False,Mobile
+TXN000036,ACC1465,Richard Taylor,Business,-1095.44,28920.0,debit,Rent/Mortgage,2025-09-11 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Seattle, WA",True,False,Phone
+TXN000037,ACC1130,Linda Anderson,Savings,3095.36,14377.64,credit,Salary,2025-06-15 23:33:24,Salary - Salary,Salary,"New York, MI",True,False,Branch
+TXN000038,ACC1019,Barbara Jackson,Savings,-64.66,40527.2,debit,Online Purchase,2025-11-30 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Detroit, TX",False,False,Online
+TXN000039,ACC1089,Elizabeth Williams,Savings,-383.11,41080.01,debit,Dining,2025-02-19 23:33:24,Dining - McDonald's,McDonald's,"San Diego, FL",False,False,Online
+TXN000040,ACC1284,Matthew Gonzalez,Business,-117.88,25294.37,debit,Gas Station,2025-01-29 23:33:24,Gas Station - Gas Station,Gas Station,"Denver, PA",False,False,Online
+TXN000041,ACC1411,George Jackson,Business,488.28,4140.47,credit,Interest,2025-04-13 23:33:24,Interest - Interest,Interest,"San Antonio, AZ",False,False,Online
+TXN000042,ACC1376,Ronald Smith,Checking,-405.84,16620.8,debit,Dining,2025-03-14 23:33:24,Dining - Starbucks,Starbucks,"Los Angeles, FL",False,False,Mobile
+TXN000043,ACC1435,Jacob Clark,Checking,-375.69,8410.41,debit,Insurance,2025-11-01 23:33:24,Insurance - Insurance,Insurance,"Miami, TX",False,False,ATM
+TXN000044,ACC1230,Paul Moore,Savings,298.54,16644.28,credit,Interest,2025-10-30 23:33:24,Interest - Interest,Interest,"New York, CA",False,False,Branch
+TXN000045,ACC1500,Anthony Flores,Savings,2371.04,5657.52,credit,Bonus,2025-03-18 23:33:24,Bonus - Bonus,Bonus,"San Antonio, AZ",False,False,ATM
+TXN000046,ACC1458,Laura Taylor,Savings,-2415.86,13498.91,debit,Rent/Mortgage,2025-05-17 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Austin, CA",True,False,ATM
+TXN000047,ACC1326,Christopher Allen,Business,320.21,46220.59,credit,Transfer In,2025-07-24 23:33:24,Transfer In - Transfer In,Transfer In,"Phoenix, NY",False,False,Online
+TXN000048,ACC1294,Joshua Miller,Business,-20.0,22737.38,debit,ATM Withdrawal,2025-09-18 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Austin, FL",False,False,Online
+TXN000049,ACC1302,Ryan Thomas,Checking,144.35,31622.86,credit,Refund,2025-10-12 23:33:24,Refund - Refund,Refund,"San Antonio, TX",False,False,Online
+TXN000050,ACC1102,Ashley Garcia,Savings,-318.45,8923.05,debit,Shopping,2025-11-16 23:33:24,Shopping - Macy's,Macy's,"San Jose, TX",False,False,Online
+TXN000051,ACC1083,James Walker,Savings,-197.01,2888.52,debit,Gas Station,2025-02-18 23:33:24,Gas Station - Gas Station,Gas Station,"Jacksonville, FL",False,False,Branch
+TXN000052,ACC1101,James Jackson,Checking,-238.63,50057.05,debit,Pharmacy,2025-09-25 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Detroit, AZ",False,False,Online
+TXN000053,ACC1090,Michelle Johnson,Checking,-50.21,28091.17,debit,Utilities,2025-02-23 23:33:24,Utilities - AT&T,AT&T,"Denver, TX",True,False,Mobile
+TXN000054,ACC1193,Linda King,Business,-39.74,19036.32,debit,Gas Station,2025-03-01 23:33:24,Gas Station - Gas Station,Gas Station,"Houston, TX",False,False,Mobile
+TXN000055,ACC1397,Daniel Brown,Business,-292.75,9525.02,debit,Transportation,2025-11-09 23:33:24,Transportation - Lyft,Lyft,"Atlanta, TX",False,False,ATM
+TXN000056,ACC1479,Patricia Harris,Savings,-380.59,30504.61,debit,Gas Station,2024-12-10 23:33:24,Gas Station - Gas Station,Gas Station,"Houston, TX",False,False,Online
+TXN000057,ACC1165,Patricia Gonzalez,Savings,-229.85,1368.38,debit,Online Purchase,2025-08-13 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Houston, NY",False,False,Online
+TXN000058,ACC1026,Nancy Clark,Checking,161.32,26818.71,credit,Transfer In,2025-07-27 23:33:24,Transfer In - Transfer In,Transfer In,"Chicago, CA",False,False,Phone
+TXN000059,ACC1228,Amanda Lewis,Business,-494.43,41526.46,debit,Gas Station,2025-09-22 23:33:24,Gas Station - Gas Station,Gas Station,"Philadelphia, GA",False,False,ATM
+TXN000060,ACC1248,William Brown,Business,-211.37,32446.68,debit,Online Purchase,2025-03-18 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Austin, GA",False,False,Online
+TXN000061,ACC1084,Linda Moore,Savings,-259.64,18453.64,debit,Pharmacy,2025-06-24 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Houston, MA",False,False,Online
+TXN000062,ACC1011,Melissa Harris,Checking,-225.12,23982.97,debit,Insurance,2025-11-22 23:33:24,Insurance - Insurance,Insurance,"Detroit, CA",False,False,Mobile
+TXN000063,ACC1261,John Anderson,Checking,176.32,2626.69,credit,Refund,2025-09-24 23:33:24,Refund - Refund,Refund,"Dallas, FL",False,False,Mobile
+TXN000064,ACC1029,Stephanie Thompson,Business,-80.0,4405.02,debit,ATM Withdrawal,2025-05-05 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Atlanta, CO",False,False,Mobile
+TXN000065,ACC1493,Robert Hernandez,Business,-2976.21,24248.72,debit,Rent/Mortgage,2025-10-26 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Houston, TX",True,False,Branch
+TXN000066,ACC1194,Sarah Brown,Checking,4890.34,2601.53,credit,Bonus,2025-11-08 23:33:24,Bonus - Bonus,Bonus,"Seattle, TX",False,False,Online
+TXN000067,ACC1433,Ronald Davis,Business,-203.34,19002.22,debit,Transportation,2025-02-28 23:33:24,Transportation - ExxonMobil,ExxonMobil,"Dallas, CA",False,False,Mobile
+TXN000068,ACC1217,Thomas Anderson,Checking,-251.11,27809.74,debit,Utilities,2025-05-26 23:33:24,Utilities - Con Edison,Con Edison,"Detroit, AZ",True,False,Mobile
+TXN000069,ACC1133,Melissa Flores,Checking,-9.48,23710.71,debit,Online Purchase,2025-07-20 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Miami, AZ",False,False,Mobile
+TXN000070,ACC1177,Susan Scott,Savings,2113.46,32456.44,credit,Salary,2025-02-24 23:33:24,Salary - Salary,Salary,"Atlanta, TX",True,False,Mobile
+TXN000071,ACC1365,Mary Ramirez,Checking,-20.0,37784.7,debit,ATM Withdrawal,2025-04-11 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Seattle, AZ",False,False,Mobile
+TXN000072,ACC1023,Daniel Sanchez,Savings,-73.39,4456.44,debit,Utilities,2025-06-19 23:33:24,Utilities - National Grid,National Grid,"Boston, TX",True,False,Branch
+TXN000073,ACC1218,Ashley Brown,Savings,2371.82,6343.45,credit,Bonus,2025-11-24 23:33:24,Bonus - Bonus,Bonus,"Detroit, FL",False,False,ATM
+TXN000074,ACC1173,Kathleen Thomas,Business,-73.79,28904.01,debit,Entertainment,2025-10-27 23:33:24,Entertainment - PlayStation Store,PlayStation Store,"San Jose, TX",False,False,ATM
+TXN000075,ACC1472,Barbara Robinson,Savings,-46.57,23631.87,debit,Gas Station,2025-03-09 23:33:24,Gas Station - Gas Station,Gas Station,"Jacksonville, CA",False,False,Mobile
+TXN000076,ACC1390,Ashley Lopez,Savings,240.44,30540.37,credit,Interest,2025-05-04 23:33:24,Interest - Interest,Interest,"Phoenix, GA",False,False,Online
+TXN000077,ACC1263,Jacob Garcia,Savings,-453.3,9571.93,debit,Pharmacy,2024-12-22 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Denver, CA",False,False,Online
+TXN000078,ACC1253,Sarah Johnson,Business,-144.08,26090.99,debit,Groceries,2025-02-10 23:33:24,Groceries - Whole Foods,Whole Foods,"Denver, MI",False,False,Mobile
+TXN000079,ACC1468,Andrew Miller,Business,-22.81,9628.39,debit,Pharmacy,2025-05-03 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Phoenix, CO",False,False,ATM
+TXN000080,ACC1285,Timothy Jackson,Checking,1825.69,34144.41,credit,Freelance,2025-05-14 23:33:24,Freelance - Freelance,Freelance,"Philadelphia, CA",False,False,Branch
+TXN000081,ACC1178,Kimberly Hill,Savings,-161.14,21987.1,debit,Dining,2025-01-24 23:33:24,Dining - Uber Eats,Uber Eats,"Detroit, CA",False,False,Mobile
+TXN000082,ACC1439,Joseph Wright,Savings,-313.24,33163.62,debit,Pharmacy,2025-01-05 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Los Angeles, CA",False,False,Mobile
+TXN000083,ACC1412,Brian Hernandez,Checking,-367.75,42598.62,debit,Healthcare,2025-04-28 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"Seattle, NY",False,False,Mobile
+TXN000084,ACC1439,Joseph Wright,Savings,78.08,33377.95,credit,Refund,2025-08-14 23:33:24,Refund - Refund,Refund,"San Antonio, AZ",False,False,Online
+TXN000085,ACC1161,Ronald Martinez,Savings,-412.93,12159.63,debit,Transportation,2025-05-09 23:33:24,Transportation - Lyft,Lyft,"Seattle, CA",False,False,Mobile
+TXN000086,ACC1024,Ronald Miller,Business,-398.67,29705.48,debit,Transportation,2025-06-08 23:33:24,Transportation - Uber,Uber,"Houston, CA",False,False,Online
+TXN000087,ACC1292,Jessica Garcia,Savings,-345.48,33391.13,debit,Shopping,2025-03-31 23:33:24,Shopping - Apple Store,Apple Store,"Los Angeles, TX",False,False,Branch
+TXN000088,ACC1378,Laura Garcia,Business,-143.59,36624.62,debit,Entertainment,2025-12-02 23:33:24,Entertainment - Netflix,Netflix,"San Diego, MI",False,False,Branch
+TXN000089,ACC1409,Amy Hernandez,Business,-70.1,28421.12,debit,Groceries,2025-01-18 23:33:24,Groceries - Walmart,Walmart,"San Antonio, CA",False,False,Mobile
+TXN000090,ACC1053,Ashley Jackson,Business,-333.1,32491.72,debit,Insurance,2025-06-09 23:33:24,Insurance - Insurance,Insurance,"Austin, CO",False,False,Mobile
+TXN000091,ACC1482,Kevin Nguyen,Business,-241.72,48434.1,debit,Gas Station,2024-12-27 23:33:24,Gas Station - Gas Station,Gas Station,"Jacksonville, MA",False,False,ATM
+TXN000092,ACC1481,Robert Harris,Savings,344.21,6059.16,credit,Refund,2025-09-22 23:33:24,Refund - Refund,Refund,"Seattle, FL",False,False,Mobile
+TXN000093,ACC1195,Melissa Harris,Checking,-344.26,47900.18,debit,Gas Station,2025-10-23 23:33:24,Gas Station - Gas Station,Gas Station,"San Diego, TX",False,True,Online
+TXN000094,ACC1133,Melissa Flores,Checking,-48.07,23144.75,debit,Insurance,2025-09-20 23:33:24,Insurance - Insurance,Insurance,"San Antonio, MI",False,False,Branch
+TXN000095,ACC1218,Ashley Brown,Savings,-247.77,6462.67,debit,Groceries,2025-05-02 23:33:24,Groceries - Costco,Costco,"Jacksonville, TX",False,False,Branch
+TXN000096,ACC1073,Sarah Lopez,Business,-393.36,36669.23,debit,Gas Station,2025-11-11 23:33:24,Gas Station - Gas Station,Gas Station,"San Jose, TX",False,False,Online
+TXN000097,ACC1223,David Rodriguez,Business,-100.0,16943.62,debit,ATM Withdrawal,2025-03-19 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Atlanta, PA",False,False,ATM
+TXN000098,ACC1280,Patricia Rodriguez,Checking,-170.64,40250.38,debit,Insurance,2025-05-08 23:33:24,Insurance - Insurance,Insurance,"Los Angeles, CA",False,False,ATM
+TXN000099,ACC1002,Elizabeth White,Checking,-117.15,24222.42,debit,Gas Station,2025-12-02 23:33:24,Gas Station - Gas Station,Gas Station,"Seattle, MA",False,False,ATM
+TXN000100,ACC1197,Richard Clark,Savings,-402.45,11674.55,debit,Online Purchase,2025-11-07 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Phoenix, CA",False,False,Online
+TXN000101,ACC1395,John Brown,Checking,57.0,49034.37,credit,Interest,2025-11-04 23:33:24,Interest - Interest,Interest,"Denver, PA",False,False,Branch
+TXN000102,ACC1488,Barbara Jones,Savings,-98.73,4820.8,debit,Entertainment,2025-06-13 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"Denver, CA",False,False,Branch
+TXN000103,ACC1015,George Robinson,Checking,-156.6,24919.06,debit,Dining,2025-09-04 23:33:24,Dining - Chipotle,Chipotle,"San Antonio, MA",False,False,Branch
+TXN000104,ACC1175,Edward Flores,Savings,924.02,6404.8,credit,Freelance,2025-07-27 23:33:24,Freelance - Freelance,Freelance,"Seattle, CA",False,False,ATM
+TXN000105,ACC1141,Ronald Lewis,Savings,-79.62,19785.61,debit,Entertainment,2025-11-09 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"Seattle, CA",False,False,Online
+TXN000106,ACC1424,Karen Hernandez,Savings,-48.7,42709.14,debit,Shopping,2025-07-31 23:33:24,Shopping - Macy's,Macy's,"Los Angeles, PA",False,False,Online
+TXN000107,ACC1345,Dorothy Brown,Checking,-441.92,13952.03,debit,Subscription,2025-06-25 23:33:24,Subscription - Subscription,Subscription,"Jacksonville, FL",True,False,Online
+TXN000108,ACC1052,Sharon Moore,Checking,-292.13,13366.44,debit,Utilities,2025-03-28 23:33:24,Utilities - National Grid,National Grid,"Miami, TX",True,False,Online
+TXN000109,ACC1444,Mark Smith,Checking,-495.8,26787.02,debit,Insurance,2025-01-31 23:33:24,Insurance - Insurance,Insurance,"San Diego, CO",False,False,ATM
+TXN000110,ACC1068,Amanda Ramirez,Business,-70.54,47145.45,debit,Online Purchase,2025-02-19 23:33:24,Online Purchase - Online Purchase,Online Purchase,"San Antonio, CO",False,False,Phone
+TXN000111,ACC1013,Rebecca Martin,Savings,-317.03,24744.45,debit,Subscription,2025-10-28 23:33:24,Subscription - Subscription,Subscription,"Philadelphia, PA",True,False,Mobile
+TXN000112,ACC1108,Jeffrey Davis,Savings,-441.73,39222.21,debit,Subscription,2025-02-25 23:33:24,Subscription - Subscription,Subscription,"Houston, TX",True,False,Mobile
+TXN000113,ACC1035,Gary Lewis,Business,-181.18,40055.46,debit,Insurance,2025-10-27 23:33:24,Insurance - Insurance,Insurance,"Chicago, TX",False,False,Online
+TXN000114,ACC1272,Daniel Sanchez,Checking,-105.19,46668.65,debit,Groceries,2025-04-15 23:33:24,Groceries - Kroger,Kroger,"Los Angeles, CA",False,False,Branch
+TXN000115,ACC1195,Melissa Harris,Checking,-93.62,47546.93,debit,Dining,2025-04-26 23:33:24,Dining - Starbucks,Starbucks,"Denver, TX",False,False,Mobile
+TXN000116,ACC1338,Sarah Allen,Savings,-135.64,8924.28,debit,Entertainment,2025-07-06 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"San Jose, TX",False,False,Mobile
+TXN000117,ACC1065,Susan Clark,Business,-470.97,5208.43,debit,Healthcare,2025-04-21 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"Atlanta, TX",False,False,ATM
+TXN000118,ACC1182,Elizabeth Nguyen,Business,-86.08,45023.71,debit,Online Purchase,2025-09-25 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Jacksonville, FL",False,False,ATM
+TXN000119,ACC1178,Kimberly Hill,Savings,-193.79,22320.28,debit,Shopping,2025-02-25 23:33:24,Shopping - Amazon,Amazon,"Philadelphia, AZ",False,False,Online
+TXN000120,ACC1197,Richard Clark,Savings,-141.02,12417.52,debit,Transportation,2025-01-08 23:33:24,Transportation - MTA,MTA,"Phoenix, TX",False,False,Mobile
+TXN000121,ACC1010,Kenneth Sanchez,Savings,-64.58,49609.32,debit,Utilities,2025-09-03 23:33:24,Utilities - Con Edison,Con Edison,"New York, WA",True,False,ATM
+TXN000122,ACC1348,Kimberly Torres,Business,285.1,31322.71,credit,Interest,2025-11-30 23:33:24,Interest - Interest,Interest,"Austin, CA",False,False,Online
+TXN000123,ACC1226,Nancy Wright,Business,-331.91,16794.04,debit,Gas Station,2025-11-03 23:33:24,Gas Station - Gas Station,Gas Station,"Philadelphia, CO",False,False,Online
+TXN000124,ACC1265,Joshua Young,Savings,-279.06,23273.26,debit,Transportation,2025-11-11 23:33:24,Transportation - Airport Parking,Airport Parking,"Chicago, TX",False,False,ATM
+TXN000125,ACC1479,Patricia Harris,Savings,-431.38,29743.06,debit,Healthcare,2025-10-13 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Los Angeles, TX",False,False,ATM
+TXN000126,ACC1240,Mark Scott,Business,-125.28,17205.2,debit,Groceries,2025-03-07 23:33:24,Groceries - Kroger,Kroger,"Phoenix, CA",False,False,Online
+TXN000127,ACC1496,Jason Miller,Business,-1252.07,24937.77,debit,Rent/Mortgage,2025-02-05 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Dallas, CA",True,False,Online
+TXN000128,ACC1440,Mary Rodriguez,Savings,-9.19,46852.46,debit,Subscription,2025-03-16 23:33:24,Subscription - Subscription,Subscription,"Los Angeles, CO",True,False,Online
+TXN000129,ACC1059,Jennifer Johnson,Business,106.75,16213.19,credit,Transfer In,2025-02-19 23:33:24,Transfer In - Transfer In,Transfer In,"Seattle, AZ",False,False,Mobile
+TXN000130,ACC1391,Nancy White,Savings,-54.82,32960.94,debit,Insurance,2025-05-22 23:33:24,Insurance - Insurance,Insurance,"Boston, IL",False,False,ATM
+TXN000131,ACC1362,Joseph Robinson,Business,-229.94,15466.8,debit,Shopping,2025-04-10 23:33:24,Shopping - Amazon,Amazon,"Houston, FL",False,False,Mobile
+TXN000132,ACC1033,Brian Brown,Checking,-393.56,10242.75,debit,Healthcare,2025-02-12 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Detroit, FL",False,False,Mobile
+TXN000133,ACC1009,Andrew White,Business,288.51,3512.67,credit,Dividend,2025-08-12 23:33:24,Dividend - Dividend,Dividend,"Chicago, TX",False,False,Online
+TXN000134,ACC1367,Matthew Smith,Savings,1522.37,27732.66,credit,Bonus,2025-01-22 23:33:24,Bonus - Bonus,Bonus,"Jacksonville, FL",False,False,Mobile
+TXN000135,ACC1119,Rebecca Thomas,Savings,2542.97,48987.05,credit,Bonus,2025-11-11 23:33:24,Bonus - Bonus,Bonus,"Houston, MI",False,False,Mobile
+TXN000136,ACC1003,Christopher Miller,Savings,-113.81,23906.07,debit,Dining,2025-07-20 23:33:24,Dining - Chipotle,Chipotle,"San Diego, PA",False,True,ATM
+TXN000137,ACC1222,Joshua Moore,Business,-452.77,2904.88,debit,Online Purchase,2025-09-25 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Houston, TX",False,False,Mobile
+TXN000138,ACC1109,Donald Flores,Savings,-296.22,38059.42,debit,Transportation,2025-08-02 23:33:24,Transportation - Lyft,Lyft,"Houston, CA",False,False,ATM
+TXN000139,ACC1081,Joshua Johnson,Savings,-85.26,34285.19,debit,Online Purchase,2025-10-18 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Detroit, TX",False,False,ATM
+TXN000140,ACC1100,Joseph Brown,Savings,-211.27,27837.28,debit,Healthcare,2025-11-01 23:33:24,Healthcare - Walgreens,Walgreens,"Chicago, CO",False,False,Online
+TXN000141,ACC1450,Jennifer Gonzalez,Checking,-112.29,18693.78,debit,Groceries,2025-01-11 23:33:24,Groceries - Safeway,Safeway,"Phoenix, CA",False,False,Online
+TXN000142,ACC1033,Brian Brown,Checking,141.47,10594.58,credit,Dividend,2025-06-03 23:33:24,Dividend - Dividend,Dividend,"Austin, TX",False,False,Online
+TXN000143,ACC1125,Jacob Robinson,Business,-327.36,42089.63,debit,Pharmacy,2025-11-03 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Phoenix, MA",False,False,Branch
+TXN000144,ACC1088,Michelle Young,Checking,-80.0,40286.65,debit,ATM Withdrawal,2025-03-02 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Houston, NY",False,False,ATM
+TXN000145,ACC1326,Christopher Allen,Business,-452.83,45552.6,debit,Healthcare,2024-12-16 23:33:24,Healthcare - Walgreens,Walgreens,"Detroit, CA",False,False,Mobile
+TXN000146,ACC1333,Cynthia Hernandez,Savings,177.52,44917.32,credit,Interest,2025-02-26 23:33:24,Interest - Interest,Interest,"Philadelphia, FL",False,False,ATM
+TXN000147,ACC1411,George Jackson,Business,-360.35,5193.08,debit,Online Purchase,2025-08-31 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Dallas, PA",False,False,Phone
+TXN000148,ACC1152,Timothy Allen,Business,-80.0,38924.45,debit,ATM Withdrawal,2025-07-05 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Jacksonville, GA",False,False,ATM
+TXN000149,ACC1423,William Wright,Business,907.92,11649.67,credit,Freelance,2024-12-25 23:33:24,Freelance - Freelance,Freelance,"Seattle, NY",False,False,ATM
+TXN000150,ACC1051,Deborah Ramirez,Business,-71.73,9400.89,debit,Entertainment,2024-12-13 23:33:24,Entertainment - Netflix,Netflix,"Philadelphia, PA",False,False,ATM
+TXN000151,ACC1087,Jennifer Martinez,Business,-405.39,39408.29,debit,Online Purchase,2024-12-25 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Philadelphia, CA",False,False,Branch
+TXN000152,ACC1143,Barbara Lopez,Checking,-119.78,37175.03,debit,Entertainment,2025-03-22 23:33:24,Entertainment - Spotify,Spotify,"San Antonio, TX",False,False,Online
+TXN000153,ACC1232,Michelle Wilson,Business,-104.04,45302.8,debit,Subscription,2025-01-15 23:33:24,Subscription - Subscription,Subscription,"Austin, IL",True,False,ATM
+TXN000154,ACC1161,Ronald Martinez,Savings,-147.19,12046.72,debit,Groceries,2025-02-09 23:33:24,Groceries - Safeway,Safeway,"San Jose, CO",False,False,ATM
+TXN000155,ACC1285,Timothy Jackson,Checking,-120.51,33949.64,debit,Groceries,2025-02-05 23:33:24,Groceries - Whole Foods,Whole Foods,"Boston, CA",False,False,Mobile
+TXN000156,ACC1255,Jacob Jones,Savings,-282.24,5280.48,debit,Insurance,2025-02-26 23:33:24,Insurance - Insurance,Insurance,"Phoenix, TX",False,False,Online
+TXN000157,ACC1371,Daniel Ramirez,Checking,-375.01,45475.69,debit,Dining,2025-05-31 23:33:24,Dining - DoorDash,DoorDash,"Miami, TX",False,False,Mobile
+TXN000158,ACC1019,Barbara Jackson,Savings,-307.49,40057.01,debit,Shopping,2024-12-13 23:33:24,Shopping - Best Buy,Best Buy,"San Diego, PA",False,False,ATM
+TXN000159,ACC1095,Deborah Young,Savings,-188.29,28482.73,debit,Gas Station,2025-05-02 23:33:24,Gas Station - Gas Station,Gas Station,"Detroit, TX",False,False,Online
+TXN000160,ACC1240,Mark Scott,Business,-318.99,16463.36,debit,Subscription,2025-10-08 23:33:24,Subscription - Subscription,Subscription,"Boston, IL",True,False,Online
+TXN000161,ACC1177,Susan Scott,Savings,-77.29,32686.93,debit,Dining,2025-11-12 23:33:24,Dining - Starbucks,Starbucks,"Houston, FL",False,False,Branch
+TXN000162,ACC1180,Ashley Garcia,Business,-34.52,2555.26,debit,Groceries,2025-04-10 23:33:24,Groceries - Safeway,Safeway,"New York, WA",False,False,ATM
+TXN000163,ACC1488,Barbara Jones,Savings,-203.84,3533.34,debit,Pharmacy,2024-12-10 23:33:24,Pharmacy - Pharmacy,Pharmacy,"San Antonio, CA",False,False,Mobile
+TXN000164,ACC1123,William Nguyen,Business,229.51,4673.92,credit,Refund,2025-03-29 23:33:24,Refund - Refund,Refund,"Jacksonville, AZ",False,False,Branch
+TXN000165,ACC1411,George Jackson,Business,-84.52,4151.84,debit,Dining,2025-08-11 23:33:24,Dining - DoorDash,DoorDash,"Dallas, TX",False,False,Branch
+TXN000166,ACC1184,Michelle Williams,Savings,-1479.23,43870.46,debit,Rent/Mortgage,2025-07-13 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Jose, TX",True,False,Phone
+TXN000167,ACC1149,Amanda Taylor,Business,-2734.31,9601.69,debit,Rent/Mortgage,2025-02-19 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Phoenix, IL",True,False,Mobile
+TXN000168,ACC1337,James Gonzalez,Checking,-117.84,9211.74,debit,Groceries,2025-07-27 23:33:24,Groceries - Trader Joe's,Trader Joe's,"Boston, AZ",False,False,Online
+TXN000169,ACC1010,Kenneth Sanchez,Savings,-1188.72,49378.85,debit,Rent/Mortgage,2025-08-23 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Houston, CA",True,False,ATM
+TXN000170,ACC1247,Rebecca Gonzalez,Checking,-199.8,4862.45,debit,Insurance,2025-01-25 23:33:24,Insurance - Insurance,Insurance,"San Diego, PA",False,False,Branch
+TXN000171,ACC1239,Kimberly Lopez,Business,434.51,45659.66,credit,Dividend,2025-09-22 23:33:24,Dividend - Dividend,Dividend,"Seattle, TX",False,False,Mobile
+TXN000172,ACC1061,Amy Anderson,Business,-60.0,17283.45,debit,ATM Withdrawal,2025-07-28 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Dallas, FL",False,False,Mobile
+TXN000173,ACC1078,Paul Davis,Business,-105.9,5347.94,debit,Groceries,2025-02-24 23:33:24,Groceries - Walmart,Walmart,"Atlanta, CA",False,False,Phone
+TXN000174,ACC1261,John Anderson,Checking,-22.21,2399.74,debit,Dining,2024-12-31 23:33:24,Dining - Chipotle,Chipotle,"Detroit, CA",False,False,ATM
+TXN000175,ACC1408,David Wilson,Checking,-232.94,16532.96,debit,Insurance,2025-01-20 23:33:24,Insurance - Insurance,Insurance,"Dallas, AZ",False,False,ATM
+TXN000176,ACC1207,Joshua Young,Checking,-351.96,14259.12,debit,Pharmacy,2025-11-10 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Dallas, FL",False,False,Online
+TXN000177,ACC1317,Thomas Harris,Savings,-235.97,9049.54,debit,Utilities,2025-01-20 23:33:24,Utilities - National Grid,National Grid,"Philadelphia, MI",True,True,Online
+TXN000178,ACC1371,Daniel Ramirez,Checking,-413.07,45801.69,debit,Dining,2025-03-15 23:33:24,Dining - Starbucks,Starbucks,"Seattle, MI",False,False,Phone
+TXN000179,ACC1164,Andrew Lopez,Business,-60.0,44707.67,debit,ATM Withdrawal,2025-06-12 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Miami, AZ",False,False,Online
+TXN000180,ACC1257,Steven Thompson,Business,-54.79,7011.48,debit,Groceries,2025-01-22 23:33:24,Groceries - Whole Foods,Whole Foods,"San Diego, PA",False,False,Branch
+TXN000181,ACC1004,Donald Scott,Savings,-15.93,19970.52,debit,Healthcare,2025-08-08 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Atlanta, TX",False,False,Mobile
+TXN000182,ACC1183,Kathleen Hernandez,Savings,-85.85,27734.24,debit,Entertainment,2025-05-01 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"Atlanta, WA",False,False,Branch
+TXN000183,ACC1049,Richard Miller,Checking,-77.11,46944.32,debit,Gas Station,2025-04-15 23:33:24,Gas Station - Gas Station,Gas Station,"New York, CA",False,False,Branch
+TXN000184,ACC1045,Mary Torres,Checking,-209.94,17704.96,debit,Transportation,2025-08-19 23:33:24,Transportation - MTA,MTA,"Jacksonville, IL",False,False,Online
+TXN000185,ACC1056,Michelle Lopez,Checking,-36.77,25738.32,debit,Groceries,2025-02-26 23:33:24,Groceries - Kroger,Kroger,"Denver, WA",False,False,Online
+TXN000186,ACC1100,Joseph Brown,Savings,-1883.74,26939.28,debit,Rent/Mortgage,2025-09-02 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Diego, TX",True,False,ATM
+TXN000187,ACC1028,Richard Hernandez,Checking,7860.4,35041.47,credit,Salary,2025-05-30 23:33:24,Salary - Salary,Salary,"Jacksonville, TX",True,False,Branch
+TXN000188,ACC1214,Dorothy Robinson,Checking,-200.0,31243.71,debit,ATM Withdrawal,2025-02-24 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Austin, PA",False,False,Branch
+TXN000189,ACC1073,Sarah Lopez,Business,-267.38,35486.33,debit,Utilities,2024-12-30 23:33:24,Utilities - AT&T,AT&T,"New York, WA",True,False,Online
+TXN000190,ACC1434,George Garcia,Business,-63.88,29409.62,debit,Entertainment,2025-07-02 23:33:24,Entertainment - Netflix,Netflix,"Austin, GA",False,False,Online
+TXN000191,ACC1359,Sharon Flores,Checking,331.47,20876.47,credit,Refund,2025-03-03 23:33:24,Refund - Refund,Refund,"Miami, MI",False,False,Online
+TXN000192,ACC1024,Ronald Miller,Business,-128.52,28732.09,debit,Groceries,2024-12-28 23:33:24,Groceries - Whole Foods,Whole Foods,"Seattle, TX",False,False,Online
+TXN000193,ACC1345,Dorothy Brown,Checking,-80.0,12919.41,debit,ATM Withdrawal,2025-08-05 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Phoenix, FL",False,False,Online
+TXN000194,ACC1237,Charles Rodriguez,Business,-3240.76,2426.18,debit,Rent/Mortgage,2025-09-09 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Diego, CA",True,False,Mobile
+TXN000195,ACC1166,John Flores,Savings,-123.0,5385.54,debit,Entertainment,2025-11-10 23:33:24,Entertainment - Spotify,Spotify,"Miami, PA",False,False,Online
+TXN000196,ACC1127,Donald Thomas,Checking,-358.86,16481.09,debit,Subscription,2025-08-09 23:33:24,Subscription - Subscription,Subscription,"Atlanta, MA",True,False,Online
+TXN000197,ACC1269,Barbara Allen,Business,-124.45,29279.4,debit,Transportation,2025-02-17 23:33:24,Transportation - ExxonMobil,ExxonMobil,"Phoenix, TX",False,False,Mobile
+TXN000198,ACC1214,Dorothy Robinson,Checking,-371.83,30315.16,debit,Dining,2025-10-31 23:33:24,Dining - Starbucks,Starbucks,"Chicago, PA",False,False,Mobile
+TXN000199,ACC1029,Stephanie Thompson,Business,-441.08,4834.54,debit,Dining,2025-10-01 23:33:24,Dining - DoorDash,DoorDash,"San Diego, CA",False,False,Mobile
+TXN000200,ACC1471,Steven Lewis,Savings,-210.78,10495.37,debit,Groceries,2025-03-20 23:33:24,Groceries - Whole Foods,Whole Foods,"Miami, CA",False,False,Mobile
+TXN000201,ACC1318,Sandra Clark,Business,-166.43,29756.51,debit,Groceries,2025-11-09 23:33:24,Groceries - Whole Foods,Whole Foods,"Seattle, MA",False,False,Branch
+TXN000202,ACC1096,Gary Wilson,Savings,-1846.18,25273.8,debit,Rent/Mortgage,2025-04-13 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Atlanta, GA",True,False,Online
+TXN000203,ACC1046,Kimberly Anderson,Checking,-287.53,18503.16,debit,Utilities,2024-12-31 23:33:24,Utilities - Con Edison,Con Edison,"Boston, CO",True,False,Mobile
+TXN000204,ACC1013,Rebecca Martin,Savings,-3198.47,25500.35,debit,Rent/Mortgage,2025-04-13 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Jose, FL",True,False,Online
+TXN000205,ACC1407,Sandra Davis,Checking,-40.0,21903.44,debit,ATM Withdrawal,2025-07-28 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Philadelphia, IL",False,False,ATM
+TXN000206,ACC1206,Karen Torres,Business,-25.78,19913.16,debit,Online Purchase,2025-02-21 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Miami, MI",False,False,Online
+TXN000207,ACC1005,Charles Perez,Savings,-240.4,39127.07,debit,Groceries,2025-05-16 23:33:24,Groceries - Costco,Costco,"Miami, TX",False,False,Mobile
+TXN000208,ACC1393,Michelle Walker,Business,-1472.74,17540.91,debit,Rent/Mortgage,2024-12-10 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Diego, TX",True,False,ATM
+TXN000209,ACC1312,Michael Lopez,Business,-495.24,27178.52,debit,Online Purchase,2024-12-11 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Jacksonville, MA",False,False,Online
+TXN000210,ACC1312,Michael Lopez,Business,164.41,28507.54,credit,Refund,2025-07-03 23:33:24,Refund - Refund,Refund,"Austin, TX",False,False,ATM
+TXN000211,ACC1067,Michelle Smith,Checking,-441.35,20530.94,debit,Gas Station,2025-03-22 23:33:24,Gas Station - Gas Station,Gas Station,"San Diego, MA",False,False,ATM
+TXN000212,ACC1103,Robert Smith,Business,-379.23,40625.31,debit,Healthcare,2025-08-15 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Philadelphia, NY",False,False,Branch
+TXN000213,ACC1063,Amy Allen,Business,-147.99,3919.39,debit,Utilities,2025-03-09 23:33:24,Utilities - Verizon,Verizon,"Los Angeles, FL",True,False,Branch
+TXN000214,ACC1388,George Jones,Checking,1446.52,36298.47,credit,Freelance,2024-12-18 23:33:24,Freelance - Freelance,Freelance,"Miami, GA",False,False,Mobile
+TXN000215,ACC1456,Kenneth Wilson,Checking,488.27,46840.43,credit,Transfer In,2025-10-24 23:33:24,Transfer In - Transfer In,Transfer In,"New York, GA",False,False,Branch
+TXN000216,ACC1404,Margaret Torres,Checking,-453.57,14921.83,debit,Gas Station,2025-01-13 23:33:24,Gas Station - Gas Station,Gas Station,"Phoenix, FL",False,False,Mobile
+TXN000217,ACC1120,Patricia Smith,Business,-40.0,35694.18,debit,ATM Withdrawal,2025-04-09 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Chicago, NY",False,True,Online
+TXN000218,ACC1253,Sarah Johnson,Business,-118.29,26386.76,debit,Insurance,2025-11-08 23:33:24,Insurance - Insurance,Insurance,"Jacksonville, CA",False,False,Online
+TXN000219,ACC1283,Joseph Rodriguez,Checking,-135.64,9474.07,debit,Utilities,2025-10-02 23:33:24,Utilities - National Grid,National Grid,"Denver, GA",True,False,Branch
+TXN000220,ACC1461,Lisa Ramirez,Savings,1101.49,34226.98,credit,Freelance,2024-12-25 23:33:24,Freelance - Freelance,Freelance,"Detroit, MA",False,False,Branch
+TXN000221,ACC1215,Stephanie Taylor,Checking,-92.52,33724.61,debit,Gas Station,2025-07-19 23:33:24,Gas Station - Gas Station,Gas Station,"San Antonio, IL",False,False,Mobile
+TXN000222,ACC1236,Rebecca Miller,Business,-252.37,26964.43,debit,Utilities,2025-11-27 23:33:24,Utilities - Spectrum,Spectrum,"New York, TX",True,False,Online
+TXN000223,ACC1281,Daniel Wright,Checking,-172.47,42410.98,debit,Pharmacy,2025-01-24 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Phoenix, TX",False,False,ATM
+TXN000224,ACC1008,David King,Business,-301.25,45319.64,debit,Insurance,2025-11-21 23:33:24,Insurance - Insurance,Insurance,"Philadelphia, MI",False,False,Online
+TXN000225,ACC1474,Paul Ramirez,Checking,-239.33,13741.85,debit,Pharmacy,2025-10-23 23:33:24,Pharmacy - Pharmacy,Pharmacy,"San Diego, TX",False,False,Online
+TXN000226,ACC1381,Susan Martin,Business,-62.23,34453.98,debit,Groceries,2025-01-08 23:33:24,Groceries - Costco,Costco,"Jacksonville, CA",False,False,Online
+TXN000227,ACC1200,Rebecca Wright,Checking,-59.5,28045.0,debit,Transportation,2025-05-09 23:33:24,Transportation - Airport Parking,Airport Parking,"San Jose, CO",False,False,Mobile
+TXN000228,ACC1166,John Flores,Savings,5707.31,5709.14,credit,Salary,2025-08-03 23:33:24,Salary - Salary,Salary,"San Diego, WA",True,False,Mobile
+TXN000229,ACC1186,Joseph Harris,Savings,1748.92,24430.73,credit,Freelance,2025-11-11 23:33:24,Freelance - Freelance,Freelance,"San Jose, AZ",False,False,ATM
+TXN000230,ACC1295,Joseph Sanchez,Savings,-69.76,27784.57,debit,Shopping,2025-05-22 23:33:24,Shopping - Amazon,Amazon,"San Diego, TX",False,False,Online
+TXN000231,ACC1433,Ronald Davis,Business,-162.08,19263.12,debit,Insurance,2025-09-08 23:33:24,Insurance - Insurance,Insurance,"Detroit, FL",False,False,ATM
+TXN000232,ACC1365,Mary Ramirez,Checking,3482.2,38565.42,credit,Salary,2025-05-05 23:33:24,Salary - Salary,Salary,"Chicago, TX",True,False,Branch
+TXN000233,ACC1454,Matthew Sanchez,Checking,-3134.74,22556.83,debit,Rent/Mortgage,2025-05-02 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Chicago, MA",True,False,Mobile
+TXN000234,ACC1362,Joseph Robinson,Business,-91.19,14798.93,debit,Entertainment,2025-06-18 23:33:24,Entertainment - Netflix,Netflix,"Boston, FL",False,False,Online
+TXN000235,ACC1142,Michelle Clark,Savings,-312.55,30469.13,debit,Gas Station,2025-06-03 23:33:24,Gas Station - Gas Station,Gas Station,"Austin, IL",False,False,Phone
+TXN000236,ACC1082,Laura Torres,Checking,-374.66,4743.75,debit,Pharmacy,2025-08-27 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Atlanta, CA",False,False,ATM
+TXN000237,ACC1355,Edward Flores,Savings,-452.77,11334.99,debit,Subscription,2025-05-28 23:33:24,Subscription - Subscription,Subscription,"San Jose, IL",True,False,ATM
+TXN000238,ACC1074,Margaret White,Savings,-336.15,15887.09,debit,Healthcare,2025-08-11 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Austin, TX",False,False,Online
+TXN000239,ACC1208,Ronald Scott,Checking,-113.74,3013.88,debit,Entertainment,2025-06-15 23:33:24,Entertainment - PlayStation Store,PlayStation Store,"San Antonio, FL",False,True,Mobile
+TXN000240,ACC1154,Matthew Anderson,Savings,864.88,23454.3,credit,Freelance,2025-09-04 23:33:24,Freelance - Freelance,Freelance,"San Antonio, WA",False,False,Mobile
+TXN000241,ACC1407,Sandra Davis,Checking,-120.0,20618.01,debit,ATM Withdrawal,2025-02-23 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"New York, AZ",False,False,ATM
+TXN000242,ACC1176,Anthony Thompson,Savings,-474.53,24449.48,debit,Insurance,2025-11-22 23:33:24,Insurance - Insurance,Insurance,"San Diego, CO",False,False,Mobile
+TXN000243,ACC1073,Sarah Lopez,Business,-392.33,36180.9,debit,Gas Station,2025-01-01 23:33:24,Gas Station - Gas Station,Gas Station,"Boston, WA",False,False,Mobile
+TXN000244,ACC1034,Andrew White,Business,215.4,46911.2,credit,Dividend,2025-07-03 23:33:24,Dividend - Dividend,Dividend,"Atlanta, TX",False,False,Mobile
+TXN000245,ACC1115,Dorothy White,Business,-132.97,24516.9,debit,Groceries,2025-07-29 23:33:24,Groceries - Kroger,Kroger,"Detroit, FL",False,False,Online
+TXN000246,ACC1500,Anthony Flores,Savings,-100.84,4892.82,debit,Entertainment,2025-06-10 23:33:24,Entertainment - Spotify,Spotify,"Dallas, IL",False,False,Online
+TXN000247,ACC1457,Carol Davis,Savings,838.66,38318.57,credit,Freelance,2025-09-11 23:33:24,Freelance - Freelance,Freelance,"San Jose, TX",False,False,Mobile
+TXN000248,ACC1477,Laura Smith,Savings,398.42,29064.31,credit,Freelance,2025-06-20 23:33:24,Freelance - Freelance,Freelance,"Seattle, CA",False,False,Online
+TXN000249,ACC1226,Nancy Wright,Business,-135.0,16866.8,debit,Online Purchase,2025-10-02 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Los Angeles, IL",False,False,Online
+TXN000250,ACC1156,Karen Thomas,Savings,-1179.05,1941.4,debit,Rent/Mortgage,2025-02-25 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Miami, WA",True,False,Online
+TXN000251,ACC1472,Barbara Robinson,Savings,-484.78,23353.16,debit,Transportation,2025-09-13 23:33:24,Transportation - Uber,Uber,"Philadelphia, CO",False,False,Online
+TXN000252,ACC1068,Amanda Ramirez,Business,-75.27,47367.9,debit,Transportation,2024-12-16 23:33:24,Transportation - Uber,Uber,"Philadelphia, CA",False,False,Online
+TXN000253,ACC1186,Joseph Harris,Savings,-88.06,24316.09,debit,Entertainment,2025-02-02 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"Boston, TX",False,False,Online
+TXN000254,ACC1397,Daniel Brown,Business,-250.77,10269.89,debit,Utilities,2025-09-16 23:33:24,Utilities - National Grid,National Grid,"Miami, WA",True,False,Online
+TXN000255,ACC1475,Elizabeth Wright,Checking,-94.1,26896.56,debit,Entertainment,2025-01-16 23:33:24,Entertainment - Spotify,Spotify,"Jacksonville, IL",False,False,ATM
+TXN000256,ACC1498,Deborah Martin,Checking,412.42,48257.82,credit,Refund,2025-11-30 23:33:24,Refund - Refund,Refund,"Detroit, FL",False,False,Online
+TXN000257,ACC1238,Dorothy Anderson,Savings,-192.56,43163.78,debit,Groceries,2025-02-13 23:33:24,Groceries - Kroger,Kroger,"San Jose, NY",False,False,Online
+TXN000258,ACC1038,Michael Robinson,Checking,-63.4,6690.88,debit,Entertainment,2025-04-06 23:33:24,Entertainment - Steam,Steam,"New York, MA",False,False,ATM
+TXN000259,ACC1314,Dorothy Allen,Business,252.73,16991.77,credit,Interest,2025-05-28 23:33:24,Interest - Interest,Interest,"New York, CA",False,False,Mobile
+TXN000260,ACC1282,Amy Miller,Savings,-157.74,26751.41,debit,Online Purchase,2025-10-21 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Los Angeles, NY",False,False,Online
+TXN000261,ACC1059,Jennifer Johnson,Business,-1720.34,15329.17,debit,Rent/Mortgage,2025-11-25 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Diego, FL",True,False,Online
+TXN000262,ACC1183,Kathleen Hernandez,Savings,-130.45,28143.43,debit,Online Purchase,2025-03-16 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Atlanta, WA",False,False,Online
+TXN000263,ACC1260,Amy Lee,Business,-10.59,25339.77,debit,Entertainment,2025-10-22 23:33:24,Entertainment - Netflix,Netflix,"Boston, CA",False,False,Mobile
+TXN000264,ACC1344,Lisa Martinez,Checking,-167.54,43982.87,debit,Gas Station,2025-04-16 23:33:24,Gas Station - Gas Station,Gas Station,"Dallas, CA",False,False,Online
+TXN000265,ACC1397,Daniel Brown,Business,294.05,9207.39,credit,Interest,2025-11-23 23:33:24,Interest - Interest,Interest,"Atlanta, TX",False,False,ATM
+TXN000266,ACC1079,Kathleen Anderson,Business,-56.49,31714.96,debit,Transportation,2025-06-28 23:33:24,Transportation - Uber,Uber,"Boston, WA",False,False,ATM
+TXN000267,ACC1041,Brian Harris,Business,-318.67,19342.71,debit,Transportation,2025-03-24 23:33:24,Transportation - Lyft,Lyft,"Miami, TX",False,False,Mobile
+TXN000268,ACC1420,Steven Nguyen,Savings,-40.0,39557.56,debit,ATM Withdrawal,2025-11-13 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Seattle, MA",False,False,ATM
+TXN000269,ACC1210,Dorothy Brown,Business,-177.23,17019.42,debit,Gas Station,2025-04-04 23:33:24,Gas Station - Gas Station,Gas Station,"Phoenix, PA",False,True,Mobile
+TXN000270,ACC1398,Robert Flores,Business,-120.0,49303.18,debit,ATM Withdrawal,2025-07-13 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Austin, CA",False,False,Mobile
+TXN000271,ACC1077,Barbara Brown,Checking,-205.87,31089.89,debit,Shopping,2025-08-12 23:33:24,Shopping - Macy's,Macy's,"Los Angeles, MA",False,False,Online
+TXN000272,ACC1403,Kimberly Rodriguez,Business,-2319.91,6486.41,debit,Rent/Mortgage,2025-02-19 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Chicago, CO",True,False,Mobile
+TXN000273,ACC1144,Mark Smith,Savings,-80.0,11917.83,debit,ATM Withdrawal,2025-05-14 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Detroit, TX",False,False,Branch
+TXN000274,ACC1280,Patricia Rodriguez,Checking,71.11,41475.21,credit,Dividend,2025-02-12 23:33:24,Dividend - Dividend,Dividend,"San Jose, CA",False,False,Branch
+TXN000275,ACC1036,Donna Brown,Savings,-128.22,10727.28,debit,Utilities,2025-04-29 23:33:24,Utilities - National Grid,National Grid,"Detroit, IL",True,False,Online
+TXN000276,ACC1157,Susan Walker,Checking,-54.78,39797.7,debit,Dining,2025-02-23 23:33:24,Dining - Uber Eats,Uber Eats,"Austin, CA",False,False,Branch
+TXN000277,ACC1387,Rebecca White,Savings,-189.53,22965.31,debit,Insurance,2025-05-20 23:33:24,Insurance - Insurance,Insurance,"San Antonio, IL",False,False,Branch
+TXN000278,ACC1053,Ashley Jackson,Business,293.37,32523.54,credit,Transfer In,2025-09-16 23:33:24,Transfer In - Transfer In,Transfer In,"San Diego, PA",False,False,Mobile
+TXN000279,ACC1364,Timothy Clark,Business,-48.64,29071.12,debit,Subscription,2025-08-14 23:33:24,Subscription - Subscription,Subscription,"Miami, WA",True,False,Online
+TXN000280,ACC1404,Margaret Torres,Checking,269.13,15363.75,credit,Dividend,2025-02-17 23:33:24,Dividend - Dividend,Dividend,"San Jose, AZ",False,False,Online
+TXN000281,ACC1260,Amy Lee,Business,-40.0,25492.59,debit,ATM Withdrawal,2025-01-03 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Los Angeles, AZ",False,False,Mobile
+TXN000282,ACC1044,Jacob Jackson,Checking,-171.41,16210.68,debit,Healthcare,2025-02-11 23:33:24,Healthcare - Walgreens,Walgreens,"Phoenix, TX",False,False,ATM
+TXN000283,ACC1475,Elizabeth Wright,Checking,-2720.32,26966.44,debit,Rent/Mortgage,2025-09-04 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Seattle, TX",True,False,ATM
+TXN000284,ACC1111,David Young,Checking,-3000.32,1574.22,debit,Rent/Mortgage,2025-04-14 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Diego, MI",True,False,Online
+TXN000285,ACC1204,Joshua Nguyen,Savings,-473.66,18755.7,debit,Healthcare,2025-01-24 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"Detroit, CA",False,False,ATM
+TXN000286,ACC1421,Jason Robinson,Savings,-120.47,7239.88,debit,Groceries,2025-09-22 23:33:24,Groceries - Trader Joe's,Trader Joe's,"Miami, NY",False,False,Mobile
+TXN000287,ACC1140,Daniel Thomas,Business,-173.82,28857.61,debit,Groceries,2025-01-07 23:33:24,Groceries - Costco,Costco,"Detroit, TX",False,False,Online
+TXN000288,ACC1073,Sarah Lopez,Business,-2296.77,35599.84,debit,Rent/Mortgage,2025-05-14 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Los Angeles, FL",True,False,ATM
+TXN000289,ACC1125,Jacob Robinson,Business,-13.62,43123.68,debit,Entertainment,2025-06-01 23:33:24,Entertainment - Netflix,Netflix,"San Antonio, TX",False,False,ATM
+TXN000290,ACC1347,Jacob Harris,Savings,-251.14,21994.96,debit,Utilities,2025-04-28 23:33:24,Utilities - Spectrum,Spectrum,"Miami, AZ",True,False,Mobile
+TXN000291,ACC1171,Susan Rodriguez,Checking,-172.56,2604.89,debit,Utilities,2024-12-16 23:33:24,Utilities - Spectrum,Spectrum,"Jacksonville, FL",True,False,Mobile
+TXN000292,ACC1395,John Brown,Checking,-103.22,48467.09,debit,Shopping,2025-09-19 23:33:24,Shopping - Macy's,Macy's,"San Antonio, NY",False,False,ATM
+TXN000293,ACC1205,Amy Ramirez,Savings,-280.06,6419.72,debit,Subscription,2025-07-28 23:33:24,Subscription - Subscription,Subscription,"Denver, TX",True,False,Branch
+TXN000294,ACC1217,Thomas Anderson,Checking,-22.3,27555.91,debit,Gas Station,2025-04-04 23:33:24,Gas Station - Gas Station,Gas Station,"San Antonio, NY",False,False,ATM
+TXN000295,ACC1128,Ryan Ramirez,Savings,-343.74,46425.46,debit,Subscription,2025-09-13 23:33:24,Subscription - Subscription,Subscription,"Denver, PA",True,False,Online
+TXN000296,ACC1449,Dorothy Nguyen,Checking,-420.3,16954.56,debit,Subscription,2025-07-01 23:33:24,Subscription - Subscription,Subscription,"Atlanta, NY",True,False,Online
+TXN000297,ACC1363,Daniel Wright,Business,-80.0,8890.9,debit,ATM Withdrawal,2025-08-08 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Denver, TX",False,False,Online
+TXN000298,ACC1052,Sharon Moore,Checking,-141.22,13595.69,debit,Entertainment,2025-11-04 23:33:24,Entertainment - Netflix,Netflix,"San Diego, CA",False,False,Online
+TXN000299,ACC1423,William Wright,Business,499.41,11335.71,credit,Transfer In,2025-06-15 23:33:24,Transfer In - Transfer In,Transfer In,"Phoenix, CA",False,False,Mobile
+TXN000300,ACC1310,Mary Sanchez,Business,-141.13,15736.76,debit,Healthcare,2025-12-02 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"Chicago, MA",False,False,ATM
+TXN000301,ACC1368,Edward Davis,Savings,-383.03,49086.04,debit,Gas Station,2025-08-26 23:33:24,Gas Station - Gas Station,Gas Station,"Jacksonville, AZ",False,False,Mobile
+TXN000302,ACC1243,Ronald Lopez,Savings,-283.9,23312.96,debit,Pharmacy,2025-04-15 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Jacksonville, NY",False,False,Online
+TXN000303,ACC1322,Anthony Martin,Savings,2478.73,47514.15,credit,Bonus,2025-04-24 23:33:24,Bonus - Bonus,Bonus,"Houston, TX",False,False,ATM
+TXN000304,ACC1290,Margaret Flores,Checking,-487.54,4505.14,debit,Healthcare,2025-01-28 23:33:24,Healthcare - Walgreens,Walgreens,"San Jose, IL",False,False,Mobile
+TXN000305,ACC1426,Betty Gonzalez,Checking,-478.51,45808.88,debit,Transportation,2025-05-18 23:33:24,Transportation - Uber,Uber,"Atlanta, NY",False,False,Online
+TXN000306,ACC1219,Stephanie Anderson,Savings,-157.99,15935.39,debit,Shopping,2025-04-08 23:33:24,Shopping - Target,Target,"San Jose, AZ",False,False,Online
+TXN000307,ACC1359,Sharon Flores,Checking,-186.31,20777.41,debit,Groceries,2025-07-10 23:33:24,Groceries - Walmart,Walmart,"San Antonio, CA",False,False,Mobile
+TXN000308,ACC1174,Carol Johnson,Savings,-270.07,26601.35,debit,Dining,2025-09-09 23:33:24,Dining - DoorDash,DoorDash,"Philadelphia, TX",False,False,Online
+TXN000309,ACC1141,Ronald Lewis,Savings,-330.61,19673.29,debit,Healthcare,2025-11-05 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"Houston, NY",False,False,Mobile
+TXN000310,ACC1141,Ronald Lewis,Savings,111.01,19781.83,credit,Dividend,2025-02-15 23:33:24,Dividend - Dividend,Dividend,"San Jose, CA",False,False,ATM
+TXN000311,ACC1128,Ryan Ramirez,Savings,3647.32,46541.94,credit,Salary,2025-01-13 23:33:24,Salary - Salary,Salary,"San Antonio, AZ",True,False,Mobile
+TXN000312,ACC1110,Stephanie Hill,Business,297.93,31651.13,credit,Interest,2025-04-29 23:33:24,Interest - Interest,Interest,"Detroit, CA",False,False,ATM
+TXN000313,ACC1021,Ashley Wilson,Checking,79.36,36214.06,credit,Dividend,2025-08-26 23:33:24,Dividend - Dividend,Dividend,"San Antonio, TX",False,False,Online
+TXN000314,ACC1254,Melissa Clark,Checking,-277.97,4411.24,debit,Subscription,2025-07-10 23:33:24,Subscription - Subscription,Subscription,"Seattle, CO",True,False,Online
+TXN000315,ACC1170,Ashley Lee,Business,480.77,49584.2,credit,Interest,2025-01-25 23:33:24,Interest - Interest,Interest,"San Antonio, GA",False,False,Phone
+TXN000316,ACC1468,Andrew Miller,Business,-177.77,8863.65,debit,Transportation,2025-08-11 23:33:24,Transportation - ExxonMobil,ExxonMobil,"Denver, CA",False,False,ATM
+TXN000317,ACC1337,James Gonzalez,Checking,-445.56,9431.83,debit,Online Purchase,2025-10-24 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Phoenix, AZ",False,False,Mobile
+TXN000318,ACC1119,Rebecca Thomas,Savings,-178.12,48707.89,debit,Transportation,2025-09-14 23:33:24,Transportation - Shell,Shell,"Atlanta, FL",False,False,Online
+TXN000319,ACC1182,Elizabeth Nguyen,Business,-1615.23,44250.49,debit,Rent/Mortgage,2025-12-08 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Dallas, TX",True,False,Mobile
+TXN000320,ACC1234,Jacob Wilson,Savings,-303.38,10310.97,debit,Insurance,2024-12-14 23:33:24,Insurance - Insurance,Insurance,"Los Angeles, CA",False,False,Mobile
+TXN000321,ACC1357,Amanda Hill,Savings,-174.22,7614.44,debit,Groceries,2025-06-02 23:33:24,Groceries - Costco,Costco,"Miami, TX",False,False,ATM
+TXN000322,ACC1447,Amanda White,Savings,-269.32,8802.17,debit,Utilities,2024-12-29 23:33:24,Utilities - Spectrum,Spectrum,"Philadelphia, PA",True,False,ATM
+TXN000323,ACC1249,Carol Gonzalez,Savings,-450.43,13843.92,debit,Gas Station,2025-12-02 23:33:24,Gas Station - Gas Station,Gas Station,"Detroit, NY",False,False,Phone
+TXN000324,ACC1252,Paul Thompson,Checking,-275.73,3162.74,debit,Insurance,2025-11-25 23:33:24,Insurance - Insurance,Insurance,"Houston, TX",False,False,Mobile
+TXN000325,ACC1157,Susan Walker,Checking,-370.34,41019.61,debit,Gas Station,2025-07-15 23:33:24,Gas Station - Gas Station,Gas Station,"Austin, FL",False,False,Mobile
+TXN000326,ACC1376,Ronald Smith,Checking,-60.0,16023.61,debit,ATM Withdrawal,2025-09-01 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Los Angeles, MA",False,False,Online
+TXN000327,ACC1160,Joseph Lewis,Checking,-120.0,2062.28,debit,ATM Withdrawal,2025-05-09 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Miami, TX",False,False,ATM
+TXN000328,ACC1466,Amy Gonzalez,Business,-135.62,5350.31,debit,Groceries,2025-06-11 23:33:24,Groceries - Trader Joe's,Trader Joe's,"San Jose, FL",False,False,Online
+TXN000329,ACC1480,Thomas Smith,Checking,1631.83,15321.33,credit,Freelance,2025-03-07 23:33:24,Freelance - Freelance,Freelance,"Denver, TX",False,False,ATM
+TXN000330,ACC1284,Matthew Gonzalez,Business,-334.22,25419.32,debit,Dining,2025-01-17 23:33:24,Dining - Starbucks,Starbucks,"San Antonio, IL",False,False,ATM
+TXN000331,ACC1323,Amy Martin,Savings,-203.3,25856.11,debit,Utilities,2025-10-04 23:33:24,Utilities - Con Edison,Con Edison,"Seattle, FL",True,False,Branch
+TXN000332,ACC1267,William Scott,Savings,-133.27,12130.06,debit,Insurance,2025-04-21 23:33:24,Insurance - Insurance,Insurance,"Miami, CA",False,False,ATM
+TXN000333,ACC1210,Dorothy Brown,Business,-241.0,17170.85,debit,Healthcare,2025-10-26 23:33:24,Healthcare - Walgreens,Walgreens,"New York, AZ",False,False,Online
+TXN000334,ACC1361,Susan Wilson,Savings,-124.86,12194.81,debit,Gas Station,2025-01-29 23:33:24,Gas Station - Gas Station,Gas Station,"San Antonio, TX",False,False,Mobile
+TXN000335,ACC1322,Anthony Martin,Savings,-141.86,46287.81,debit,Groceries,2025-10-09 23:33:24,Groceries - Trader Joe's,Trader Joe's,"San Antonio, CA",False,False,Mobile
+TXN000336,ACC1385,Emily Gonzalez,Business,-144.23,2464.06,debit,Subscription,2025-09-12 23:33:24,Subscription - Subscription,Subscription,"Chicago, TX",True,False,Mobile
+TXN000337,ACC1466,Amy Gonzalez,Business,357.05,6670.72,credit,Refund,2025-11-25 23:33:24,Refund - Refund,Refund,"Seattle, AZ",False,False,Mobile
+TXN000338,ACC1493,Robert Hernandez,Business,-100.0,24277.06,debit,ATM Withdrawal,2025-11-21 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Austin, CA",False,False,Branch
+TXN000339,ACC1402,Mary Miller,Checking,-245.27,6900.73,debit,Gas Station,2025-10-13 23:33:24,Gas Station - Gas Station,Gas Station,"Houston, WA",False,False,Mobile
+TXN000340,ACC1390,Ashley Lopez,Savings,-228.11,29728.6,debit,Healthcare,2025-01-14 23:33:24,Healthcare - Walgreens,Walgreens,"Phoenix, MI",False,False,ATM
+TXN000341,ACC1494,Sharon Perez,Savings,-70.4,47736.52,debit,Entertainment,2025-10-13 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"Atlanta, PA",False,False,ATM
+TXN000342,ACC1152,Timothy Allen,Business,-200.0,39273.25,debit,ATM Withdrawal,2025-04-03 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"San Jose, GA",False,False,Online
+TXN000343,ACC1093,Gary Garcia,Business,-20.71,23441.98,debit,Entertainment,2025-11-22 23:33:24,Entertainment - Steam,Steam,"Los Angeles, PA",False,False,Branch
+TXN000344,ACC1243,Ronald Lopez,Savings,-300.72,23439.23,debit,Online Purchase,2025-06-17 23:33:24,Online Purchase - Online Purchase,Online Purchase,"San Jose, PA",False,False,Online
+TXN000345,ACC1134,David Lopez,Business,-369.09,29852.09,debit,Gas Station,2025-10-02 23:33:24,Gas Station - Gas Station,Gas Station,"Austin, TX",False,False,Mobile
+TXN000346,ACC1066,Timothy Hill,Business,-64.35,9470.94,debit,Gas Station,2025-07-14 23:33:24,Gas Station - Gas Station,Gas Station,"San Antonio, CA",False,False,ATM
+TXN000347,ACC1461,Lisa Ramirez,Savings,-122.35,34236.87,debit,Entertainment,2025-05-02 23:33:24,Entertainment - Netflix,Netflix,"Seattle, MA",False,False,Mobile
+TXN000348,ACC1309,Susan Harris,Checking,-497.49,13560.28,debit,Shopping,2024-12-08 23:33:24,Shopping - Target,Target,"Boston, GA",False,False,Phone
+TXN000349,ACC1006,Jacob Jones,Savings,-444.0,40387.08,debit,Pharmacy,2024-12-16 23:33:24,Pharmacy - Pharmacy,Pharmacy,"New York, WA",False,False,Online
+TXN000350,ACC1182,Elizabeth Nguyen,Business,-85.8,43899.71,debit,Insurance,2025-03-07 23:33:24,Insurance - Insurance,Insurance,"San Antonio, CA",False,False,Online
+TXN000351,ACC1499,Ronald Lopez,Savings,-2657.79,3666.5,debit,Rent/Mortgage,2025-10-11 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Diego, MA",True,False,ATM
+TXN000352,ACC1275,Daniel Taylor,Business,-450.41,15459.87,debit,Shopping,2025-07-25 23:33:24,Shopping - Nordstrom,Nordstrom,"Miami, CA",False,False,Online
+TXN000353,ACC1028,Richard Hernandez,Checking,-191.54,35177.63,debit,Pharmacy,2025-08-29 23:33:24,Pharmacy - Pharmacy,Pharmacy,"San Diego, MI",False,False,ATM
+TXN000354,ACC1075,Charles Jackson,Checking,-94.73,19174.19,debit,Healthcare,2025-01-26 23:33:24,Healthcare - Walgreens,Walgreens,"Austin, TX",False,False,Mobile
+TXN000355,ACC1017,Ashley Brown,Savings,-165.37,31837.43,debit,Groceries,2025-10-15 23:33:24,Groceries - Trader Joe's,Trader Joe's,"Phoenix, TX",False,False,Branch
+TXN000356,ACC1259,Deborah Gonzalez,Business,-2110.59,33802.87,debit,Rent/Mortgage,2025-03-26 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Miami, TX",True,False,Mobile
+TXN000357,ACC1185,Susan Clark,Business,-481.21,29013.52,debit,Healthcare,2025-09-15 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"New York, CA",False,False,Online
+TXN000358,ACC1105,Edward Hill,Checking,-217.38,20258.58,debit,Insurance,2025-07-29 23:33:24,Insurance - Insurance,Insurance,"Seattle, TX",False,False,Mobile
+TXN000359,ACC1191,Robert Miller,Business,-305.64,38174.94,debit,Shopping,2025-02-22 23:33:24,Shopping - Target,Target,"Boston, FL",False,False,Mobile
+TXN000360,ACC1111,David Young,Checking,-365.57,1648.85,debit,Online Purchase,2025-10-15 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Austin, WA",False,False,Online
+TXN000361,ACC1393,Michelle Walker,Business,-310.24,17643.67,debit,Gas Station,2025-01-06 23:33:24,Gas Station - Gas Station,Gas Station,"San Antonio, PA",False,False,Phone
+TXN000362,ACC1205,Amy Ramirez,Savings,-100.0,6563.12,debit,ATM Withdrawal,2025-11-23 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Atlanta, CO",False,False,ATM
+TXN000363,ACC1359,Sharon Flores,Checking,2752.63,20645.77,credit,Salary,2025-01-01 23:33:24,Salary - Salary,Salary,"Boston, TX",True,False,Online
+TXN000364,ACC1023,Daniel Sanchez,Savings,-160.37,3273.49,debit,Groceries,2025-03-07 23:33:24,Groceries - Kroger,Kroger,"Atlanta, CO",False,False,Online
+TXN000365,ACC1387,Rebecca White,Savings,-301.14,23050.54,debit,Pharmacy,2024-12-28 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Boston, CO",False,False,Mobile
+TXN000366,ACC1264,Deborah Johnson,Savings,-20.0,10620.28,debit,ATM Withdrawal,2025-10-06 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"New York, TX",False,False,Mobile
+TXN000367,ACC1291,Robert Martin,Savings,19.44,13721.71,credit,Refund,2025-04-17 23:33:24,Refund - Refund,Refund,"Phoenix, CA",False,False,ATM
+TXN000368,ACC1051,Deborah Ramirez,Business,1640.66,9865.97,credit,Bonus,2025-11-24 23:33:24,Bonus - Bonus,Bonus,"Detroit, IL",False,False,Online
+TXN000369,ACC1159,Michelle Harris,Savings,149.08,33019.88,credit,Dividend,2025-11-13 23:33:24,Dividend - Dividend,Dividend,"New York, IL",False,False,ATM
+TXN000370,ACC1245,Sandra Hill,Checking,-451.49,47694.36,debit,Transportation,2025-03-02 23:33:24,Transportation - Airport Parking,Airport Parking,"Detroit, TX",False,False,Branch
+TXN000371,ACC1483,Edward Lee,Savings,-436.99,38233.73,debit,Gas Station,2025-10-30 23:33:24,Gas Station - Gas Station,Gas Station,"Atlanta, CA",False,False,Online
+TXN000372,ACC1131,Jason Ramirez,Business,-90.0,15469.18,debit,Insurance,2025-11-21 23:33:24,Insurance - Insurance,Insurance,"San Diego, TX",False,False,Mobile
+TXN000373,ACC1332,Joseph Moore,Business,1409.34,17641.37,credit,Freelance,2024-12-31 23:33:24,Freelance - Freelance,Freelance,"Detroit, CO",False,False,ATM
+TXN000374,ACC1243,Ronald Lopez,Savings,-166.97,23688.53,debit,Gas Station,2025-11-14 23:33:24,Gas Station - Gas Station,Gas Station,"Miami, MA",False,False,Online
+TXN000375,ACC1443,Anthony Walker,Checking,1276.51,10160.57,credit,Bonus,2025-03-23 23:33:24,Bonus - Bonus,Bonus,"San Diego, TX",False,False,Mobile
+TXN000376,ACC1107,Edward Wright,Savings,974.85,42177.22,credit,Freelance,2025-02-24 23:33:24,Freelance - Freelance,Freelance,"San Diego, FL",False,False,Branch
+TXN000377,ACC1062,Jason Martin,Business,265.31,35815.05,credit,Refund,2025-03-02 23:33:24,Refund - Refund,Refund,"New York, TX",False,False,Branch
+TXN000378,ACC1424,Karen Hernandez,Savings,-100.0,42114.35,debit,ATM Withdrawal,2025-03-05 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Dallas, IL",False,False,Mobile
+TXN000379,ACC1249,Carol Gonzalez,Savings,-454.56,14854.96,debit,Dining,2025-08-20 23:33:24,Dining - McDonald's,McDonald's,"San Jose, IL",False,False,Mobile
+TXN000380,ACC1421,Jason Robinson,Savings,-82.77,7114.23,debit,Entertainment,2025-08-27 23:33:24,Entertainment - Steam,Steam,"Miami, TX",False,False,ATM
+TXN000381,ACC1011,Melissa Harris,Checking,-1334.91,23012.09,debit,Rent/Mortgage,2025-09-17 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Philadelphia, FL",True,False,Branch
+TXN000382,ACC1456,Kenneth Wilson,Checking,-27.33,46735.67,debit,Entertainment,2025-11-15 23:33:24,Entertainment - Spotify,Spotify,"Houston, TX",False,True,Online
+TXN000383,ACC1135,Susan Perez,Business,-474.81,16420.92,debit,Dining,2025-10-05 23:33:24,Dining - Starbucks,Starbucks,"Chicago, FL",False,False,Mobile
+TXN000384,ACC1114,Daniel Garcia,Savings,51.88,45656.29,credit,Interest,2025-04-04 23:33:24,Interest - Interest,Interest,"San Antonio, TX",False,False,Online
+TXN000385,ACC1119,Rebecca Thomas,Savings,-142.65,48743.31,debit,Insurance,2025-06-09 23:33:24,Insurance - Insurance,Insurance,"Houston, GA",False,False,Mobile
+TXN000386,ACC1452,Stephanie Ramirez,Savings,-240.54,42767.55,debit,Utilities,2025-09-08 23:33:24,Utilities - Spectrum,Spectrum,"Houston, TX",True,False,Mobile
+TXN000387,ACC1082,Laura Torres,Checking,-288.59,4509.04,debit,Online Purchase,2025-02-20 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Jacksonville, IL",False,False,Online
+TXN000388,ACC1382,Karen Moore,Checking,-277.89,19285.2,debit,Utilities,2025-05-13 23:33:24,Utilities - Con Edison,Con Edison,"Dallas, CO",True,False,Mobile
+TXN000389,ACC1312,Michael Lopez,Business,-146.29,28268.32,debit,Entertainment,2025-03-07 23:33:24,Entertainment - Steam,Steam,"San Jose, TX",False,False,Online
+TXN000390,ACC1337,James Gonzalez,Checking,-261.92,10336.75,debit,Healthcare,2025-03-20 23:33:24,Healthcare - Walgreens,Walgreens,"San Jose, AZ",False,False,Mobile
+TXN000391,ACC1437,Donna Ramirez,Checking,-62.36,32940.99,debit,Gas Station,2025-09-14 23:33:24,Gas Station - Gas Station,Gas Station,"New York, GA",False,False,Mobile
+TXN000392,ACC1335,Lisa Williams,Savings,-156.17,5422.46,debit,Pharmacy,2025-06-07 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Philadelphia, CA",False,False,ATM
+TXN000393,ACC1479,Patricia Harris,Savings,-261.9,29611.82,debit,Subscription,2025-03-18 23:33:24,Subscription - Subscription,Subscription,"Boston, CA",True,False,ATM
+TXN000394,ACC1232,Michelle Wilson,Business,-69.7,44731.35,debit,Entertainment,2025-03-22 23:33:24,Entertainment - PlayStation Store,PlayStation Store,"Los Angeles, CA",False,False,ATM
+TXN000395,ACC1450,Jennifer Gonzalez,Checking,-133.68,17609.82,debit,Subscription,2025-08-10 23:33:24,Subscription - Subscription,Subscription,"Houston, TX",True,False,Branch
+TXN000396,ACC1049,Richard Miller,Checking,-496.79,46921.38,debit,Pharmacy,2025-03-09 23:33:24,Pharmacy - Pharmacy,Pharmacy,"New York, TX",False,False,Online
+TXN000397,ACC1167,Joseph Brown,Business,-200.0,23189.46,debit,ATM Withdrawal,2025-07-12 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Houston, AZ",False,False,Online
+TXN000398,ACC1461,Lisa Ramirez,Savings,-96.9,33630.32,debit,Dining,2025-08-12 23:33:24,Dining - Chipotle,Chipotle,"San Jose, TX",False,False,Online
+TXN000399,ACC1378,Laura Garcia,Business,1477.29,36150.33,credit,Freelance,2025-05-17 23:33:24,Freelance - Freelance,Freelance,"Denver, NY",False,False,Mobile
+TXN000400,ACC1246,Sharon Martin,Business,-86.54,42124.87,debit,Entertainment,2025-11-03 23:33:24,Entertainment - Spotify,Spotify,"Austin, FL",False,False,Online
+TXN000401,ACC1180,Ashley Garcia,Business,-79.36,2133.61,debit,Entertainment,2024-12-13 23:33:24,Entertainment - Netflix,Netflix,"San Antonio, NY",False,False,Branch
+TXN000402,ACC1003,Christopher Miller,Savings,87.49,22906.3,credit,Transfer In,2025-04-18 23:33:24,Transfer In - Transfer In,Transfer In,"Miami, CA",False,False,ATM
+TXN000403,ACC1285,Timothy Jackson,Checking,408.62,34838.02,credit,Interest,2025-05-05 23:33:24,Interest - Interest,Interest,"Atlanta, FL",False,False,Online
+TXN000404,ACC1275,Daniel Taylor,Business,-187.17,14771.65,debit,Insurance,2025-04-25 23:33:24,Insurance - Insurance,Insurance,"Miami, FL",False,False,Branch
+TXN000405,ACC1179,Joseph Lopez,Savings,-274.9,14401.46,debit,Utilities,2025-07-04 23:33:24,Utilities - Spectrum,Spectrum,"Los Angeles, FL",True,False,Online
+TXN000406,ACC1241,Amy Torres,Checking,-109.31,34632.12,debit,Groceries,2025-11-26 23:33:24,Groceries - Costco,Costco,"Chicago, CA",False,False,ATM
+TXN000407,ACC1406,Matthew Rodriguez,Business,-400.48,14513.85,debit,Transportation,2025-04-08 23:33:24,Transportation - ExxonMobil,ExxonMobil,"Houston, TX",False,False,Online
+TXN000408,ACC1253,Sarah Johnson,Business,-254.78,26416.49,debit,Utilities,2025-10-13 23:33:24,Utilities - Spectrum,Spectrum,"Detroit, TX",True,False,Online
+TXN000409,ACC1351,Barbara Sanchez,Checking,352.43,47348.25,credit,Refund,2025-03-28 23:33:24,Refund - Refund,Refund,"Atlanta, CA",False,False,Mobile
+TXN000410,ACC1411,George Jackson,Business,-339.55,4566.2,debit,Subscription,2025-07-16 23:33:24,Subscription - Subscription,Subscription,"Boston, FL",True,False,Online
+TXN000411,ACC1180,Ashley Garcia,Business,-200.17,2894.81,debit,Transportation,2025-03-16 23:33:24,Transportation - Airport Parking,Airport Parking,"Detroit, AZ",False,False,Mobile
+TXN000412,ACC1040,Paul Jackson,Checking,-109.11,15213.37,debit,Entertainment,2025-04-20 23:33:24,Entertainment - Spotify,Spotify,"San Diego, PA",False,False,Mobile
+TXN000413,ACC1429,Anthony Nguyen,Savings,-1942.85,46973.45,debit,Rent/Mortgage,2025-06-09 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Atlanta, CO",True,False,ATM
+TXN000414,ACC1446,Brian Taylor,Business,-243.99,41879.06,debit,Insurance,2025-12-03 23:33:24,Insurance - Insurance,Insurance,"Boston, TX",False,False,Mobile
+TXN000415,ACC1145,Timothy Clark,Savings,459.35,9279.49,credit,Interest,2025-09-23 23:33:24,Interest - Interest,Interest,"Jacksonville, FL",False,False,Mobile
+TXN000416,ACC1321,Edward Flores,Checking,-488.45,38389.25,debit,Transportation,2025-04-19 23:33:24,Transportation - ExxonMobil,ExxonMobil,"San Diego, MA",False,False,Online
+TXN000417,ACC1011,Melissa Harris,Checking,-362.27,23514.8,debit,Subscription,2025-08-08 23:33:24,Subscription - Subscription,Subscription,"Los Angeles, FL",True,False,Phone
+TXN000418,ACC1003,Christopher Miller,Savings,-382.38,23432.32,debit,Healthcare,2025-11-11 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Dallas, CO",False,False,Branch
+TXN000419,ACC1228,Amanda Lewis,Business,-134.77,40880.48,debit,Gas Station,2025-01-23 23:33:24,Gas Station - Gas Station,Gas Station,"Atlanta, CO",False,False,ATM
+TXN000420,ACC1300,Jason Wilson,Checking,-137.42,16626.82,debit,Insurance,2025-01-13 23:33:24,Insurance - Insurance,Insurance,"Philadelphia, CA",False,False,Mobile
+TXN000421,ACC1062,Jason Martin,Business,-121.32,35716.75,debit,Shopping,2025-09-15 23:33:24,Shopping - Macy's,Macy's,"Seattle, CO",False,False,Online
+TXN000422,ACC1376,Ronald Smith,Checking,-348.08,15323.89,debit,Pharmacy,2025-04-07 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Houston, TX",False,False,Phone
+TXN000423,ACC1064,Jacob Davis,Checking,265.6,40542.42,credit,Interest,2025-05-16 23:33:24,Interest - Interest,Interest,"Philadelphia, WA",False,False,Mobile
+TXN000424,ACC1287,Susan Lopez,Checking,-269.91,23344.81,debit,Subscription,2025-07-02 23:33:24,Subscription - Subscription,Subscription,"Austin, PA",True,False,Online
+TXN000425,ACC1422,Donald Hill,Business,-2076.0,39450.02,debit,Rent/Mortgage,2025-03-27 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Jose, GA",True,False,Mobile
+TXN000426,ACC1441,David Brown,Checking,-388.47,20756.57,debit,Pharmacy,2025-04-25 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Atlanta, GA",False,False,ATM
+TXN000427,ACC1119,Rebecca Thomas,Savings,-168.15,48343.95,debit,Utilities,2025-03-10 23:33:24,Utilities - Con Edison,Con Edison,"Detroit, WA",True,False,Online
+TXN000428,ACC1136,Anthony Taylor,Business,-388.23,40156.86,debit,Online Purchase,2025-09-21 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Denver, FL",False,False,Mobile
+TXN000429,ACC1422,Donald Hill,Business,-13.72,40115.64,debit,Dining,2025-07-23 23:33:24,Dining - Starbucks,Starbucks,"Seattle, TX",False,False,Online
+TXN000430,ACC1146,Amanda Nguyen,Business,-80.0,3571.01,debit,ATM Withdrawal,2024-12-25 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"San Antonio, TX",False,False,Online
+TXN000431,ACC1062,Jason Martin,Business,741.28,35428.93,credit,Freelance,2025-03-10 23:33:24,Freelance - Freelance,Freelance,"San Jose, CO",False,False,Branch
+TXN000432,ACC1070,Emily Moore,Savings,-52.76,46401.67,debit,Shopping,2025-03-30 23:33:24,Shopping - Macy's,Macy's,"New York, GA",False,False,Mobile
+TXN000433,ACC1276,Jeffrey Jones,Savings,-69.77,43878.95,debit,Groceries,2025-03-08 23:33:24,Groceries - Safeway,Safeway,"Boston, TX",False,False,ATM
+TXN000434,ACC1412,Brian Hernandez,Checking,7399.61,41818.84,credit,Salary,2025-03-26 23:33:24,Salary - Salary,Salary,"Philadelphia, PA",True,False,Online
+TXN000435,ACC1289,Betty Rodriguez,Savings,-328.77,40402.51,debit,Subscription,2025-07-13 23:33:24,Subscription - Subscription,Subscription,"Houston, AZ",True,False,Mobile
+TXN000436,ACC1322,Anthony Martin,Savings,-200.0,47224.84,debit,ATM Withdrawal,2025-05-01 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Dallas, CO",False,False,Online
+TXN000437,ACC1356,Gary Anderson,Checking,118.51,16955.67,credit,Dividend,2025-02-28 23:33:24,Dividend - Dividend,Dividend,"Houston, NY",False,False,Mobile
+TXN000438,ACC1181,George Flores,Checking,-110.9,41183.38,debit,Online Purchase,2025-01-27 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Phoenix, WA",False,False,Mobile
+TXN000439,ACC1400,Jessica Taylor,Business,-460.78,28105.6,debit,Shopping,2025-01-29 23:33:24,Shopping - Apple Store,Apple Store,"San Diego, TX",False,False,Mobile
+TXN000440,ACC1044,Jacob Jackson,Checking,-195.4,16388.62,debit,Gas Station,2025-01-23 23:33:24,Gas Station - Gas Station,Gas Station,"New York, GA",False,False,Mobile
+TXN000441,ACC1416,Betty Moore,Savings,-103.56,18724.5,debit,Entertainment,2025-11-29 23:33:24,Entertainment - Netflix,Netflix,"San Jose, MA",False,False,Mobile
+TXN000442,ACC1408,David Wilson,Checking,-174.14,17651.07,debit,Dining,2025-05-11 23:33:24,Dining - Chipotle,Chipotle,"Boston, CA",False,False,Mobile
+TXN000443,ACC1280,Patricia Rodriguez,Checking,-40.0,41531.81,debit,ATM Withdrawal,2025-06-13 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Philadelphia, CO",False,False,ATM
+TXN000444,ACC1129,Steven Johnson,Business,-224.73,20469.32,debit,Dining,2025-02-26 23:33:24,Dining - DoorDash,DoorDash,"San Diego, MA",False,False,Mobile
+TXN000445,ACC1306,Cynthia Clark,Checking,-173.82,34898.93,debit,Insurance,2025-10-16 23:33:24,Insurance - Insurance,Insurance,"San Jose, CA",False,True,ATM
+TXN000446,ACC1083,James Walker,Savings,453.48,2811.23,credit,Dividend,2024-12-19 23:33:24,Dividend - Dividend,Dividend,"San Antonio, CA",False,False,Branch
+TXN000447,ACC1418,Kimberly Martinez,Savings,-233.42,19090.14,debit,Subscription,2025-04-15 23:33:24,Subscription - Subscription,Subscription,"Houston, TX",True,False,Branch
+TXN000448,ACC1229,Ryan Davis,Business,39.1,49186.94,credit,Dividend,2025-05-02 23:33:24,Dividend - Dividend,Dividend,"San Jose, MA",False,False,Branch
+TXN000449,ACC1127,Donald Thomas,Checking,-272.2,16357.13,debit,Utilities,2025-02-14 23:33:24,Utilities - National Grid,National Grid,"Seattle, TX",True,False,Online
+TXN000450,ACC1409,Amy Hernandez,Business,-62.0,28906.44,debit,Groceries,2025-10-23 23:33:24,Groceries - Whole Foods,Whole Foods,"San Jose, FL",False,False,Online
+TXN000451,ACC1092,Mary White,Savings,-139.04,17707.54,debit,Pharmacy,2025-02-28 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Phoenix, IL",False,False,ATM
+TXN000452,ACC1268,Edward Robinson,Business,-386.07,10172.53,debit,Pharmacy,2025-02-23 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Jacksonville, FL",False,False,Mobile
+TXN000453,ACC1199,Kevin Davis,Business,2365.17,16031.58,credit,Bonus,2025-02-23 23:33:24,Bonus - Bonus,Bonus,"Detroit, TX",False,False,Mobile
+TXN000454,ACC1280,Patricia Rodriguez,Checking,-438.55,40155.01,debit,Subscription,2025-06-16 23:33:24,Subscription - Subscription,Subscription,"Atlanta, NY",True,False,Mobile
+TXN000455,ACC1451,Amy Martinez,Checking,-1403.92,34132.63,debit,Rent/Mortgage,2025-11-06 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Jose, NY",True,False,Online
+TXN000456,ACC1032,John Brown,Business,-254.06,26500.11,debit,Insurance,2025-10-08 23:33:24,Insurance - Insurance,Insurance,"Miami, TX",False,False,Online
+TXN000457,ACC1274,Margaret Taylor,Savings,-490.88,27114.87,debit,Subscription,2025-05-15 23:33:24,Subscription - Subscription,Subscription,"Philadelphia, CA",True,False,ATM
+TXN000458,ACC1112,Matthew King,Savings,-59.3,44980.34,debit,Entertainment,2025-11-12 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"Denver, TX",False,False,Online
+TXN000459,ACC1265,Joshua Young,Savings,-237.54,23996.87,debit,Pharmacy,2025-08-23 23:33:24,Pharmacy - Pharmacy,Pharmacy,"San Jose, AZ",False,False,Mobile
+TXN000460,ACC1318,Sandra Clark,Business,-300.55,29771.44,debit,Pharmacy,2025-03-09 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Miami, NY",False,False,Branch
+TXN000461,ACC1226,Nancy Wright,Business,-399.86,17424.11,debit,Pharmacy,2025-07-02 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Boston, NY",False,False,Mobile
+TXN000462,ACC1438,Charles Thompson,Savings,-150.51,4466.98,debit,Shopping,2025-11-06 23:33:24,Shopping - Macy's,Macy's,"Phoenix, MI",False,False,Online
+TXN000463,ACC1193,Linda King,Business,1592.05,18176.95,credit,Freelance,2025-02-09 23:33:24,Freelance - Freelance,Freelance,"Phoenix, TX",False,False,Mobile
+TXN000464,ACC1333,Cynthia Hernandez,Savings,-467.12,45216.15,debit,Pharmacy,2025-09-05 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Houston, TX",False,False,Online
+TXN000465,ACC1073,Sarah Lopez,Business,365.83,36556.3,credit,Dividend,2024-12-13 23:33:24,Dividend - Dividend,Dividend,"San Antonio, GA",False,False,ATM
+TXN000466,ACC1022,Timothy White,Savings,-386.52,24905.38,debit,Healthcare,2025-10-28 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Phoenix, WA",False,False,Mobile
+TXN000467,ACC1420,Steven Nguyen,Savings,-217.06,38618.1,debit,Utilities,2025-08-09 23:33:24,Utilities - Spectrum,Spectrum,"Detroit, NY",True,False,Online
+TXN000468,ACC1160,Joseph Lewis,Checking,-427.25,1582.47,debit,Healthcare,2025-09-03 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Houston, CA",False,False,Mobile
+TXN000469,ACC1347,Jacob Harris,Savings,-158.9,21648.47,debit,Dining,2025-02-03 23:33:24,Dining - McDonald's,McDonald's,"Boston, TX",False,False,ATM
+TXN000470,ACC1366,Kimberly Wilson,Business,-2752.8,41053.44,debit,Rent/Mortgage,2025-01-20 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Jacksonville, GA",True,False,Phone
+TXN000471,ACC1222,Joshua Moore,Business,-264.39,2546.6,debit,Healthcare,2025-02-10 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Atlanta, TX",False,False,ATM
+TXN000472,ACC1114,Daniel Garcia,Savings,-371.97,45489.78,debit,Subscription,2025-03-12 23:33:24,Subscription - Subscription,Subscription,"Miami, IL",True,False,Mobile
+TXN000473,ACC1322,Anthony Martin,Savings,-116.79,47218.66,debit,Groceries,2025-02-08 23:33:24,Groceries - Costco,Costco,"Detroit, PA",False,False,Mobile
+TXN000474,ACC1405,Brian Lee,Checking,-483.75,44182.93,debit,Pharmacy,2025-12-01 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Los Angeles, FL",False,False,Mobile
+TXN000475,ACC1010,Kenneth Sanchez,Savings,-156.31,48640.62,debit,Groceries,2025-08-25 23:33:24,Groceries - Safeway,Safeway,"Chicago, GA",False,False,ATM
+TXN000476,ACC1216,Sharon Walker,Savings,-363.81,25296.24,debit,Healthcare,2025-06-10 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Detroit, CA",False,False,Phone
+TXN000477,ACC1323,Amy Martin,Savings,-386.15,24792.72,debit,Insurance,2025-06-24 23:33:24,Insurance - Insurance,Insurance,"Philadelphia, FL",False,False,Mobile
+TXN000478,ACC1403,Kimberly Rodriguez,Business,-57.72,6197.5,debit,Entertainment,2025-07-22 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"Dallas, MA",False,False,Branch
+TXN000479,ACC1196,Michael Martinez,Checking,-451.15,7931.75,debit,Pharmacy,2025-07-05 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Atlanta, CA",False,False,Branch
+TXN000480,ACC1115,Dorothy White,Business,4429.08,24919.12,credit,Salary,2024-12-20 23:33:24,Salary - Salary,Salary,"Dallas, CA",True,False,Mobile
+TXN000481,ACC1278,Margaret White,Business,5915.5,12643.96,credit,Salary,2025-01-05 23:33:24,Salary - Salary,Salary,"Chicago, CA",True,False,Mobile
+TXN000482,ACC1043,Matthew Lee,Savings,-200.0,7191.25,debit,ATM Withdrawal,2025-05-09 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Miami, CA",False,False,Mobile
+TXN000483,ACC1273,Donna Flores,Business,-441.9,14603.69,debit,Online Purchase,2025-04-20 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Austin, FL",False,False,Mobile
+TXN000484,ACC1080,William Martin,Checking,-98.27,15595.91,debit,Transportation,2025-08-05 23:33:24,Transportation - Lyft,Lyft,"Boston, IL",False,False,Mobile
+TXN000485,ACC1473,Daniel Robinson,Business,83.02,3511.45,credit,Refund,2025-10-11 23:33:24,Refund - Refund,Refund,"Philadelphia, CO",False,False,Online
+TXN000486,ACC1440,Mary Rodriguez,Savings,-240.64,47856.78,debit,Healthcare,2025-05-23 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"San Jose, GA",False,False,Phone
+TXN000487,ACC1124,Barbara Brown,Business,-275.7,31675.34,debit,Shopping,2025-09-25 23:33:24,Shopping - Best Buy,Best Buy,"Atlanta, NY",False,False,Online
+TXN000488,ACC1276,Jeffrey Jones,Savings,-388.84,44112.86,debit,Insurance,2025-06-05 23:33:24,Insurance - Insurance,Insurance,"Phoenix, CA",False,False,Mobile
+TXN000489,ACC1390,Ashley Lopez,Savings,-388.88,30371.41,debit,Subscription,2025-02-11 23:33:24,Subscription - Subscription,Subscription,"Austin, FL",True,False,Branch
+TXN000490,ACC1261,John Anderson,Checking,-499.64,2658.41,debit,Dining,2025-11-23 23:33:24,Dining - Uber Eats,Uber Eats,"Los Angeles, CA",False,False,Branch
+TXN000491,ACC1211,Edward Thompson,Checking,-97.47,21906.8,debit,Online Purchase,2025-06-18 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Detroit, AZ",False,False,Online
+TXN000492,ACC1435,Jacob Clark,Checking,-145.65,8818.3,debit,Groceries,2025-07-04 23:33:24,Groceries - Costco,Costco,"San Jose, MI",False,False,Mobile
+TXN000493,ACC1403,Kimberly Rodriguez,Business,-179.94,6798.36,debit,Gas Station,2025-09-03 23:33:24,Gas Station - Gas Station,Gas Station,"Jacksonville, CA",False,False,Online
+TXN000494,ACC1062,Jason Martin,Business,-402.23,34592.55,debit,Online Purchase,2025-04-24 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Los Angeles, IL",False,False,Online
+TXN000495,ACC1284,Matthew Gonzalez,Business,-81.65,25732.31,debit,Pharmacy,2025-07-26 23:33:24,Pharmacy - Pharmacy,Pharmacy,"San Diego, CO",False,False,Online
+TXN000496,ACC1286,Charles Young,Business,-80.0,16999.39,debit,ATM Withdrawal,2025-12-03 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Detroit, PA",False,False,Phone
+TXN000497,ACC1170,Ashley Lee,Business,-213.92,50352.19,debit,Gas Station,2025-04-10 23:33:24,Gas Station - Gas Station,Gas Station,"San Antonio, CA",False,False,Online
+TXN000498,ACC1164,Andrew Lopez,Business,132.26,45499.52,credit,Dividend,2025-07-12 23:33:24,Dividend - Dividend,Dividend,"Austin, CA",False,False,Branch
+TXN000499,ACC1062,Jason Martin,Business,-141.75,35392.61,debit,Online Purchase,2024-12-22 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Dallas, CO",False,False,Online
+TXN000500,ACC1303,Jason Hernandez,Checking,-32.58,40116.4,debit,Gas Station,2025-10-03 23:33:24,Gas Station - Gas Station,Gas Station,"Dallas, WA",False,False,Online
+TXN000501,ACC1199,Kevin Davis,Business,-129.93,15621.68,debit,Healthcare,2025-02-24 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"New York, TX",False,False,ATM
+TXN000502,ACC1009,Andrew White,Business,-40.0,3514.73,debit,ATM Withdrawal,2025-11-21 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"San Jose, TX",False,False,Online
+TXN000503,ACC1124,Barbara Brown,Business,-217.48,31524.4,debit,Insurance,2025-11-10 23:33:24,Insurance - Insurance,Insurance,"Seattle, CO",False,False,Mobile
+TXN000504,ACC1191,Robert Miller,Business,-202.85,37797.71,debit,Healthcare,2024-12-24 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Miami, CA",False,False,Mobile
+TXN000505,ACC1134,David Lopez,Business,-125.27,29888.98,debit,Groceries,2025-10-21 23:33:24,Groceries - Whole Foods,Whole Foods,"Los Angeles, AZ",False,False,Online
+TXN000506,ACC1441,David Brown,Checking,-168.04,21284.93,debit,Shopping,2025-07-05 23:33:24,Shopping - Target,Target,"San Antonio, FL",False,False,Online
+TXN000507,ACC1119,Rebecca Thomas,Savings,2944.35,47704.7,credit,Bonus,2025-11-21 23:33:24,Bonus - Bonus,Bonus,"Atlanta, AZ",False,False,Branch
+TXN000508,ACC1080,William Martin,Checking,-421.52,16134.38,debit,Transportation,2025-05-06 23:33:24,Transportation - ExxonMobil,ExxonMobil,"Seattle, AZ",False,False,Branch
+TXN000509,ACC1423,William Wright,Business,77.18,10959.66,credit,Refund,2025-11-30 23:33:24,Refund - Refund,Refund,"Jacksonville, GA",False,False,Online
+TXN000510,ACC1215,Stephanie Taylor,Checking,-228.67,33110.91,debit,Subscription,2025-02-24 23:33:24,Subscription - Subscription,Subscription,"Detroit, TX",True,False,Mobile
+TXN000511,ACC1349,Laura Hernandez,Savings,-100.0,8221.96,debit,ATM Withdrawal,2025-01-18 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Denver, CA",False,False,ATM
+TXN000512,ACC1149,Amanda Taylor,Business,-406.02,10023.78,debit,Insurance,2025-12-08 23:33:24,Insurance - Insurance,Insurance,"Seattle, FL",False,False,Mobile
+TXN000513,ACC1178,Kimberly Hill,Savings,-194.89,21495.99,debit,Groceries,2025-07-02 23:33:24,Groceries - Safeway,Safeway,"Austin, CA",False,False,Online
+TXN000514,ACC1213,Dorothy Harris,Business,-8.62,2127.27,debit,Pharmacy,2025-10-19 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Philadelphia, IL",False,False,ATM
+TXN000515,ACC1266,Elizabeth Perez,Checking,-2637.62,37451.48,debit,Rent/Mortgage,2025-02-04 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Los Angeles, FL",True,False,Online
+TXN000516,ACC1212,Edward Torres,Business,-145.42,8351.28,debit,Insurance,2025-12-05 23:33:24,Insurance - Insurance,Insurance,"Seattle, CA",False,False,Mobile
+TXN000517,ACC1406,Matthew Rodriguez,Business,-322.81,15069.15,debit,Subscription,2025-10-15 23:33:24,Subscription - Subscription,Subscription,"San Diego, NY",True,False,Online
+TXN000518,ACC1330,Jennifer Torres,Checking,-318.63,47768.81,debit,Subscription,2025-12-07 23:33:24,Subscription - Subscription,Subscription,"San Diego, CA",True,False,ATM
+TXN000519,ACC1042,Edward Wright,Business,163.45,30645.62,credit,Transfer In,2025-10-22 23:33:24,Transfer In - Transfer In,Transfer In,"San Diego, TX",False,False,Online
+TXN000520,ACC1047,Patricia Wilson,Business,-474.47,7183.67,debit,Shopping,2025-06-21 23:33:24,Shopping - Macy's,Macy's,"Atlanta, TX",False,False,Mobile
+TXN000521,ACC1415,Betty Hernandez,Business,-429.07,27876.76,debit,Dining,2025-09-13 23:33:24,Dining - DoorDash,DoorDash,"San Jose, FL",False,True,Phone
+TXN000522,ACC1298,John Walker,Checking,-194.25,16912.92,debit,Gas Station,2025-10-17 23:33:24,Gas Station - Gas Station,Gas Station,"San Diego, NY",False,False,ATM
+TXN000523,ACC1073,Sarah Lopez,Business,-350.69,35450.21,debit,Shopping,2025-05-11 23:33:24,Shopping - Apple Store,Apple Store,"New York, PA",False,False,Branch
+TXN000524,ACC1483,Edward Lee,Savings,-79.55,38046.61,debit,Healthcare,2025-10-13 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Houston, TX",False,False,Online
+TXN000525,ACC1144,Mark Smith,Savings,-231.64,12048.8,debit,Shopping,2025-11-26 23:33:24,Shopping - Apple Store,Apple Store,"Austin, NY",False,False,Online
+TXN000526,ACC1137,Christopher Martinez,Checking,-61.52,9083.22,debit,Entertainment,2025-03-11 23:33:24,Entertainment - Spotify,Spotify,"San Jose, CO",False,False,Online
+TXN000527,ACC1062,Jason Martin,Business,-51.75,35507.91,debit,Entertainment,2025-06-05 23:33:24,Entertainment - Netflix,Netflix,"Chicago, WA",False,False,Mobile
+TXN000528,ACC1452,Stephanie Ramirez,Savings,-172.34,42217.55,debit,Shopping,2024-12-29 23:33:24,Shopping - Target,Target,"New York, TX",False,False,Online
+TXN000529,ACC1337,James Gonzalez,Checking,-274.21,9391.94,debit,Online Purchase,2025-04-28 23:33:24,Online Purchase - Online Purchase,Online Purchase,"San Antonio, TX",False,False,Mobile
+TXN000530,ACC1112,Matthew King,Savings,357.01,44760.4,credit,Interest,2025-07-14 23:33:24,Interest - Interest,Interest,"San Jose, MA",False,False,Branch
+TXN000531,ACC1174,Carol Johnson,Savings,-122.66,27130.31,debit,Insurance,2025-11-19 23:33:24,Insurance - Insurance,Insurance,"Chicago, CA",False,False,ATM
+TXN000532,ACC1351,Barbara Sanchez,Checking,-53.53,48018.04,debit,Shopping,2025-03-26 23:33:24,Shopping - Best Buy,Best Buy,"Atlanta, FL",False,False,Mobile
+TXN000533,ACC1197,Richard Clark,Savings,-493.0,11950.71,debit,Subscription,2025-01-10 23:33:24,Subscription - Subscription,Subscription,"Jacksonville, TX",True,False,Online
+TXN000534,ACC1141,Ronald Lewis,Savings,-70.9,20279.8,debit,Online Purchase,2025-07-07 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Austin, CO",False,False,Mobile
+TXN000535,ACC1064,Jacob Davis,Checking,-20.0,40333.89,debit,ATM Withdrawal,2025-05-27 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Boston, CA",False,False,Online
+TXN000536,ACC1260,Amy Lee,Business,-265.1,24090.09,debit,Online Purchase,2025-01-18 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Los Angeles, MI",False,False,Phone
+TXN000537,ACC1273,Donna Flores,Business,-365.67,14596.11,debit,Dining,2025-12-06 23:33:24,Dining - McDonald's,McDonald's,"Houston, FL",False,False,ATM
+TXN000538,ACC1030,Barbara Wright,Checking,-20.0,22986.95,debit,ATM Withdrawal,2025-12-07 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Seattle, TX",False,False,Mobile
+TXN000539,ACC1267,William Scott,Savings,-43.66,11199.4,debit,Healthcare,2025-11-14 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"Dallas, FL",False,False,Branch
+TXN000540,ACC1453,Timothy King,Business,-161.56,4294.31,debit,Utilities,2025-11-16 23:33:24,Utilities - National Grid,National Grid,"Houston, MA",True,False,Online
+TXN000541,ACC1108,Jeffrey Davis,Savings,-88.7,39722.65,debit,Insurance,2025-03-17 23:33:24,Insurance - Insurance,Insurance,"Phoenix, IL",False,False,Mobile
+TXN000542,ACC1451,Amy Martinez,Checking,82.68,34009.42,credit,Dividend,2025-12-04 23:33:24,Dividend - Dividend,Dividend,"Houston, GA",False,False,Mobile
+TXN000543,ACC1070,Emily Moore,Savings,-69.77,46860.56,debit,Groceries,2025-07-21 23:33:24,Groceries - Kroger,Kroger,"San Jose, TX",False,False,Online
+TXN000544,ACC1080,William Martin,Checking,-72.42,15755.8,debit,Shopping,2025-07-29 23:33:24,Shopping - Apple Store,Apple Store,"San Antonio, MA",False,False,Online
+TXN000545,ACC1428,Thomas Lopez,Checking,203.89,11919.96,credit,Dividend,2025-06-02 23:33:24,Dividend - Dividend,Dividend,"Houston, TX",False,False,Mobile
+TXN000546,ACC1438,Charles Thompson,Savings,-175.09,5371.0,debit,Healthcare,2025-03-31 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"Los Angeles, IL",False,False,Mobile
+TXN000547,ACC1366,Kimberly Wilson,Business,-79.75,40349.81,debit,Online Purchase,2025-06-20 23:33:24,Online Purchase - Online Purchase,Online Purchase,"San Diego, NY",False,False,Mobile
+TXN000548,ACC1497,Melissa Ramirez,Checking,-55.35,13372.86,debit,Shopping,2025-02-09 23:33:24,Shopping - Apple Store,Apple Store,"San Antonio, TX",False,False,Mobile
+TXN000549,ACC1379,Deborah Hernandez,Checking,-85.79,16249.42,debit,Transportation,2025-07-24 23:33:24,Transportation - Uber,Uber,"Philadelphia, CA",False,False,Mobile
+TXN000550,ACC1290,Margaret Flores,Checking,-317.32,4901.37,debit,Transportation,2025-02-06 23:33:24,Transportation - ExxonMobil,ExxonMobil,"Phoenix, CA",False,False,Online
+TXN000551,ACC1134,David Lopez,Business,-100.99,30298.95,debit,Gas Station,2025-07-12 23:33:24,Gas Station - Gas Station,Gas Station,"Miami, GA",False,False,Online
+TXN000552,ACC1076,Michael Rodriguez,Checking,-295.57,17307.09,debit,Insurance,2025-03-24 23:33:24,Insurance - Insurance,Insurance,"San Diego, MI",False,False,Online
+TXN000553,ACC1326,Christopher Allen,Business,-20.0,46344.78,debit,ATM Withdrawal,2025-11-22 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"New York, TX",False,False,Mobile
+TXN000554,ACC1315,Ryan Gonzalez,Business,23.12,9516.88,credit,Refund,2025-07-06 23:33:24,Refund - Refund,Refund,"San Jose, CA",False,False,Mobile
+TXN000555,ACC1445,Richard Wright,Checking,-282.73,29921.11,debit,Healthcare,2025-09-23 23:33:24,Healthcare - Walgreens,Walgreens,"Austin, MA",False,False,ATM
+TXN000556,ACC1316,Jason Thomas,Checking,1057.18,12477.44,credit,Freelance,2025-02-08 23:33:24,Freelance - Freelance,Freelance,"Austin, TX",False,False,ATM
+TXN000557,ACC1383,Patricia Thompson,Savings,-40.0,26781.4,debit,ATM Withdrawal,2025-05-11 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Detroit, CO",False,False,ATM
+TXN000558,ACC1377,Barbara Gonzalez,Business,-128.55,38388.92,debit,Transportation,2025-02-27 23:33:24,Transportation - Uber,Uber,"New York, FL",False,False,ATM
+TXN000559,ACC1417,Michelle Harris,Checking,-3163.73,47424.27,debit,Rent/Mortgage,2025-01-19 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Detroit, GA",True,False,Mobile
+TXN000560,ACC1130,Linda Anderson,Savings,-27.83,14724.6,debit,Shopping,2025-09-07 23:33:24,Shopping - Nordstrom,Nordstrom,"Los Angeles, IL",False,False,Mobile
+TXN000561,ACC1257,Steven Thompson,Business,-239.41,7276.48,debit,Groceries,2025-01-20 23:33:24,Groceries - Whole Foods,Whole Foods,"Phoenix, TX",False,False,Online
+TXN000562,ACC1439,Joseph Wright,Savings,461.43,33121.16,credit,Interest,2025-10-04 23:33:24,Interest - Interest,Interest,"Denver, CO",False,False,Branch
+TXN000563,ACC1104,Michael Allen,Checking,-155.05,30980.11,debit,Subscription,2025-07-26 23:33:24,Subscription - Subscription,Subscription,"San Jose, IL",True,False,ATM
+TXN000564,ACC1283,Joseph Rodriguez,Checking,-214.61,8707.16,debit,Groceries,2025-07-15 23:33:24,Groceries - Walmart,Walmart,"Austin, WA",False,False,Online
+TXN000565,ACC1028,Richard Hernandez,Checking,-363.32,34480.83,debit,Dining,2025-03-09 23:33:24,Dining - Starbucks,Starbucks,"Detroit, TX",False,False,Phone
+TXN000566,ACC1450,Jennifer Gonzalez,Checking,-126.25,18675.21,debit,Shopping,2025-03-07 23:33:24,Shopping - Best Buy,Best Buy,"Denver, AZ",False,False,Online
+TXN000567,ACC1230,Paul Moore,Savings,-323.11,17636.47,debit,Gas Station,2025-10-28 23:33:24,Gas Station - Gas Station,Gas Station,"Houston, CA",False,False,ATM
+TXN000568,ACC1498,Deborah Martin,Checking,-251.24,48247.7,debit,Utilities,2025-03-17 23:33:24,Utilities - Spectrum,Spectrum,"Seattle, CA",True,False,ATM
+TXN000569,ACC1057,Linda Flores,Checking,-451.84,38705.86,debit,Pharmacy,2025-07-04 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Los Angeles, TX",False,False,ATM
+TXN000570,ACC1266,Elizabeth Perez,Checking,13.17,36427.71,credit,Interest,2025-01-10 23:33:24,Interest - Interest,Interest,"Miami, MI",False,False,Mobile
+TXN000571,ACC1174,Carol Johnson,Savings,-90.47,26850.21,debit,Online Purchase,2025-09-01 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Miami, FL",False,False,Branch
+TXN000572,ACC1007,Jessica King,Business,789.73,23298.63,credit,Freelance,2025-05-17 23:33:24,Freelance - Freelance,Freelance,"Phoenix, FL",False,False,ATM
+TXN000573,ACC1221,Jessica Flores,Savings,-326.41,45495.28,debit,Pharmacy,2025-07-03 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Chicago, WA",False,False,Online
+TXN000574,ACC1090,Michelle Johnson,Checking,22.73,29117.93,credit,Interest,2025-04-23 23:33:24,Interest - Interest,Interest,"Denver, TX",False,False,Online
+TXN000575,ACC1190,Jason Martin,Business,-100.0,40186.09,debit,ATM Withdrawal,2025-12-04 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Atlanta, IL",False,False,ATM
+TXN000576,ACC1318,Sandra Clark,Business,320.7,30520.85,credit,Dividend,2025-01-23 23:33:24,Dividend - Dividend,Dividend,"Houston, NY",False,False,Online
+TXN000577,ACC1337,James Gonzalez,Checking,311.73,9496.73,credit,Transfer In,2025-03-30 23:33:24,Transfer In - Transfer In,Transfer In,"Los Angeles, WA",False,False,Branch
+TXN000578,ACC1395,John Brown,Checking,-58.16,48067.82,debit,Entertainment,2025-02-03 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"Phoenix, CA",False,False,Online
+TXN000579,ACC1163,Betty Williams,Business,-216.54,46644.6,debit,Online Purchase,2025-07-25 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Miami, CA",False,False,Mobile
+TXN000580,ACC1211,Edward Thompson,Checking,-483.13,22111.23,debit,Shopping,2025-10-17 23:33:24,Shopping - Amazon,Amazon,"Chicago, GA",False,False,Branch
+TXN000581,ACC1266,Elizabeth Perez,Checking,-428.72,36797.1,debit,Gas Station,2025-06-07 23:33:24,Gas Station - Gas Station,Gas Station,"Phoenix, TX",False,False,Mobile
+TXN000582,ACC1372,Christopher Clark,Checking,-100.0,18176.33,debit,ATM Withdrawal,2025-04-28 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Denver, CA",False,False,Phone
+TXN000583,ACC1010,Kenneth Sanchez,Savings,493.78,49301.99,credit,Transfer In,2025-03-04 23:33:24,Transfer In - Transfer In,Transfer In,"San Diego, TX",False,False,Online
+TXN000584,ACC1140,Daniel Thomas,Business,-100.0,28035.1,debit,ATM Withdrawal,2025-02-06 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"New York, FL",False,False,Mobile
+TXN000585,ACC1442,Christopher Miller,Checking,-407.13,27845.83,debit,Healthcare,2025-01-08 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"San Diego, FL",False,False,ATM
+TXN000586,ACC1186,Joseph Harris,Savings,-160.07,24528.65,debit,Pharmacy,2025-05-06 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Phoenix, AZ",False,False,Branch
+TXN000587,ACC1299,Christopher Miller,Checking,-346.21,47537.07,debit,Gas Station,2025-10-13 23:33:24,Gas Station - Gas Station,Gas Station,"Los Angeles, NY",False,False,ATM
+TXN000588,ACC1422,Donald Hill,Business,-100.0,39409.55,debit,ATM Withdrawal,2025-03-28 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Miami, TX",False,False,Online
+TXN000589,ACC1476,Richard Walker,Savings,-220.28,8443.58,debit,Groceries,2024-12-24 23:33:24,Groceries - Costco,Costco,"Dallas, FL",False,False,Mobile
+TXN000590,ACC1212,Edward Torres,Business,-275.45,8752.91,debit,Insurance,2025-09-24 23:33:24,Insurance - Insurance,Insurance,"Seattle, CO",False,False,Mobile
+TXN000591,ACC1113,Cynthia White,Checking,-208.95,28833.83,debit,Groceries,2024-12-23 23:33:24,Groceries - Kroger,Kroger,"Phoenix, WA",False,False,Mobile
+TXN000592,ACC1117,Robert Lopez,Business,-399.71,37160.2,debit,Subscription,2025-03-24 23:33:24,Subscription - Subscription,Subscription,"Boston, TX",True,False,ATM
+TXN000593,ACC1207,Joshua Young,Checking,-3445.81,14121.41,debit,Rent/Mortgage,2025-03-28 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Antonio, AZ",True,False,Branch
+TXN000594,ACC1024,Ronald Miller,Business,-200.0,29581.83,debit,ATM Withdrawal,2024-12-21 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"New York, IL",False,False,Mobile
+TXN000595,ACC1226,Nancy Wright,Business,-69.02,16127.32,debit,Entertainment,2025-06-29 23:33:24,Entertainment - Spotify,Spotify,"San Diego, CA",False,False,Mobile
+TXN000596,ACC1175,Edward Flores,Savings,-367.58,6657.46,debit,Gas Station,2025-07-05 23:33:24,Gas Station - Gas Station,Gas Station,"Seattle, GA",False,False,Online
+TXN000597,ACC1210,Dorothy Brown,Business,-152.04,16485.76,debit,Dining,2025-11-02 23:33:24,Dining - Uber Eats,Uber Eats,"Los Angeles, CO",False,False,Mobile
+TXN000598,ACC1116,Kathleen Walker,Savings,-212.08,2272.8,debit,Utilities,2025-06-16 23:33:24,Utilities - AT&T,AT&T,"Denver, MI",True,False,Online
+TXN000599,ACC1445,Richard Wright,Checking,-417.16,29808.68,debit,Online Purchase,2025-06-24 23:33:24,Online Purchase - Online Purchase,Online Purchase,"New York, PA",False,False,ATM
+TXN000600,ACC1089,Elizabeth Williams,Savings,-59.15,40528.65,debit,Subscription,2025-08-05 23:33:24,Subscription - Subscription,Subscription,"Miami, TX",True,False,Mobile
+TXN000601,ACC1452,Stephanie Ramirez,Savings,1130.48,42783.29,credit,Bonus,2025-08-19 23:33:24,Bonus - Bonus,Bonus,"New York, NY",False,False,Mobile
+TXN000602,ACC1148,Linda Flores,Business,-428.59,29935.18,debit,Healthcare,2025-12-04 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Chicago, TX",False,False,Online
+TXN000603,ACC1424,Karen Hernandez,Savings,-60.46,42330.4,debit,Dining,2025-08-05 23:33:24,Dining - Starbucks,Starbucks,"Jacksonville, MI",False,False,ATM
+TXN000604,ACC1149,Amanda Taylor,Business,-256.88,9377.84,debit,Subscription,2025-04-26 23:33:24,Subscription - Subscription,Subscription,"Jacksonville, TX",True,False,Online
+TXN000605,ACC1039,Kevin Gonzalez,Savings,-3247.28,20922.88,debit,Rent/Mortgage,2024-12-08 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Diego, FL",True,False,Online
+TXN000606,ACC1153,Brian White,Checking,-134.96,13998.85,debit,Gas Station,2025-10-21 23:33:24,Gas Station - Gas Station,Gas Station,"San Diego, GA",False,False,Mobile
+TXN000607,ACC1250,Joshua Lewis,Checking,-307.51,10874.02,debit,Healthcare,2025-08-24 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Atlanta, TX",False,False,Phone
+TXN000608,ACC1273,Donna Flores,Business,-438.16,15563.35,debit,Online Purchase,2025-10-10 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Philadelphia, FL",False,False,Mobile
+TXN000609,ACC1475,Elizabeth Wright,Checking,2443.26,27460.86,credit,Salary,2025-01-11 23:33:24,Salary - Salary,Salary,"Austin, FL",True,False,Mobile
+TXN000610,ACC1118,Jacob Thomas,Business,-2218.93,29700.05,debit,Rent/Mortgage,2025-07-08 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Los Angeles, PA",True,False,Online
+TXN000611,ACC1382,Karen Moore,Checking,-398.73,20458.68,debit,Healthcare,2025-08-23 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"Denver, CA",False,False,Online
+TXN000612,ACC1348,Kimberly Torres,Business,1374.94,31553.79,credit,Freelance,2024-12-19 23:33:24,Freelance - Freelance,Freelance,"San Jose, WA",False,False,ATM
+TXN000613,ACC1421,Jason Robinson,Savings,-1427.05,7524.06,debit,Rent/Mortgage,2025-03-01 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Denver, FL",True,False,ATM
+TXN000614,ACC1437,Donna Ramirez,Checking,-191.49,32779.13,debit,Gas Station,2025-07-10 23:33:24,Gas Station - Gas Station,Gas Station,"San Jose, GA",False,False,Mobile
+TXN000615,ACC1391,Nancy White,Savings,-429.16,31836.14,debit,Transportation,2025-03-08 23:33:24,Transportation - ExxonMobil,ExxonMobil,"Boston, AZ",False,False,Branch
+TXN000616,ACC1414,Amy Wright,Business,-362.28,6739.53,debit,Online Purchase,2025-03-20 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Los Angeles, AZ",False,False,Branch
+TXN000617,ACC1105,Edward Hill,Checking,-348.52,20672.54,debit,Insurance,2025-04-14 23:33:24,Insurance - Insurance,Insurance,"Chicago, MI",False,False,Branch
+TXN000618,ACC1330,Jennifer Torres,Checking,-199.49,47782.28,debit,Gas Station,2025-07-17 23:33:24,Gas Station - Gas Station,Gas Station,"Seattle, PA",False,False,Phone
+TXN000619,ACC1444,Mark Smith,Checking,-315.46,25701.67,debit,Transportation,2025-03-06 23:33:24,Transportation - Lyft,Lyft,"Boston, TX",False,False,ATM
+TXN000620,ACC1234,Jacob Wilson,Savings,161.05,10056.88,credit,Transfer In,2025-08-31 23:33:24,Transfer In - Transfer In,Transfer In,"San Antonio, CA",False,False,ATM
+TXN000621,ACC1242,Laura Perez,Savings,234.14,4940.67,credit,Interest,2025-07-14 23:33:24,Interest - Interest,Interest,"Phoenix, GA",False,False,Mobile
+TXN000622,ACC1475,Elizabeth Wright,Checking,286.49,27502.09,credit,Dividend,2025-11-25 23:33:24,Dividend - Dividend,Dividend,"Denver, TX",False,False,Online
+TXN000623,ACC1204,Joshua Nguyen,Savings,-322.08,18653.12,debit,Healthcare,2025-01-16 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Jacksonville, MI",False,False,Online
+TXN000624,ACC1300,Jason Wilson,Checking,99.03,17189.36,credit,Interest,2025-11-06 23:33:24,Interest - Interest,Interest,"Chicago, FL",False,False,Online
+TXN000625,ACC1021,Ashley Wilson,Checking,-2217.97,36037.75,debit,Rent/Mortgage,2025-01-13 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Houston, CA",True,False,Phone
+TXN000626,ACC1240,Mark Scott,Business,-483.08,17733.17,debit,Shopping,2025-11-04 23:33:24,Shopping - Apple Store,Apple Store,"Philadelphia, MI",False,False,Online
+TXN000627,ACC1304,Timothy Robinson,Savings,-242.43,45180.04,debit,Utilities,2025-03-31 23:33:24,Utilities - Verizon,Verizon,"Atlanta, TX",True,False,Mobile
+TXN000628,ACC1345,Dorothy Brown,Checking,-449.31,14171.57,debit,Online Purchase,2025-08-01 23:33:24,Online Purchase - Online Purchase,Online Purchase,"New York, TX",False,False,ATM
+TXN000629,ACC1082,Laura Torres,Checking,-132.91,4143.98,debit,Entertainment,2025-05-02 23:33:24,Entertainment - Spotify,Spotify,"Chicago, PA",False,False,Branch
+TXN000630,ACC1161,Ronald Martinez,Savings,-3165.66,11364.32,debit,Rent/Mortgage,2025-08-11 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Phoenix, MA",True,False,Mobile
+TXN000631,ACC1365,Mary Ramirez,Checking,-318.29,38285.8,debit,Dining,2025-01-26 23:33:24,Dining - Chipotle,Chipotle,"Boston, FL",False,False,Mobile
+TXN000632,ACC1369,Charles Johnson,Checking,2425.09,5300.06,credit,Salary,2025-05-15 23:33:24,Salary - Salary,Salary,"Houston, NY",True,False,ATM
+TXN000633,ACC1250,Joshua Lewis,Checking,337.72,11320.03,credit,Interest,2025-02-16 23:33:24,Interest - Interest,Interest,"Jacksonville, PA",False,False,Branch
+TXN000634,ACC1067,Michelle Smith,Checking,-347.0,20534.93,debit,Subscription,2025-05-16 23:33:24,Subscription - Subscription,Subscription,"San Antonio, CO",True,False,Mobile
+TXN000635,ACC1262,Sandra Miller,Business,-200.0,10911.13,debit,ATM Withdrawal,2025-01-02 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Seattle, MA",False,False,Mobile
+TXN000636,ACC1051,Deborah Ramirez,Business,427.02,9427.53,credit,Dividend,2024-12-12 23:33:24,Dividend - Dividend,Dividend,"Denver, CO",False,False,Mobile
+TXN000637,ACC1174,Carol Johnson,Savings,343.26,27294.38,credit,Refund,2025-09-23 23:33:24,Refund - Refund,Refund,"Dallas, FL",False,False,Online
+TXN000638,ACC1186,Joseph Harris,Savings,6359.03,23336.33,credit,Salary,2025-05-22 23:33:24,Salary - Salary,Salary,"Seattle, PA",True,False,Online
+TXN000639,ACC1492,Brian Miller,Savings,-433.5,14256.32,debit,Gas Station,2024-12-17 23:33:24,Gas Station - Gas Station,Gas Station,"Philadelphia, TX",False,False,Mobile
+TXN000640,ACC1138,Steven Robinson,Business,-2716.2,30467.29,debit,Rent/Mortgage,2025-04-05 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Diego, IL",True,False,Online
+TXN000641,ACC1455,Mary Rodriguez,Savings,1049.82,35456.3,credit,Freelance,2025-10-06 23:33:24,Freelance - Freelance,Freelance,"Dallas, CA",False,False,Mobile
+TXN000642,ACC1294,Joshua Miller,Business,-210.43,22368.58,debit,Utilities,2025-08-28 23:33:24,Utilities - AT&T,AT&T,"Austin, CA",True,True,Branch
+TXN000643,ACC1043,Matthew Lee,Savings,-108.0,6962.26,debit,Insurance,2025-01-08 23:33:24,Insurance - Insurance,Insurance,"Philadelphia, TX",False,False,Online
+TXN000644,ACC1428,Thomas Lopez,Checking,-60.0,11556.72,debit,ATM Withdrawal,2025-02-28 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Denver, FL",False,False,ATM
+TXN000645,ACC1356,Gary Anderson,Checking,1809.21,16751.85,credit,Freelance,2025-05-14 23:33:24,Freelance - Freelance,Freelance,"Jacksonville, WA",False,False,Online
+TXN000646,ACC1472,Barbara Robinson,Savings,-385.53,23853.59,debit,Online Purchase,2024-12-28 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Miami, AZ",False,False,Online
+TXN000647,ACC1474,Paul Ramirez,Checking,-1826.94,14168.71,debit,Rent/Mortgage,2025-05-06 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Houston, TX",True,False,ATM
+TXN000648,ACC1235,Michael Jones,Savings,-84.66,18705.41,debit,Transportation,2025-03-03 23:33:24,Transportation - Uber,Uber,"New York, IL",False,False,Mobile
+TXN000649,ACC1203,Brian Clark,Checking,-70.46,27985.33,debit,Utilities,2025-04-08 23:33:24,Utilities - National Grid,National Grid,"Chicago, CO",True,False,Mobile
+TXN000650,ACC1254,Melissa Clark,Checking,-115.1,4626.55,debit,Entertainment,2025-06-22 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"Phoenix, NY",False,False,ATM
+TXN000651,ACC1222,Joshua Moore,Business,-482.35,3175.75,debit,Dining,2025-09-28 23:33:24,Dining - McDonald's,McDonald's,"Dallas, PA",False,False,Mobile
+TXN000652,ACC1448,Ryan Scott,Business,-325.52,20621.99,debit,Shopping,2025-12-07 23:33:24,Shopping - Best Buy,Best Buy,"Miami, PA",False,False,Mobile
+TXN000653,ACC1123,William Nguyen,Business,-2982.03,4044.34,debit,Rent/Mortgage,2025-09-23 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Austin, GA",True,False,Mobile
+TXN000654,ACC1282,Amy Miller,Savings,-113.7,27814.73,debit,Dining,2025-06-26 23:33:24,Dining - Uber Eats,Uber Eats,"Miami, CA",False,False,ATM
+TXN000655,ACC1213,Dorothy Harris,Business,-54.17,2138.11,debit,Healthcare,2025-11-03 23:33:24,Healthcare - Walgreens,Walgreens,"Philadelphia, GA",False,False,Online
+TXN000656,ACC1123,William Nguyen,Business,-484.37,4517.42,debit,Pharmacy,2025-07-29 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Seattle, WA",False,False,Online
+TXN000657,ACC1251,Jeffrey Moore,Business,-185.16,31798.11,debit,Healthcare,2025-06-07 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Miami, TX",False,False,Online
+TXN000658,ACC1105,Edward Hill,Checking,-326.91,21067.26,debit,Pharmacy,2024-12-14 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Austin, TX",False,False,Mobile
+TXN000659,ACC1372,Christopher Clark,Checking,-2481.75,17655.29,debit,Rent/Mortgage,2025-01-27 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Dallas, CA",True,False,Branch
+TXN000660,ACC1493,Robert Hernandez,Business,1074.83,24514.1,credit,Freelance,2025-09-30 23:33:24,Freelance - Freelance,Freelance,"Jacksonville, CA",False,False,Branch
+TXN000661,ACC1317,Thomas Harris,Savings,-303.62,7938.62,debit,Gas Station,2025-10-23 23:33:24,Gas Station - Gas Station,Gas Station,"Miami, MI",False,False,ATM
+TXN000662,ACC1149,Amanda Taylor,Business,-56.61,9215.68,debit,Healthcare,2025-08-29 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"Miami, NY",False,False,Mobile
+TXN000663,ACC1365,Mary Ramirez,Checking,3687.46,37989.3,credit,Bonus,2025-06-18 23:33:24,Bonus - Bonus,Bonus,"San Diego, PA",False,False,Mobile
+TXN000664,ACC1246,Sharon Martin,Business,-430.57,41156.2,debit,Online Purchase,2025-09-22 23:33:24,Online Purchase - Online Purchase,Online Purchase,"San Diego, CA",False,False,Mobile
+TXN000665,ACC1490,Melissa Moore,Checking,64.59,44002.36,credit,Interest,2025-08-27 23:33:24,Interest - Interest,Interest,"Jacksonville, TX",False,False,ATM
+TXN000666,ACC1358,Donald Moore,Business,144.16,16760.44,credit,Dividend,2025-01-12 23:33:24,Dividend - Dividend,Dividend,"San Antonio, WA",False,False,ATM
+TXN000667,ACC1155,Brian Thomas,Checking,381.75,2617.42,credit,Refund,2025-02-09 23:33:24,Refund - Refund,Refund,"Dallas, TX",False,False,ATM
+TXN000668,ACC1200,Rebecca Wright,Checking,92.67,27246.05,credit,Transfer In,2025-06-28 23:33:24,Transfer In - Transfer In,Transfer In,"Austin, WA",False,False,Online
+TXN000669,ACC1388,George Jones,Checking,-112.19,35377.68,debit,Subscription,2025-10-08 23:33:24,Subscription - Subscription,Subscription,"Philadelphia, TX",True,False,Online
+TXN000670,ACC1297,William Wright,Checking,-1130.19,33566.19,debit,Rent/Mortgage,2025-02-26 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"New York, WA",True,False,ATM
+TXN000671,ACC1298,John Walker,Checking,-450.43,18064.85,debit,Transportation,2025-08-03 23:33:24,Transportation - Shell,Shell,"Dallas, NY",False,False,Online
+TXN000672,ACC1183,Kathleen Hernandez,Savings,-246.06,28580.1,debit,Transportation,2025-01-11 23:33:24,Transportation - Airport Parking,Airport Parking,"Houston, CA",False,False,Branch
+TXN000673,ACC1449,Dorothy Nguyen,Checking,-279.29,16694.48,debit,Dining,2025-01-07 23:33:24,Dining - Chipotle,Chipotle,"San Antonio, MA",False,False,Online
+TXN000674,ACC1159,Michelle Harris,Savings,-338.12,32932.05,debit,Dining,2025-04-22 23:33:24,Dining - Chipotle,Chipotle,"Chicago, CA",False,False,Online
+TXN000675,ACC1494,Sharon Perez,Savings,-230.56,47361.41,debit,Gas Station,2024-12-11 23:33:24,Gas Station - Gas Station,Gas Station,"San Diego, WA",False,False,ATM
+TXN000676,ACC1273,Donna Flores,Business,-112.5,15170.85,debit,Insurance,2025-07-16 23:33:24,Insurance - Insurance,Insurance,"Philadelphia, FL",False,False,Mobile
+TXN000677,ACC1065,Susan Clark,Business,-294.71,5862.73,debit,Subscription,2025-10-13 23:33:24,Subscription - Subscription,Subscription,"Boston, MI",True,False,ATM
+TXN000678,ACC1264,Deborah Johnson,Savings,-302.18,10612.59,debit,Pharmacy,2025-03-26 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Dallas, TX",False,False,Branch
+TXN000679,ACC1373,Sarah Allen,Savings,-54.7,40504.22,debit,Entertainment,2025-02-05 23:33:24,Entertainment - Steam,Steam,"Boston, CA",False,False,Online
+TXN000680,ACC1099,Sandra Jackson,Checking,-185.35,27510.83,debit,Utilities,2025-11-30 23:33:24,Utilities - Verizon,Verizon,"Miami, GA",True,False,ATM
+TXN000681,ACC1312,Michael Lopez,Business,-462.87,27868.34,debit,Subscription,2024-12-12 23:33:24,Subscription - Subscription,Subscription,"Los Angeles, TX",True,False,ATM
+TXN000682,ACC1073,Sarah Lopez,Business,-48.32,35817.01,debit,Insurance,2025-05-27 23:33:24,Insurance - Insurance,Insurance,"Chicago, CA",False,False,ATM
+TXN000683,ACC1466,Amy Gonzalez,Business,-338.7,6476.78,debit,Dining,2025-06-05 23:33:24,Dining - Starbucks,Starbucks,"Los Angeles, CA",False,False,Online
+TXN000684,ACC1404,Margaret Torres,Checking,-73.44,15661.71,debit,Entertainment,2025-08-06 23:33:24,Entertainment - Steam,Steam,"Seattle, CA",False,False,ATM
+TXN000685,ACC1149,Amanda Taylor,Business,-109.49,9330.84,debit,Dining,2025-10-23 23:33:24,Dining - Starbucks,Starbucks,"Miami, NY",False,False,Mobile
+TXN000686,ACC1067,Michelle Smith,Checking,-454.29,20696.69,debit,Insurance,2025-11-08 23:33:24,Insurance - Insurance,Insurance,"Seattle, TX",False,False,Online
+TXN000687,ACC1161,Ronald Martinez,Savings,-312.87,12544.4,debit,Dining,2025-07-17 23:33:24,Dining - Chipotle,Chipotle,"Philadelphia, FL",False,False,ATM
+TXN000688,ACC1467,Stephanie Gonzalez,Savings,-82.24,19064.93,debit,Online Purchase,2025-02-07 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Seattle, CA",False,False,Online
+TXN000689,ACC1047,Patricia Wilson,Business,-179.42,6781.34,debit,Utilities,2025-01-19 23:33:24,Utilities - National Grid,National Grid,"Chicago, TX",True,False,Mobile
+TXN000690,ACC1196,Michael Martinez,Checking,-460.8,7006.42,debit,Subscription,2025-06-20 23:33:24,Subscription - Subscription,Subscription,"Jacksonville, NY",True,False,Mobile
+TXN000691,ACC1290,Margaret Flores,Checking,-244.09,4659.72,debit,Healthcare,2025-10-03 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Houston, NY",False,False,Mobile
+TXN000692,ACC1207,Joshua Young,Checking,-448.3,13271.31,debit,Insurance,2025-08-21 23:33:24,Insurance - Insurance,Insurance,"Denver, NY",False,False,Online
+TXN000693,ACC1461,Lisa Ramirez,Savings,-2453.1,33500.26,debit,Rent/Mortgage,2025-07-03 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Austin, CA",True,False,Branch
+TXN000694,ACC1451,Amy Martinez,Checking,-116.73,33636.53,debit,Dining,2025-07-17 23:33:24,Dining - Starbucks,Starbucks,"San Diego, IL",False,False,Online
+TXN000695,ACC1262,Sandra Miller,Business,-275.81,11456.15,debit,Shopping,2025-04-27 23:33:24,Shopping - Target,Target,"Chicago, NY",False,False,Mobile
+TXN000696,ACC1193,Linda King,Business,-124.38,18371.92,debit,Subscription,2025-08-21 23:33:24,Subscription - Subscription,Subscription,"Phoenix, GA",True,False,Online
+TXN000697,ACC1468,Andrew Miller,Business,-336.76,9707.13,debit,Pharmacy,2025-09-12 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Miami, TX",False,False,Online
+TXN000698,ACC1131,Jason Ramirez,Business,-464.64,15865.04,debit,Online Purchase,2025-09-10 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Atlanta, WA",False,False,Mobile
+TXN000699,ACC1481,Robert Harris,Savings,-143.66,7237.92,debit,Transportation,2024-12-13 23:33:24,Transportation - MTA,MTA,"Jacksonville, IL",False,False,Phone
+TXN000700,ACC1428,Thomas Lopez,Checking,-35.11,12259.09,debit,Subscription,2025-09-14 23:33:24,Subscription - Subscription,Subscription,"Detroit, TX",True,False,ATM
+TXN000701,ACC1377,Barbara Gonzalez,Business,-1773.46,38309.29,debit,Rent/Mortgage,2025-08-01 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Houston, TX",True,False,ATM
+TXN000702,ACC1355,Edward Flores,Savings,-120.24,10612.56,debit,Shopping,2025-12-03 23:33:24,Shopping - Macy's,Macy's,"San Antonio, CA",False,False,Mobile
+TXN000703,ACC1176,Anthony Thompson,Savings,-191.31,24229.56,debit,Utilities,2025-09-02 23:33:24,Utilities - National Grid,National Grid,"Jacksonville, GA",True,False,ATM
+TXN000704,ACC1314,Dorothy Allen,Business,-119.03,16449.76,debit,Entertainment,2025-03-05 23:33:24,Entertainment - Spotify,Spotify,"Los Angeles, GA",False,False,Mobile
+TXN000705,ACC1029,Stephanie Thompson,Business,-123.35,4528.78,debit,Entertainment,2025-01-03 23:33:24,Entertainment - PlayStation Store,PlayStation Store,"Austin, MI",False,False,Mobile
+TXN000706,ACC1355,Edward Flores,Savings,-47.39,10412.38,debit,Groceries,2025-01-30 23:33:24,Groceries - Kroger,Kroger,"Boston, PA",False,False,Online
+TXN000707,ACC1494,Sharon Perez,Savings,-447.37,48231.5,debit,Insurance,2025-07-10 23:33:24,Insurance - Insurance,Insurance,"Dallas, PA",False,False,ATM
+TXN000708,ACC1085,Richard Davis,Business,-126.09,11614.01,debit,Groceries,2025-09-04 23:33:24,Groceries - Kroger,Kroger,"San Jose, GA",False,False,Phone
+TXN000709,ACC1020,Donald Sanchez,Business,-1260.14,39192.48,debit,Rent/Mortgage,2025-04-29 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Atlanta, NY",True,False,Branch
+TXN000710,ACC1031,Andrew Thomas,Checking,-391.12,28805.77,debit,Gas Station,2025-05-15 23:33:24,Gas Station - Gas Station,Gas Station,"Houston, AZ",False,False,Mobile
+TXN000711,ACC1381,Susan Martin,Business,-458.49,34114.77,debit,Subscription,2025-03-01 23:33:24,Subscription - Subscription,Subscription,"Los Angeles, WA",True,False,Mobile
+TXN000712,ACC1443,Anthony Walker,Checking,-151.8,9255.79,debit,Utilities,2025-10-25 23:33:24,Utilities - AT&T,AT&T,"Jacksonville, MA",True,False,Online
+TXN000713,ACC1405,Brian Lee,Checking,466.35,44015.92,credit,Dividend,2025-05-25 23:33:24,Dividend - Dividend,Dividend,"Detroit, GA",False,False,Online
+TXN000714,ACC1405,Brian Lee,Checking,-127.27,44198.86,debit,Groceries,2025-04-10 23:33:24,Groceries - Trader Joe's,Trader Joe's,"San Diego, AZ",False,False,Mobile
+TXN000715,ACC1190,Jason Martin,Business,-74.16,40546.92,debit,Groceries,2025-01-30 23:33:24,Groceries - Safeway,Safeway,"Denver, MI",False,False,Mobile
+TXN000716,ACC1120,Patricia Smith,Business,189.5,34809.73,credit,Dividend,2025-08-13 23:33:24,Dividend - Dividend,Dividend,"Atlanta, MA",False,False,Mobile
+TXN000717,ACC1411,George Jackson,Business,-259.3,4720.55,debit,Transportation,2025-11-05 23:33:24,Transportation - ExxonMobil,ExxonMobil,"Jacksonville, MA",False,False,Online
+TXN000718,ACC1405,Brian Lee,Checking,288.92,43176.94,credit,Transfer In,2025-07-12 23:33:24,Transfer In - Transfer In,Transfer In,"Seattle, CA",False,False,Online
+TXN000719,ACC1223,David Rodriguez,Business,-481.94,16865.81,debit,Subscription,2025-02-05 23:33:24,Subscription - Subscription,Subscription,"Phoenix, TX",True,False,Online
+TXN000720,ACC1180,Ashley Garcia,Business,-149.38,2966.67,debit,Entertainment,2025-08-03 23:33:24,Entertainment - Netflix,Netflix,"Philadelphia, CA",False,False,Mobile
+TXN000721,ACC1436,Sharon Davis,Checking,-37.39,13398.62,debit,Entertainment,2025-05-23 23:33:24,Entertainment - Spotify,Spotify,"New York, PA",False,False,Phone
+TXN000722,ACC1111,David Young,Checking,4490.57,2076.25,credit,Bonus,2025-05-30 23:33:24,Bonus - Bonus,Bonus,"San Diego, CA",False,False,ATM
+TXN000723,ACC1424,Karen Hernandez,Savings,-136.59,42379.06,debit,Utilities,2025-07-10 23:33:24,Utilities - Spectrum,Spectrum,"Austin, FL",True,False,ATM
+TXN000724,ACC1108,Jeffrey Davis,Savings,4274.84,39723.29,credit,Bonus,2025-01-11 23:33:24,Bonus - Bonus,Bonus,"Jacksonville, WA",False,False,Mobile
+TXN000725,ACC1095,Deborah Young,Savings,-36.93,28941.38,debit,Shopping,2025-06-08 23:33:24,Shopping - Nordstrom,Nordstrom,"San Jose, IL",False,False,Branch
+TXN000726,ACC1329,Margaret Ramirez,Business,17.37,50194.43,credit,Transfer In,2025-02-15 23:33:24,Transfer In - Transfer In,Transfer In,"Houston, AZ",False,False,Online
+TXN000727,ACC1226,Nancy Wright,Business,-486.01,17141.21,debit,Gas Station,2025-09-20 23:33:24,Gas Station - Gas Station,Gas Station,"Los Angeles, CO",False,False,ATM
+TXN000728,ACC1421,Jason Robinson,Savings,-88.55,7244.82,debit,Entertainment,2025-04-23 23:33:24,Entertainment - Netflix,Netflix,"Seattle, TX",False,False,ATM
+TXN000729,ACC1196,Michael Martinez,Checking,497.63,8394.69,credit,Freelance,2025-06-12 23:33:24,Freelance - Freelance,Freelance,"Austin, CA",False,False,Mobile
+TXN000730,ACC1392,Michael Taylor,Checking,-343.98,30571.59,debit,Dining,2025-10-08 23:33:24,Dining - DoorDash,DoorDash,"San Diego, PA",False,False,Mobile
+TXN000731,ACC1305,Kathleen Lewis,Checking,-323.01,29729.42,debit,Insurance,2025-03-13 23:33:24,Insurance - Insurance,Insurance,"San Diego, WA",False,False,Branch
+TXN000732,ACC1049,Richard Miller,Checking,149.21,47672.8,credit,Transfer In,2025-06-04 23:33:24,Transfer In - Transfer In,Transfer In,"Denver, PA",False,False,Phone
+TXN000733,ACC1072,Emily Ramirez,Business,-411.99,11854.83,debit,Transportation,2025-07-30 23:33:24,Transportation - Lyft,Lyft,"San Diego, AZ",False,False,Mobile
+TXN000734,ACC1493,Robert Hernandez,Business,-206.13,25112.47,debit,Healthcare,2025-02-15 23:33:24,Healthcare - Walgreens,Walgreens,"Miami, TX",False,False,ATM
+TXN000735,ACC1131,Jason Ramirez,Business,-326.6,16627.15,debit,Subscription,2025-09-07 23:33:24,Subscription - Subscription,Subscription,"Atlanta, CA",True,False,Online
+TXN000736,ACC1279,Brian Gonzalez,Checking,-23.72,14672.79,debit,Subscription,2025-03-06 23:33:24,Subscription - Subscription,Subscription,"New York, FL",True,False,Mobile
+TXN000737,ACC1490,Melissa Moore,Checking,-300.89,44250.58,debit,Dining,2025-02-17 23:33:24,Dining - McDonald's,McDonald's,"Seattle, NY",False,False,ATM
+TXN000738,ACC1397,Daniel Brown,Business,-51.48,8931.61,debit,Utilities,2025-09-23 23:33:24,Utilities - AT&T,AT&T,"Chicago, FL",True,False,ATM
+TXN000739,ACC1325,Robert Smith,Savings,264.4,49514.84,credit,Dividend,2025-08-12 23:33:24,Dividend - Dividend,Dividend,"San Antonio, CA",False,False,ATM
+TXN000740,ACC1301,Paul Ramirez,Checking,-200.0,41885.73,debit,ATM Withdrawal,2025-02-21 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"San Diego, PA",False,True,Phone
+TXN000741,ACC1083,James Walker,Savings,-238.74,2775.68,debit,Gas Station,2025-01-13 23:33:24,Gas Station - Gas Station,Gas Station,"Phoenix, AZ",False,False,Mobile
+TXN000742,ACC1057,Linda Flores,Checking,-241.58,38957.61,debit,Shopping,2025-07-25 23:33:24,Shopping - Macy's,Macy's,"Los Angeles, CA",False,False,Mobile
+TXN000743,ACC1406,Matthew Rodriguez,Business,4503.34,14170.28,credit,Bonus,2025-06-21 23:33:24,Bonus - Bonus,Bonus,"Philadelphia, FL",False,False,ATM
+TXN000744,ACC1077,Barbara Brown,Checking,-89.17,30126.45,debit,Shopping,2025-02-26 23:33:24,Shopping - Target,Target,"Austin, TX",False,False,Online
+TXN000745,ACC1345,Dorothy Brown,Checking,4425.81,12904.5,credit,Bonus,2025-06-03 23:33:24,Bonus - Bonus,Bonus,"Austin, WA",False,False,Mobile
+TXN000746,ACC1386,Sarah Miller,Savings,-112.25,43840.68,debit,Dining,2025-01-16 23:33:24,Dining - Chipotle,Chipotle,"Philadelphia, TX",False,False,Mobile
+TXN000747,ACC1118,Jacob Thomas,Business,-340.1,30858.56,debit,Healthcare,2025-11-11 23:33:24,Healthcare - CVS Pharmacy,CVS Pharmacy,"Atlanta, TX",False,False,Online
+TXN000748,ACC1073,Sarah Lopez,Business,-94.49,35421.75,debit,Gas Station,2025-04-04 23:33:24,Gas Station - Gas Station,Gas Station,"Atlanta, WA",False,False,Mobile
+TXN000749,ACC1256,Jason Walker,Checking,451.02,10223.56,credit,Dividend,2025-09-06 23:33:24,Dividend - Dividend,Dividend,"San Diego, FL",False,False,Online
+TXN000750,ACC1076,Michael Rodriguez,Checking,-121.8,18057.56,debit,Groceries,2025-09-09 23:33:24,Groceries - Whole Foods,Whole Foods,"San Jose, PA",False,False,ATM
+TXN000751,ACC1068,Amanda Ramirez,Business,-66.95,48048.48,debit,Healthcare,2025-04-13 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Detroit, FL",False,False,Branch
+TXN000752,ACC1049,Richard Miller,Checking,-331.45,48131.87,debit,Subscription,2025-04-22 23:33:24,Subscription - Subscription,Subscription,"Detroit, PA",True,False,ATM
+TXN000753,ACC1185,Susan Clark,Business,-210.54,29337.52,debit,Gas Station,2024-12-25 23:33:24,Gas Station - Gas Station,Gas Station,"New York, IL",False,False,Branch
+TXN000754,ACC1149,Amanda Taylor,Business,-1263.39,10094.19,debit,Rent/Mortgage,2025-05-27 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Detroit, CA",True,False,Online
+TXN000755,ACC1165,Patricia Gonzalez,Savings,-23.4,913.66,debit,Entertainment,2025-07-05 23:33:24,Entertainment - Spotify,Spotify,"Boston, PA",False,False,Online
+TXN000756,ACC1383,Patricia Thompson,Savings,-325.63,26857.23,debit,Online Purchase,2024-12-13 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Philadelphia, CA",False,False,Mobile
+TXN000757,ACC1397,Daniel Brown,Business,-100.0,9968.1,debit,ATM Withdrawal,2024-12-28 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Phoenix, MI",False,False,ATM
+TXN000758,ACC1304,Timothy Robinson,Savings,366.51,45367.47,credit,Dividend,2025-12-04 23:33:24,Dividend - Dividend,Dividend,"Jacksonville, FL",False,False,ATM
+TXN000759,ACC1381,Susan Martin,Business,-360.12,34052.34,debit,Transportation,2025-10-13 23:33:24,Transportation - MTA,MTA,"San Jose, CO",False,False,Online
+TXN000760,ACC1082,Laura Torres,Checking,-433.39,3742.72,debit,Pharmacy,2024-12-29 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Detroit, TX",False,False,Online
+TXN000761,ACC1299,Christopher Miller,Checking,298.3,46950.67,credit,Dividend,2024-12-25 23:33:24,Dividend - Dividend,Dividend,"Seattle, CA",False,False,Branch
+TXN000762,ACC1271,Edward Jackson,Savings,5803.77,19178.97,credit,Salary,2025-10-04 23:33:24,Salary - Salary,Salary,"Detroit, AZ",True,False,Online
+TXN000763,ACC1101,James Jackson,Checking,4665.19,49107.17,credit,Bonus,2025-03-16 23:33:24,Bonus - Bonus,Bonus,"San Diego, CA",False,False,Online
+TXN000764,ACC1358,Donald Moore,Business,-50.17,16556.71,debit,Entertainment,2025-04-30 23:33:24,Entertainment - Steam,Steam,"New York, IL",False,False,Mobile
+TXN000765,ACC1071,Ryan Taylor,Checking,-20.0,37441.27,debit,ATM Withdrawal,2025-04-16 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Boston, PA",False,False,Phone
+TXN000766,ACC1397,Daniel Brown,Business,-61.85,8989.87,debit,Groceries,2025-05-21 23:33:24,Groceries - Safeway,Safeway,"Los Angeles, IL",False,False,Online
+TXN000767,ACC1341,Deborah Gonzalez,Business,-301.5,6723.43,debit,Gas Station,2025-03-24 23:33:24,Gas Station - Gas Station,Gas Station,"Dallas, CA",False,False,Online
+TXN000768,ACC1094,Barbara Nguyen,Checking,-211.94,23271.23,debit,Groceries,2025-05-12 23:33:24,Groceries - Costco,Costco,"Los Angeles, PA",False,False,ATM
+TXN000769,ACC1035,Gary Lewis,Business,-498.87,40567.02,debit,Subscription,2025-03-04 23:33:24,Subscription - Subscription,Subscription,"Philadelphia, FL",True,False,Mobile
+TXN000770,ACC1086,Michael Wilson,Savings,-52.29,11593.12,debit,Shopping,2025-04-11 23:33:24,Shopping - Target,Target,"San Jose, MI",False,False,Online
+TXN000771,ACC1295,Joseph Sanchez,Savings,1833.61,27579.56,credit,Freelance,2024-12-15 23:33:24,Freelance - Freelance,Freelance,"San Antonio, GA",False,False,Online
+TXN000772,ACC1262,Sandra Miller,Business,352.84,10819.53,credit,Dividend,2025-12-07 23:33:24,Dividend - Dividend,Dividend,"Seattle, NY",False,False,Online
+TXN000773,ACC1028,Richard Hernandez,Checking,488.23,34828.92,credit,Refund,2025-02-23 23:33:24,Refund - Refund,Refund,"San Diego, GA",False,False,Online
+TXN000774,ACC1238,Dorothy Anderson,Savings,-149.58,43030.84,debit,Entertainment,2025-11-03 23:33:24,Entertainment - Steam,Steam,"Houston, NY",False,False,Mobile
+TXN000775,ACC1050,Michael Hill,Business,-138.31,1207.8,debit,Healthcare,2025-05-10 23:33:24,Healthcare - Walgreens,Walgreens,"New York, AZ",False,False,Mobile
+TXN000776,ACC1040,Paul Jackson,Checking,-232.26,15206.05,debit,Utilities,2025-10-30 23:33:24,Utilities - Verizon,Verizon,"Atlanta, TX",True,False,ATM
+TXN000777,ACC1286,Charles Young,Business,4821.79,16989.57,credit,Bonus,2025-09-22 23:33:24,Bonus - Bonus,Bonus,"New York, AZ",False,False,Mobile
+TXN000778,ACC1440,Mary Rodriguez,Savings,-474.88,47534.71,debit,Pharmacy,2025-02-18 23:33:24,Pharmacy - Pharmacy,Pharmacy,"San Jose, CA",False,False,ATM
+TXN000779,ACC1475,Elizabeth Wright,Checking,-67.24,27632.16,debit,Gas Station,2025-07-03 23:33:24,Gas Station - Gas Station,Gas Station,"Phoenix, TX",False,False,ATM
+TXN000780,ACC1104,Michael Allen,Checking,-78.87,31963.96,debit,Groceries,2025-07-12 23:33:24,Groceries - Kroger,Kroger,"New York, FL",False,False,Online
+TXN000781,ACC1473,Daniel Robinson,Business,7970.18,3447.79,credit,Salary,2025-06-20 23:33:24,Salary - Salary,Salary,"Austin, TX",True,False,Mobile
+TXN000782,ACC1385,Emily Gonzalez,Business,-361.12,2510.39,debit,Gas Station,2025-08-04 23:33:24,Gas Station - Gas Station,Gas Station,"Boston, CA",False,False,Branch
+TXN000783,ACC1245,Sandra Hill,Checking,-469.89,47675.17,debit,Shopping,2025-10-15 23:33:24,Shopping - Best Buy,Best Buy,"Seattle, GA",False,False,Online
+TXN000784,ACC1291,Robert Martin,Savings,1352.29,13588.43,credit,Bonus,2025-08-25 23:33:24,Bonus - Bonus,Bonus,"Jacksonville, GA",False,False,Online
+TXN000785,ACC1450,Jennifer Gonzalez,Checking,-404.28,18450.41,debit,Pharmacy,2025-09-27 23:33:24,Pharmacy - Pharmacy,Pharmacy,"New York, FL",False,False,Mobile
+TXN000786,ACC1231,Stephanie Lopez,Business,-342.26,16033.42,debit,Healthcare,2025-07-12 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Austin, TX",False,False,Branch
+TXN000787,ACC1055,Ryan Rodriguez,Business,1247.42,5628.09,credit,Freelance,2025-09-25 23:33:24,Freelance - Freelance,Freelance,"Philadelphia, CO",False,True,Phone
+TXN000788,ACC1013,Rebecca Martin,Savings,-375.49,25478.09,debit,Shopping,2025-03-11 23:33:24,Shopping - Apple Store,Apple Store,"Houston, CA",False,False,Mobile
+TXN000789,ACC1223,David Rodriguez,Business,-167.03,16575.06,debit,Gas Station,2025-02-23 23:33:24,Gas Station - Gas Station,Gas Station,"Chicago, TX",False,False,Online
+TXN000790,ACC1272,Daniel Sanchez,Checking,429.5,47718.46,credit,Freelance,2025-03-18 23:33:24,Freelance - Freelance,Freelance,"Austin, TX",False,False,Online
+TXN000791,ACC1452,Stephanie Ramirez,Savings,-424.72,42468.38,debit,Subscription,2025-04-12 23:33:24,Subscription - Subscription,Subscription,"Phoenix, TX",True,False,Online
+TXN000792,ACC1166,John Flores,Savings,76.17,5360.49,credit,Refund,2025-11-19 23:33:24,Refund - Refund,Refund,"Chicago, NY",False,False,ATM
+TXN000793,ACC1024,Ronald Miller,Business,-399.19,29599.13,debit,Online Purchase,2025-03-16 23:33:24,Online Purchase - Online Purchase,Online Purchase,"San Antonio, TX",False,False,Online
+TXN000794,ACC1199,Kevin Davis,Business,-295.86,16161.01,debit,Dining,2025-01-27 23:33:24,Dining - Uber Eats,Uber Eats,"New York, CO",False,False,Branch
+TXN000795,ACC1101,James Jackson,Checking,-255.15,50077.31,debit,Shopping,2025-10-24 23:33:24,Shopping - Apple Store,Apple Store,"Houston, IL",False,False,Branch
+TXN000796,ACC1442,Christopher Miller,Checking,-341.28,26902.81,debit,Pharmacy,2024-12-23 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Seattle, MI",False,False,ATM
+TXN000797,ACC1283,Joseph Rodriguez,Checking,-274.13,9423.2,debit,Shopping,2025-06-26 23:33:24,Shopping - Macy's,Macy's,"Seattle, CA",False,False,Mobile
+TXN000798,ACC1166,John Flores,Savings,-476.14,4628.2,debit,Shopping,2025-05-19 23:33:24,Shopping - Amazon,Amazon,"San Diego, FL",False,False,Mobile
+TXN000799,ACC1016,Kevin Hill,Business,-224.2,6727.23,debit,Shopping,2025-07-22 23:33:24,Shopping - Target,Target,"Philadelphia, TX",False,False,ATM
+TXN000800,ACC1400,Jessica Taylor,Business,367.55,27583.81,credit,Refund,2025-10-12 23:33:24,Refund - Refund,Refund,"San Jose, TX",False,False,Mobile
+TXN000801,ACC1140,Daniel Thomas,Business,191.53,28903.65,credit,Refund,2025-03-29 23:33:24,Refund - Refund,Refund,"San Diego, PA",False,False,Mobile
+TXN000802,ACC1324,Sandra Thomas,Business,-357.24,24178.62,debit,Transportation,2025-01-01 23:33:24,Transportation - Uber,Uber,"Jacksonville, FL",False,False,Mobile
+TXN000803,ACC1276,Jeffrey Jones,Savings,-426.41,43516.52,debit,Subscription,2025-02-16 23:33:24,Subscription - Subscription,Subscription,"Los Angeles, CO",True,False,Mobile
+TXN000804,ACC1495,Linda Gonzalez,Business,192.53,14937.48,credit,Interest,2025-07-09 23:33:24,Interest - Interest,Interest,"Philadelphia, NY",False,False,Online
+TXN000805,ACC1305,Kathleen Lewis,Checking,-281.05,29448.82,debit,Subscription,2025-04-25 23:33:24,Subscription - Subscription,Subscription,"Atlanta, TX",True,False,Online
+TXN000806,ACC1072,Emily Ramirez,Business,310.73,12205.4,credit,Transfer In,2025-12-08 23:33:24,Transfer In - Transfer In,Transfer In,"Jacksonville, CA",False,False,Mobile
+TXN000807,ACC1152,Timothy Allen,Business,-210.59,38026.72,debit,Online Purchase,2025-10-29 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Atlanta, IL",False,False,Mobile
+TXN000808,ACC1192,Barbara Lee,Checking,-478.71,40708.16,debit,Online Purchase,2025-04-18 23:33:24,Online Purchase - Online Purchase,Online Purchase,"San Jose, TX",False,False,Branch
+TXN000809,ACC1226,Nancy Wright,Business,-273.55,17260.6,debit,Pharmacy,2025-06-07 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Phoenix, TX",False,False,Mobile
+TXN000810,ACC1287,Susan Lopez,Checking,-147.13,24681.93,debit,Entertainment,2025-01-03 23:33:24,Entertainment - Netflix,Netflix,"Miami, CA",False,False,Online
+TXN000811,ACC1132,Emily Perez,Savings,-108.56,2293.82,debit,Groceries,2025-06-07 23:33:24,Groceries - Trader Joe's,Trader Joe's,"San Diego, TX",False,False,Online
+TXN000812,ACC1203,Brian Clark,Checking,-410.44,27147.28,debit,Gas Station,2025-05-13 23:33:24,Gas Station - Gas Station,Gas Station,"San Jose, TX",False,False,ATM
+TXN000813,ACC1436,Sharon Davis,Checking,-191.79,13892.2,debit,Dining,2025-11-30 23:33:24,Dining - Uber Eats,Uber Eats,"San Jose, GA",False,False,Online
+TXN000814,ACC1348,Kimberly Torres,Business,-379.15,31252.36,debit,Gas Station,2025-05-25 23:33:24,Gas Station - Gas Station,Gas Station,"San Antonio, TX",False,False,ATM
+TXN000815,ACC1409,Amy Hernandez,Business,-325.14,29717.95,debit,Subscription,2025-07-11 23:33:24,Subscription - Subscription,Subscription,"Phoenix, FL",True,False,Online
+TXN000816,ACC1453,Timothy King,Business,-176.75,4766.34,debit,Transportation,2025-04-05 23:33:24,Transportation - ExxonMobil,ExxonMobil,"Chicago, TX",False,False,Mobile
+TXN000817,ACC1329,Margaret Ramirez,Business,-228.76,49405.24,debit,Utilities,2025-04-07 23:33:24,Utilities - Verizon,Verizon,"Chicago, FL",True,False,ATM
+TXN000818,ACC1427,Gary Hill,Savings,-60.0,9799.86,debit,ATM Withdrawal,2025-01-28 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"New York, IL",False,False,Online
+TXN000819,ACC1444,Mark Smith,Checking,-221.75,26051.35,debit,Transportation,2025-02-22 23:33:24,Transportation - Shell,Shell,"San Jose, MI",False,False,ATM
+TXN000820,ACC1208,Ronald Scott,Checking,-397.8,2609.87,debit,Shopping,2025-09-08 23:33:24,Shopping - Best Buy,Best Buy,"Los Angeles, CA",False,False,Phone
+TXN000821,ACC1071,Ryan Taylor,Checking,-196.64,36886.71,debit,Shopping,2025-04-12 23:33:24,Shopping - Target,Target,"Phoenix, TX",False,False,Mobile
+TXN000822,ACC1389,Karen Wilson,Savings,-386.81,45941.64,debit,Shopping,2025-07-18 23:33:24,Shopping - Target,Target,"Boston, CO",False,False,Mobile
+TXN000823,ACC1111,David Young,Checking,-154.37,2115.42,debit,Pharmacy,2025-06-21 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Dallas, FL",False,False,Online
+TXN000824,ACC1237,Charles Rodriguez,Business,339.2,1821.52,credit,Dividend,2025-05-13 23:33:24,Dividend - Dividend,Dividend,"San Antonio, TX",False,False,Online
+TXN000825,ACC1384,Kathleen Nguyen,Business,-11.96,20060.38,debit,Online Purchase,2024-12-16 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Seattle, TX",False,False,Online
+TXN000826,ACC1018,Susan White,Business,-1489.08,46881.27,debit,Rent/Mortgage,2025-09-25 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Dallas, MI",True,False,ATM
+TXN000827,ACC1181,George Flores,Checking,-488.34,40437.97,debit,Subscription,2025-05-03 23:33:24,Subscription - Subscription,Subscription,"Detroit, PA",True,False,ATM
+TXN000828,ACC1259,Deborah Gonzalez,Business,-337.27,33551.99,debit,Insurance,2025-08-04 23:33:24,Insurance - Insurance,Insurance,"Houston, TX",False,False,Mobile
+TXN000829,ACC1176,Anthony Thompson,Savings,-268.67,24767.22,debit,Utilities,2025-09-25 23:33:24,Utilities - National Grid,National Grid,"San Antonio, IL",True,False,Mobile
+TXN000830,ACC1283,Joseph Rodriguez,Checking,-200.0,8471.57,debit,ATM Withdrawal,2025-12-06 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Miami, PA",False,False,Mobile
+TXN000831,ACC1003,Christopher Miller,Savings,-412.95,23222.65,debit,Dining,2025-05-18 23:33:24,Dining - McDonald's,McDonald's,"Dallas, TX",False,False,Online
+TXN000832,ACC1416,Betty Moore,Savings,-129.93,18835.3,debit,Healthcare,2024-12-24 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Chicago, AZ",False,False,Mobile
+TXN000833,ACC1106,Donna Sanchez,Checking,-75.7,44463.63,debit,Entertainment,2025-08-09 23:33:24,Entertainment - Netflix,Netflix,"Houston, CA",False,False,Mobile
+TXN000834,ACC1349,Laura Hernandez,Savings,-2890.31,8255.36,debit,Rent/Mortgage,2025-09-30 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Dallas, PA",True,False,Mobile
+TXN000835,ACC1387,Rebecca White,Savings,-364.32,23486.92,debit,Pharmacy,2025-12-07 23:33:24,Pharmacy - Pharmacy,Pharmacy,"New York, CA",False,False,Online
+TXN000836,ACC1109,Donald Flores,Savings,-31.57,37702.1,debit,Healthcare,2025-06-09 23:33:24,Healthcare - Quest Diagnostics,Quest Diagnostics,"Detroit, CA",False,False,ATM
+TXN000837,ACC1349,Laura Hernandez,Savings,300.64,7408.28,credit,Interest,2025-05-29 23:33:24,Interest - Interest,Interest,"San Diego, TX",False,False,Mobile
+TXN000838,ACC1025,Rebecca Hernandez,Checking,-92.13,24384.24,debit,Entertainment,2025-04-22 23:33:24,Entertainment - PlayStation Store,PlayStation Store,"Austin, CA",False,False,Online
+TXN000839,ACC1030,Barbara Wright,Checking,-2959.8,23807.25,debit,Rent/Mortgage,2025-03-24 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Atlanta, TX",True,False,Mobile
+TXN000840,ACC1088,Michelle Young,Checking,-429.1,40350.24,debit,Transportation,2025-03-04 23:33:24,Transportation - Uber,Uber,"Austin, AZ",False,False,Online
+TXN000841,ACC1220,Kathleen Taylor,Checking,-129.2,22481.6,debit,Utilities,2025-04-03 23:33:24,Utilities - National Grid,National Grid,"Detroit, CA",True,False,Online
+TXN000842,ACC1089,Elizabeth Williams,Savings,-54.71,40849.8,debit,Gas Station,2025-01-26 23:33:24,Gas Station - Gas Station,Gas Station,"Los Angeles, TX",False,False,Online
+TXN000843,ACC1206,Karen Torres,Business,807.0,19828.1,credit,Freelance,2025-10-22 23:33:24,Freelance - Freelance,Freelance,"Atlanta, CA",False,False,Mobile
+TXN000844,ACC1323,Amy Martin,Savings,-2351.51,25509.61,debit,Rent/Mortgage,2025-01-21 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Chicago, TX",True,False,ATM
+TXN000845,ACC1199,Kevin Davis,Business,-56.89,15780.33,debit,Pharmacy,2025-09-25 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Philadelphia, CA",False,False,Mobile
+TXN000846,ACC1222,Joshua Moore,Business,-258.62,2738.06,debit,Dining,2025-03-11 23:33:24,Dining - Chipotle,Chipotle,"Denver, TX",False,False,Mobile
+TXN000847,ACC1063,Amy Allen,Business,-13.27,4317.76,debit,Insurance,2025-03-06 23:33:24,Insurance - Insurance,Insurance,"Chicago, TX",False,False,Online
+TXN000848,ACC1168,Susan Brown,Checking,6725.83,19693.81,credit,Salary,2025-05-27 23:33:24,Salary - Salary,Salary,"San Diego, AZ",True,False,ATM
+TXN000849,ACC1288,Matthew Wright,Business,-72.26,3595.67,debit,Utilities,2025-03-31 23:33:24,Utilities - Con Edison,Con Edison,"New York, CA",True,False,Mobile
+TXN000850,ACC1371,Daniel Ramirez,Checking,-35.21,45347.57,debit,Insurance,2025-02-11 23:33:24,Insurance - Insurance,Insurance,"Detroit, CA",False,False,ATM
+TXN000851,ACC1035,Gary Lewis,Business,275.31,41194.92,credit,Interest,2025-11-24 23:33:24,Interest - Interest,Interest,"Atlanta, FL",False,False,ATM
+TXN000852,ACC1276,Jeffrey Jones,Savings,-377.86,44227.18,debit,Dining,2024-12-21 23:33:24,Dining - DoorDash,DoorDash,"Chicago, CA",False,False,Branch
+TXN000853,ACC1440,Mary Rodriguez,Savings,-133.2,47381.74,debit,Dining,2025-11-05 23:33:24,Dining - Starbucks,Starbucks,"Jacksonville, CO",False,False,Phone
+TXN000854,ACC1254,Melissa Clark,Checking,-247.57,4136.88,debit,Transportation,2025-04-28 23:33:24,Transportation - Lyft,Lyft,"Dallas, TX",False,False,ATM
+TXN000855,ACC1220,Kathleen Taylor,Checking,-243.61,21957.66,debit,Pharmacy,2025-05-23 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Austin, TX",False,False,Online
+TXN000856,ACC1098,Betty Rodriguez,Checking,-116.87,25881.36,debit,Entertainment,2025-05-13 23:33:24,Entertainment - PlayStation Store,PlayStation Store,"San Diego, WA",False,False,Mobile
+TXN000857,ACC1314,Dorothy Allen,Business,42.61,16240.62,credit,Dividend,2025-07-11 23:33:24,Dividend - Dividend,Dividend,"San Antonio, CA",False,False,ATM
+TXN000858,ACC1380,Margaret Thomas,Business,-1341.42,29174.8,debit,Rent/Mortgage,2025-02-18 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Diego, PA",True,False,Mobile
+TXN000859,ACC1016,Kevin Hill,Business,-57.91,6804.82,debit,Entertainment,2025-12-06 23:33:24,Entertainment - AMC Theatres,AMC Theatres,"Seattle, MA",False,False,Online
+TXN000860,ACC1332,Joseph Moore,Business,-375.13,17246.62,debit,Pharmacy,2025-05-12 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Jacksonville, IL",False,False,ATM
+TXN000861,ACC1002,Elizabeth White,Checking,-158.37,24141.4,debit,Subscription,2025-06-06 23:33:24,Subscription - Subscription,Subscription,"Miami, WA",True,False,ATM
+TXN000862,ACC1243,Ronald Lopez,Savings,-489.53,23934.66,debit,Transportation,2025-05-12 23:33:24,Transportation - Shell,Shell,"Miami, TX",False,False,ATM
+TXN000863,ACC1155,Brian Thomas,Checking,-454.34,2769.35,debit,Transportation,2025-03-28 23:33:24,Transportation - Lyft,Lyft,"Austin, TX",False,False,ATM
+TXN000864,ACC1384,Kathleen Nguyen,Business,491.05,20559.37,credit,Interest,2025-08-28 23:33:24,Interest - Interest,Interest,"San Jose, FL",False,False,Mobile
+TXN000865,ACC1421,Jason Robinson,Savings,-481.68,7179.76,debit,Transportation,2025-01-08 23:33:24,Transportation - Uber,Uber,"New York, FL",False,False,Mobile
+TXN000866,ACC1027,Joseph Flores,Business,-71.38,4865.15,debit,Online Purchase,2025-04-24 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Atlanta, CA",False,False,Mobile
+TXN000867,ACC1469,Kimberly Wright,Savings,-58.61,15942.72,debit,Healthcare,2024-12-25 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Phoenix, IL",False,False,Online
+TXN000868,ACC1476,Richard Walker,Savings,3661.16,8562.73,credit,Bonus,2025-10-05 23:33:24,Bonus - Bonus,Bonus,"Miami, IL",False,False,Mobile
+TXN000869,ACC1404,Margaret Torres,Checking,-308.05,14859.3,debit,Gas Station,2025-12-03 23:33:24,Gas Station - Gas Station,Gas Station,"Boston, TX",False,False,ATM
+TXN000870,ACC1247,Rebecca Gonzalez,Checking,-120.0,4925.6,debit,ATM Withdrawal,2025-08-23 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Seattle, CA",False,False,Mobile
+TXN000871,ACC1444,Mark Smith,Checking,-59.48,26823.1,debit,Groceries,2025-08-24 23:33:24,Groceries - Trader Joe's,Trader Joe's,"San Jose, WA",False,False,Mobile
+TXN000872,ACC1162,Emily Sanchez,Savings,-331.18,32381.67,debit,Shopping,2025-03-22 23:33:24,Shopping - Amazon,Amazon,"Houston, WA",False,False,Branch
+TXN000873,ACC1469,Kimberly Wright,Savings,-102.21,16119.55,debit,Groceries,2025-07-03 23:33:24,Groceries - Safeway,Safeway,"Miami, AZ",False,False,Mobile
+TXN000874,ACC1319,Nancy King,Business,155.18,11178.66,credit,Dividend,2025-03-27 23:33:24,Dividend - Dividend,Dividend,"Chicago, TX",False,False,Mobile
+TXN000875,ACC1450,Jennifer Gonzalez,Checking,-200.0,17653.9,debit,ATM Withdrawal,2025-01-24 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Detroit, MA",False,False,ATM
+TXN000876,ACC1315,Ryan Gonzalez,Business,-97.54,10894.6,debit,Shopping,2025-10-03 23:33:24,Shopping - Nordstrom,Nordstrom,"Seattle, PA",False,False,ATM
+TXN000877,ACC1113,Cynthia White,Checking,1840.44,28783.11,credit,Bonus,2025-10-14 23:33:24,Bonus - Bonus,Bonus,"San Antonio, WA",False,False,Online
+TXN000878,ACC1386,Sarah Miller,Savings,-1268.05,43741.01,debit,Rent/Mortgage,2025-10-01 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Austin, NY",True,False,Branch
+TXN000879,ACC1257,Steven Thompson,Business,-20.0,6987.55,debit,ATM Withdrawal,2025-01-25 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Dallas, WA",False,False,Branch
+TXN000880,ACC1304,Timothy Robinson,Savings,-244.85,46163.9,debit,Groceries,2024-12-21 23:33:24,Groceries - Whole Foods,Whole Foods,"Seattle, IL",False,True,ATM
+TXN000881,ACC1113,Cynthia White,Checking,-128.58,28747.44,debit,Online Purchase,2025-10-22 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Jacksonville, MI",False,False,Online
+TXN000882,ACC1447,Amanda White,Savings,3747.55,9014.01,credit,Bonus,2025-08-28 23:33:24,Bonus - Bonus,Bonus,"Jacksonville, TX",False,False,Mobile
+TXN000883,ACC1188,Cynthia Anderson,Checking,-2242.2,45525.78,debit,Rent/Mortgage,2025-05-13 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Austin, IL",True,False,Mobile
+TXN000884,ACC1366,Kimberly Wilson,Business,1497.09,41451.08,credit,Freelance,2025-11-25 23:33:24,Freelance - Freelance,Freelance,"San Jose, FL",False,False,ATM
+TXN000885,ACC1107,Edward Wright,Savings,341.97,41515.84,credit,Interest,2025-09-23 23:33:24,Interest - Interest,Interest,"Boston, MA",False,False,ATM
+TXN000886,ACC1417,Michelle Harris,Checking,3472.81,47533.49,credit,Salary,2025-03-22 23:33:24,Salary - Salary,Salary,"Denver, NY",True,False,Online
+TXN000887,ACC1303,Jason Hernandez,Checking,-155.66,40359.76,debit,Groceries,2025-01-01 23:33:24,Groceries - Whole Foods,Whole Foods,"San Jose, CA",False,False,Branch
+TXN000888,ACC1126,Christopher Garcia,Business,-150.42,33549.97,debit,Subscription,2025-01-31 23:33:24,Subscription - Subscription,Subscription,"San Antonio, FL",True,False,ATM
+TXN000889,ACC1249,Carol Gonzalez,Savings,2013.81,14191.92,credit,Salary,2025-10-22 23:33:24,Salary - Salary,Salary,"Atlanta, TX",True,False,Mobile
+TXN000890,ACC1366,Kimberly Wilson,Business,-132.24,41214.38,debit,Dining,2025-02-26 23:33:24,Dining - Uber Eats,Uber Eats,"Los Angeles, GA",False,False,Branch
+TXN000891,ACC1461,Lisa Ramirez,Savings,-103.76,34365.78,debit,Online Purchase,2025-10-08 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Miami, GA",False,False,Mobile
+TXN000892,ACC1371,Daniel Ramirez,Checking,-284.54,45820.38,debit,Insurance,2025-03-01 23:33:24,Insurance - Insurance,Insurance,"Detroit, GA",False,False,Mobile
+TXN000893,ACC1433,Ronald Davis,Business,-263.15,19186.19,debit,Transportation,2025-10-04 23:33:24,Transportation - MTA,MTA,"Boston, TX",False,False,ATM
+TXN000894,ACC1173,Kathleen Thomas,Business,164.38,29371.81,credit,Refund,2025-09-01 23:33:24,Refund - Refund,Refund,"Phoenix, CA",False,False,Online
+TXN000895,ACC1434,George Garcia,Business,-3208.68,29211.94,debit,Rent/Mortgage,2025-02-28 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Boston, WA",True,False,Branch
+TXN000896,ACC1189,Michelle Scott,Business,538.71,7900.85,credit,Bonus,2025-11-06 23:33:24,Bonus - Bonus,Bonus,"Houston, IL",False,False,Mobile
+TXN000897,ACC1137,Christopher Martinez,Checking,-359.17,9123.28,debit,Insurance,2025-09-19 23:33:24,Insurance - Insurance,Insurance,"Jacksonville, FL",False,False,ATM
+TXN000898,ACC1367,Matthew Smith,Savings,-209.81,28992.73,debit,Healthcare,2025-10-18 23:33:24,Healthcare - Walgreens,Walgreens,"Houston, PA",False,False,ATM
+TXN000899,ACC1438,Charles Thompson,Savings,-354.17,5513.63,debit,Dining,2025-02-22 23:33:24,Dining - McDonald's,McDonald's,"Detroit, IL",False,False,Mobile
+TXN000900,ACC1061,Amy Anderson,Business,-444.57,17136.19,debit,Dining,2025-05-29 23:33:24,Dining - DoorDash,DoorDash,"Jacksonville, CA",False,False,Online
+TXN000901,ACC1003,Christopher Miller,Savings,-436.53,23662.47,debit,Online Purchase,2025-02-08 23:33:24,Online Purchase - Online Purchase,Online Purchase,"San Antonio, CA",False,False,Branch
+TXN000902,ACC1148,Linda Flores,Business,1630.41,29790.22,credit,Freelance,2025-01-06 23:33:24,Freelance - Freelance,Freelance,"Jacksonville, CA",False,False,Branch
+TXN000903,ACC1210,Dorothy Brown,Business,-194.19,17454.63,debit,Dining,2025-03-25 23:33:24,Dining - DoorDash,DoorDash,"Boston, TX",False,False,Mobile
+TXN000904,ACC1112,Matthew King,Savings,-60.0,44323.81,debit,ATM Withdrawal,2025-05-02 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"San Diego, FL",False,False,Branch
+TXN000905,ACC1475,Elizabeth Wright,Checking,-80.0,27216.07,debit,ATM Withdrawal,2025-11-05 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Phoenix, CA",False,False,ATM
+TXN000906,ACC1019,Barbara Jackson,Savings,-228.64,39810.03,debit,Groceries,2025-09-30 23:33:24,Groceries - Trader Joe's,Trader Joe's,"Miami, TX",False,False,Online
+TXN000907,ACC1188,Cynthia Anderson,Checking,-50.25,45819.59,debit,Groceries,2025-10-11 23:33:24,Groceries - Costco,Costco,"Boston, AZ",False,False,Mobile
+TXN000908,ACC1443,Anthony Walker,Checking,-74.11,9174.63,debit,Utilities,2025-10-21 23:33:24,Utilities - Spectrum,Spectrum,"San Antonio, TX",True,False,Mobile
+TXN000909,ACC1392,Michael Taylor,Checking,-20.0,29382.52,debit,ATM Withdrawal,2025-05-30 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Los Angeles, IL",False,False,Online
+TXN000910,ACC1488,Barbara Jones,Savings,-60.0,4830.4,debit,ATM Withdrawal,2024-12-27 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Phoenix, TX",False,False,Online
+TXN000911,ACC1266,Elizabeth Perez,Checking,-369.17,37461.1,debit,Subscription,2025-01-28 23:33:24,Subscription - Subscription,Subscription,"Austin, WA",True,False,Online
+TXN000912,ACC1072,Emily Ramirez,Business,-187.0,11983.96,debit,Utilities,2025-08-13 23:33:24,Utilities - Verizon,Verizon,"Detroit, CA",True,False,Online
+TXN000913,ACC1245,Sandra Hill,Checking,-120.0,47461.68,debit,ATM Withdrawal,2025-01-19 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Detroit, AZ",False,False,Online
+TXN000914,ACC1185,Susan Clark,Business,-155.62,29264.71,debit,Transportation,2025-09-17 23:33:24,Transportation - Lyft,Lyft,"San Diego, WA",False,False,Online
+TXN000915,ACC1046,Kimberly Anderson,Checking,-200.0,17825.03,debit,ATM Withdrawal,2025-06-30 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Denver, CO",False,False,Online
+TXN000916,ACC1118,Jacob Thomas,Business,-17.81,30647.24,debit,Dining,2025-05-22 23:33:24,Dining - DoorDash,DoorDash,"New York, CA",False,False,ATM
+TXN000917,ACC1470,Joseph Martin,Business,-105.06,21007.31,debit,Utilities,2025-06-13 23:33:24,Utilities - National Grid,National Grid,"Philadelphia, FL",True,False,Online
+TXN000918,ACC1085,Richard Davis,Business,-402.11,11919.63,debit,Subscription,2025-02-05 23:33:24,Subscription - Subscription,Subscription,"New York, WA",True,False,Branch
+TXN000919,ACC1005,Charles Perez,Savings,-50.44,39432.0,debit,Transportation,2025-04-28 23:33:24,Transportation - Shell,Shell,"San Antonio, AZ",False,False,Online
+TXN000920,ACC1290,Margaret Flores,Checking,-360.79,4326.36,debit,Pharmacy,2025-08-20 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Boston, TX",False,False,ATM
+TXN000921,ACC1162,Emily Sanchez,Savings,-2104.57,32062.09,debit,Rent/Mortgage,2024-12-29 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Phoenix, NY",True,False,Branch
+TXN000922,ACC1221,Jessica Flores,Savings,-445.44,45436.09,debit,Online Purchase,2025-11-12 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Atlanta, NY",False,False,Online
+TXN000923,ACC1114,Daniel Garcia,Savings,58.98,46405.6,credit,Dividend,2025-02-27 23:33:24,Dividend - Dividend,Dividend,"Houston, AZ",False,False,Online
+TXN000924,ACC1245,Sandra Hill,Checking,-119.89,47074.45,debit,Utilities,2025-11-30 23:33:24,Utilities - AT&T,AT&T,"Los Angeles, TX",True,False,Online
+TXN000925,ACC1311,Kathleen Clark,Savings,344.12,23644.49,credit,Dividend,2025-03-28 23:33:24,Dividend - Dividend,Dividend,"New York, WA",False,False,Branch
+TXN000926,ACC1044,Jacob Jackson,Checking,-170.4,15902.73,debit,Shopping,2025-10-02 23:33:24,Shopping - Apple Store,Apple Store,"Jacksonville, GA",False,False,Mobile
+TXN000927,ACC1461,Lisa Ramirez,Savings,60.35,34320.09,credit,Interest,2025-01-23 23:33:24,Interest - Interest,Interest,"New York, TX",False,False,Mobile
+TXN000928,ACC1097,Ronald Lopez,Checking,-169.4,13169.94,debit,Groceries,2025-06-14 23:33:24,Groceries - Trader Joe's,Trader Joe's,"San Diego, GA",False,False,Online
+TXN000929,ACC1181,George Flores,Checking,-2764.28,41175.33,debit,Rent/Mortgage,2025-09-24 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Atlanta, CA",True,False,Branch
+TXN000930,ACC1456,Kenneth Wilson,Checking,-333.8,47267.9,debit,Gas Station,2025-04-12 23:33:24,Gas Station - Gas Station,Gas Station,"Detroit, FL",False,False,Online
+TXN000931,ACC1393,Michelle Walker,Business,-286.26,18227.17,debit,Utilities,2025-02-06 23:33:24,Utilities - AT&T,AT&T,"New York, CO",True,False,Mobile
+TXN000932,ACC1112,Matthew King,Savings,-1554.6,44768.82,debit,Rent/Mortgage,2025-11-04 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"San Antonio, TX",True,False,Branch
+TXN000933,ACC1402,Mary Miller,Checking,-468.22,7147.85,debit,Insurance,2025-06-20 23:33:24,Insurance - Insurance,Insurance,"San Antonio, CA",False,False,Online
+TXN000934,ACC1127,Donald Thomas,Checking,-112.67,16648.62,debit,Utilities,2025-04-02 23:33:24,Utilities - Verizon,Verizon,"Dallas, TX",True,False,Mobile
+TXN000935,ACC1345,Dorothy Brown,Checking,-204.13,13511.73,debit,Pharmacy,2025-12-07 23:33:24,Pharmacy - Pharmacy,Pharmacy,"San Antonio, TX",False,False,ATM
+TXN000936,ACC1217,Thomas Anderson,Checking,-2976.07,27132.37,debit,Rent/Mortgage,2025-10-02 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Austin, FL",True,False,Branch
+TXN000937,ACC1221,Jessica Flores,Savings,-1088.83,45121.77,debit,Rent/Mortgage,2025-09-16 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Austin, CO",True,False,Mobile
+TXN000938,ACC1162,Emily Sanchez,Savings,-100.0,32470.96,debit,ATM Withdrawal,2025-02-16 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Boston, CA",False,False,Mobile
+TXN000939,ACC1457,Carol Davis,Savings,-52.01,37852.84,debit,Insurance,2025-11-29 23:33:24,Insurance - Insurance,Insurance,"Jacksonville, TX",False,False,Mobile
+TXN000940,ACC1180,Ashley Garcia,Business,-44.15,3026.91,debit,Pharmacy,2025-06-23 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Dallas, AZ",False,False,Mobile
+TXN000941,ACC1219,Stephanie Anderson,Savings,-244.15,17150.54,debit,Healthcare,2025-06-18 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"San Jose, CA",False,False,ATM
+TXN000942,ACC1286,Charles Young,Business,-132.48,16539.76,debit,Groceries,2025-10-03 23:33:24,Groceries - Costco,Costco,"Chicago, NY",False,False,ATM
+TXN000943,ACC1266,Elizabeth Perez,Checking,-142.81,36200.46,debit,Healthcare,2025-10-06 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Houston, TX",False,False,Phone
+TXN000944,ACC1279,Brian Gonzalez,Checking,-392.41,15334.99,debit,Subscription,2025-06-06 23:33:24,Subscription - Subscription,Subscription,"San Diego, MA",True,False,Online
+TXN000945,ACC1363,Daniel Wright,Business,-80.0,9373.1,debit,ATM Withdrawal,2025-04-14 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Chicago, PA",False,False,Online
+TXN000946,ACC1197,Richard Clark,Savings,-51.2,11154.67,debit,Entertainment,2025-02-13 23:33:24,Entertainment - Steam,Steam,"Philadelphia, CA",False,False,Branch
+TXN000947,ACC1297,William Wright,Checking,-401.95,32558.81,debit,Insurance,2025-07-17 23:33:24,Insurance - Insurance,Insurance,"Jacksonville, MA",False,False,ATM
+TXN000948,ACC1254,Melissa Clark,Checking,-344.04,4165.99,debit,Subscription,2025-06-30 23:33:24,Subscription - Subscription,Subscription,"San Diego, FL",True,False,Mobile
+TXN000949,ACC1381,Susan Martin,Business,-20.0,34484.97,debit,ATM Withdrawal,2025-07-25 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Seattle, TX",False,False,Mobile
+TXN000950,ACC1300,Jason Wilson,Checking,-150.67,17594.16,debit,Dining,2025-03-03 23:33:24,Dining - DoorDash,DoorDash,"Chicago, WA",False,False,Mobile
+TXN000951,ACC1071,Ryan Taylor,Checking,-1438.04,37209.84,debit,Rent/Mortgage,2025-03-05 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Philadelphia, GA",True,False,Online
+TXN000952,ACC1468,Andrew Miller,Business,-40.0,10001.95,debit,ATM Withdrawal,2025-08-31 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Chicago, IL",False,False,Online
+TXN000953,ACC1115,Dorothy White,Business,-141.24,25025.81,debit,Online Purchase,2025-05-09 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Austin, GA",False,False,Mobile
+TXN000954,ACC1187,Michelle Anderson,Savings,-25.32,6967.86,debit,Entertainment,2025-08-20 23:33:24,Entertainment - PlayStation Store,PlayStation Store,"San Diego, MI",False,False,ATM
+TXN000955,ACC1051,Deborah Ramirez,Business,-418.2,10073.18,debit,Gas Station,2025-05-10 23:33:24,Gas Station - Gas Station,Gas Station,"Jacksonville, WA",False,False,Online
+TXN000956,ACC1291,Robert Martin,Savings,-282.91,14226.61,debit,Online Purchase,2025-06-18 23:33:24,Online Purchase - Online Purchase,Online Purchase,"San Jose, TX",False,False,Mobile
+TXN000957,ACC1200,Rebecca Wright,Checking,-398.21,27419.2,debit,Shopping,2025-09-14 23:33:24,Shopping - Target,Target,"San Jose, CA",False,False,Online
+TXN000958,ACC1051,Deborah Ramirez,Business,-391.79,10407.64,debit,Pharmacy,2025-10-04 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Houston, FL",False,False,Online
+TXN000959,ACC1072,Emily Ramirez,Business,-80.0,12101.97,debit,ATM Withdrawal,2025-12-08 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"San Antonio, IL",False,False,Branch
+TXN000960,ACC1450,Jennifer Gonzalez,Checking,-84.95,18166.9,debit,Healthcare,2025-05-13 23:33:24,Healthcare - Hospital Copay,Hospital Copay,"Philadelphia, IL",False,False,Mobile
+TXN000961,ACC1246,Sharon Martin,Business,-73.1,41863.68,debit,Utilities,2025-03-10 23:33:24,Utilities - AT&T,AT&T,"Miami, MA",True,False,Mobile
+TXN000962,ACC1201,Brian Smith,Business,-303.1,43739.04,debit,Pharmacy,2025-01-16 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Jacksonville, TX",False,False,Mobile
+TXN000963,ACC1329,Margaret Ramirez,Business,-71.95,49226.79,debit,Entertainment,2025-11-07 23:33:24,Entertainment - Spotify,Spotify,"Seattle, MA",False,False,Mobile
+TXN000964,ACC1423,William Wright,Business,-74.06,11717.78,debit,Subscription,2025-10-02 23:33:24,Subscription - Subscription,Subscription,"San Antonio, CA",True,False,Online
+TXN000965,ACC1474,Paul Ramirez,Checking,-401.78,14857.46,debit,Subscription,2025-01-16 23:33:24,Subscription - Subscription,Subscription,"Boston, MI",True,False,ATM
+TXN000966,ACC1396,John Nguyen,Business,241.49,46659.56,credit,Transfer In,2025-02-11 23:33:24,Transfer In - Transfer In,Transfer In,"Chicago, WA",False,False,Online
+TXN000967,ACC1129,Steven Johnson,Business,237.25,20393.81,credit,Dividend,2024-12-26 23:33:24,Dividend - Dividend,Dividend,"Phoenix, CA",False,False,ATM
+TXN000968,ACC1196,Michael Martinez,Checking,-347.8,8208.84,debit,Pharmacy,2025-11-25 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Seattle, TX",False,False,ATM
+TXN000969,ACC1349,Laura Hernandez,Savings,528.17,7603.9,credit,Freelance,2024-12-24 23:33:24,Freelance - Freelance,Freelance,"Philadelphia, MI",False,False,Mobile
+TXN000970,ACC1079,Kathleen Anderson,Business,1202.75,32404.82,credit,Freelance,2025-06-26 23:33:24,Freelance - Freelance,Freelance,"Houston, FL",False,False,Mobile
+TXN000971,ACC1283,Joseph Rodriguez,Checking,-424.4,8719.59,debit,Online Purchase,2025-01-11 23:33:24,Online Purchase - Online Purchase,Online Purchase,"Philadelphia, CA",False,False,ATM
+TXN000972,ACC1425,Michael Thomas,Savings,-51.38,30780.79,debit,Entertainment,2025-07-26 23:33:24,Entertainment - Netflix,Netflix,"Boston, IL",False,False,Online
+TXN000973,ACC1103,Robert Smith,Business,-489.75,40824.98,debit,Shopping,2025-01-03 23:33:24,Shopping - Macy's,Macy's,"Austin, FL",False,False,Online
+TXN000974,ACC1466,Amy Gonzalez,Business,-34.08,6453.58,debit,Insurance,2025-10-31 23:33:24,Insurance - Insurance,Insurance,"San Jose, CA",False,False,Branch
+TXN000975,ACC1123,William Nguyen,Business,28.6,4105.27,credit,Interest,2025-12-05 23:33:24,Interest - Interest,Interest,"Phoenix, WA",False,False,ATM
+TXN000976,ACC1248,William Brown,Business,6802.18,32480.58,credit,Salary,2025-07-08 23:33:24,Salary - Salary,Salary,"Boston, WA",True,False,Online
+TXN000977,ACC1465,Richard Taylor,Business,3896.16,28736.76,credit,Bonus,2025-07-10 23:33:24,Bonus - Bonus,Bonus,"Jacksonville, FL",False,False,Mobile
+TXN000978,ACC1253,Sarah Johnson,Business,-458.07,25940.53,debit,Subscription,2025-03-07 23:33:24,Subscription - Subscription,Subscription,"Boston, CA",True,False,Online
+TXN000979,ACC1224,George Miller,Checking,-61.58,25301.6,debit,Pharmacy,2025-04-11 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Austin, FL",False,False,ATM
+TXN000980,ACC1438,Charles Thompson,Savings,-335.4,4591.56,debit,Shopping,2025-09-06 23:33:24,Shopping - Amazon,Amazon,"Los Angeles, MI",False,False,Online
+TXN000981,ACC1377,Barbara Gonzalez,Business,23.97,38548.81,credit,Interest,2025-06-09 23:33:24,Interest - Interest,Interest,"Denver, NY",False,False,Phone
+TXN000982,ACC1255,Jacob Jones,Savings,-80.0,4275.42,debit,ATM Withdrawal,2025-11-05 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"Atlanta, CA",False,False,ATM
+TXN000983,ACC1216,Sharon Walker,Savings,-369.35,25525.02,debit,Gas Station,2025-10-11 23:33:24,Gas Station - Gas Station,Gas Station,"Philadelphia, NY",False,False,Branch
+TXN000984,ACC1255,Jacob Jones,Savings,-40.0,4787.72,debit,ATM Withdrawal,2025-03-12 23:33:24,ATM Withdrawal - ATM Withdrawal,ATM Withdrawal,"San Diego, TX",False,False,Branch
+TXN000985,ACC1015,George Robinson,Checking,-191.35,24790.91,debit,Pharmacy,2025-01-02 23:33:24,Pharmacy - Pharmacy,Pharmacy,"San Antonio, WA",False,False,Online
+TXN000986,ACC1013,Rebecca Martin,Savings,-367.36,25739.88,debit,Dining,2025-11-22 23:33:24,Dining - Uber Eats,Uber Eats,"New York, CA",False,True,Mobile
+TXN000987,ACC1011,Melissa Harris,Checking,-2594.0,23393.08,debit,Rent/Mortgage,2025-01-21 23:33:24,Rent/Mortgage - Rent/Mortgage,Rent/Mortgage,"Phoenix, TX",True,False,Mobile
+TXN000988,ACC1338,Sarah Allen,Savings,282.82,8506.56,credit,Transfer In,2025-06-03 23:33:24,Transfer In - Transfer In,Transfer In,"Austin, IL",False,False,ATM
+TXN000989,ACC1277,Jessica Anderson,Business,-58.98,42372.07,debit,Groceries,2025-07-13 23:33:24,Groceries - Trader Joe's,Trader Joe's,"New York, TX",False,False,Online
+TXN000990,ACC1183,Kathleen Hernandez,Savings,-117.6,28496.28,debit,Dining,2024-12-14 23:33:24,Dining - Starbucks,Starbucks,"San Jose, FL",False,False,Mobile
+TXN000991,ACC1141,Ronald Lewis,Savings,174.56,20265.87,credit,Refund,2025-03-04 23:33:24,Refund - Refund,Refund,"Austin, FL",False,False,Online
+TXN000992,ACC1374,Margaret Hill,Checking,397.1,25286.23,credit,Interest,2025-07-27 23:33:24,Interest - Interest,Interest,"Boston, TX",False,False,Online
+TXN000993,ACC1488,Barbara Jones,Savings,-364.44,4593.82,debit,Dining,2025-10-06 23:33:24,Dining - McDonald's,McDonald's,"Atlanta, IL",False,False,Online
+TXN000994,ACC1156,Karen Thomas,Savings,-371.9,2962.08,debit,Dining,2025-02-25 23:33:24,Dining - DoorDash,DoorDash,"Chicago, WA",False,True,ATM
+TXN000995,ACC1237,Charles Rodriguez,Business,210.92,1859.09,credit,Transfer In,2025-09-05 23:33:24,Transfer In - Transfer In,Transfer In,"Philadelphia, TX",False,False,Online
+TXN000996,ACC1474,Paul Ramirez,Checking,-216.22,13869.91,debit,Groceries,2025-07-31 23:33:24,Groceries - Kroger,Kroger,"Jacksonville, TX",False,False,Mobile
+TXN000997,ACC1243,Ronald Lopez,Savings,-285.94,23800.6,debit,Gas Station,2025-04-17 23:33:24,Gas Station - Gas Station,Gas Station,"Chicago, TX",False,False,ATM
+TXN000998,ACC1461,Lisa Ramirez,Savings,-246.58,33914.03,debit,Pharmacy,2025-10-06 23:33:24,Pharmacy - Pharmacy,Pharmacy,"Atlanta, TX",False,False,Mobile
+TXN000999,ACC1061,Amy Anderson,Business,-233.82,16664.17,debit,Groceries,2025-07-09 23:33:24,Groceries - Whole Foods,Whole Foods,"Jacksonville, CA",False,False,Mobile
+TXN001000,ACC1355,Edward Flores,Savings,383.12,10404.53,credit,Refund,2025-06-29 23:33:24,Refund - Refund,Refund,"San Antonio, CO",False,False,Mobile

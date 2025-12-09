@@ -3,12 +3,12 @@
     "name": "Data Scientist",
     "started": "2025-12-03T12:36:23.599872",
     "level": 2,
-    "xp": 140
+    "xp": 250
   },
   "skills": {
     "data_exploration": {
       "level": 0,
-      "xp": 40,
+      "xp": 75,
       "max_xp": 100
     },
     "data_cleaning": {
@@ -23,12 +23,12 @@
     },
     "classification": {
       "level": 0,
-      "xp": 0,
+      "xp": 25,
       "max_xp": 100
     },
     "regression": {
       "level": 0,
-      "xp": 0,
+      "xp": 25,
       "max_xp": 100
     },
     "clustering": {
@@ -42,9 +42,9 @@
       "max_xp": 100
     },
     "time_series": {
-      "level": 0,
-      "xp": 75,
-      "max_xp": 100
+      "level": 1,
+      "xp": 0,
+      "max_xp": 200
     }
   },
   "achievements": [
@@ -65,9 +65,45 @@
       "description": "Practiced 3 different skills",
       "date": "2025-12-06T18:15:04.282336",
       "icon": "\ud83c\udf1f"
+    },
+    {
+      "name": "Notebook Ninja",
+      "description": "Generated 5 analysis notebooks",
+      "date": "2025-12-08T23:39:53.611279",
+      "icon": "\ud83e\udd77"
     }
   ],
   "activities": [
+    {
+      "name": "Generated Regression Analysis notebook for transactions",
+      "skill": "regression",
+      "xp": 25,
+      "date": "2025-12-09T16:01:22.627488"
+    },
+    {
+      "name": "Generated Classification Analysis notebook for transactions",
+      "skill": "classification",
+      "xp": 25,
+      "date": "2025-12-09T15:09:34.237057"
+    },
+    {
+      "name": "Profiled Dataset",
+      "skill": "data_exploration",
+      "xp": 20,
+      "date": "2025-12-09T10:21:20.395080"
+    },
+    {
+      "name": "cleaned data",
+      "skill": "data_exploration",
+      "xp": 15,
+      "date": "2025-12-09T10:21:07.207506"
+    },
+    {
+      "name": "Generated Time Series Analysis notebook for credit_applications",
+      "skill": "time_series",
+      "xp": 25,
+      "date": "2025-12-08T23:39:53.611256"
+    },
     {
       "name": "Generated Time Series Analysis notebook for stock_prices",
       "skill": "time_series",
@@ -111,10 +147,10 @@
       "date": "2025-12-03T12:36:32.154354"
     }
   ],
-  "notebooks_generated": 4,
-  "datasets_profiled": 1,
+  "notebooks_generated": 7,
+  "datasets_profiled": 2,
   "datasets_explored": 0,
-  "total_sessions": 22,
-  "streak_days": 1,
-  "last_active": "2025-12-08T12:12:03.919154"
+  "total_sessions": 44,
+  "streak_days": 2,
+  "last_active": "2025-12-09T16:05:27.104587"
 }

@@ -16,7 +16,7 @@ import os
 from .interface import CLIResult
 
 
-def find_available_port(start_port: int = 8501, max_attempts: int = 10) -> int:
+def find_available_port(start_port: int = 8530, max_attempts: int = 10) -> int:
     """Find an available port starting from start_port."""
     for port in range(start_port, start_port + max_attempts):
         with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:

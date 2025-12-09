@@ -15,9 +15,23 @@ from pathlib import Path
 class SyntheticDataGenerator:
     """Generate realistic synthetic datasets for learning purposes."""
     
-    def __init__(self, seed: int = 42):
+    def __init__(self, seed: int = 42, error_rate: float = 0.15, duplicate_rate: float = 0.05, missing_rate: float = 0.10):
+        """
+        Initialize the synthetic data generator.
+        
+        Args:
+            seed: Random seed for reproducibility
+            error_rate: Percentage of records with data quality issues (0.0-1.0)
+            duplicate_rate: Percentage of duplicate records to add (0.0-1.0)
+            missing_rate: Percentage of values to make missing (0.0-1.0)
+        """
         np.random.seed(seed)
         random.seed(seed)
+        
+        # Store messiness parameters
+        self.error_rate = error_rate
+        self.duplicate_rate = duplicate_rate
+        self.missing_rate = missing_rate
         
         # Common data pools
         self.first_names = [
@@ -201,8 +215,8 @@ class SyntheticDataGenerator:
                 "chronic_conditions": ";".join(conditions) if conditions else "None"
             }
             
-            # Introduce data quality issues for learning (30% of records now - increased from 15%)
-            if random.random() < 0.30:
+            # Introduce data quality issues based on error_rate
+            if random.random() < self.error_rate:
                 issue_type = random.choice([
                     "missing_email", "missing_phone", "invalid_age", 
                     "duplicate_prone", "inconsistent_case", "whitespace",
@@ -239,8 +253,8 @@ class SyntheticDataGenerator:
                     
             patients.append(patient)
         
-        # Add some exact duplicates (8% of records for learning - increased from 5%)
-        num_duplicates = int(num_patients * 0.08)
+        # Add exact duplicates based on duplicate_rate
+        num_duplicates = int(num_patients * self.duplicate_rate)
         for _ in range(num_duplicates):
             dup = random.choice(patients).copy()
             dup["patient_id"] = f"P{len(patients)+1:06d}"
@@ -428,8 +442,8 @@ class SyntheticDataGenerator:
                 )[0]
             }
             
-            # Introduce data quality issues (30% of records - increased from 20%)
-            if random.random() < 0.30:
+            # Introduce data quality issues based on error_rate
+            if random.random() < self.error_rate:
                 issue = random.choice([
                     "missing_email", "missing_age", "invalid_phone", 
                     "duplicate_name", "inconsistent_case", "whitespace",
@@ -466,8 +480,8 @@ class SyntheticDataGenerator:
             
             customers.append(customer)
         
-        # Add exact duplicates (7% of records - increased from 3%)
-        num_duplicates = int(num_customers * 0.07)
+        # Add exact duplicates based on duplicate_rate
+        num_duplicates = int(num_customers * self.duplicate_rate)
         for _ in range(num_duplicates):
             dup = random.choice(customers).copy()
             dup["customer_id"] = len(customers) + 1

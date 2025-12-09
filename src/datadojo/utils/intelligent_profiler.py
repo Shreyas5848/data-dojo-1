@@ -558,15 +558,19 @@ class IntelligentProfiler:
         temporal_cols = []
         
         for col in df.columns:
-            # Direct datetime columns
-            if pd.api.types.is_datetime64_any_dtype(df[col]):
-                temporal_cols.append(col)
-            # String columns that might be dates
-            elif df[col].dtype == 'object':
-                sample = df[col].dropna().astype(str).iloc[:100] if len(df[col].dropna()) > 0 else []
-                date_matches = sum(1 for val in sample if pd.to_datetime(val, errors='coerce') is not pd.NaT)
-                if date_matches > len(sample) * 0.8:  # 80% of samples are valid dates
+            try:
+                # Direct datetime columns
+                if pd.api.types.is_datetime64_any_dtype(df[col]):
                     temporal_cols.append(col)
+                # String columns that might be dates - only check columns with date-like names
+                elif df[col].dtype == 'object' and any(kw in col.lower() for kw in ['date', 'time', 'timestamp', 'dt', 'created', 'updated']):
+                    sample = df[col].dropna().astype(str).head(20)  # Reduced sample size
+                    if len(sample) > 0:
+                        date_matches = sum(1 for val in sample if pd.to_datetime(val, errors='coerce') is not pd.NaT)
+                        if date_matches > len(sample) * 0.8:  # 80% of samples are valid dates
+                            temporal_cols.append(col)
+            except Exception:
+                continue  # Skip problematic columns
         
         return temporal_cols
     

@@ -17,6 +17,7 @@ from .interactive_session import start_interactive_session
 from .practice import practice
 from .web_launch import launch_web_dashboard, check_web_status
 from .ml_pipeline import ml_pipeline
+from .generate_notebook import generate_notebook, list_templates
 
 
 def show_welcome_banner(console=None):
@@ -309,6 +310,41 @@ def main():
         help="Don't automatically open browser"
     )
 
+    # notebook command - generate Jupyter notebooks from datasets
+    notebook_parser = subparsers.add_parser(
+        "notebook",
+        help="Generate Jupyter notebook from a dataset"
+    )
+    notebook_parser.add_argument(
+        "dataset",
+        nargs="?",
+        help="Path to CSV dataset file"
+    )
+    notebook_parser.add_argument(
+        "--template", "-t",
+        choices=[
+            'exploratory_data_analysis', 'data_cleaning', 'classification_analysis',
+            'regression_analysis', 'time_series_analysis', 'clustering_analysis',
+            'dimensionality_reduction', 'feature_engineering'
+        ],
+        default="exploratory_data_analysis",
+        help="Notebook template type (default: exploratory_data_analysis)"
+    )
+    notebook_parser.add_argument(
+        "--output", "-o",
+        help="Output directory for the notebook"
+    )
+    notebook_parser.add_argument(
+        "--open",
+        action="store_true",
+        help="Open notebook after generation"
+    )
+    notebook_parser.add_argument(
+        "--list-templates",
+        action="store_true",
+        help="List all available notebook templates"
+    )
+
     # Parse arguments
     args = parser.parse_args()
 
@@ -489,6 +525,23 @@ def main():
                     auto_open=not args.no_browser
                 )
                 return
+
+            elif args.command == "notebook":
+                # Generate Jupyter notebook from dataset
+                if args.list_templates:
+                    result = list_templates()
+                elif not args.dataset:
+                    print("Error: Please provide a dataset path or use --list-templates")
+                    print("Usage: datadojo notebook <dataset.csv> --template <type>")
+                    print("       datadojo notebook --list-templates")
+                    sys.exit(1)
+                else:
+                    result = generate_notebook(
+                        dataset_path=args.dataset,
+                        template_type=args.template,
+                        output_dir=args.output,
+                        open_notebook=args.open
+                    )
 
             else:
                 print(f"Error: Unknown command: {args.command}", file=sys.stderr)

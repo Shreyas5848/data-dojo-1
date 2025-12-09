@@ -1,0 +1,1101 @@
+customer_id,first_name,last_name,email,age,gender,city,state,zip_code,registration_date,phone,loyalty_tier,total_purchases,total_spent,preferred_category,account_status
+1,Barbara,Wilson,barbara.wilson@gmail.com,32.0,Prefer not to say,Denver,CO,80201,2025-02-05,+1-749-997-9965,Platinum,0,512.84,Health,Active
+2,Edward,Gonzalez,edward.gonzalez@yahoo.com,51.0,Female,New York,NY,10001,2025-03-10,N/A,Bronze,28,6182.94,Sports,Active
+3,Timothy,Harris,tharris@outlook.com,43.0,Male,Dallas,TX,75201,2025-08-02,+1-322-227-9435,Gold,63,6313.29,Sports,Active
+4,Jeffrey,Garcia,jeffrey.garcia@gmail.com,69.0,Female,Seattle,WA,98101,2022-06-03,+1-327-598-3250,Silver,87,586.31,Clothing,Active
+5,Thomas,King,thomasking@hotmail.com,73.0,Female,San Antonio,TX,78201,2021-04-10,+1-325-973-6788,Bronze,85,-649.89,Books,Inactive
+6,Jeffrey,Wright,jeffrey.wright@gmail.com,21.0,Prefer not to say,San Jose,CA,95101,2023-01-04,+1-697-619-2184,Silver,33,2715.57,Books,Active
+7,Michelle,Brown,michellebrown@gmail.com,27.0,Non-binary,Dallas,TX,75201,2026-12-01,+1-925-800-4911,Silver,34,4890.32,Beauty,Active
+8,  Steven  ,Williams, stevenwilliams@yahoo.com ,20.0,Male, Los Angeles ,CA,90001,2022-03-29,+1-778-334-9475,Platinum,16,2115.02,Automotive,Active
+9,Barbara,Lewis,barbara.lewis@outlook.com,38.0,Prefer not to say,Atlanta,GA,30301,2021-10-11,+1-240-905-5554,Gold,99,3355.52,Health,Active
+10,Robert,Lopez,robert.lopez@hotmail.com,27.0,Non-binary,San Diego,CA,92101,2022-07-20,+1-211-390-9380,Bronze,5,1369.7,Beauty,Active
+11,Amy,Torres,amy.torres@hotmail.com,26.0,Female,Austin,TX,78701,2025-10-11,+1-227-359-4277,Bronze,37,3147.99,Beauty,Inactive
+12,Paul,Hernandez,paulhernandez@gmail.com,-1.0,Male,Philadelphia,PA,19101,2023-04-15,+1-803-610-8529,Bronze,55,562.78,Automotive,Active
+13,Jessica,Brown,jessicabrown@icloud.com,53.0,Male,Seattle,WA,98101,2022-01-19,N/A,Bronze,90,5357.2,Clothing,Active
+14,Cynthia,Martinez,cynthia77@gmail.com,41.0,Prefer not to say,Jacksonville,FL,32201,2021-06-13,unknown,Silver,87,2547.39,Books,Inactive
+15,Deborah,Flores,deborah.flores@gmail.com,69.0,Male,Phoenix,AZ,85001,2024-04-17,+1-695-277-9949,Bronze,21,2106.01,Clothing,Active
+16,Timothy,Jones,timothyjones@outlook.com,27.0,Prefer not to say,Miami,FL,33101,2024-08-28,+1-804-840-8784,Silver,56,2492.02,Clothing,Active
+17,Cynthia,Walker,cynthiawalker@gmail.com,40.0,Prefer not to say,Chicago,IL,60601,2021-07-11,+1-716-686-4336,Silver,88,4896.25,Electronics,Active
+18,Daniel@#,O'Harris,dharris@outlook.com,58.0,Male,San Diego,CA,92101,2025-07-04,+1-866-607-7742,Silver,55,2245.1,Home & Garden,Active
+19,John,Jones,john.jones@outlook.com,51.0,Non-binary,Detroit,MI,48201,2022-01-05,+1-740-870-2932,Silver,84,1162.72,Electronics,Active
+20,John,Brown,john56@icloud.com,50.0,Male,New York,NY,10001,2024-11-16,+1-505-780-3446,Silver,64,4633.97,Beauty,Active
+21,Rebecca,Miller,rebecca30@hotmail.com,40.0,Male,Seattle,WA,98101,2023-05-04,+1-720-226-6506,Gold,69,3272.63,Electronics,Active
+22,Cynthia,Garcia,cynthia.garcia@gmail.com,37.0,Prefer not to say,Boston,MA,02101,2022-06-24,+1-392-392-8441,Silver,79,1875.4,Clothing,Active
+23,Kimberly,Miller,kimberlymiller@hotmail.com,26.0,Female,New York,NY,10001,2021-09-03,+1-555-483-9028,Bronze,71,3642.87,Clothing,Active
+24,Jason,Martinez,jasonmartinez@icloud.com,50.0,Non-binary,San Jose,CA,95101,2024-06-25,+1-949-844-2340,Silver,88,843.2,Electronics,Active
+25,Michelle,Wright,michellewright@gmail.com,70.0,Male,Miami,FL,33101,2023-09-07,+1-745-861-8402,Platinum,21,2945.72,Beauty,Active
+26,Deborah,Young,deborahyoung@gmail.com,29.0,Female,Miami,FL,33101,2024-04-25,+1-460-337-7286,Gold,73,1045.47,Health,Active
+27,Nancy,Ramirez,nramirez@outlook.com,43.0,Female,Phoenix,AZ,85001,2025-08-20,+1-919-229-8641,Gold,35,1838.9,Home & Garden,Active
+28,Brian,Thompson,brian14@gmail.com,29.0,Female,San Jose,CA,95101,2024-02-19,+1-675-624-7989,Bronze,65,4987.04,Clothing,Active
+29,Kevin,Smith,kevin1@hotmail.com,62.0,Male,San Diego,CA,92101,2021-04-22,+1-449-875-2309,Bronze,0,154.14,Sports,Active
+30,James,Ramirez,jramirez@yahoo.com,25.0,Female,San Jose,CA,95101,2025-08-06,+1-325-309-1052,Silver,19,2351.42,Home & Garden,Active
+31,Melissa,Wright,melissa.wright@hotmail.com,40.0,Non-binary,Dallas,TX,75201,2022-05-03,+1-511-643-7962,Platinum,88,2890.34,Clothing,Active
+32,Dorothy,King,dorothyking@yahoo.com,24.0,Prefer not to say,San Diego,CA,92101,2023-12-01,+1-795-867-4479,Gold,25,-1060.17,Beauty,Inactive
+33,Kathleen,Thomas,kathleen82@hotmail.com,42.0,Female,Seattle,WA,98101,2021-06-24,+1-862-896-1458,Bronze,36,3040.78,Beauty,Active
+34,Richard,Lee,richardlee@outlook.com,40.0,Non-binary,Boston,MA,02101,2022-05-21,+1-544-438-5555,Bronze,63,4580.95,Home & Garden,Active
+35,Charles,Davis,cdavis@yahoo.com,50.0,Female,Chicago,IL,60601,2024-09-16,+1-843-836-6853,Bronze,50,4607.37,Home & Garden,Active
+36,Emily,Young,emily.young@hotmail.com,63.0,Male,Phoenix,AZ,85001,2022-10-09,+1-473-200-9136,Silver,70,166.74,Home & Garden,Suspended
+37,Anthony,Johnson,anthonyjohnson@icloud.com,34.0,Non-binary,San Jose,CA,95101,2022-09-15,+1-523-343-1104,Platinum,69,402.51,Beauty,Active
+38,Emily,Scott,emilyscott@outlook.com,18.0,Prefer not to say,San Jose,CA,95101,2023-04-19,+1-980-600-4292,Silver,86,4052.53,Beauty,Active
+39,Patricia,Ramirez,patricia.ramirez@icloud.com,75.0,Female,Seattle,WA,98101,2024-09-09,+1-670-827-7188,Bronze,96,5819.39,Automotive,Inactive
+40,Timothy,Walker,timothywalker@gmail.com,67.0,Prefer not to say,Phoenix,AZ,85001,2022-09-05,+1-331-319-6433,Silver,98,198.95,Automotive,Active
+41,Mark,Taylor,marktaylor@yahoo.com,64.0,Male,Seattle,WA,98101,2022-08-07,+1-655-815-5341,Gold,40,3521.26,Home & Garden,Active
+42,Thomas,Davis,tdavis@hotmail.com,51.0,Male,Dallas,TX,75201,2024-01-06,+1-439-318-5662,Bronze,91,6706.17,Home & Garden,Inactive
+43,Amy,Thomas,amythomas@hotmail.com,52.0,Prefer not to say,Seattle,WA,98101,2022-07-09,+1-327-687-9732,Bronze,36,2124.51,Electronics,Active
+44,Mary,Scott,null,51.0,Female,San Jose,CA,95101,2025-06-25,+1-340-679-4703,Silver,96,3940.08,Health,Active
+45,  Charles  ,Taylor, charlestaylor@icloud.com ,73.0,Prefer not to say, San Diego ,CA,92101,2022-04-12,+1-648-357-5438,Bronze,51,5383.78,Clothing,Active
+46,Mary,Robinson,mary.robinson@gmail.com,49.0,Non-binary,Houston,TX,77001,2024-12-03,+1-255-698-8432,Bronze,9,1618.77,Sports,Active
+47,James,Rodriguez,james.rodriguez@icloud.com,70.0,Prefer not to say,Atlanta,GA,30301,2021-09-29,+1-501-794-8980,Silver,24,3333.96,Sports,Active
+48,Joshua,Rodriguez,joshua59@yahoo.com,33.0,Female,Dallas,TX,75201,2023-05-21,+1-336-943-3950,Silver,15,-3008.99,Books,Active
+49,Brian,Rodriguez,brian.rodriguez@gmail.com,52.0,Prefer not to say,Dallas,TX,75201,2024-10-08,+1-875-239-7201,Bronze,82,2037.9,Books,Active
+50,Jennifer,Jackson,jennifer.jackson@gmail.com,39.0,Non-binary,Jacksonville,FL,32201,2026-04-15,+1-216-728-5171,Bronze,75,4756.93,Automotive,Active
+51,Kimberly,Wilson,kimberlywilson@icloud.com,25.0,Prefer not to say,Philadelphia,PA,19101,2023-09-08,+1-802-428-9735,Silver,46,3860.68,Books,Active
+52,Laura,Jackson,laura64@icloud.com,42.0,Non-binary,Detroit,MI,48201,2021-10-31,+1-756-905-8109,Bronze,16,2373.4,Health,Active
+53,Joseph,Garcia,jgarcia@icloud.com,40.0,Male,Detroit,MI,48201,2021-04-14,+1-254-917-9961,Silver,19,3160.42,Clothing,Active
+54,Thomas,Lopez,tlopez@hotmail.com,22.0,Male,San Antonio,TX,78201,2025-08-30,+1-346-309-1672,Silver,2,4437.68,Health,Inactive
+55,Donna,Wilson,donna27@yahoo.com,38.0,Prefer not to say,San Jose,CA,95101,2024-04-02,+1-693-779-9350,Silver,1,993.9,Home & Garden,Active
+56,Kevin,Clark,kevin37@icloud.com,33.0,Female,Chicago,IL,60601,2021-05-09,+1-934-680-7451,Gold,9,153.03,Automotive,Active
+57,Linda,Thompson,linda.thompson@icloud.com,29.0,Non-binary,San Antonio,TX,78201,2023-09-01,+1-450-661-3502,Platinum,37,4218.72,Clothing,Active
+58,Michelle,Brown,mbrown@hotmail.com,58.0,Female,Detroit,MI,48201,2021-04-08,+1-798-518-5172,Bronze,14,4307.22,Sports,Inactive
+59,William,King,william.king@hotmail.com,18.0,Male,San Antonio,TX,78201,2024-08-22,+1-727-374-9088,Gold,53,2519.56,Health,Active
+60,Christopher,Young,cyoung@hotmail.com,61.0,Male,Boston,MA,02101,2025-09-08,+1-643-450-5153,Silver,97,4264.82,Sports,Active
+61,Brian,Garcia,brian16@icloud.com,21.0,Prefer not to say,San Diego,CA,92101,2024-05-14,+1-517-427-2226,Silver,43,4390.59,Beauty,Active
+62,Elizabeth,Walker,elizabeth89@hotmail.com,66.0,Non-binary,Houston,TX,77001,2025-10-18,+1-869-256-6065,Bronze,56,428.8,Home & Garden,Active
+63,Cynthia,Lewis,cynthia55@outlook.com,33.0,Male,Boston,MA,02101,2023-05-21,+1-432-671-3784,Gold,29,3929.86,Sports,Active
+64,Jennifer,Walker,jennifer2@gmail.com,19.0,Prefer not to say,Detroit,MI,48201,2025-09-20,+1-773-706-5053,Gold,44,4432.25,Sports,Active
+65,MELISSA,Lee,melissa.lee@icloud.com,49.0,Male,CHICAGO,IL,60601,2022-04-18,+1-887-811-4916,Gold,63,3228.87,Books,Active
+66,Kevin,Jackson,kjackson@yahoo.com,23.0,Female,Seattle,WA,98101,2022-04-14,+1-319-314-7531,Silver,95,3053.83,Electronics,Inactive
+67,David,Lee,david19@outlook.com,38.0,Non-binary,San Jose,CA,95101,2022-10-01,+1-214-929-4718,Silver,22,216.13,Clothing,Active
+68,John,Johnson,john70@outlook.com,27.0,Non-binary,Houston,TX,77001,2024-02-24,+1-253-921-4630,Gold,2,1213.67,Books,Active
+69,Anthony,Hernandez,anthony5@gmail.com,67.0,Prefer not to say,Atlanta,GA,30301,2023-04-08,+1-520-861-6249,Gold,25,739.11,Health,Active
+70,Sharon,Thompson,sharonthompson@hotmail.com,70.0,Prefer not to say,Dallas,TX,75201,2021-08-19,+1-826-207-3552,Silver,65,1885.29,Home & Garden,Active
+71,Sandra,Ramirez,sandra.ramirez@gmail.com,26.0,Prefer not to say,San Antonio,TX,78201,2025-01-06,+1-224-420-1195,Silver,55,203.78,Health,Active
+72,Kenneth,Walker,kenneth30@hotmail.com,40.0,Female,Phoenix,AZ,85001,2024-02-07,+1-341-863-8855,Silver,82,2286.18,Health,Active
+73,Jessica,Allen,jessicaallen@icloud.com,36.0,Prefer not to say,Phoenix,AZ,85001,2022-06-18,+1-534-692-5140,Gold,68,1841.88,Books,Active
+74,David,Wright,dwright@yahoo.com,-1.0,Female,San Diego,CA,92101,2025-08-22,+1-975-214-3273,Bronze,69,2465.57,Books,Active
+75,Donna,Garcia,donnagarcia@outlook.com,41.0,Non-binary,Los Angeles,CA,90001,2020-12-13,+1-412-509-6672,Bronze,94,5313.28,Beauty,Active
+76,Brian,Scott,bscott@outlook.com,23.0,Female,San Diego,CA,92101,2022-07-23,+1-502-443-5555,Gold,12,1616.62,Books,Active
+77,Donald,Smith,donaldsmith@hotmail.com,73.0,Male,San Antonio,XX,78201,2022-11-24,+1-253-213-4314,Bronze,29,3984.67,Beauty,Active
+78,  Kevin  ,Harris, kevin47@outlook.com ,62.0,Female, Los Angeles ,CA,90001,2025-11-17,+1-981-874-5104,Silver,91,4595.79,Electronics,Active
+79,Jason,Wilson,jasonwilson@hotmail.com,21.0,Male,San Jose,CA,95101,2021-01-18,+1-330-988-9687,Bronze,22,2586.79,Sports,Inactive
+80,Thomas,Jones,thomas.jones@gmail.com,48.0,Female,San Diego,CA,92101,2021-05-12,+1-835-458-7998,Silver,94,710.57,Home & Garden,Active
+81,Mark,Miller,mark16@gmail.com,18.0,Male,Denver,CO,80201,2022-07-26,+1-536-541-1827,Platinum,67,647.14,Health,Active
+82,Jason,Sanchez,jason76@yahoo.com,63.0,Female,Miami,FL,33101,2025-04-27,+1-767-954-4341,Silver,75,-4354.19,Automotive,Active
+83,Jeffrey,Sanchez,jeffrey.sanchez@gmail.com,35.0,Non-binary,Los Angeles,CA,90001,2024-08-06,+1-980-830-6014,Platinum,78,2798.1,Home & Garden,Active
+84,James,King,james37@gmail.com,66.0,Non-binary,Chicago,IL,60601,2023-08-04,+1-726-833-6388,Bronze,59,4034.9,Electronics,Suspended
+85,Donald,Garcia,donald.garcia@icloud.com,30.0,Non-binary,Phoenix,AZ,85001,2022-01-18,+1-542-323-2699,Gold,40,2259.59,Clothing,Active
+86,Jennifer,Perez,jenniferperez@hotmail.com,56.0,Male,Miami,FL,33101,2023-12-27,+1-682-570-2570,Platinum,91,1344.17,Sports,Active
+87,ELIZABETH,Taylor,elizabethtaylor@outlook.com,30.0,Female,SAN ANTONIO,TX,78201,2022-04-21,+1-707-334-7375,Silver,12,3228.09,Health,Inactive
+88,Ronald,Ramirez,ronald.ramirez@outlook.com,75.0,Non-binary,Houston,TX,77001,2024-08-18,+1-557-742-7092,Silver,7,5967.34,Beauty,Active
+89,Michelle,Garcia,michelle79@gmail.com,73.0,Prefer not to say,Atlanta,GA,30301,2021-05-16,+1-928-735-1856,Silver,97,126.0,Home & Garden,Active
+90,Laura,Brown,lbrown@icloud.com,33.0,Non-binary,Austin,TX,78701,2022-02-23,+1-401-328-7931,Bronze,69,285.49,Beauty,Active
+91,Amy,Clark,amy.clark@outlook.com,75.0,Male,San Diego,CA,92101,2026-03-09,+1-995-268-1286,Bronze,68,913.39,Clothing,Active
+92,Mark,Miller,mark32@yahoo.com,57.0,Male,San Diego,CA,92101,2022-07-17,+1-912-918-4114,Platinum,25,3862.99,Sports,Active
+93,Michael,Wright,michael22@outlook.com,39.0,Prefer not to say,Phoenix,AZ,85001,2023-08-25,+1-230-935-3684,Gold,15,811.86,Health,Inactive
+94,Deborah,Walker,dwalker@hotmail.com,41.0,Non-binary,San Diego,CA,92101,2023-11-09,+1-752-897-5612,Bronze,15,2092.58,Automotive,Inactive
+95,Thomas,Jackson,thomas.jackson@hotmail.com,26.0,Non-binary,Boston,MA,02101,2022-01-31,+1-600-272-5710,Gold,24,1687.9,Automotive,Active
+96,Gary,Taylor,gary.taylor@gmail.com,22.0,Male,Jacksonville,FL,32201,2024-12-04,+1-879-978-2740,Bronze,75,4225.07,Electronics,Active
+97,Matthew,Young,matthewyoung@hotmail.com,61.0,Male,Los Angeles,CA,90001,2025-12-06,+1-928-388-5889,Gold,53,4782.34,Home & Garden,Active
+98,Jason,White,jasonwhite@hotmail.com,64.0,Male,Chicago,IL,60601,2023-08-27,+1-793-663-2855,Bronze,28,1988.15,Electronics,Active
+99,Karen,Jackson,kjackson@yahoo.com,54.0,Prefer not to say,San Diego,CA,92101,2023-08-14,+1-476-301-8932,Gold,80,953.62,Automotive,Inactive
+100,Dorothy,Taylor,dorothy4@yahoo.com,50.0,Male,Dallas,TX,75201,2021-07-30,+1-791-941-1010,Bronze,92,7193.55,Health,Active
+101,Jason,Torres,jason15@yahoo.com,66.0,Prefer not to say,Phoenix,AZ,85001,2022-08-11,+1-676-244-3425,Gold,44,634.04,Home & Garden,Active
+102,Lisa,Robinson,,57.0,Non-binary,San Jose,CA,95101,2025-03-09,+1-369-565-9493,Gold,50,2105.38,Home & Garden,Active
+103,Sandra,Wilson,sandra.wilson@yahoo.com,47.0,Prefer not to say,San Jose,CA,95101,2024-08-14,+1-827-278-3402,Silver,48,3118.66,Electronics,Active
+104,Sharon,Clark,sharon.clark@icloud.com,46.0,Prefer not to say,San Jose,CA,95101,2021-06-09,+1-910-954-4551,Silver,14,200.31,Beauty,Active
+105,Karen,King,karen5@yahoo.com,19.0,Non-binary,San Jose,CA,95101,2021-09-19,+1-684-366-8059,Bronze,63,-3426.25,Books,Active
+106,Betty,Lewis,betty.lewis@hotmail.com,67.0,Non-binary,Philadelphia,PA,19101,2021-05-18,+1-718-449-1055,Silver,72,4107.13,Books,Active
+107,Betty,Taylor,betty71@yahoo.com,40.0,Female,Dallas,TX,75201,2024-08-28,+1-524-713-1955,Bronze,9,3942.38,Books,Active
+108,Linda,Thomas,linda11@icloud.com,23.0,Female,Miami,,33101,2022-11-11,+1-498-421-3069,Bronze,63,1558.12,Books,Active
+109,Jeffrey,Martinez,jmartinez@yahoo.com,26.0,Male,San Antonio,TX,78201,2025-01-16,+1-772-287-1668,Gold,6,344.39,Clothing,Active
+110,Elizabeth,Lee,elizabeth60@outlook.com,42.0,Female,San Jose,CA,95101,2022-12-20,+1-644-758-5519,Gold,21,1193.72,Beauty,Active
+111,Susan,Thompson,sthompson@outlook.com,39.0,Prefer not to say,Philadelphia,PA,19101,2023-05-31,+1-407-313-6740,Platinum,15,296.7,Beauty,Suspended
+112,Mark,Moore,markmoore@outlook.com,32.0,Female,Boston,MA,02101,2023-06-24,+1-390-754-5060,Silver,3,1300.37,Electronics,Active
+113,Richard,Young,ryoung@gmail.com,18.0,Female,Austin,TX,78701,2025-08-13,+1-985-627-7836,Silver,51,2702.14,Clothing,Active
+114,William,Thompson,william66@outlook.com,19.0,Non-binary,Phoenix,AZ,85001,2024-11-17,+1-268-740-9277,Bronze,19,196.91,Electronics,Active
+115,Jessica,Flores,N/A,61.0,Prefer not to say,Austin,TX,78701,2023-01-08,+1-851-745-8382,Bronze,70,3125.31,Clothing,Active
+116,Cynthia,Jones,cjones@icloud.com,53.0,Non-binary,Chicago,IL,60601,2021-12-12,+1-965-914-8408,Bronze,28,3067.99,Electronics,Active
+117,Joseph,Moore,josephmoore@icloud.com,36.0,Female,San Jose,CA,95101,2021-06-10,+1-218-233-5661,Platinum,69,4717.08,Sports,Active
+118,Ryan,Davis,rdavis@yahoo.com,63.0,Male,Chicago,IL,60601,2023-03-10,+1-695-936-2457,Bronze,25,2033.3,Health,Active
+119,Sarah,Rodriguez,srodriguez@icloud.com,28.0,Male,Houston,TX,77001,2024-09-29,+1-855-650-4433,Bronze,56,3891.15,Sports,Active
+120,Andrew,Jackson,ajackson@hotmail.com,34.0,Male,Seattle,WA,98101,2023-05-29,+1-650-713-4442,,68,3278.79,Sports,Inactive
+121,Susan,Johnson,susan32@gmail.com,-1.0,Male,Chicago,IL,60601,2025-07-01,+1-442-499-1940,Gold,36,1601.16,Books,Active
+122,  Kathleen  ,Hill, khill@yahoo.com ,73.0,Non-binary, Dallas ,TX,75201,2023-07-24,+1-308-491-4179,Bronze,96,3023.06,Beauty,Active
+123,Daniel,Hill,danielhill@outlook.com,72.0,Male,Denver,,80201,2025-10-08,+1-477-730-4967,Silver,24,3799.5,Health,Active
+124,William,Young,william.young@yahoo.com,72.0,Female,Denver,CO,80201,2021-06-18,+1-424-600-5406,Bronze,55,147.01,Electronics,Active
+125,Kevin,Wright,kevin.wright@gmail.com,34.0,Prefer not to say,New York,NY,10001,2022-01-14,+1-887-890-7099,Platinum,33,654.48,Beauty,Active
+126,Amy,Clark,amyclark@outlook.com,23.0,Female,Detroit,MI,48201,2025-08-01,+1-674-757-3841,Silver,58,4157.97,Clothing,Active
+127,Karen,Lopez,N/A,41.0,Non-binary,Los Angeles,CA,90001,2023-04-08,+1-672-580-5596,Platinum,47,1500.74,Sports,Active
+128,Mark,Scott,mark98@gmail.com,20.0,Male,Atlanta,GA,30301,2025-10-16,+1-431-245-4966,Bronze,29,1369.49,Health,Active
+129,Brian,Taylor,brian.taylor@gmail.com,68.0,Female,Detroit,MI,48201,2022-02-15,123456,Silver,7,4193.08,Books,Suspended
+130,Kimberly,Hernandez,kimberly17@hotmail.com,35.0,Male,San Diego,CA,92101,2023-08-25,+1-330-680-5932,Bronze,6,3954.21,Sports,Active
+131,Barbara,Williams,barbara10@yahoo.com,64.0,Non-binary,San Diego,CA,92101,2021-02-11,+1-662-449-8043,Bronze,38,1973.62,Electronics,Inactive
+132,Barbara,Miller,barbara32@gmail.com,56.0,Female,Atlanta,GA,30301,2022-01-20,+1-857-680-6373,Silver,25,7494.52,Books,Inactive
+133,Daniel,Young,danielyoung@outlook.com,72.0,Female,San Jose,,95101,2024-01-06,+1-752-717-1607,Gold,21,2790.03,Beauty,Inactive
+134,George,Robinson,george71@hotmail.com,65.0,Female,Austin,TX,78701,2026-12-07,+1-569-878-8256,Silver,73,3416.6,Automotive,Active
+135,Laura,Hernandez,laura.hernandez@yahoo.com,57.0,Non-binary,Phoenix,AZ,85001,2021-12-26,+1-475-889-3828,,41,6520.45,Electronics,Active
+136,Jacob,Gonzalez,jacob.gonzalez@outlook.com,26.0,Male,Philadelphia,PA,19101,2024-06-01,+1-740-820-7456,Silver,59,4135.74,Health,Active
+137,Michael,King,mking@icloud.com,49.0,Non-binary,Miami,FL,33101,2022-09-20,+1-341-584-1758,Gold,76,3038.85,Beauty,Active
+138,Michael,Walker,michael.walker@outlook.com,64.0,Prefer not to say,Detroit,MI,48201,2023-02-22,555-FAKE,Silver,79,5595.57,Home & Garden,Active
+139,Patricia,King,patriciaking@yahoo.com,43.0,Prefer not to say,Jacksonville,FL,32201,2021-09-04,+1-418-252-9323,Bronze,58,-2169.6,Books,Active
+140,Edward,Allen,edward53@hotmail.com,39.0,Prefer not to say,Austin,TX,78701,2024-10-06,+1-208-850-7339,Platinum,32,873.74,Books,Active
+141,Kenneth,Scott,kscott@gmail.com,18.0,Female,Seattle,WA,98101,2023-03-29,+1-402-244-4098,Gold,12,1177.2,Sports,Inactive
+142,Anthony,Martinez,anthonymartinez@outlook.com,63.0,Male,Austin,TX,78701,2022-08-30,+1-333-393-9083,Gold,14,369.28,Electronics,Active
+143,Donna,Harris,donnaharris@icloud.com,32.0,Male,Dallas,TX,75201,2022-03-11,+1-239-738-8500,Platinum,25,1787.67,Sports,Active
+144,Nancy,Williams,nancywilliams@gmail.com,67.0,Non-binary,Miami,FL,33101,2025-02-10,+1-562-416-3466,Silver,56,-1309.99,Electronics,Active
+145,Patricia,Jackson,patriciajackson@outlook.com,47.0,Female,San Diego,CA,92101,2022-12-01,+1-779-574-1315,Bronze,61,7126.19,Automotive,Active
+146,Richard,Wright,richard40@gmail.com,62.0,Male,New York,NY,10001,2024-09-02,+1-331-597-8392,Silver,64,5745.18,Health,Active
+147,Laura,Perez,lperez@outlook.com,68.0,Non-binary,Phoenix,AZ,85001,2021-12-31,+1-504-698-8013,Platinum,25,2793.87,Electronics,Active
+148,Patricia,Williams,patricia29@yahoo.com,70.0,Prefer not to say,Jacksonville,FL,32201,2023-11-19,+1-371-827-1820,Bronze,27,1667.37,Beauty,Active
+149,  Donna  ,Garcia, donna6@yahoo.com ,71.0,Non-binary, San Antonio ,TX,78201,2025-08-09,+1-419-485-5252,Gold,92,3521.27,Automotive,Active
+150,Nancy,Allen,nallen@hotmail.com,30.0,Prefer not to say,New York,NY,10001,2024-02-19,+1-580-258-9030,Bronze,10,4183.83,Sports,Active
+151,Sarah,White,sarah.white@gmail.com,75.0,Female,San Jose,CA,95101,2023-08-06,+1-873-494-8553,Bronze,84,2461.93,Automotive,Active
+152,Gary,Nguyen,garynguyen@icloud.com,28.0,Prefer not to say,Dallas,TX,75201,2021-12-26,+1-871-688-1583,Bronze,43,2098.99,Health,Active
+153,Carol,King,carolking@gmail.com,72.0,Female,San Diego,CA,92101,2024-02-06,+1-304-292-6355,Silver,73,2220.5,Clothing,Active
+154,Timothy,Lewis,timothy.lewis@hotmail.com,41.0,Non-binary,San Jose,CA,95101,2022-10-05,+1-818-952-4813,Silver,53,1270.7,Clothing,Active
+155,Margaret,Gonzalez,margaretgonzalez@gmail.com,33.0,Non-binary,Los Angeles,CA,90001,2021-07-29,+1-263-208-5889,Silver,74,354.33,Automotive,Inactive
+156,Brian@#,O'Moore,brian22@yahoo.com,68.0,Non-binary,Houston,TX,77001,2022-11-05,+1-910-605-8082,Platinum,17,1505.14,Sports,Suspended
+157,Daniel,Lewis,daniel.lewis@hotmail.com,25.0,Female,Jacksonville,FL,32201,2024-06-20,+1-855-784-5821,Bronze,65,3920.39,Automotive,Active
+158,Nancy,Nguyen,nancy18@gmail.com,62.0,Male,Denver,CO,80201,2023-06-22,+1-761-683-3875,Bronze,27,5082.31,Beauty,Active
+159,Steven,Lewis,slewis@gmail.com,38.0,Male,San Jose,CA,95101,2024-05-02,+1-589-456-9835,Bronze,31,645.72,Beauty,Active
+160,Ryan,Perez,ryan74@yahoo.com,56.0,Prefer not to say,Miami,FL,33101,2024-09-18,+1-336-869-4845,Silver,9,2864.33,Sports,Active
+161,Ronald,Hernandez,ronald43@icloud.com,36.0,Prefer not to say,Houston,TX,77001,2025-06-11,+1-533-512-5140,Bronze,95,259.14,Beauty,Inactive
+162,George,Brown,george.brown@hotmail.com,53.0,Male,Los Angeles,CA,90001,2021-02-28,+1-543-428-9124,Silver,12,838.4,Beauty,Active
+163,Mark,White,mark.white@hotmail.com,26.0,Male,Atlanta,GA,30301,2021-06-29,+1-572-740-3512,Bronze,14,3183.37,Sports,Active
+164,Laura,Torres,laura.torres@icloud.com,21.0,Prefer not to say,Phoenix,AZ,85001,2025-05-13,+1-385-723-5609,Bronze,6,2579.58,Electronics,Active
+165,Kimberly,King,kking@gmail.com,20.0,Female,Dallas,TX,75201,2021-05-30,+1-919-613-2764,Bronze,16,3153.4,Home & Garden,Active
+166,Emily,Nguyen,emily84@outlook.com,62.0,Non-binary,Detroit,MI,48201,2022-12-30,+1-406-958-5202,Bronze,15,1113.71,Home & Garden,Active
+167,Ashley,Allen,ashley47@icloud.com,-1.0,Female,Detroit,MI,48201,2025-03-02,+1-440-845-4630,Gold,0,1039.55,Health,Active
+168,Kimberly,Lopez,klopez@gmail.com,60.0,Non-binary,San Antonio,TX,,2024-06-14,+1-575-653-9915,Silver,74,1947.01,Home & Garden,Inactive
+169,Jason,Hernandez,jason95@gmail.com,41.0,Male,Detroit,MI,48201,2025-01-03,+1-368-634-3488,Gold,40,5577.53,Beauty,Active
+170,Richard,Rodriguez,richard.rodriguez@icloud.com,61.0,Prefer not to say,Denver,CO,80201,2021-09-12,+1-356-766-1002,Platinum,2,1587.28,Sports,Active
+171,Richard,Martinez,richard62@yahoo.com,40.0,Male,Miami,FL,33101,2025-09-19,+1-440-363-8012,Gold,68,1445.09,Clothing,Active
+172,Christopher,Ramirez,christopherramirez@hotmail.com,21.0,Male,Houston,TX,77001,2022-10-01,+1-925-806-4278,Silver,25,4051.5,Books,Active
+173,Ryan,Ramirez,rramirez@outlook.com,46.0,Female,Miami,FL,33101,2024-08-07,+1-315-985-2734,Bronze,17,1238.24,Electronics,Active
+174,Matthew,Hernandez,matthew.hernandez@yahoo.com,45.0,Female,Jacksonville,FL,32201,2024-11-20,+1-386-486-7634,Unknown,15,2689.28,Home & Garden,Active
+175,Dorothy,Jackson,dorothy.jackson@yahoo.com,47.0,Female,Austin,TX,78701,2022-08-02,+1-763-742-9322,Platinum,68,4520.34,Electronics,Active
+176,Ryan,Allen,ryan.allen@icloud.com,57.0,Male,San Jose,CA,95101,2026-03-10,+1-879-534-7394,Silver,20,716.94,Health,Active
+177,Deborah,Nguyen,dnguyen@gmail.com,67.0,Non-binary,Dallas,TX,75201,2021-01-09,+1-517-601-4202,Bronze,20,2266.74,Automotive,Active
+178,Ryan,King,ryan.king@hotmail.com,66.0,Female,Jacksonville,FL,32201,2025-02-04,+1-607-527-7403,Gold,0,371.39,Clothing,Active
+179,Timothy,Miller,timothy36@hotmail.com,47.0,Male,Phoenix,AZ,85001,2022-06-16,+1-573-924-2146,,92,6433.15,Beauty,Active
+180,Barbara,Williams,barbarawilliams@yahoo.com,75.0,Non-binary,Houston,TX,77001,2024-12-27,+1-415-296-7086,Bronze,50,5542.55,Electronics,Active
+181,Laura,Lopez,laura67@hotmail.com,62.0,Non-binary,Seattle,WA,98101,2023-07-29,+1-682-350-2924,Gold,99,3876.17,Health,Active
+182,Dorothy,Thompson,dorothy33@yahoo.com,73.0,Non-binary,San Antonio,TX,78201,2025-01-20,+1-663-333-9200,Bronze,43,5567.49,Automotive,Active
+183,Michael,Flores,michael.flores@gmail.com,52.0,Female,Los Angeles,CA,90001,2023-09-21,+1-513-670-2151,Silver,12,5163.33,Beauty,Active
+184,Kimberly,Sanchez,kimberly26@outlook.com,25.0,Prefer not to say,San Jose,CA,95101,2024-07-13,+1-520-599-3003,Bronze,42,2954.07,Clothing,Active
+185,Jacob,Hill,jacob.hill@yahoo.com,54.0,Non-binary,Phoenix,AZ,85001,2024-09-23,,Bronze,68,6175.1,Beauty,Active
+186,Jennifer,Clark,jennifer50@icloud.com,60.0,Female,Chicago,IL,60601,2021-11-08,+1-724-582-6576,Gold,30,2160.23,Beauty,Inactive
+187,Susan,Wright,susanwright@icloud.com,24.0,Male,Houston,TX,77001,2025-08-09,+1-923-549-5461,Bronze,26,1211.96,Health,Active
+188,Jason,Sanchez,jason.sanchez@yahoo.com,64.0,Male,Austin,TX,78701,2025-04-19,+1-428-942-5470,Bronze,74,2004.05,Clothing,Active
+189,Ashley,Robinson,ashley.robinson@yahoo.com,72.0,Female,Los Angeles,CA,90001,2025-03-30,+1-669-836-9100,Bronze,35,5171.01,Books,Active
+190,Rebecca,Wright,rebecca4@gmail.com,32.0,Non-binary,Atlanta,GA,30301,2025-03-02,+1-673-551-1413,Silver,88,2232.3,Beauty,Suspended
+191,Jessica,Wilson,jessicawilson@gmail.com,35.0,Prefer not to say,Phoenix,AZ,85001,2022-12-14,+1-533-250-4140,Platinum,82,1525.99,Electronics,Active
+192,Sarah,Thompson,sthompson@hotmail.com,28.0,Prefer not to say,Dallas,TX,75201,2020-12-10,+1-415-337-9767,Bronze,21,738.62,Health,Active
+193,Ashley,Brown,ashley20@gmail.com,49.0,Male,Chicago,IL,60601,2022-05-03,+1-548-663-3731,Gold,52,4124.37,Beauty,Active
+194,Jacob,Miller,jacob24@icloud.com,-1.0,Male,Philadelphia,PA,19101,2023-03-07,+1-779-633-9779,Bronze,35,4052.76,Clothing,Active
+195,Ronald,Smith,ronald83@outlook.com,32.0,Prefer not to say,Seattle,WA,98101,2025-02-04,+1-901-954-1169,Gold,57,2563.68,Beauty,Active
+196,Jacob,Lewis,jlewis@outlook.com,55.0,Non-binary,Denver,CO,80201,2023-06-13,+1-797-591-5411,Bronze,47,-5143.08,Beauty,Active
+197,Jacob,Lee,jacob57@gmail.com,29.0,Non-binary,Phoenix,AZ,85001,2025-01-07,+1-953-808-2416,Bronze,90,2173.22,Automotive,Active
+198,Patricia,White,patriciawhite@gmail.com,21.0,Female,Detroit,,48201,2024-12-20,+1-277-299-9009,Bronze,47,4614.54,Sports,Active
+199,Sandra,Lopez,sandralopez@icloud.com,26.0,Prefer not to say,Jacksonville,FL,32201,2021-06-06,+1-587-224-8633,Bronze,17,197.48,Clothing,Active
+200,Brian,Flores,brian.flores@outlook.com,41.0,Male,Seattle,WA,98101,2023-06-07,+1-825-800-1299,Gold,88,1104.53,Clothing,Active
+201,Sandra,Hernandez,shernandez@outlook.com,55.0,Male,Atlanta,GA,30301,2023-03-03,+1-320-324-8001,Bronze,45,7483.2,Clothing,Active
+202,Thomas,Allen,thomas.allen@yahoo.com,29.0,Non-binary,San Antonio,TX,78201,2024-11-30,+1-283-749-2976,Platinum,5,4974.79,Sports,Active
+203,Brian,Sanchez,brian.sanchez@yahoo.com,45.0,Non-binary,Chicago,IL,60601,2020-12-18,+1-429-921-6107,Bronze,10,2557.66,Sports,Active
+204,  Kevin  ,Robinson, kevinrobinson@yahoo.com ,61.0,Male, Houston ,TX,77001,2022-09-04,+1-749-457-5365,Bronze,65,2023.77,Electronics,Active
+205,Melissa,Hernandez,mhernandez@gmail.com,45.0,Non-binary,Austin,TX,78701,2022-01-10,+1-611-429-2459,Gold,11,6782.23,Beauty,Active
+206,Kenneth,Wright,kennethwright@gmail.com,64.0,Prefer not to say,Phoenix,AZ,85001,2025-03-28,+1-279-865-6245,Silver,11,3075.93,Automotive,Active
+207,Lisa,Martin,lisa.martin@hotmail.com,19.0,Non-binary,Denver,CO,80201,2023-07-22,+1-331-209-7156,Bronze,77,606.79,Sports,Active
+208,Nancy,Martinez,nancymartinez@icloud.com,25.0,Non-binary,Denver,CO,80201,2025-08-22,+1-838-368-6171,Gold,66,3383.59,Beauty,Active
+209,Jason,Gonzalez,jgonzalez@icloud.com,40.0,Prefer not to say,San Diego,CA,92101,2025-09-16,+1-950-281-5728,Silver,25,1361.0,Health,Active
+210,Joseph@#,O'Taylor,jtaylor@outlook.com,23.0,Prefer not to say,Dallas,TX,75201,2024-02-13,+1-292-548-3084,Gold,74,4697.66,Sports,Active
+211,Stephanie,Brown,stephaniebrown@yahoo.com,18.0,Female,Houston,TX,99999,2021-07-23,+1-628-306-4589,Bronze,57,3219.0,Electronics,Active
+212,Kevin,Martinez,kevinmartinez@outlook.com,69.0,Female,Atlanta,GA,30301,2021-04-14,+1-406-779-1710,Bronze,61,2997.49,Health,Active
+213,Rebecca,Davis,rdavis@icloud.com,75.0,Female,San Antonio,TX,78201,2023-05-02,+1-399-682-2352,Silver,79,4150.19,Clothing,Active
+214,Betty,Thomas,betty.thomas@icloud.com,71.0,Non-binary,Philadelphia,PA,19101,2024-05-25,+1-399-486-9013,Gold,37,1874.31,Home & Garden,Active
+215,Elizabeth,Hernandez,ehernandez@icloud.com,18.0,Non-binary,Atlanta,GA,30301,2025-03-25,+1-824-654-4919,Silver,45,1440.33,Home & Garden,Active
+216,Edward,Martinez,edwardmartinez@outlook.com,63.0,Prefer not to say,Detroit,MI,48201,2024-04-29,+1-617-291-7950,Bronze,92,1384.4,Sports,Active
+217,Sarah,Sanchez,sarahsanchez@outlook.com,62.0,Non-binary,Seattle,WA,98101,2021-06-19,+1-354-821-7762,Bronze,3,4901.51,Electronics,Active
+218,Richard,Nguyen,richard49@outlook.com,25.0,Prefer not to say,San Diego,CA,92101,2022-02-06,+1-742-661-4917,Silver,1,3439.43,Sports,Active
+219,Elizabeth,Jones,ejones@gmail.com,22.0,Male,Jacksonville,FL,32201,2023-04-23,+1-921-624-9516,Gold,43,4271.71,Automotive,Active
+220,Christopher,Harris,christopher.harris@yahoo.com,72.0,Prefer not to say,Atlanta,GA,30301,2023-10-16,+1-885-786-1393,Platinum,82,3068.98,Home & Garden,Active
+221,Christopher,Thomas,christopher14@gmail.com,28.0,Female,Los Angeles,CA,90001,2024-02-04,+1-211-875-9070,Bronze,34,155.55,Clothing,Active
+222,Carol,Brown,carol41@outlook.com,28.0,Male,Miami,FL,33101,2024-10-23,+1-547-418-4969,Silver,53,532.86,Health,Active
+223,Amanda,Torres,atorres@hotmail.com,32.0,Female,Miami,FL,33101,2021-08-31,+1-842-877-1246,Bronze,32,3008.56,Books,Active
+224,Kathleen,Torres,kathleentorres@hotmail.com,56.0,Female,Seattle,WA,98101,2025-02-14,+1-781-611-4198,Gold,10,6771.04,Sports,Active
+225,Donald,Hernandez,dhernandez@outlook.com,22.0,Female,Houston,TX,77001,2024-01-20,+1-991-394-3549,Silver,86,4432.04,Beauty,Active
+226,Ryan,Miller,ryan42@outlook.com,65.0,Non-binary,Miami,FL,33101,2021-03-12,+1-580-584-9749,diamond,32,3015.08,Beauty,Active
+227,Dorothy,White,dorothywhite@yahoo.com,27.0,Prefer not to say,San Jose,CA,95101,2023-08-17,unknown,Silver,32,1917.06,Clothing,Active
+228,Elizabeth,Jones,elizabeth13@yahoo.com,,Male,Philadelphia,PA,19101,2021-07-31,+1-970-409-1932,Silver,24,3733.19,Automotive,Active
+229,Deborah,Robinson,drobinson@outlook.com,71.0,Non-binary,Chicago,IL,60601,2025-11-15,+1-615-713-5236,Platinum,76,1918.91,Beauty,Suspended
+230,John,Lee,johnlee@yahoo.com,41.0,Female,Miami,FL,33101,2024-07-01,+1-907-849-2628,Silver,96,4225.25,Home & Garden,Active
+231,William,Gonzalez,william.gonzalez@icloud.com,57.0,Non-binary,Houston,TX,77001,2023-10-29,+1-604-891-4019,Gold,69,6279.69,Clothing,Active
+232,Stephanie,Scott,stephanie.scott@hotmail.com,69.0,Female,Houston,TX,77001,2026-01-13,+1-777-676-3497,Platinum,86,1488.08,Clothing,Active
+233,Joshua,Johnson,joshua39@hotmail.com,49.0,Female,Boston,MA,02101,2021-08-22,+1-516-688-2461,Platinum,67,5015.0,Health,Active
+234,Margaret,Lee,margaret.lee@outlook.com,40.0,Non-binary,Philadelphia,PA,19101,2024-12-03,+1-284-632-6853,Bronze,83,1832.52,Health,Active
+235,Sarah@#,O'Allen,sarah6@hotmail.com,69.0,Prefer not to say,Austin,TX,78701,2024-05-20,+1-878-685-2936,Bronze,82,4056.51,Health,Active
+236,Mark,Brown,markbrown@gmail.com,29.0,Prefer not to say,San Jose,CA,99999,2023-12-29,+1-780-312-4076,Bronze,0,3782.94,Books,Inactive
+237,Edward,Thompson,edward.thompson@icloud.com,27.0,Male,Austin,TX,78701,2023-11-10,+1-967-811-5077,Bronze,9,1030.11,Automotive,Active
+238,Mary,King,mking@gmail.com,47.0,Non-binary,Atlanta,GA,30301,2021-02-17,+1-821-537-1502,Bronze,54,2863.99,Clothing,Active
+239,Rebecca,Lopez,rebecca.lopez@icloud.com,39.0,Prefer not to say,Detroit,MI,48201,2025-11-03,+1-201-878-8686,Silver,90,4764.6,Health,Inactive
+240,Christopher,Flores,christopherflores@yahoo.com,53.0,Male,Atlanta,GA,30301,2026-09-09,+1-671-905-4225,Gold,27,2192.43,Home & Garden,Active
+241,Timothy,Taylor,timothytaylor@yahoo.com,25.0,Male,Seattle,WA,98101,2025-02-20,+1-203-715-4583,Bronze,39,4441.97,Beauty,Active
+242,Andrew,Wright,andrewwright@hotmail.com,60.0,Prefer not to say,San Antonio,TX,78201,2022-07-31,+1-329-852-9831,Silver,97,3690.51,Beauty,Active
+243,Robert,Torres,robert99@yahoo.com,63.0,Non-binary,Los Angeles,CA,90001,2023-03-20,+1-826-566-1637,Bronze,14,1183.78,Automotive,Active
+244,Margaret,Martinez,margaret57@gmail.com,75.0,Female,Denver,CO,80201,2022-03-23,+1-998-789-4119,Gold,86,5038.74,Automotive,Active
+245,Deborah@#,O'Lopez,deborahlopez@gmail.com,70.0,Prefer not to say,Atlanta,GA,30301,2025-11-08,+1-721-907-2900,Silver,63,4966.92,Home & Garden,Active
+246,Jacob,Anderson,jacob11@icloud.com,36.0,Male,San Jose,CA,95101,2021-07-16,+1-939-628-1590,Bronze,90,4905.94,Books,Active
+247,  Anthony  ,Young, anthonyyoung@gmail.com ,43.0,Prefer not to say, Jacksonville ,FL,32201,2023-02-07,+1-798-595-6676,Silver,46,1240.27,Books,Active
+248,Barbara,Gonzalez,barbara75@outlook.com,25.0,Prefer not to say,Austin,TX,78701,2021-10-20,+1-242-441-3294,Platinum,58,540.35,Books,Active
+249,Timothy,Taylor,timothytaylor@outlook.com,74.0,Male,Miami,FL,33101,2025-10-13,+1-701-240-3204,Silver,67,3600.83,Electronics,Active
+250,Sandra,Young,sandra26@icloud.com,42.0,Male,Detroit,MI,48201,2022-02-25,+1-629-808-1126,Gold,93,2159.39,Health,Active
+251,Andrew,Taylor,andrew.taylor@icloud.com,58.0,Male,Miami,XX,33101,2024-03-17,+1-309-741-5212,Silver,29,756.9,Clothing,Suspended
+252,Andrew,Hill,ahill@icloud.com,58.0,Female,Denver,CO,80201,2023-11-26,+1-317-940-9579,Silver,95,1853.59,Automotive,Active
+253,Jason,Johnson,jason41@icloud.com,60.0,Non-binary,Phoenix,AZ,85001,2021-11-07,+1-752-305-3048,Gold,92,3664.43,Books,Active
+254,David,King,david.king@hotmail.com,31.0,Female,San Antonio,TX,78201,2022-04-23,+1-290-350-6806,Bronze,31,456.6,Sports,Active
+255,Mark,Johnson,mark96@gmail.com,57.0,Male,San Antonio,TX,78201,2025-09-05,+1-445-604-2094,Bronze,94,3469.65,Clothing,Active
+256,  Sarah  ,Anderson, sarahanderson@outlook.com ,71.0,Non-binary, New York ,NY,10001,2021-09-27,+1-692-415-8507,Silver,51,3143.06,Books,Active
+257,Susan,Wright,susan.wright@gmail.com,38.0,Prefer not to say,Detroit,MI,48201,2025-06-24,N/A,Bronze,99,1078.67,Books,Active
+258,jessica,Thomas,jessica7@yahoo.com,40.0,Non-binary,AUSTIN,TX,78701,2025-06-29,+1-403-476-2535,Bronze,7,858.9,Sports,Active
+259,Matthew,Lopez,mlopez@yahoo.com,37.0,Non-binary,Philadelphia,PA,19101,2024-08-25,+1-574-325-4030,Platinum,19,1732.66,Clothing,Active
+260,Betty,Smith,betty.smith@gmail.com,29.0,Prefer not to say,San Antonio,TX,78201,2022-08-18,+1-381-633-2582,Silver,1,1061.45,Home & Garden,Active
+261,  Jason  ,Young, jason33@icloud.com ,46.0,Non-binary, Detroit ,MI,48201,2023-10-31,+1-597-611-1176,Silver,94,3609.38,Clothing,Active
+262,James,Harris,james.harris@gmail.com,58.0,Non-binary,Boston,MA,02101,2023-09-03,+1-285-853-9489,Bronze,29,568.95,Sports,Inactive
+263,Timothy,Robinson,timothy6@yahoo.com,48.0,Non-binary,Los Angeles,CA,90001,2024-06-05,+1-809-759-1015,Silver,95,3938.39,Home & Garden,Inactive
+264,Stephanie,Martin,stephaniemartin@icloud.com,65.0,Female,Philadelphia,PA,19101,2023-07-15,+1-775-744-8603,Silver,23,2458.78,Beauty,Active
+265,Michael,Thomas,mthomas@yahoo.com,48.0,Male,Seattle,WA,98101,2021-10-04,+1-368-609-1607,Bronze,58,1025.78,Automotive,Inactive
+266,Rebecca,Hill,rhill@icloud.com,20.0,Prefer not to say,Houston,TX,77001,2021-08-08,+1-987-685-1766,Silver,99,4189.02,Books,Active
+267,Deborah,Hernandez,deborah.hernandez@outlook.com,31.0,Non-binary,Phoenix,AZ,85001,2025-02-19,+1-312-736-3893,Bronze,0,3654.53,Electronics,Active
+268,Margaret,Lopez,margaret90@yahoo.com,27.0,Prefer not to say,San Diego,CA,92101,2024-08-06,+1-967-527-5603,Gold,36,3096.53,Home & Garden,Active
+269,Robert,Young,robert.young@icloud.com,51.0,Male,San Antonio,TX,78201,2024-04-09,+1-402-263-8861,Bronze,3,6843.98,Beauty,Active
+270,Ronald,Jones,ronald87@icloud.com,42.0,Female,San Diego,CA,92101,2024-03-26,+1-719-512-7696,Bronze,1,6196.41,Clothing,Active
+271,Deborah,Jones,,20.0,Non-binary,Philadelphia,PA,19101,2024-04-24,+1-764-940-7280,Bronze,14,451.82,Beauty,Active
+272,Ashley,Jones,ashley.jones@icloud.com,20.0,Non-binary,Boston,MA,02101,2022-05-23,+1-547-297-6954,Bronze,24,2336.19,Clothing,Active
+273,Donald,Davis,donald.davis@icloud.com,70.0,Non-binary,Denver,CO,80201,2023-09-01,+1-494-961-7303,Gold,3,4405.69,Electronics,Active
+274,betty,Martinez,betty.martinez@icloud.com,59.0,Prefer not to say,san antonio,TX,78201,2025-11-04,+1-302-685-1103,Silver,45,5302.36,Automotive,Active
+275,Susan,Flores,susanflores@hotmail.com,62.0,Female,Phoenix,AZ,85001,2025-11-11,+1-223-286-4472,Bronze,14,1160.39,Health,Active
+276,Sandra,Harris,sandra65@yahoo.com,28.0,Female,Austin,TX,78701,2026-04-21,+1-990-989-4833,Bronze,36,4011.27,Home & Garden,Active
+277,  Deborah  ,Brown, deborahbrown@yahoo.com ,18.0,Male, Seattle ,WA,98101,2023-12-23,+1-922-614-5750,Bronze,38,4073.3,Sports,Active
+278,Gary,Jackson,gary.jackson@hotmail.com,29.0,Non-binary,New York,NY,10001,2021-08-28,+1-976-806-5764,Gold,75,1648.67,Home & Garden,Active
+279,Ryan,Wright,ryan51@gmail.com,18.0,Male,Denver,CO,80201,2021-03-14,+1-571-798-9862,Silver,38,4528.96,Electronics,Active
+280,Mary,Garcia,marygarcia@yahoo.com,23.0,Female,Phoenix,AZ,85001,2026-05-19,+1-512-619-2951,Bronze,40,1694.72,Automotive,Active
+281,Thomas,Perez,thomas.perez@gmail.com,54.0,Non-binary,Atlanta,GA,00000,2025-02-07,+1-981-487-7655,Gold,83,560.08,Beauty,Active
+282,Timothy,Perez,timothy17@gmail.com,49.0,Prefer not to say,Detroit,MI,48201,2026-08-06,+1-774-224-8173,Gold,56,6081.46,Automotive,Active
+283,Matthew,Sanchez,msanchez@gmail.com,24.0,Non-binary,Houston,TX,77001,2022-09-24,+1-625-393-4544,Silver,63,4796.27,Books,Active
+284,Ashley,Taylor,ashley.taylor@icloud.com,58.0,Female,Boston,MA,02101,2023-05-25,+1-451-924-5811,Silver,78,6470.53,Health,Active
+285,Jessica,Thomas,jthomas@hotmail.com,47.0,Prefer not to say,Dallas,TX,75201,2022-10-29,+1-699-285-1242,Bronze,87,5019.87,Electronics,Active
+286,Amanda,Johnson,amanda.johnson@gmail.com,30.0,Non-binary,Detroit,MI,48201,2023-01-31,+1-358-299-9374,Platinum,82,964.24,Health,Active
+287,George,Moore,georgemoore@hotmail.com,45.0,Male,Boston,MA,02101,2021-06-27,+1-363-510-7946,Silver,93,268.86,Home & Garden,Active
+288,Donna,Williams,donna4@hotmail.com,31.0,Prefer not to say,San Antonio,TX,78201,2025-10-20,+1-920-326-3121,Bronze,80,632.4,Books,Active
+289,Thomas,Allen,tallen@hotmail.com,29.0,Female,Jacksonville,FL,32201,2021-11-04,+1-339-422-8335,Silver,11,1524.24,Sports,Active
+290,Sarah,Walker,sarah.walker@gmail.com,68.0,Male,Houston,TX,77001,2023-04-10,+1-390-309-1107,Platinum,73,253.7,Home & Garden,Inactive
+291,melissa,Williams,melissa.williams@yahoo.com,64.0,Non-binary,san diego,CA,92101,2021-06-18,+1-815-371-9120,Platinum,51,4852.87,Books,Active
+292,Edward,Rodriguez,edward18@icloud.com,59.0,Male,Austin,,78701,2024-07-24,+1-214-349-5195,Gold,26,4618.0,Sports,Active
+293,John,Torres,johntorres@icloud.com,28.0,Non-binary,New York,NY,10001,2025-06-09,+1-450-939-2162,Silver,13,1412.48,Beauty,Active
+294,Jeffrey,Davis,jeffrey.davis@hotmail.com,60.0,Male,Denver,CO,80201,2022-11-21,+1-863-654-4323,Bronze,71,7358.48,Clothing,Suspended
+295,Michael,Jones,michael63@icloud.com,39.0,Male,Houston,TX,77001,2021-01-19,+1-907-661-5126,Platinum,4,2994.01,Electronics,Active
+296,Cynthia,Sanchez,cynthia.sanchez@outlook.com,55.0,Non-binary,Miami,FL,33101,2024-07-18,+1-774-236-4075,Gold,8,6223.44,Health,Active
+297,Jennifer,Thompson,jennifer64@yahoo.com,37.0,Prefer not to say,Chicago,IL,60601,2024-09-03,+1-604-783-5923,Silver,45,4311.26,Automotive,Inactive
+298,Mary,Allen,maryallen@icloud.com,67.0,Non-binary,Atlanta,GA,30301,2021-06-12,+1-582-474-6101,Bronze,46,1807.03,Home & Garden,Active
+299,William,Wilson,williamwilson@outlook.com,44.0,Non-binary,San Jose,CA,95101,2021-01-15,+1-257-340-1830,Platinum,7,6946.83,Health,Active
+300,Daniel@#,O'Davis,danieldavis@icloud.com,41.0,Non-binary,Detroit,MI,48201,2021-04-28,+1-452-766-3988,Bronze,2,1887.5,Health,Active
+301,Steven,Nguyen,stevennguyen@icloud.com,46.0,Male,Denver,CO,80201,2022-01-21,+1-634-907-1948,Bronze,33,2273.92,Sports,Active
+302,Steven,Thompson,steven57@outlook.com,74.0,Non-binary,Jacksonville,FL,32201,2024-06-27,+1-531-544-4857,Gold,53,3833.41,Books,Active
+303,Daniel,Rodriguez,daniel.rodriguez@outlook.com,0.0,Male,Jacksonville,FL,32201,2021-05-18,+1-900-826-5144,Bronze,97,6511.56,Health,Suspended
+304,Donna,King,donnaking@yahoo.com,32.0,Female,Austin,TX,78701,2021-06-18,+1-269-707-3488,Bronze,74,117.04,Automotive,Active
+305,Ronald,Martin,ronald3@gmail.com,64.0,Male,Atlanta,GA,30301,2022-06-02,+1-415-409-1216,Platinum,53,4371.29,Electronics,Active
+306,Donna,Clark,N/A,25.0,Male,San Jose,CA,95101,2024-06-28,+1-828-944-6964,Bronze,22,1009.29,Automotive,Inactive
+307,Melissa,Taylor,melissataylor@hotmail.com,73.0,Male,Phoenix,AZ,85001,2021-07-08,+1-294-364-1717,Gold,1,1636.78,Electronics,Active
+308,Susan,White,susan87@yahoo.com,43.0,Non-binary,Seattle,WA,98101,2024-01-08,+1-528-602-4655,Bronze,96,971.42,Clothing,Active
+309,Michelle,Young,myoung@gmail.com,32.0,Male,Jacksonville,FL,32201,2024-01-09,+1-870-640-7074,,74,589.8,Clothing,Active
+310,Sarah,Young,syoung@outlook.com,27.0,Male,Miami,FL,33101,2021-04-16,+1-757-267-2715,Bronze,93,2299.66,Electronics,Active
+311,Barbara,Rodriguez,barbara.rodriguez@outlook.com,50.0,Prefer not to say,Chicago,IL,60601,2024-10-29,+1-515-704-7451,Silver,17,2019.24,Clothing,Active
+312,Sarah,Smith,sarahsmith@icloud.com,20.0,Male,Houston,TX,77001,2023-03-17,+1-583-525-8212,,63,3890.71,Health,Active
+313,Thomas,Wright,thomas.wright@gmail.com,23.0,Female,Atlanta,GA,30301,2024-12-24,+1-340-643-3279,Platinum,57,398.92,Automotive,Active
+314,William,Gonzalez,william75@icloud.com,30.0,Prefer not to say,Boston,MA,02101,2024-07-05,+1-304-397-9849,Bronze,25,4384.81,Clothing,Active
+315,Sharon,Thomas,sharonthomas@yahoo.com,38.0,Non-binary,Seattle,WA,98101,2021-08-22,+1-412-989-2686,Bronze,46,3188.51,Clothing,Active
+316,Steven,Perez,steven63@outlook.com,49.0,Female,Miami,FL,33101,2024-09-14,+1-633-297-5180,Platinum,15,3686.29,Beauty,Active
+317,john,Young,jyoung@outlook.com,35.0,Prefer not to say,HOUSTON,TX,77001,2025-12-07,+1-891-363-5071,Bronze,82,3084.75,Clothing,Inactive
+318,Carol,Torres,carol80@yahoo.com,75.0,Non-binary,Seattle,WA,98101,2025-04-11,+1-261-622-5017,Silver,65,950.64,Electronics,Active
+319,Steven,Allen,steven37@gmail.com,54.0,Prefer not to say,San Diego,CA,92101,2022-06-06,+1-219-572-7879,Gold,65,5328.03,Home & Garden,Suspended
+320,Brian,Jones,brianjones@icloud.com,69.0,Prefer not to say,Boston,MA,02101,2024-03-21,123456,Silver,99,259.44,Health,Active
+321,Ashley,Clark,aclark@icloud.com,49.0,Male,New York,NY,10001,2022-04-23,+1-948-472-9918,Bronze,86,5641.63,Health,Active
+322,Kathleen,Sanchez,kathleen6@outlook.com,63.0,Female,Philadelphia,PA,19101,2021-10-05,+1-518-916-2932,Bronze,97,5141.49,Books,Active
+323,Richard,Allen,richardallen@outlook.com,35.0,Male,Denver,CO,80201,2025-06-16,+1-292-942-5992,Bronze,77,4538.24,Sports,Active
+324,Kimberly,Hernandez,kimberlyhernandez@hotmail.com,49.0,Prefer not to say,Austin,TX,78701,2021-01-17,+1-775-812-2028,Gold,42,5243.13,Beauty,Active
+325,Ronald,Miller,ronald.miller@hotmail.com,39.0,Prefer not to say,Denver,CO,80201,2021-12-29,+1-318-984-3382,Gold,21,4920.15,Home & Garden,Active
+326,Mary,Nguyen,mary73@gmail.com,71.0,Male,Austin,TX,78701,2022-01-03,+1-336-784-3197,Bronze,3,1672.03,Electronics,Active
+327,Ryan,Martinez,rmartinez@hotmail.com,49.0,Male,Chicago,IL,60601,2023-10-03,+1-328-998-7541,Silver,18,1585.26,Health,Active
+328,Rebecca,Martin,rebeccamartin@yahoo.com,70.0,Prefer not to say,Los Angeles,CA,90001,2024-01-29,+1-223-964-8345,Bronze,91,5554.86,Health,Active
+329,Carol,Thompson,cthompson@icloud.com,70.0,Non-binary,Miami,FL,33101,2025-05-29,+1-274-389-7140,Platinum,7,3230.01,Clothing,Active
+330,Barbara,Nguyen,barbara.nguyen@outlook.com,62.0,Female,Houston,TX,77001,2021-10-28,+1-324-579-1027,Gold,47,2147.67,Home & Garden,Suspended
+331,Donald,Thompson,donald30@icloud.com,56.0,Non-binary,Austin,TX,78701,2021-08-16,+1-644-435-6708,Bronze,99,2897.02,Automotive,Active
+332,Ronald,Young,ronald97@yahoo.com,28.0,Male,Seattle,WA,98101,2024-11-19,+1-739-292-3146,Bronze,95,3706.04,Electronics,Active
+333,JESSICA,Taylor,jtaylor@icloud.com,46.0,Prefer not to say,boston,MA,02101,2024-12-19,+1-659-524-7912,Platinum,95,831.62,Home & Garden,Active
+334,Carol,Sanchez,carol31@outlook.com,37.0,Prefer not to say,Miami,FL,33101,2026-09-09,+1-723-515-9238,Bronze,74,3498.58,Books,Active
+335,Daniel,Williams,daniel93@icloud.com,75.0,Non-binary,Atlanta,GA,30301,2022-08-07,+1-249-638-8344,Bronze,32,2013.05,Health,Active
+336,Jessica,Perez,jessicaperez@icloud.com,61.0,Female,Atlanta,GA,30301,2021-09-18,+1-351-471-2301,Bronze,38,3797.03,Automotive,Active
+337,Sharon,Taylor,staylor@outlook.com,27.0,Female,Austin,TX,78701,2024-08-27,+1-662-698-9669,Bronze,64,3096.75,Books,Active
+338,Anthony,Lopez,anthonylopez@icloud.com,30.0,Female,Phoenix,AZ,85001,2024-02-20,+1-639-509-4654,Platinum,54,3119.57,Health,Active
+339,Sharon@#,O'Williams,sharon31@yahoo.com,67.0,Female,Jacksonville,FL,32201,2022-12-28,+1-959-407-8131,Gold,34,5719.8,Electronics,Active
+340,Rebecca,Ramirez,rebecca.ramirez@gmail.com,26.0,Female,Dallas,TX,75201,2025-05-13,+1-304-950-5710,Bronze,29,2227.04,Health,Active
+341,Matthew,Scott,matthewscott@outlook.com,30.0,Male,San Jose,CA,95101,2024-02-10,+1-280-310-8557,Bronze,98,2327.2,Automotive,Active
+342,PATRICIA,Gonzalez,patricia10@hotmail.com,46.0,Prefer not to say,AUSTIN,TX,78701,2024-04-25,+1-771-242-4267,Gold,47,4114.45,Books,Active
+343,Ryan,White,ryanwhite@yahoo.com,31.0,Non-binary,Dallas,TX,75201,2022-06-13,+1-994-209-3591,Bronze,16,1722.8,Electronics,Active
+344,Donald,Johnson,djohnson@outlook.com,41.0,Female,Jacksonville,FL,32201,2024-11-28,+1-468-360-5723,Platinum,47,5538.1,Books,Active
+345,Matthew,Thomas,mthomas@outlook.com,46.0,Prefer not to say,Los Angeles,CA,90001,2024-06-22,+1-267-566-8902,Platinum,77,5895.1,Automotive,Active
+346,Betty,Robinson,betty.robinson@hotmail.com,31.0,Non-binary,San Jose,CA,95101,2024-12-15,+1-211-251-2347,Silver,48,248.67,Beauty,Active
+347,Edward,Young,edward84@yahoo.com,74.0,Non-binary,Atlanta,GA,30301,2021-12-25,+1-866-327-4774,Silver,48,3022.98,Home & Garden,Active
+348,Joseph,Harris,joseph.harris@outlook.com,68.0,Prefer not to say,New York,NY,10001,2023-06-07,+1-459-433-5640,Bronze,66,710.53,Clothing,Active
+349,Susan,Ramirez,susanramirez@outlook.com,70.0,Prefer not to say,Detroit,MI,48201,2022-03-05,+1-551-229-3152,Silver,17,2721.15,Home & Garden,Suspended
+350,Steven,Lee,steven.lee@hotmail.com,64.0,Male,New York,NY,10001,2024-07-21,+1-378-484-9516,Gold,47,5404.42,Automotive,Active
+351,  Deborah  ,Perez, dperez@gmail.com ,57.0,Non-binary, San Jose ,CA,95101,2025-04-24,+1-740-676-1289,Platinum,99,2453.26,Health,Active
+352,Steven,White,swhite@hotmail.com,34.0,Non-binary,San Antonio,TX,78201,2021-02-15,+1-526-618-8110,Bronze,35,3298.9,Automotive,Active
+353,Joseph,Allen,,27.0,Prefer not to say,Dallas,TX,75201,2024-07-09,+1-775-384-6070,Bronze,96,2199.49,Home & Garden,Active
+354,Steven@#,O'Lee,slee@hotmail.com,42.0,Male,Boston,MA,02101,2025-06-30,+1-739-430-3092,Bronze,52,4731.53,Home & Garden,Active
+355,Deborah,Davis,deborahdavis@outlook.com,63.0,Non-binary,Los Angeles,,90001,2025-05-15,+1-419-490-1378,Silver,51,4427.05,Health,Active
+356,Emily,Jackson,ejackson@yahoo.com,30.0,Non-binary,Atlanta,GA,30301,2024-07-27,+1-653-358-4983,Bronze,9,3106.01,Home & Garden,Active
+357,David,Harris,david.harris@yahoo.com,58.0,Female,Phoenix,AZ,85001,2020-12-24,+1-546-441-2472,Bronze,46,2269.11,Books,Active
+358,Linda,Brown,linda.brown@icloud.com,33.0,Non-binary,Phoenix,AZ,85001,2022-10-13,+1-283-881-2782,Bronze,34,308.9,Electronics,Active
+359,Jeffrey,Jackson,jeffrey38@hotmail.com,71.0,Male,Atlanta,GA,30301,2024-08-04,+1-946-730-2673,Silver,71,995.71,Sports,Active
+360,Sharon,Brown,sharon.brown@gmail.com,68.0,Prefer not to say,San Antonio,TX,78201,2025-12-06,+1-522-757-2470,Bronze,7,5086.01,Electronics,Active
+361,Barbara,Rodriguez,barbara.rodriguez@outlook.com,26.0,Non-binary,San Jose,CA,95101,2021-11-28,+1-235-233-8092,Bronze,66,3857.6,Sports,Active
+362,Timothy,Robinson,timothy91@hotmail.com,39.0,Non-binary,New York,NY,10001,2025-08-04,+1-868-487-8221,Platinum,88,3537.82,Home & Garden,Active
+363,James,Thomas,james89@yahoo.com,34.0,Prefer not to say,Atlanta,GA,30301,2023-08-16,+1-627-325-9272,Silver,1,1481.91,Health,Active
+364,Patricia,Jones,pjones@icloud.com,49.0,Prefer not to say,Miami,FL,33101,2024-05-15,+1-719-663-9196,Gold,10,1812.24,Health,Inactive
+365,Nancy,Martinez,nancy30@yahoo.com,21.0,Non-binary,Los Angeles,CA,90001,2025-03-11,+1-457-938-9083,Gold,32,423.73,Books,Active
+366,Richard,Rodriguez,richard.rodriguez@outlook.com,35.0,Male,San Jose,CA,95101,2025-04-05,+1-900-300-3699,Silver,47,3025.52,Health,Active
+367,Emily,Sanchez,emily.sanchez@yahoo.com,41.0,Prefer not to say,San Jose,CA,95101,2022-05-26,+1-834-668-8409,Silver,10,6401.93,Clothing,Active
+368,Melissa,Scott,melissa.scott@yahoo.com,73.0,Prefer not to say,Los Angeles,CA,90001,2023-03-20,+1-293-845-7214,Gold,12,3083.95,Electronics,Active
+369,William,Lewis,wlewis@gmail.com,49.0,Male,Seattle,WA,98101,2022-07-11,+1-731-320-1341,Silver,84,576.13,Sports,Active
+370,Anthony,Lopez,anthony32@gmail.com,33.0,Non-binary,New York,NY,10001,2024-11-25,+1-559-696-1893,Gold,48,2820.58,Sports,Inactive
+371,Sandra,King,sandra.king@yahoo.com,59.0,Non-binary,San Antonio,TX,78201,2021-10-11,+1-687-451-7592,Gold,56,3192.64,Clothing,Inactive
+372,Gary,Rodriguez,gary.rodriguez@gmail.com,29.0,Prefer not to say,Jacksonville,FL,32201,2025-07-29,+1-876-344-7253,Silver,53,3442.19,Electronics,Active
+373,Cynthia,Thomas,cynthiathomas@gmail.com,35.0,Female,Miami,FL,33101,2021-09-25,+1-597-764-4509,Bronze,55,1991.37,Electronics,Active
+374,Sandra,Young,syoung@outlook.com,18.0,Female,Boston,MA,02101,2025-09-18,+1-604-665-5919,Silver,99,3896.75,Sports,Active
+375,Kathleen,Nguyen,kathleennguyen@yahoo.com,71.0,Female,Los Angeles,CA,90001,2023-06-02,+1-869-220-5390,Bronze,4,141.48,Electronics,Active
+376,Christopher,Taylor,christophertaylor@icloud.com,43.0,Non-binary,Austin,TX,78701,2023-03-16,+1-931-726-9855,Bronze,14,4298.33,Sports,Active
+377,Melissa,Taylor,,50.0,Female,Jacksonville,FL,32201,2021-10-20,+1-921-703-6533,Silver,43,6095.97,Books,Active
+378,Timothy,Flores,timothyflores@yahoo.com,24.0,Prefer not to say,Miami,FL,33101,2022-12-26,+1-302-730-4564,Bronze,7,4151.7,Automotive,Active
+379,Amanda,Nguyen,amandanguyen@icloud.com,41.0,Non-binary,Denver,CO,80201,2022-03-10,+1-514-578-9203,Platinum,90,3269.63,Home & Garden,Active
+380,Kenneth@#,O'Sanchez,kenneth99@yahoo.com,47.0,Prefer not to say,San Diego,CA,92101,2024-06-26,+1-421-754-7152,Silver,70,1254.37,Health,Active
+381,Mark,Smith,msmith@gmail.com,54.0,Female,Detroit,MI,48201,2024-02-04,+1-499-234-7333,Bronze,27,4090.04,Clothing,Active
+382,Paul,Rodriguez,paulrodriguez@icloud.com,50.0,Prefer not to say,Chicago,IL,60601,2022-08-10,+1-314-992-7574,Silver,45,544.24,Beauty,Active
+383,Rebecca,King,rebecca1@outlook.com,52.0,Non-binary,Denver,CO,80201,2025-06-28,+1-233-732-9253,diamond,96,4030.24,Health,Active
+384,Steven,Gonzalez,stevengonzalez@yahoo.com,58.0,Non-binary,Detroit,MI,48201,2024-08-24,+1-564-861-1826,,29,5244.3,Health,Active
+385,John,Ramirez,john88@yahoo.com,43.0,Prefer not to say,San Diego,CA,92101,2022-12-07,+1-636-711-3795,Bronze,54,3288.31,Sports,Suspended
+386,Jessica,Lewis,jessicalewis@yahoo.com,72.0,Non-binary,Denver,CO,80201,2021-07-17,+1-234-479-9762,Bronze,13,642.62,Beauty,Active
+387,Kevin,Jackson,kjackson@icloud.com,-1.0,Prefer not to say,San Diego,CA,92101,2022-11-25,+1-444-976-9559,Bronze,90,1065.23,Clothing,Active
+388,Elizabeth,Martin,elizabeth24@gmail.com,70.0,Male,Philadelphia,PA,19101,2023-08-27,+1-437-223-7949,Silver,48,3521.67,Clothing,Inactive
+389,Mark,Lopez,mark73@gmail.com,50.0,Prefer not to say,Miami,FL,33101,2025-01-09,+1-419-216-6040,Platinum,99,6709.59,Books,Active
+390,George,Allen,george90@hotmail.com,24.0,Female,Seattle,WA,98101,2022-11-25,+1-981-745-5745,Bronze,37,3705.08,Beauty,Active
+391,Steven,Ramirez,stevenramirez@yahoo.com,28.0,Female,Boston,MA,02101,2024-04-19,+1-237-510-4424,Silver,92,3107.31,Home & Garden,Inactive
+392,Laura,Smith,laura41@hotmail.com,54.0,Female,San Diego,CA,92101,2021-10-06,+1-498-470-7940,Bronze,86,4146.17,Beauty,Active
+393,  Michelle  ,Robinson, mrobinson@outlook.com ,21.0,Prefer not to say, Chicago ,IL,60601,2022-12-10,+1-260-965-8918,Bronze,58,4981.93,Electronics,Active
+394,Donna,Martinez,donnamartinez@gmail.com,56.0,Female,San Antonio,TX,78201,2022-07-01,+1-810-585-4708,Bronze,3,1594.3,Health,Active
+395,Gary,Jackson,gjackson@gmail.com,30.0,Prefer not to say,New York,NY,10001,2023-08-14,+1-441-767-2236,Silver,17,490.81,Health,Active
+396,Kathleen,Walker,kathleen54@gmail.com,35.0,Non-binary,Houston,TX,77001,2021-03-06,+1-231-808-4214,Gold,42,2817.26,Clothing,Active
+397,Charles,Robinson,charlesrobinson@yahoo.com,74.0,Male,Dallas,TX,75201,2021-05-29,+1-356-745-9535,Silver,87,837.5,Sports,Active
+398,Jacob,Lewis,jlewis@icloud.com,26.0,Female,Houston,TX,77001,2021-11-06,+1-289-301-6440,Bronze,23,4513.04,Electronics,Active
+399,Edward,Thompson,ethompson@icloud.com,50.0,Non-binary,Austin,TX,78701,2022-09-13,+1-480-596-6682,Gold,22,7093.92,Sports,Active
+400,Betty,Anderson,betty38@yahoo.com,18.0,Female,New York,NY,10001,2025-01-28,+1-815-980-8922,Platinum,1,2374.56,Books,Active
+401,Amanda,Thomas,athomas@hotmail.com,71.0,Non-binary,Seattle,WA,98101,2024-02-11,+1-739-418-8852,,81,4459.59,Clothing,Active
+402,Melissa,Harris,melissa.harris@icloud.com,51.0,Female,Phoenix,AZ,85001,2022-08-31,+1-672-748-8578,Platinum,85,3531.43,Beauty,Inactive
+403,Edward,Sanchez,edward.sanchez@hotmail.com,71.0,Male,San Jose,CA,95101,2023-03-10,+1-766-631-4158,Bronze,88,5125.05,Automotive,Active
+404,Jacob,Hernandez,jacob.hernandez@gmail.com,30.0,Male,San Antonio,TX,78201,2025-12-09,+1-891-869-5817,Bronze,83,3151.32,Sports,Active
+405,Andrew,Thomas,andrewthomas@yahoo.com,43.0,Prefer not to say,Philadelphia,,19101,2022-04-22,+1-871-762-7562,Bronze,16,1131.97,Sports,Active
+406,Joseph,Harris,jharris@gmail.com,75.0,Female,San Antonio,TX,00000,2022-08-04,+1-374-855-5246,Silver,69,4369.19,Clothing,Active
+407,Matthew,White,matthew40@hotmail.com,63.0,Non-binary,Seattle,WA,98101,2025-03-17,(000) 000-0000,Silver,19,622.05,Beauty,Active
+408,Sandra,Miller,sandra.miller@gmail.com,41.0,Prefer not to say,San Antonio,TX,78201,2023-12-08,123456,Silver,28,5593.11,Beauty,Inactive
+409,Jacob,Lewis,jlewis@outlook.com,71.0,Prefer not to say,Philadelphia,PA,19101,2022-09-22,+1-552-254-8698,Gold,79,2519.14,Sports,Active
+410,Mary,Lopez,mary67@icloud.com,40.0,Male,Denver,CO,80201,2021-03-17,+1-965-667-7103,Bronze,64,2074.94,Electronics,Active
+411,Linda,Brown,linda.brown@outlook.com,62.0,Prefer not to say,San Diego,CA,92101,2022-08-05,+1-800-538-7515,Platinum,79,3879.72,Home & Garden,Active
+412,Richard,Martinez,richardmartinez@icloud.com,38.0,Female,Los Angeles,CA,90001,2022-03-29,+1-797-220-1555,Silver,87,430.93,Sports,Active
+413,William,Davis,wdavis@hotmail.com,61.0,Non-binary,Philadelphia,PA,19101,2024-07-06,(000) 000-0000,Gold,67,4513.14,Books,Active
+414,Lisa,Thomas,lisathomas@hotmail.com,70.0,Female,Atlanta,GA,30301,2021-01-16,+1-988-746-4323,Silver,11,3951.93,Automotive,Active
+415,Anthony,Lewis,anthony.lewis@icloud.com,71.0,Male,Houston,TX,77001,2021-12-02,+1-986-849-9991,Bronze,10,2782.88,Electronics,Active
+416,Linda,Anderson,landerson@icloud.com,66.0,Prefer not to say,Jacksonville,FL,32201,2025-11-18,+1-596-495-9337,Gold,57,4576.63,Electronics,Active
+417,Deborah,Lopez,deborah.lopez@hotmail.com,67.0,Non-binary,San Antonio,TX,78201,2022-01-07,+1-321-533-4589,Bronze,2,4145.66,Automotive,Active
+418,Ashley,Nguyen,anguyen@yahoo.com,41.0,Female,Phoenix,AZ,85001,2024-03-29,+1-763-538-3257,Bronze,82,7120.31,Beauty,Active
+419,Andrew,King,andrewking@icloud.com,51.0,Male,Denver,XX,80201,2024-09-10,+1-405-830-1318,Bronze,32,5777.81,Clothing,Active
+420,Carol,Miller,carol.miller@outlook.com,,Female,Jacksonville,FL,32201,2024-06-01,+1-679-211-9166,Gold,49,2818.74,Clothing,Suspended
+421,Daniel,Williams,N/A,52.0,Male,San Antonio,TX,78201,2025-04-19,+1-757-893-6338,Platinum,73,308.61,Clothing,Active
+422,Rebecca,Anderson,rebeccaanderson@hotmail.com,53.0,Non-binary,Atlanta,GA,30301,2023-06-25,+1-622-742-1565,Bronze,51,2224.9,Electronics,Active
+423,Donald,Wright,donaldwright@gmail.com,73.0,Male,New York,NY,10001,2026-09-19,+1-212-717-3324,Bronze,38,3588.02,Beauty,Inactive
+424,Edward,Ramirez,edward5@hotmail.com,49.0,Prefer not to say,Boston,MA,02101,2023-11-24,+1-688-230-7150,Gold,44,1305.95,Electronics,Inactive
+425,Dorothy,Ramirez,dorothy.ramirez@gmail.com,41.0,Female,Detroit,MI,48201,2025-04-04,+1-888-590-3775,Bronze,98,6761.38,Beauty,Active
+426,Donna,Davis,donna.davis@gmail.com,40.0,Prefer not to say,Denver,CO,80201,2020-12-11,+1-550-862-3743,Bronze,75,217.01,Books,Active
+427,Andrew,Walker,andrew72@yahoo.com,35.0,Prefer not to say,Jacksonville,FL,32201,2024-07-17,+1-278-209-2055,Bronze,50,3145.83,Beauty,Active
+428,James,Thomas,jamesthomas@gmail.com,50.0,Non-binary,Dallas,TX,75201,2022-06-30,+1-609-461-7373,Silver,91,2636.45,Home & Garden,Active
+429,James,Young,james58@outlook.com,49.0,Prefer not to say,Jacksonville,FL,32201,2023-09-22,+1-318-370-7606,Bronze,60,7154.02,Home & Garden,Active
+430,Linda,Lee,linda.lee@yahoo.com,19.0,Non-binary,Phoenix,AZ,85001,2022-04-27,+1-230-499-4840,Bronze,26,2374.94,Health,Active
+431,Barbara,Brown,,67.0,Prefer not to say,Dallas,TX,75201,2021-08-18,+1-281-213-1257,Bronze,19,3469.58,Automotive,Inactive
+432,Daniel,Sanchez,daniel38@yahoo.com,65.0,Female,Houston,TX,77001,2021-10-19,+1-630-706-1741,Silver,48,2072.77,Home & Garden,Active
+433,Joseph,Hernandez,josephhernandez@outlook.com,40.0,Prefer not to say,Austin,TX,78701,2022-11-21,+1-328-713-4013,Silver,81,1654.15,Clothing,Active
+434,  Deborah  ,Williams, deborahwilliams@yahoo.com ,20.0,Non-binary, New York ,NY,10001,2023-06-17,+1-294-523-5406,Platinum,44,4359.25,Home & Garden,Active
+435,Christopher,Young,christopheryoung@outlook.com,26.0,Male,Dallas,TX,75201,2024-12-06,+1-379-407-9591,Bronze,84,4121.4,Books,Active
+436,Edward,Thomas,edwardthomas@icloud.com,40.0,Non-binary,New York,NY,10001,2025-06-11,+1-771-633-5184,Bronze,69,3366.14,Clothing,Active
+437,Ryan,Garcia,ryan.garcia@icloud.com,56.0,Female,Austin,TX,78701,2021-07-04,+1-667-772-7670,Bronze,12,6237.95,Health,Active
+438,Mary,Sanchez,marysanchez@gmail.com,71.0,Female,Los Angeles,CA,90001,2022-04-28,+1-204-389-9020,Gold,80,2163.13,Electronics,Inactive
+439,sharon,Wilson,swilson@gmail.com,42.0,Female,los angeles,CA,90001,2025-10-14,+1-478-614-3882,Gold,6,4896.33,Electronics,Active
+440,Linda,Jackson,lindajackson@icloud.com,25.0,Non-binary,Denver,CO,80201,2022-08-14,+1-896-802-4614,Platinum,86,2074.61,Books,Active
+441,Michael,Martin,michael.martin@gmail.com,43.0,Non-binary,Boston,MA,02101,2024-10-31,+1-523-795-3741,Bronze,76,1764.26,Electronics,Active
+442,  Sandra  ,Harris, sandra24@hotmail.com ,42.0,Non-binary, Atlanta ,GA,30301,2023-11-08,+1-335-903-4258,Bronze,25,1393.12,Health,Active
+443,Margaret,Flores,margaretflores@yahoo.com,33.0,Prefer not to say,Denver,CO,80201,2024-01-07,+1-359-527-9715,Silver,100,2994.34,Home & Garden,Active
+444,Anthony,White,anthony.white@hotmail.com,28.0,Male,Chicago,IL,60601,2025-12-02,+1-569-960-6633,Platinum,0,2819.51,Books,Inactive
+445,Michelle,Lopez,michellelopez@gmail.com,28.0,Non-binary,Dallas,TX,75201,2024-08-15,+1-713-932-2486,Bronze,59,1448.19,Health,Active
+446,Elizabeth,Clark,elizabeth.clark@yahoo.com,62.0,Prefer not to say,New York,NY,10001,2025-09-18,+1-815-472-8746,Silver,79,1138.28,Health,Active
+447,Joseph,Martinez,josephmartinez@gmail.com,25.0,Female,Phoenix,AZ,85001,2025-03-26,+1-570-413-4255,Bronze,95,4682.56,Clothing,Active
+448,  Kenneth  ,Jackson, kennethjackson@outlook.com ,35.0,Male, Boston ,MA,02101,2022-07-25,+1-338-286-4146,Bronze,94,2183.0,Beauty,Active
+449,Joseph,King,jking@yahoo.com,45.0,Male,Denver,CO,80201,2023-08-13,+1-445-673-6713,Bronze,47,179.27,Health,Inactive
+450,Patricia,Martinez,patricia3@outlook.com,50.0,Prefer not to say,Austin,TX,78701,2021-06-24,+1-342-615-2385,Bronze,35,1321.05,Electronics,Inactive
+451,Donald,Martin,donaldmartin@gmail.com,60.0,Female,Phoenix,AZ,85001,2021-03-31,+1-729-872-6712,Bronze,88,580.58,Electronics,Active
+452,Susan,Sanchez,susan.sanchez@gmail.com,18.0,Female,Phoenix,AZ,85001,2024-05-16,+1-965-251-3398,Silver,18,3625.53,Electronics,Inactive
+453,Jennifer,Lewis,jenniferlewis@outlook.com,30.0,Male,New York,NY,10001,2022-04-08,+1-710-691-6710,Bronze,46,1244.14,Electronics,Active
+454,Gary,Lewis,gary.lewis@hotmail.com,46.0,Prefer not to say,Dallas,TX,75201,2023-06-17,+1-974-846-5082,Bronze,30,4070.06,Electronics,Active
+455,Kathleen,Taylor,kathleen.taylor@yahoo.com,49.0,Male,Detroit,MI,48201,2023-02-16,+1-553-483-2311,Silver,74,7100.91,Books,Active
+456,Margaret,Lewis,margaret11@yahoo.com,25.0,Non-binary,San Antonio,TX,78201,2025-05-13,+1-783-901-4278,Gold,35,3198.06,Automotive,Active
+457,Daniel,Jackson,daniel.jackson@gmail.com,51.0,Male,Austin,TX,78701,2023-02-07,+1-777-781-1323,Silver,39,5648.61,Clothing,Active
+458,Jason,Lewis,jlewis@icloud.com,59.0,Non-binary,Philadelphia,PA,19101,2024-10-21,+1-811-590-1762,Bronze,12,2666.71,Books,Active
+459,Joshua,Lewis,joshua55@gmail.com,45.0,Male,Austin,TX,78701,2024-09-04,+1-891-270-7542,Platinum,3,957.93,Home & Garden,Active
+460,Jessica,Wright,jwright@yahoo.com,22.0,Prefer not to say,Atlanta,GA,30301,2021-09-15,+1-299-671-7597,Silver,97,1308.9,Clothing,Active
+461,Michael,Lee,michael.lee@gmail.com,38.0,Female,Chicago,IL,60601,2024-07-04,+1-708-727-3015,Silver,40,3710.78,Clothing,Active
+462,Jeffrey,Smith,jeffrey8@yahoo.com,61.0,Male,Detroit,MI,48201,2021-07-03,+1-818-924-3494,Bronze,9,1902.09,Home & Garden,Inactive
+463,Jacob,Moore,jacob45@gmail.com,35.0,Female,New York,NY,10001,2022-04-01,+1-568-820-1329,Silver,17,682.24,Sports,Active
+464,Christopher,King,christopherking@icloud.com,58.0,Male,Chicago,IL,60601,2025-08-18,+1-789-597-6864,Gold,86,379.95,Electronics,Inactive
+465,Donna,Ramirez,dramirez@yahoo.com,73.0,Non-binary,San Antonio,TX,78201,2024-04-06,+1-695-658-9330,Silver,48,3693.99,Health,Active
+466,William,Thompson,william5@icloud.com,67.0,Non-binary,Jacksonville,FL,32201,2021-11-08,+1-587-500-5573,Bronze,68,4755.87,Home & Garden,Active
+467,Donna@#,O'Wright,donna.wright@hotmail.com,25.0,Prefer not to say,Dallas,TX,75201,2023-11-21,+1-962-983-1406,Bronze,94,4602.03,Electronics,Active
+468,betty,Walker,betty.walker@gmail.com,31.0,Non-binary,jacksonville,FL,32201,2025-07-05,+1-233-467-7873,Bronze,35,2665.85,Sports,Active
+469,Carol,Ramirez,carol.ramirez@yahoo.com,69.0,Non-binary,Jacksonville,FL,32201,2021-08-12,+1-525-249-7122,Gold,4,3162.6,Books,Active
+470,  Timothy  ,Jones, timothy.jones@yahoo.com ,58.0,Female, Detroit ,MI,48201,2021-05-24,+1-634-528-3311,Bronze,7,4372.73,Books,Inactive
+471,Barbara,Robinson,barbararobinson@gmail.com,23.0,Non-binary,New York,NY,10001,2024-11-27,+1-378-365-5905,Silver,36,2522.91,Home & Garden,Inactive
+472,Jason,Moore,jason.moore@outlook.com,66.0,Non-binary,Atlanta,,30301,2025-08-07,+1-548-316-5222,Silver,99,932.65,Books,Active
+473,Patricia,Ramirez,patricia35@icloud.com,57.0,Prefer not to say,Los Angeles,CA,90001,2022-09-23,unknown,Bronze,94,6940.12,Sports,Active
+474,Laura,Martin,laura26@icloud.com,65.0,Non-binary,New York,NY,10001,2024-06-17,+1-969-750-1361,Gold,66,4111.08,Beauty,Active
+475,christopher,Ramirez,christopher.ramirez@hotmail.com,61.0,Male,miami,FL,33101,2025-07-10,+1-653-763-7041,Gold,86,2826.96,Home & Garden,Active
+476,Nancy,Davis,ndavis@hotmail.com,48.0,Prefer not to say,Los Angeles,CA,90001,2023-04-21,+1-760-995-6274,Bronze,1,4989.82,Sports,Active
+477,Robert,Lee,robertlee@hotmail.com,62.0,Prefer not to say,San Antonio,TX,78201,2024-04-21,+1-906-627-3416,Gold,79,4454.56,Books,Inactive
+478,Margaret,Jones,mjones@gmail.com,30.0,Non-binary,San Antonio,TX,78201,2023-07-20,+1-396-858-2731,Bronze,32,4738.24,Clothing,Active
+479,Deborah,Scott,dscott@gmail.com,23.0,Prefer not to say,Boston,MA,02101,2024-09-15,+1-551-727-2203,Gold,35,1815.5,Beauty,Active
+480,Nancy,Martinez,nancy24@icloud.com,43.0,Male,Boston,MA,02101,2023-09-25,+1-564-586-6905,Bronze,85,2914.48,Home & Garden,Active
+481,Mark,Rodriguez,markrodriguez@outlook.com,49.0,Male,Atlanta,GA,30301,2024-05-28,+1-200-314-6060,Bronze,7,224.69,Health,Active
+482,Jason,Robinson,jason.robinson@icloud.com,24.0,Prefer not to say,Houston,TX,77001,2025-04-08,+1-402-522-4301,Silver,10,265.67,Electronics,Active
+483,Amanda,Hernandez,amanda39@icloud.com,37.0,Male,Boston,MA,02101,2025-08-29,+1-322-673-9139,Platinum,37,670.25,Clothing,Active
+484,Lisa,Rodriguez,lisarodriguez@gmail.com,65.0,Non-binary,Phoenix,AZ,85001,2021-09-13,+1-812-253-3082,Gold,62,2677.35,Books,Inactive
+485,Ronald,Perez,ronald.perez@outlook.com,65.0,Female,New York,NY,10001,2024-02-01,+1-469-552-2674,Silver,70,1774.03,Clothing,Active
+486,Ashley,Davis,ashleydavis@gmail.com,33.0,Prefer not to say,San Antonio,TX,78201,2022-12-29,+1-510-421-5030,Bronze,57,254.91,Automotive,Active
+487,Donald,Williams,donald.williams@gmail.com,36.0,Non-binary,Jacksonville,FL,00000,2023-06-07,+1-572-214-1396,Gold,80,2704.7,Automotive,Active
+488,Anthony,Scott,anthonyscott@hotmail.com,71.0,Non-binary,Boston,MA,02101,2025-04-26,+1-801-434-5560,Gold,55,367.72,Home & Garden,Active
+489,Anthony,Williams,anthonywilliams@gmail.com,72.0,Prefer not to say,New York,NY,10001,2025-02-24,+1-584-333-5718,Bronze,2,1891.33,Automotive,Active
+490,Jennifer,Williams,jennifer47@outlook.com,23.0,Female,Austin,TX,78701,2023-10-04,+1-816-566-6295,Bronze,23,-1955.56,Clothing,Active
+491,John,Walker,john2@gmail.com,56.0,Female,Austin,TX,78701,2021-02-10,+1-322-587-3850,Silver,43,754.61,Books,Active
+492,Sandra,Rodriguez,sandra.rodriguez@yahoo.com,54.0,Non-binary,Miami,FL,33101,2026-08-02,+1-460-492-9448,Silver,78,3952.91,Sports,Active
+493,Sharon,Gonzalez,sharon.gonzalez@outlook.com,31.0,Prefer not to say,Phoenix,AZ,85001,2022-10-03,+1-279-628-6606,Silver,62,4092.49,Health,Active
+494,John,Smith,jsmith@gmail.com,56.0,Non-binary,Dallas,TX,75201,2024-10-18,+1-516-936-3546,Gold,97,5840.76,Clothing,Active
+495,Jessica,Garcia,jessica63@yahoo.com,61.0,Female,Jacksonville,FL,32201,2021-04-10,+1-759-312-6544,Unknown,5,2112.54,Books,Active
+496,Elizabeth,Walker,elizabeth.walker@icloud.com,44.0,Male,San Antonio,TX,,2023-01-25,+1-677-727-1504,Silver,26,6922.9,Home & Garden,Active
+497,Linda,Rodriguez,linda39@hotmail.com,51.0,Male,Miami,FL,33101,2022-08-20,+1-744-452-2338,Silver,55,7156.93,Health,Active
+498,Andrew,Rodriguez,andrew.rodriguez@hotmail.com,48.0,Non-binary,San Antonio,TX,78201,2021-12-23,+1-205-378-8005,Silver,68,6039.37,Electronics,Active
+499,Michael,Nguyen,michaelnguyen@yahoo.com,71.0,Non-binary,Jacksonville,FL,32201,2025-03-17,+1-793-629-4341,Bronze,4,4147.23,Beauty,Active
+500,Sarah,Martinez,smartinez@hotmail.com,66.0,Female,Houston,,77001,2025-03-24,+1-723-757-8168,Bronze,94,4011.11,Home & Garden,Active
+501,Kenneth,Walker,kwalker@gmail.com,24.0,Female,Philadelphia,PA,19101,2023-04-30,+1-990-765-2322,Silver,55,3181.04,Clothing,Inactive
+502,Steven,Perez,steven35@yahoo.com,39.0,Prefer not to say,Atlanta,GA,30301,2021-12-03,+1-362-554-1484,Gold,50,4011.04,Automotive,Active
+503,  Rebecca  ,Johnson, rebecca62@icloud.com ,34.0,Female, Phoenix ,AZ,85001,2022-02-27,+1-206-517-9573,Bronze,86,2237.14,Home & Garden,Active
+504,Elizabeth,Allen,eallen@gmail.com,18.0,Prefer not to say,Atlanta,GA,30301,2021-02-26,+1-484-975-7732,Gold,92,2799.85,Electronics,Active
+505,Stephanie,Martinez,stephanie55@hotmail.com,49.0,Non-binary,Los Angeles,CA,90001,2023-02-08,+1-990-271-5667,Silver,38,6962.95,Beauty,Active
+506,James,Martin,jamesmartin@outlook.com,24.0,Male,San Jose,CA,95101,2021-09-24,+1-388-710-5949,Silver,91,4791.1,Sports,Active
+507,Michael,Wilson,mwilson@icloud.com,64.0,Female,Phoenix,AZ,85001,2022-06-11,+1-719-804-6673,Bronze,88,3623.3,Health,Inactive
+508,Brian,Miller,brian.miller@yahoo.com,63.0,Male,Los Angeles,CA,90001,2021-07-04,+1-712-890-3223,Bronze,27,4369.84,Books,Active
+509,Nancy,Martin,nmartin@yahoo.com,46.0,Non-binary,Dallas,TX,75201,2021-06-19,+1-845-365-8006,Silver,64,3982.82,Beauty,Active
+510,Amanda,Garcia,amanda.garcia@gmail.com,48.0,Male,Miami,FL,33101,2023-01-18,+1-486-902-5055,Gold,11,4936.29,Clothing,Suspended
+511,Ryan,Wilson,rwilson@gmail.com,61.0,Prefer not to say,Seattle,WA,98101,2022-11-03,+1-491-802-2554,Platinum,79,4208.01,Sports,Active
+512,Ryan,Wilson,ryanwilson@gmail.com,54.0,Female,Chicago,IL,60601,2024-11-30,+1-740-650-5799,Bronze,83,1318.64,Beauty,Active
+513,Emily,Johnson,emilyjohnson@icloud.com,70.0,Prefer not to say,Phoenix,AZ,85001,2024-12-05,+1-409-811-9883,Platinum,43,392.38,Electronics,Active
+514,Sarah,Martinez,smartinez@gmail.com,70.0,Non-binary,Chicago,IL,60601,2024-11-14,+1-744-651-4201,Platinum,0,4867.31,Sports,Active
+515,Amanda,Torres,amanda67@yahoo.com,55.0,Female,Houston,TX,77001,2023-09-16,+1-663-785-6062,Bronze,77,6395.25,Books,Active
+516,Brian,Jackson,brian.jackson@hotmail.com,40.0,Prefer not to say,San Jose,CA,95101,2022-01-14,+1-901-260-5483,Bronze,76,1645.88,Health,Active
+517,Donald,Rodriguez,drodriguez@hotmail.com,35.0,Male,Los Angeles,CA,90001,2025-01-20,+1-958-960-1634,Silver,9,1755.96,Automotive,Suspended
+518,Robert,White,robert.white@icloud.com,64.0,Prefer not to say,Denver,,80201,2021-02-24,+1-512-726-5768,Bronze,5,1295.46,Home & Garden,Active
+519,Thomas,Brown,thomas.brown@icloud.com,35.0,Non-binary,San Diego,CA,92101,2021-04-07,+1-731-206-5547,Bronze,76,4067.02,Clothing,Active
+520,carol,Clark,carol50@outlook.com,23.0,Non-binary,MIAMI,FL,33101,2022-02-18,+1-469-919-1404,Gold,29,2363.9,Electronics,Active
+521,Melissa,Sanchez,melissasanchez@hotmail.com,59.0,Male,Denver,CO,80201,2022-06-25,+1-669-478-8395,BRONZE,25,3187.88,Clothing,Active
+522,Sharon,Lewis,sharon.lewis@icloud.com,57.0,Prefer not to say,Austin,TX,78701,2022-03-02,+1-869-948-6433,Gold,36,1875.88,Automotive,Active
+523,Michelle,Williams,mwilliams@yahoo.com,19.0,Female,Philadelphia,PA,19101,2023-08-08,+1-263-411-8420,Gold,86,1057.46,Clothing,Active
+524,Kimberly,Young,kimberly55@yahoo.com,59.0,Non-binary,Detroit,MI,48201,2024-11-20,+1-476-218-3695,Gold,27,1105.79,Home & Garden,Active
+525,James,Gonzalez,jamesgonzalez@yahoo.com,20.0,Non-binary,Philadelphia,PA,19101,2024-11-11,+1-952-525-7663,Gold,74,3541.31,Automotive,Active
+526,Jason@#,O'Anderson,jason.anderson@yahoo.com,62.0,Non-binary,Miami,FL,33101,2021-04-08,+1-286-359-2648,Bronze,30,4998.94,Electronics,Active
+527,Matthew,Wright,matthewwright@hotmail.com,,Female,Atlanta,GA,30301,2023-10-13,+1-579-862-4056,Silver,7,2316.6,Home & Garden,Inactive
+528,Ryan,Taylor,ryantaylor@outlook.com,37.0,Non-binary,Houston,TX,77001,2023-01-02,(000) 000-0000,Silver,0,4772.86,Books,Active
+529,Elizabeth,Hill,ehill@hotmail.com,58.0,Female,Philadelphia,PA,19101,2021-11-28,+1-302-642-6326,Bronze,60,615.14,Health,Active
+530,Donna,Martinez,donna38@gmail.com,45.0,Female,Seattle,WA,98101,2025-05-14,+1-861-545-9528,Silver,67,6623.99,Clothing,Active
+531,John,Walker,jwalker@hotmail.com,32.0,Prefer not to say,Austin,TX,78701,2021-05-10,+1-277-591-5072,Bronze,3,3415.0,Health,Active
+532,Deborah,Thompson,dthompson@icloud.com,,Non-binary,Atlanta,GA,30301,2025-06-28,+1-228-592-8754,Silver,95,3804.89,Books,Active
+533,Amanda,Flores,aflores@icloud.com,69.0,Female,Dallas,TX,75201,2023-07-20,+1-886-634-9812,Platinum,61,4627.07,Books,Active
+534,Steven,Williams,N/A,60.0,Non-binary,Denver,CO,80201,2021-01-05,+1-949-868-6259,Bronze,24,4857.12,Electronics,Active
+535,John@#,O'White,jwhite@outlook.com,58.0,Male,Houston,TX,77001,2022-03-09,+1-265-651-3151,Bronze,95,5082.23,Beauty,Active
+536,Brian,Thompson,brian81@gmail.com,48.0,Male,Seattle,WA,98101,2021-09-25,+1-300-430-3978,Bronze,11,4237.17,Home & Garden,Active
+537,Elizabeth@#,O'Flores,eflores@outlook.com,50.0,Prefer not to say,Philadelphia,PA,19101,2024-02-09,+1-624-233-6486,Bronze,79,3414.98,Automotive,Active
+538,Ronald,Rodriguez,ronaldrodriguez@outlook.com,22.0,Prefer not to say,Denver,CO,80201,2024-05-06,+1-204-927-1298,Gold,23,3784.81,Books,Active
+539,Cynthia,Nguyen,cynthia.nguyen@yahoo.com,52.0,Prefer not to say,Philadelphia,PA,19101,2025-03-15,+1-949-772-5836,Gold,100,3207.09,Health,Active
+540,Michael,Walker,michaelwalker@yahoo.com,47.0,Female,San Diego,CA,92101,2022-08-29,+1-477-898-3368,Silver,67,7419.97,Electronics,Active
+541,Dorothy,Anderson,danderson@icloud.com,71.0,Female,Jacksonville,FL,32201,2023-08-04,+1-251-299-2874,Bronze,13,2119.59,Clothing,Active
+542,Kimberly,Davis,kdavis@icloud.com,70.0,Prefer not to say,Phoenix,AZ,85001,2022-12-23,+1-248-791-1424,Gold,95,1912.9,Automotive,Active
+543,James,King,james.king@yahoo.com,46.0,Non-binary,Chicago,IL,60601,2023-04-26,+1-402-271-2980,Silver,8,3062.97,Automotive,Inactive
+544,Patricia,Young,patricia.young@gmail.com,25.0,Non-binary,Atlanta,GA,30301,2022-03-18,+1-867-927-7404,Bronze,31,2126.94,Electronics,Active
+545,Donna,Johnson,djohnson@gmail.com,30.0,Male,San Jose,CA,95101,2025-07-07,+1-731-200-7916,Silver,84,167.78,Clothing,Active
+546,Andrew,Sanchez,andrew18@yahoo.com,42.0,Non-binary,Atlanta,GA,30301,2025-04-27,+1-878-319-7396,Bronze,62,508.97,Beauty,Inactive
+547,Joshua,Davis,jdavis@yahoo.com,47.0,Non-binary,San Diego,,92101,2025-07-31,+1-611-224-4321,Gold,51,3253.37,Electronics,Active
+548,Susan,Lee,slee@gmail.com,27.0,Non-binary,Houston,TX,77001,2024-04-20,+1-416-421-3870,Silver,52,4234.7,Books,Active
+549,Brian,Anderson,briananderson@gmail.com,58.0,Non-binary,Seattle,WA,98101,2023-11-15,+1-545-776-6301,Bronze,92,6791.06,Books,Active
+550,George,Harris,georgeharris@yahoo.com,75.0,Prefer not to say,Boston,MA,02101,2025-08-26,+1-754-444-1414,Silver,97,2382.11,Automotive,Active
+551,Amanda,Sanchez,amanda92@icloud.com,24.0,Prefer not to say,San Diego,CA,92101,2021-08-16,+1-270-849-9110,Silver,28,3081.82,Home & Garden,Active
+552,Margaret,Wright,mwright@hotmail.com,43.0,Male,Phoenix,AZ,85001,2021-06-12,+1-426-622-3605,,6,6250.64,Sports,Active
+553,Gary,Davis,garydavis@yahoo.com,41.0,Prefer not to say,San Diego,CA,92101,2025-04-05,+1-740-565-3634,Gold,89,6178.46,Health,Suspended
+554,Amanda,Johnson,amandajohnson@icloud.com,63.0,Prefer not to say,Atlanta,GA,30301,2023-05-30,+1-805-453-8934,Silver,89,4650.6,Sports,Active
+555,Jennifer,Smith,jsmith@hotmail.com,65.0,Prefer not to say,Denver,CO,80201,2025-08-24,+1-643-838-1083,Bronze,47,2677.77,Electronics,Active
+556,Jennifer,Rodriguez,jennifer.rodriguez@hotmail.com,54.0,Prefer not to say,San Jose,CA,95101,2025-05-08,+1-495-701-8772,Platinum,34,7020.51,Automotive,Suspended
+557,Timothy,Clark,timothy.clark@outlook.com,33.0,Non-binary,New York,NY,10001,2022-06-03,+1-673-650-3656,Silver,56,2245.39,Health,Active
+558,Jeffrey,White,jeffreywhite@gmail.com,45.0,Male,Detroit,MI,48201,2025-04-01,+1-701-655-9384,Silver,17,5215.14,Sports,Active
+559,Jason,Torres,jason44@gmail.com,47.0,Non-binary,Detroit,MI,48201,2021-07-28,+1-559-783-4489,Gold,97,2136.0,Health,Active
+560,Jennifer,Anderson,jennifer.anderson@gmail.com,39.0,Female,Los Angeles,CA,90001,2025-02-16,+1-633-486-9219,Silver,84,2064.03,Beauty,Active
+561,Thomas,Young,thomasyoung@icloud.com,50.0,Female,Detroit,MI,48201,2025-08-10,,Silver,96,6515.16,Electronics,Active
+562,Christopher,Walker,christopher.walker@icloud.com,32.0,Prefer not to say,Miami,FL,33101,2024-03-26,+1-833-216-1685,Silver,36,1819.41,Books,Active
+563,Edward,Anderson,edward.anderson@hotmail.com,25.0,Male,Denver,CO,80201,2026-04-28,+1-737-446-6051,Silver,14,1913.17,Sports,Active
+564,Ronald,Sanchez,ronaldsanchez@yahoo.com,20.0,Non-binary,Austin,TX,78701,2025-11-05,+1-443-466-5892,Unknown,61,865.14,Beauty,Active
+565,Donna,Johnson,donna41@hotmail.com,34.0,Male,Austin,TX,78701,2024-11-24,+1-534-961-3145,Gold,43,1121.95,Automotive,Active
+566,Anthony,Thompson,anthony.thompson@icloud.com,65.0,Male,Atlanta,GA,30301,2023-08-08,+1-547-807-5003,Bronze,37,-5939.84,Home & Garden,Active
+567,George,Williams,georgewilliams@gmail.com,71.0,Male,San Jose,CA,95101,2021-07-26,+1-491-614-2756,Bronze,42,5820.43,Clothing,Inactive
+568,Brian@#,O'King,brian.king@outlook.com,50.0,Male,Phoenix,AZ,85001,2022-02-19,+1-321-483-6414,Silver,73,2419.16,Home & Garden,Active
+569,Emily,Clark,eclark@yahoo.com,51.0,Male,San Antonio,TX,78201,2021-08-03,+1-224-833-7532,Gold,31,6977.17,Electronics,Active
+570,Ronald,Scott,ronaldscott@hotmail.com,19.0,Non-binary,Houston,TX,77001,2025-03-22,+1-658-819-7634,Gold,56,3339.65,Books,Active
+571,Michelle,Nguyen,michelle.nguyen@outlook.com,64.0,Female,Miami,FL,33101,2022-07-23,123456,Bronze,62,3892.18,Books,Active
+572,Paul,Gonzalez,pgonzalez@icloud.com,70.0,Female,Detroit,MI,48201,2024-04-22,+1-504-569-6205,BRONZE,83,5042.89,Home & Garden,Active
+573,Lisa,Lopez,lisa.lopez@yahoo.com,53.0,Female,Chicago,IL,60601,2024-04-27,+1-466-346-5322,Silver,100,5844.01,Health,Active
+574,Christopher,Walker,christopher58@hotmail.com,68.0,Female,Chicago,IL,60601,2024-07-06,+1-489-450-5506,Platinum,47,1142.67,Clothing,Active
+575,John,Perez,john73@icloud.com,33.0,Prefer not to say,Detroit,,48201,2024-10-03,+1-572-725-5297,Silver,35,3156.02,Clothing,Active
+576,Joshua,Wilson,jwilson@icloud.com,-1.0,Male,Philadelphia,PA,19101,2024-03-17,+1-265-568-2231,Platinum,58,5778.51,Automotive,Active
+577,Susan,Wilson,susanwilson@yahoo.com,64.0,Prefer not to say,Dallas,TX,75201,2024-04-02,+1-574-517-5893,Bronze,6,5168.71,Beauty,Inactive
+578,Stephanie,Martinez,smartinez@outlook.com,30.0,Non-binary,San Antonio,TX,78201,2024-03-08,+1-769-364-4103,Gold,52,2399.05,Health,Active
+579,Jason,Jackson,jjackson@hotmail.com,39.0,Non-binary,Philadelphia,PA,19101,2022-04-03,+1-498-660-9447,Bronze,9,4212.72,Books,Active
+580,Donna,Perez,donna.perez@gmail.com,56.0,Non-binary,Detroit,MI,48201,2023-10-20,+1-671-959-2374,Silver,78,5983.04,Sports,Active
+581,Robert,Anderson,robertanderson@outlook.com,66.0,Prefer not to say,San Jose,CA,95101,2023-11-22,+1-901-559-7307,Bronze,20,3249.12,Clothing,Active
+582,Deborah,Nguyen,deborah68@outlook.com,22.0,Male,Jacksonville,FL,32201,2021-11-13,+1-344-304-8837,Bronze,92,2341.7,Home & Garden,Active
+583,Michelle,Garcia,michelle34@outlook.com,73.0,Male,San Diego,CA,92101,2022-04-27,+1-709-670-8898,Bronze,26,2843.23,Home & Garden,Active
+584,Donna,Martin,,65.0,Male,Jacksonville,FL,32201,2024-12-10,+1-674-434-9235,Silver,24,2373.14,Books,Inactive
+585,Sandra,Martinez,sandra.martinez@outlook.com,28.0,Male,New York,NY,10001,2025-11-25,+1-715-694-2576,Platinum,80,662.64,Health,Active
+586,Donald,Torres,dtorres@hotmail.com,18.0,Prefer not to say,San Diego,CA,92101,2024-09-25,+1-692-902-2413,Silver,21,4734.68,Automotive,Active
+587,Jason,Torres,jasontorres@icloud.com,37.0,Prefer not to say,Jacksonville,FL,32201,2023-09-18,+1-951-374-4459,Bronze,65,420.19,Automotive,Active
+588,Gary,Perez,gperez@outlook.com,36.0,Non-binary,San Antonio,TX,78201,2024-11-28,+1-905-804-8630,Gold,84,1197.54,Beauty,Active
+589,Nancy,Davis,nancydavis@hotmail.com,36.0,Male,Houston,TX,77001,2022-10-01,+1-779-876-6482,Bronze,36,4054.54,Health,Active
+590,Matthew,Hill,matthew68@outlook.com,57.0,Prefer not to say,Philadelphia,PA,19101,2024-03-24,+1-992-257-5923,BRONZE,86,5064.81,Electronics,Active
+591,Dorothy,Smith,dorothysmith@gmail.com,22.0,Non-binary,Dallas,TX,75201,2022-03-27,+1-416-484-5379,Silver,74,2412.81,Home & Garden,Active
+592,Karen,Gonzalez,,61.0,Prefer not to say,San Diego,CA,92101,2022-12-27,+1-502-360-3824,Bronze,50,4782.59,Sports,Active
+593,George,Torres,george41@hotmail.com,42.0,Non-binary,Boston,MA,02101,2023-10-28,+1-595-428-5550,Gold,74,725.4,Books,Active
+594,Ryan,Sanchez,ryan2@icloud.com,24.0,Non-binary,San Diego,CA,92101,2021-12-25,+1-452-586-8446,Silver,62,4454.2,Clothing,Active
+595,Dorothy,Lewis,dlewis@outlook.com,19.0,Male,Dallas,TX,75201,2025-03-22,+1-918-804-4217,Silver,48,1165.23,Automotive,Active
+596,Charles,White,charles11@outlook.com,44.0,Male,Chicago,IL,60601,2026-04-05,+1-223-324-6502,Bronze,51,3438.36,Beauty,Inactive
+597,David,Martinez,david.martinez@yahoo.com,18.0,Non-binary,Philadelphia,PA,19101,2022-11-17,+1-996-355-3467,Silver,19,950.94,Automotive,Active
+598,Michelle,Clark,michelle45@hotmail.com,32.0,Female,Detroit,MI,48201,2024-12-20,+1-537-357-2196,Silver,16,4547.61,Health,Active
+599,Elizabeth,Taylor,elizabeth8@outlook.com,45.0,Female,Houston,TX,77001,2024-07-10,+1-671-445-1742,Bronze,2,3853.32,Automotive,Active
+600,Carol,Jackson,caroljackson@outlook.com,60.0,Male,Denver,CO,ABCDE,2023-05-20,+1-943-331-5390,Bronze,1,1453.89,Clothing,Active
+601,Gary,Lee,gary.lee@gmail.com,66.0,Female,Atlanta,GA,30301,2022-07-22,+1-439-858-9191,Silver,34,1575.41,Home & Garden,Active
+602,Anthony,Sanchez,asanchez@outlook.com,26.0,Non-binary,Phoenix,AZ,85001,2022-02-09,,Bronze,92,4479.7,Sports,Suspended
+603,Gary,Garcia,ggarcia@icloud.com,39.0,Prefer not to say,Denver,CO,80201,2022-02-04,+1-796-318-1246,Bronze,24,1132.6,Clothing,Active
+604,Jason,Hill,jasonhill@outlook.com,33.0,Female,Detroit,MI,48201,2024-05-08,+1-968-588-8672,Silver,61,4864.43,Beauty,Active
+605,Ronald,King,ronald87@icloud.com,45.0,Male,San Antonio,TX,78201,2024-07-02,+1-877-947-7419,Gold,83,2544.31,Health,Active
+606,Joshua,Ramirez,jramirez@gmail.com,43.0,Prefer not to say,Austin,TX,78701,2023-04-06,+1-405-444-9033,Silver,21,-6972.28,Sports,Inactive
+607,  Patricia  ,Harris, patricia96@yahoo.com ,51.0,Prefer not to say, Atlanta ,GA,30301,2023-10-23,+1-629-932-8223,Silver,40,2650.8,Beauty,Active
+608,Sharon,Perez,sharon8@yahoo.com,75.0,Non-binary,Miami,FL,33101,2025-11-22,+1-625-226-9674,Silver,71,5147.51,Automotive,Active
+609,Carol,Miller,cmiller@yahoo.com,57.0,Female,San Jose,CA,95101,2025-01-25,+1-232-704-6462,Silver,72,5376.08,Beauty,Active
+610,Amy,Walker,amy63@gmail.com,52.0,Male,Austin,TX,78701,2022-05-19,,Silver,32,5271.25,Automotive,Active
+611,Lisa,Brown,lisabrown@gmail.com,63.0,Prefer not to say,Phoenix,AZ,85001,2024-12-23,+1-830-365-9830,Bronze,29,4506.22,Books,Active
+612,Brian,Nguyen,brian57@yahoo.com,74.0,Non-binary,Dallas,TX,75201,2025-05-06,+1-595-302-7640,Bronze,54,5876.86,Electronics,Active
+613,Ronald,Torres,ronaldtorres@icloud.com,25.0,Non-binary,Houston,TX,77001,2023-10-04,+1-494-649-9492,Silver,9,3179.29,Sports,Active
+614,Barbara,Flores,barbara80@gmail.com,57.0,Prefer not to say,Denver,CO,80201,2022-04-09,+1-201-395-9182,Bronze,64,3655.43,Health,Active
+615,Ashley,Jackson,ajackson@icloud.com,51.0,Non-binary,Chicago,IL,60601,2024-11-16,+1-343-224-5847,Silver,85,4253.76,Beauty,Inactive
+616,Charles,Torres,charlestorres@outlook.com,75.0,Non-binary,Phoenix,AZ,85001,2023-03-12,+1-771-681-7284,Gold,0,5227.99,Electronics,Active
+617,Jessica,White,jessicawhite@gmail.com,34.0,Prefer not to say,San Diego,CA,92101,2021-04-08,+1-566-878-8647,Gold,74,1328.32,Beauty,Active
+618,Elizabeth,Smith,elizabethsmith@yahoo.com,66.0,Prefer not to say,Atlanta,GA,30301,2023-06-22,+1-584-916-2890,Gold,87,3033.37,Home & Garden,Active
+619,Emily,Ramirez,emilyramirez@outlook.com,23.0,Non-binary,Phoenix,AZ,85001,2021-02-20,+1-204-442-2564,Gold,99,4001.96,Sports,Active
+620,Robert,Wilson,,60.0,Female,Philadelphia,PA,19101,2023-03-04,+1-526-807-8708,Gold,59,1801.01,Beauty,Active
+621,Amy,Martin,amy36@outlook.com,-1.0,Male,Seattle,WA,98101,2023-02-07,+1-660-907-9969,Silver,19,195.55,Sports,Active
+622,Brian,Smith,bsmith@icloud.com,41.0,Female,Philadelphia,PA,19101,2021-04-25,+1-872-685-2333,Platinum,7,361.28,Home & Garden,Inactive
+623,Robert@#,O'Jones,rjones@gmail.com,69.0,Male,Chicago,IL,60601,2021-05-08,+1-796-533-2742,Silver,68,2076.03,Books,Inactive
+624,Andrew,Hernandez,andrew72@outlook.com,53.0,Male,Denver,CO,80201,2022-09-01,+1-520-353-9116,Gold,25,4143.87,Home & Garden,Active
+625,Michelle,Lewis,michellelewis@hotmail.com,30.0,Prefer not to say,Atlanta,GA,30301,2021-06-16,+1-601-363-9032,Bronze,72,3988.95,Home & Garden,Active
+626,Thomas,Thomas,thomas9@gmail.com,24.0,Male,New York,NY,10001,2024-10-29,+1-919-870-4148,Bronze,43,3477.37,Sports,Suspended
+627,Emily,Johnson,emily30@outlook.com,18.0,Female,Boston,MA,02101,2021-05-14,+1-210-764-5127,Bronze,36,4938.99,Books,Active
+628,Elizabeth,Garcia,elizabeth.garcia@gmail.com,41.0,Prefer not to say,Houston,TX,77001,2021-09-09,+1-920-644-2226,Platinum,11,181.4,Health,Active
+629,Amy,Moore,amy68@yahoo.com,53.0,Non-binary,New York,NY,10001,2021-04-02,+1-485-389-7477,Platinum,94,4244.7,Health,Active
+630,Robert,Jones,robert.jones@icloud.com,60.0,Prefer not to say,Dallas,TX,75201,2022-06-09,+1-694-976-5483,Bronze,43,6341.47,Health,Inactive
+631,Ronald,Sanchez,rsanchez@icloud.com,71.0,Male,Dallas,TX,75201,2025-08-29,+1-278-801-5511,Bronze,97,5887.83,Books,Active
+632,Sarah,Ramirez,sarah.ramirez@gmail.com,73.0,Male,Boston,MA,02101,2021-08-31,+1-769-382-3012,Bronze,27,2730.75,Electronics,Active
+633,Amanda,Harris,amandaharris@outlook.com,31.0,Non-binary,San Antonio,TX,78201,2021-08-15,+1-321-970-7783,Silver,41,4137.97,Books,Active
+634,James,Lewis,jameslewis@hotmail.com,74.0,Prefer not to say,Atlanta,GA,30301,2025-09-28,+1-723-341-4989,Gold,18,4722.6,Clothing,Active
+635,Richard,Lewis,richard33@yahoo.com,60.0,Prefer not to say,Miami,FL,33101,2026-08-17,+1-865-487-1973,Bronze,12,2341.01,Books,Active
+636,Stephanie,Brown,stephaniebrown@outlook.com,21.0,Female,Dallas,TX,75201,2022-10-08,+1-386-438-8705,Platinum,81,3508.81,Beauty,Active
+637,Elizabeth,Perez,elizabeth67@icloud.com,41.0,Prefer not to say,Miami,FL,33101,2022-08-08,+1-311-959-9156,Gold,67,1872.26,Beauty,Inactive
+638,Thomas,Smith,thomas89@yahoo.com,70.0,Female,New York,NY,10001,2023-07-29,,Silver,7,5651.36,Beauty,Active
+639,Lisa,Garcia,lisa24@yahoo.com,20.0,Non-binary,Philadelphia,XX,19101,2023-11-22,+1-319-871-2258,Bronze,86,538.19,Beauty,Suspended
+640,Andrew,Torres,andrewtorres@icloud.com,43.0,Male,San Diego,CA,92101,2021-10-22,+1-381-357-7950,Gold,56,6834.57,Beauty,Active
+641,Mark,Brown,mark.brown@hotmail.com,20.0,Female,San Antonio,TX,78201,2023-12-22,+1-248-208-6383,Silver,83,4352.71,Electronics,Active
+642,Matthew,Moore,matthew.moore@yahoo.com,20.0,Female,Dallas,TX,75201,2022-02-05,+1-428-696-4138,Bronze,45,1611.08,Books,Active
+643,Sharon@#,O'Martinez,smartinez@gmail.com,61.0,Prefer not to say,Phoenix,AZ,85001,2022-06-30,+1-627-962-1848,Bronze,58,1318.3,Electronics,Active
+644,Ryan,Sanchez,rsanchez@gmail.com,52.0,Non-binary,Denver,CO,80201,2025-01-19,+1-418-520-1894,Silver,5,4053.02,Books,Active
+645,Richard,Hernandez,richardhernandez@gmail.com,0.0,Prefer not to say,Atlanta,GA,30301,2021-09-12,+1-263-873-6599,Bronze,35,2879.49,Sports,Inactive
+646,Kathleen,Hernandez,kathleen76@gmail.com,47.0,Prefer not to say,San Antonio,XX,78201,2025-08-07,+1-225-678-9497,Bronze,85,6005.93,Electronics,Active
+647,Patricia,Lopez,patricia.lopez@gmail.com,23.0,Prefer not to say,Austin,TX,78701,2025-03-27,,Gold,32,4714.31,Home & Garden,Active
+648,Matthew,Hill,matthewhill@hotmail.com,74.0,Male,Miami,FL,33101,2025-08-18,+1-610-295-8472,Bronze,16,3566.62,Automotive,Active
+649,Jeffrey,Thomas,jeffrey82@hotmail.com,26.0,Prefer not to say,Houston,TX,77001,2023-11-15,+1-809-866-5185,Bronze,30,3977.98,Clothing,Active
+650,Matthew,Hill,matthew.hill@yahoo.com,23.0,Non-binary,Miami,FL,33101,2021-09-17,+1-897-849-1094,Bronze,83,2753.39,Automotive,Active
+651,Daniel,Young,daniel15@icloud.com,55.0,Prefer not to say,Dallas,TX,75201,2025-05-31,+1-870-255-5389,Silver,83,729.47,Sports,Active
+652,Thomas,Moore,thomasmoore@icloud.com,20.0,Non-binary,Seattle,WA,98101,2022-09-07,+1-907-236-1185,Bronze,25,760.92,Sports,Active
+653,  Margaret  ,Gonzalez, margaret34@hotmail.com ,46.0,Male, Los Angeles ,CA,90001,2023-03-29,+1-338-816-7481,Gold,49,5065.3,Automotive,Active
+654,Jeffrey@#,O'Garcia,jeffreygarcia@hotmail.com,54.0,Female,San Jose,CA,95101,2024-01-24,+1-204-343-6377,Bronze,85,3648.69,Health,Active
+655,Brian,Hill,brian72@yahoo.com,38.0,Prefer not to say,New York,NY,10001,2024-11-09,unknown,Bronze,97,1864.36,Home & Garden,Active
+656,Dorothy,Anderson,dorothy.anderson@gmail.com,45.0,Non-binary,San Diego,CA,92101,2025-09-16,+1-444-577-1745,Bronze,6,1932.41,Beauty,Active
+657,Michael,Nguyen,michael.nguyen@gmail.com,63.0,Female,Miami,FL,33101,2025-10-26,+1-903-779-6873,Silver,23,1559.13,Home & Garden,Active
+658,Kathleen,Anderson,kathleenanderson@outlook.com,49.0,Non-binary,Seattle,WA,98101,2023-08-19,+1-930-977-8364,Gold,14,1310.3,Electronics,Active
+659,Kathleen,Garcia,kathleengarcia@yahoo.com,62.0,Non-binary,Houston,TX,77001,2023-10-13,+1-342-720-1645,Bronze,48,1191.46,Books,Active
+660,Amanda,Lee,amandalee@icloud.com,69.0,Male,Atlanta,GA,30301,2024-04-18,+1-344-742-8860,Gold,19,625.36,Automotive,Inactive
+661,Cynthia@#,O'Wilson,cynthiawilson@hotmail.com,71.0,Male,Dallas,TX,75201,2022-05-21,+1-275-821-1148,Bronze,87,1853.33,Home & Garden,Active
+662,  Matthew  ,Lee, matthewlee@icloud.com ,38.0,Female, Seattle ,WA,98101,2025-10-29,+1-971-755-9581,Bronze,53,1629.21,Health,Active
+663,Jessica,Wilson,jessica.wilson@hotmail.com,73.0,Prefer not to say,Houston,TX,77001,2021-05-27,+1-920-510-5558,Gold,4,2344.49,Sports,Suspended
+664,Carol,Johnson,cjohnson@yahoo.com,30.0,Female,Los Angeles,CA,90001,2026-06-05,+1-711-968-2406,Bronze,87,3615.79,Home & Garden,Active
+665,Matthew,Thompson,matthewthompson@icloud.com,57.0,Male,New York,NY,10001,2022-11-25,+1-307-205-3439,Bronze,31,4623.84,Clothing,Active
+666,  George  ,Sanchez, georgesanchez@yahoo.com ,24.0,Male, Dallas ,TX,75201,2021-02-19,+1-640-221-7436,Gold,6,1135.51,Books,Active
+667,Margaret,Miller,margaretmiller@yahoo.com,37.0,Prefer not to say,San Antonio,TX,78201,2023-07-17,+1-294-234-4111,Bronze,12,183.48,Health,Active
+668,Ashley,Johnson,ashleyjohnson@gmail.com,75.0,Prefer not to say,San Diego,CA,92101,2021-07-24,+1-567-441-1655,Bronze,43,4626.91,Beauty,Active
+669,Ronald,Wilson,ronald83@outlook.com,42.0,Non-binary,San Diego,CA,92101,2022-04-04,+1-207-543-2907,Bronze,59,2711.68,Electronics,Inactive
+670,Linda,King,linda.king@gmail.com,19.0,Prefer not to say,Denver,CO,80201,2026-02-03,+1-894-279-3928,Silver,56,1406.24,Home & Garden,Active
+671,Deborah,Jones,deborah58@gmail.com,42.0,Male,Phoenix,AZ,85001,2024-10-31,+1-746-839-2471,Bronze,26,5850.05,Sports,Active
+672,BARBARA,Miller,barbara.miller@gmail.com,25.0,Prefer not to say,SAN ANTONIO,TX,78201,2024-11-04,+1-607-965-7270,Gold,69,4211.63,Automotive,Active
+673,Ryan,Brown,ryanbrown@gmail.com,61.0,Non-binary,San Diego,CA,92101,2023-10-26,+1-624-327-8048,Gold,21,5963.44,Automotive,Active
+674,Lisa,Anderson,lisa.anderson@gmail.com,27.0,Prefer not to say,Houston,TX,77001,2024-11-08,+1-663-949-1788,Bronze,14,2814.46,Clothing,Inactive
+675,Laura,Miller,lauramiller@icloud.com,22.0,Non-binary,Jacksonville,FL,32201,2023-01-12,+1-469-721-1595,Bronze,26,3274.12,Automotive,Active
+676,Kathleen,Sanchez,ksanchez@hotmail.com,37.0,Prefer not to say,New York,NY,10001,2023-10-10,+1-555-280-6607,Silver,17,3465.49,Health,Active
+677,George,Thomas,george59@yahoo.com,-1.0,Non-binary,Jacksonville,FL,32201,2021-01-13,+1-634-219-8519,Bronze,6,3892.76,Home & Garden,Active
+678,Kathleen,Thomas,kathleenthomas@hotmail.com,61.0,Prefer not to say,Austin,TX,78701,2024-02-14,+1-511-899-3713,Platinum,51,1510.25,Electronics,Active
+679,Gary,Nguyen,gnguyen@hotmail.com,75.0,Prefer not to say,Austin,TX,78701,2025-11-08,+1-530-894-6018,Silver,85,4956.37,Sports,Active
+680,Charles@#,O'Harris,charlesharris@gmail.com,26.0,Male,Denver,CO,80201,2025-01-19,+1-876-819-3227,Gold,61,3258.09,Clothing,Active
+681,Stephanie,Martinez,stephanie.martinez@icloud.com,32.0,Male,Jacksonville,FL,32201,2024-08-06,+1-891-565-7608,,55,4741.67,Sports,Active
+682,Kevin,Allen,kevinallen@hotmail.com,47.0,Female,San Jose,CA,95101,2024-06-01,+1-533-216-8192,Bronze,99,4075.22,Beauty,Active
+683,Amy,Martinez,null,42.0,Non-binary,Denver,CO,80201,2023-01-21,+1-959-799-1366,Bronze,81,1502.25,Books,Active
+684,Melissa,Lewis,melissa.lewis@outlook.com,61.0,Female,Chicago,,60601,2023-05-28,+1-893-317-2601,Bronze,96,1754.5,Clothing,Active
+685,Laura,Harris,lharris@hotmail.com,48.0,Male,San Diego,CA,92101,2023-12-04,+1-802-941-6414,Silver,63,2605.81,Electronics,Active
+686,Kenneth,Martin,kennethmartin@yahoo.com,46.0,Prefer not to say,Philadelphia,PA,19101,2022-01-28,+1-761-613-7841,Gold,58,415.17,Sports,Active
+687,Gary,Martinez,garymartinez@gmail.com,19.0,Prefer not to say,San Diego,CA,92101,2026-11-11,+1-335-748-1872,Silver,45,425.24,Sports,Active
+688,Kenneth,Nguyen,kenneth.nguyen@gmail.com,20.0,Prefer not to say,Houston,TX,77001,2024-06-03,N/A,Gold,15,1719.38,Books,Active
+689,Christopher,Rodriguez,crodriguez@icloud.com,20.0,Female,Detroit,MI,48201,2021-03-08,+1-694-984-9391,Gold,10,2955.62,Automotive,Active
+690,Donald,Brown,dbrown@icloud.com,29.0,Male,Chicago,IL,60601,2024-04-14,+1-333-969-2033,Bronze,90,479.08,Beauty,Active
+691,Richard,Brown,richard.brown@gmail.com,0.0,Prefer not to say,Chicago,IL,60601,2023-05-06,+1-388-552-3450,Silver,69,3805.25,Beauty,Active
+692,Christopher,Thompson,christopher77@outlook.com,44.0,Female,Miami,FL,33101,2024-03-15,+1-596-377-7132,Bronze,48,3626.64,Beauty,Active
+693,Daniel,Nguyen,dnguyen@gmail.com,73.0,Female,Chicago,IL,60601,2021-12-30,+1-782-448-7687,Bronze,43,3369.11,Electronics,Active
+694,Ronald,Jackson,ronaldjackson@hotmail.com,34.0,Non-binary,Seattle,WA,98101,2024-06-19,+1-501-514-7463,Silver,8,1601.6,Automotive,Active
+695,Joseph,Robinson,jrobinson@yahoo.com,0.0,Female,Houston,TX,77001,2022-08-04,+1-910-706-4140,Silver,14,5472.43,Health,Active
+696,Sarah,Martin,sarahmartin@yahoo.com,19.0,Male,Detroit,MI,48201,2022-11-18,+1-353-263-2827,Platinum,26,4269.25,Automotive,Active
+697,Michael,Hernandez,michaelhernandez@hotmail.com,55.0,Non-binary,Boston,MA,02101,2025-07-02,+1-491-503-7872,Silver,65,2181.59,Books,Active
+698,Amanda,Lewis,amanda.lewis@yahoo.com,67.0,Non-binary,Miami,FL,33101,2021-06-03,+1-745-842-7220,Bronze,67,4975.22,Sports,Active
+699,Melissa,Jackson,melissa.jackson@gmail.com,49.0,Non-binary,Phoenix,AZ,85001,2023-06-11,+1-209-828-5415,Gold,78,731.04,Home & Garden,Active
+700,Margaret,Gonzalez,margaretgonzalez@yahoo.com,61.0,Prefer not to say,San Diego,CA,92101,2024-04-04,+1-292-263-3451,Gold,31,3242.39,Beauty,Active
+701,Deborah,Miller,dmiller@gmail.com,32.0,Prefer not to say,Dallas,TX,75201,2022-04-17,+1-555-401-2420,Bronze,12,2760.58,Health,Active
+702,Lisa,Nguyen,lisa7@outlook.com,47.0,Non-binary,Philadelphia,PA,19101,2024-08-30,+1-772-449-7291,Silver,61,5350.86,Home & Garden,Active
+703,Jeffrey,Miller,jeffrey.miller@gmail.com,-1.0,Prefer not to say,Boston,MA,02101,2023-10-11,+1-647-573-6737,Gold,45,595.32,Health,Active
+704,Cynthia,Nguyen,cynthia37@hotmail.com,62.0,Female,San Diego,CA,ABCDE,2024-07-13,+1-938-600-7462,Gold,90,5296.04,Health,Active
+705,  Joseph  ,Walker, joseph11@yahoo.com ,56.0,Female, Phoenix ,AZ,85001,2024-06-16,+1-303-262-1188,Silver,15,2999.71,Electronics,Active
+706,Patricia,Young,pyoung@hotmail.com,60.0,Non-binary,Jacksonville,FL,32201,2024-05-02,+1-453-249-7017,Platinum,87,3334.9,Beauty,Active
+707,George,White,gwhite@yahoo.com,22.0,Non-binary,Seattle,WA,00000,2025-04-06,+1-502-301-7128,Bronze,56,2484.39,Clothing,Active
+708,George,Hernandez,georgehernandez@yahoo.com,50.0,Prefer not to say,Los Angeles,CA,90001,2024-12-28,+1-831-866-5729,Bronze,54,4800.3,Sports,Active
+709,Laura,Jones,laura11@yahoo.com,58.0,Non-binary,San Antonio,TX,78201,2022-01-17,+1-584-391-9161,Silver,76,-547.4,Clothing,Active
+710,Betty,Thompson,betty.thompson@gmail.com,66.0,Female,Miami,FL,33101,2023-11-22,+1-432-355-5777,Bronze,57,3363.5,Beauty,Active
+711,Sandra,Torres,storres@hotmail.com,49.0,Non-binary,Seattle,WA,98101,2023-07-05,+1-466-348-1462,Silver,94,3786.51,Electronics,Suspended
+712,Amy,Martinez,amartinez@hotmail.com,0.0,Prefer not to say,Atlanta,GA,30301,2022-12-27,+1-279-775-7583,Gold,71,213.28,Beauty,Active
+713,John,Torres,john.torres@icloud.com,44.0,Non-binary,Austin,TX,78701,2025-03-14,+1-966-727-6335,Gold,90,5175.45,Electronics,Inactive
+714,Lisa,Jackson,lisajackson@outlook.com,55.0,Prefer not to say,Philadelphia,PA,19101,2024-11-09,+1-365-816-7642,Silver,86,7333.37,Electronics,Active
+715,Matthew,Davis,matthew90@yahoo.com,52.0,Prefer not to say,San Antonio,TX,78201,2021-07-26,+1-918-629-2133,Bronze,85,887.73,Health,Inactive
+716,Susan,Ramirez,sramirez@hotmail.com,41.0,Male,Los Angeles,CA,90001,2023-10-01,+1-639-983-6857,BRONZE,13,6168.0,Health,Active
+717,Michelle,Anderson,michelle.anderson@yahoo.com,59.0,Non-binary,Denver,CO,80201,2022-02-25,+1-330-540-7476,Silver,53,720.57,Clothing,Active
+718,Laura,Sanchez,laura87@hotmail.com,53.0,Female,Jacksonville,FL,32201,2021-03-29,+1-906-856-5899,Bronze,98,2721.11,Home & Garden,Active
+719,Barbara,Thomas,barbara.thomas@hotmail.com,36.0,Non-binary,Houston,TX,77001,2025-10-29,+1-552-373-1110,Silver,3,667.21,Clothing,Active
+720,Jennifer,Garcia,jennifer82@gmail.com,31.0,Prefer not to say,Seattle,WA,98101,2020-12-16,+1-701-225-8457,,79,821.85,Health,Active
+721,Stephanie,Gonzalez,stephanie20@outlook.com,40.0,Male,Jacksonville,FL,32201,2023-06-29,+1-893-526-9905,Silver,20,2816.72,Books,Active
+722,Donna,Ramirez,donna36@outlook.com,66.0,Prefer not to say,Los Angeles,CA,90001,2021-08-31,+1-584-586-2328,Platinum,22,1429.25,Books,Inactive
+723,Jessica,King,jessica43@yahoo.com,53.0,Male,New York,NY,10001,2021-08-05,+1-911-994-9956,Platinum,73,4339.4,Beauty,Active
+724,Joseph,Clark,josephclark@gmail.com,31.0,Female,Boston,MA,02101,2022-02-18,+1-500-731-6902,Silver,30,3766.96,Automotive,Inactive
+725,Betty,Robinson,betty.robinson@yahoo.com,31.0,Male,San Diego,CA,92101,2022-04-02,+1-676-871-2650,Bronze,53,2001.35,Sports,Active
+726,Sandra,Thomas,null,18.0,Male,Detroit,MI,48201,2025-08-26,+1-384-402-2993,Silver,99,4426.53,Beauty,Active
+727,John,Clark,john94@outlook.com,36.0,Female,Seattle,WA,98101,2021-07-23,+1-742-451-4004,Bronze,5,1481.17,Home & Garden,Active
+728,Richard,King,rking@outlook.com,23.0,Prefer not to say,Detroit,MI,48201,2021-06-12,+1-496-448-5808,Bronze,100,461.62,Sports,Active
+729,Stephanie,Young,stephanie.young@gmail.com,69.0,Non-binary,Dallas,TX,75201,2024-12-12,+1-543-823-3997,Platinum,43,3684.74,Health,Active
+730,Mary,Jackson,maryjackson@hotmail.com,63.0,Female,Detroit,MI,48201,2026-06-04,+1-266-477-1135,Bronze,95,4284.96,Sports,Active
+731,Cynthia,Allen,cynthia30@gmail.com,34.0,Prefer not to say,Houston,TX,77001,2022-10-10,+1-738-893-3197,Bronze,39,2331.0,Books,Inactive
+732,Thomas,Lopez,tlopez@outlook.com,74.0,Male,Los Angeles,CA,90001,2022-12-02,+1-964-288-9161,Silver,79,3529.34,Beauty,Active
+733,JENNIFER,Johnson,jennifer.johnson@gmail.com,56.0,Male,AUSTIN,TX,78701,2021-02-16,+1-570-251-5491,Bronze,87,2506.89,Automotive,Active
+734,Jason,Hernandez,jason.hernandez@hotmail.com,43.0,Female,Austin,TX,78701,2023-05-29,+1-476-332-5382,Bronze,87,6047.47,Beauty,Active
+735,kimberly,Torres,kimberly.torres@hotmail.com,35.0,Prefer not to say,boston,MA,02101,2024-01-06,+1-286-625-9297,Platinum,65,2028.55,Home & Garden,Active
+736,Edward,Robinson,edward.robinson@yahoo.com,22.0,Non-binary,Seattle,XX,98101,2023-05-09,+1-439-398-8348,Bronze,42,3083.75,Health,Active
+737,Gary,Thompson,gthompson@yahoo.com,28.0,Non-binary,Chicago,,60601,2021-08-26,+1-949-981-3133,Bronze,23,1228.88,Beauty,Active
+738,Mary,Miller,marymiller@outlook.com,39.0,Non-binary,San Antonio,TX,78201,2025-03-01,+1-682-230-6981,Bronze,18,372.83,Health,Active
+739,Linda,Lewis,lindalewis@gmail.com,36.0,Male,Houston,TX,77001,2021-04-08,+1-359-300-2937,Bronze,20,2270.61,Beauty,Active
+740,Charles,Taylor,charles23@icloud.com,48.0,Prefer not to say,San Diego,CA,92101,2024-04-22,+1-639-419-3507,Silver,83,7210.67,Health,Inactive
+741,Dorothy,Wright,dwright@yahoo.com,46.0,Prefer not to say,San Jose,CA,95101,2023-07-13,+1-739-507-9934,Silver,4,4278.9,Sports,Active
+742,Jacob,Gonzalez,jacob98@yahoo.com,57.0,Non-binary,San Antonio,TX,78201,2024-12-07,+1-571-338-5919,Gold,12,1559.39,Health,Active
+743,Andrew,Walker,andrew.walker@gmail.com,68.0,Female,Chicago,IL,60601,2022-05-10,+1-858-343-3103,Silver,95,933.84,Automotive,Active
+744,Betty,Torres,btorres@yahoo.com,27.0,Female,San Jose,CA,95101,2025-03-31,+1-477-859-4194,Silver,10,3898.14,Sports,Active
+745,Brian,Johnson,brian.johnson@outlook.com,49.0,Non-binary,New York,NY,10001,2023-03-28,+1-712-672-2720,Gold,93,6879.96,Health,Active
+746,Melissa,Allen,melissaallen@icloud.com,47.0,Non-binary,San Antonio,TX,78201,2022-06-07,+1-461-303-4040,Bronze,55,4817.35,Sports,Active
+747,Kevin,Gonzalez,kevin.gonzalez@gmail.com,70.0,Prefer not to say,Chicago,IL,60601,2022-02-19,+1-762-506-5782,Bronze,94,1770.71,Health,Active
+748,Daniel,Brown,dbrown@yahoo.com,40.0,Male,Chicago,IL,60601,2026-07-04,+1-935-469-9722,Bronze,79,4242.21,Beauty,Active
+749,Jeffrey,Young,jeffrey.young@outlook.com,49.0,Male,Miami,FL,33101,2024-12-15,+1-621-878-6138,Gold,84,5354.01,Books,Active
+750,Jason,Nguyen,N/A,22.0,Non-binary,Seattle,WA,98101,2024-11-29,+1-252-473-7368,Silver,72,1344.1,Books,Active
+751,Ryan,Garcia,rgarcia@yahoo.com,25.0,Male,New York,NY,10001,2023-10-17,+1-283-546-9950,Platinum,76,2547.95,Books,Active
+752,Rebecca,Lopez,rlopez@icloud.com,44.0,Male,Boston,MA,02101,2021-11-30,+1-885-325-1246,BRONZE,67,6264.2,Health,Active
+753,Patricia,Martin,patricia.martin@gmail.com,59.0,Female,Denver,CO,80201,2022-08-18,+1-635-271-8788,Silver,3,5824.68,Books,Active
+754,  Sharon  ,Brown, sbrown@hotmail.com ,68.0,Male, San Antonio ,TX,78201,2021-04-20,+1-966-999-6474,Silver,35,2448.61,Automotive,Active
+755,Joseph@#,O'Wright,joseph.wright@outlook.com,27.0,Female,Philadelphia,PA,19101,2022-04-25,+1-954-525-5606,Silver,78,4709.31,Sports,Active
+756,Donna,Thomas,dthomas@outlook.com,72.0,Non-binary,Detroit,,48201,2022-11-07,+1-431-820-3883,Platinum,7,3925.32,Health,Active
+757,dorothy,Wright,dwright@hotmail.com,53.0,Non-binary,phoenix,AZ,85001,2023-06-26,+1-439-260-6057,Bronze,74,2004.49,Books,Active
+758,  Elizabeth  ,Scott, elizabethscott@gmail.com ,21.0,Female, New York ,NY,10001,2022-06-02,+1-965-633-5621,Silver,56,398.46,Health,Active
+759,Jennifer,Harris,jharris@gmail.com,28.0,Male,Austin,TX,78701,2023-10-17,+1-617-383-6934,Silver,1,4613.7,Beauty,Active
+760,Lisa,Martinez,lisa.martinez@outlook.com,,Female,Detroit,MI,48201,2024-11-20,+1-593-593-7336,Silver,25,1938.86,Beauty,Active
+761,Carol,Walker,carol40@yahoo.com,58.0,Non-binary,Detroit,MI,48201,2023-10-23,+1-550-230-9921,Silver,47,5343.54,Books,Active
+762,Christopher,Lewis,christopher24@outlook.com,67.0,Male,Denver,CO,80201,2024-07-09,+1-285-898-2348,Bronze,45,2464.11,Beauty,Inactive
+763,Stephanie,Thompson,sthompson@hotmail.com,30.0,Male,Denver,CO,80201,2022-12-14,+1-679-600-8598,Platinum,84,1991.72,Sports,Active
+764,Cynthia,Scott,cynthia.scott@icloud.com,38.0,Female,Atlanta,GA,30301,2024-10-03,+1-846-723-1385,Bronze,22,2290.08,Health,Active
+765,Deborah,Thomas,deborahthomas@gmail.com,41.0,Non-binary,Miami,FL,33101,2024-10-05,+1-880-951-1778,Bronze,42,1527.5,Beauty,Suspended
+766,Susan,Torres,storres@outlook.com,68.0,Female,Dallas,TX,75201,2024-12-27,+1-862-967-9652,Silver,5,474.44,Books,Active
+767,Mark,King,mking@icloud.com,41.0,Female,Dallas,TX,75201,2024-06-16,+1-890-878-8686,Bronze,24,2542.51,Automotive,Active
+768,Jessica,Young,jessica.young@outlook.com,29.0,Female,Seattle,WA,98101,2021-10-16,+1-749-256-7351,Bronze,22,900.87,Sports,Active
+769,William,Miller,williammiller@yahoo.com,18.0,Prefer not to say,San Diego,CA,92101,2024-11-20,+1-332-900-8362,Silver,34,4384.69,Home & Garden,Active
+770,Richard,Jones,rjones@icloud.com,51.0,Non-binary,Phoenix,AZ,85001,2025-05-29,+1-916-702-9695,Gold,68,6284.19,Health,Active
+771,Margaret,Perez,mperez@hotmail.com,27.0,Male,Detroit,MI,48201,2022-03-15,+1-998-657-9948,Bronze,66,4152.07,Clothing,Active
+772,Christopher,White,christopher74@icloud.com,71.0,Male,Austin,TX,78701,2021-09-26,+1-266-815-2199,Gold,63,4704.69,Beauty,Active
+773,Jessica,Hill,jessica93@outlook.com,66.0,Male,Detroit,MI,48201,2022-10-17,+1-860-387-3108,Gold,23,2779.64,Sports,Active
+774,Timothy,Thompson,tthompson@hotmail.com,49.0,Prefer not to say,Miami,XX,33101,2025-05-01,+1-510-706-1183,Silver,0,172.92,Electronics,Active
+775,Lisa,Taylor,lisa92@gmail.com,58.0,Male,Atlanta,GA,30301,2024-09-12,+1-472-268-3749,diamond,99,1051.93,Health,Active
+776,Mark,Rodriguez,mark.rodriguez@hotmail.com,54.0,Prefer not to say,Austin,TX,78701,2021-11-25,+1-813-610-5647,Silver,30,3117.66,Health,Active
+777,brian,Young,brian16@hotmail.com,55.0,Male,DENVER,CO,80201,2022-10-14,+1-257-683-8960,Gold,73,6090.65,Electronics,Active
+778,Kimberly,Lopez,klopez@outlook.com,73.0,Prefer not to say,Houston,TX,77001,2025-08-31,+1-408-715-6461,Bronze,46,3594.82,Home & Garden,Active
+779,Emily,Clark,emily90@gmail.com,53.0,Non-binary,Denver,CO,80201,2021-03-13,+1-284-974-7223,Silver,5,3067.01,Home & Garden,Inactive
+780,John,Robinson,jrobinson@outlook.com,30.0,Male,Dallas,TX,75201,2023-10-30,+1-687-457-3443,Gold,87,4051.97,Automotive,Active
+781,Christopher,Thompson,christopher20@yahoo.com,66.0,Male,Dallas,TX,75201,2022-09-18,+1-847-233-9582,Bronze,71,2973.59,Sports,Active
+782,Kenneth,Lopez,kenneth.lopez@outlook.com,30.0,Male,Dallas,TX,75201,2021-10-24,+1-427-875-5749,Silver,81,4896.86,Electronics,Active
+783,Matthew@#,O'Johnson,matthew25@gmail.com,39.0,Non-binary,New York,NY,10001,2023-05-27,+1-353-700-6692,Bronze,72,3686.94,Beauty,Inactive
+784,Donna,Martinez,donna.martinez@hotmail.com,31.0,Non-binary,Philadelphia,PA,19101,2021-10-04,+1-546-330-2455,Silver,69,4940.8,Home & Garden,Active
+785,James,Miller,jamesmiller@outlook.com,29.0,Female,Los Angeles,CA,90001,2022-10-01,+1-723-995-9401,Bronze,35,2025.85,Electronics,Active
+786,Cynthia,Torres,cynthiatorres@outlook.com,68.0,Non-binary,Phoenix,AZ,85001,2022-08-03,+1-640-881-2729,Bronze,96,333.5,Clothing,Active
+787,Steven,Martin,stevenmartin@outlook.com,27.0,Prefer not to say,Seattle,WA,98101,2021-07-27,+1-911-534-3083,Gold,42,1772.86,Books,Inactive
+788,Susan,Lewis,susan63@yahoo.com,36.0,Prefer not to say,Boston,MA,02101,2024-09-09,+1-796-943-4285,Gold,46,1598.96,Clothing,Active
+789,William,Taylor,william.taylor@gmail.com,74.0,Male,Denver,CO,80201,2023-08-04,+1-471-777-8895,Bronze,98,2954.49,Sports,Active
+790,Anthony,Wilson,anthony27@gmail.com,30.0,Non-binary,Seattle,WA,98101,2026-06-05,+1-674-430-9621,Bronze,100,381.12,Books,Active
+791,  Nancy  ,Brown, nancy29@gmail.com ,53.0,Male, Dallas ,TX,75201,2022-08-05,+1-911-639-6853,Silver,85,2748.7,Electronics,Suspended
+792,Donald,Wright,donaldwright@outlook.com,33.0,Female,Phoenix,AZ,85001,2024-07-06,+1-813-936-1550,Silver,39,947.53,Electronics,Active
+793,Linda,Flores,lindaflores@yahoo.com,31.0,Female,Dallas,TX,75201,2024-11-24,+1-740-809-9348,Bronze,67,1244.4,Health,Suspended
+794,Susan,Moore,susan.moore@icloud.com,50.0,Male,Los Angeles,CA,90001,2022-11-26,+1-472-732-4061,Platinum,50,7205.29,Clothing,Active
+795,Linda,Lopez,llopez@gmail.com,66.0,Male,San Antonio,TX,78201,2023-08-10,+1-914-360-1006,Bronze,43,5691.54,Automotive,Active
+796,William,Miller,wmiller@yahoo.com,44.0,Male,San Jose,CA,95101,2021-07-23,+1-429-347-1436,Bronze,25,4940.83,Beauty,Inactive
+797,Barbara,Jones,barbara.jones@yahoo.com,68.0,Male,San Jose,CA,95101,2021-11-03,+1-774-649-6193,Bronze,61,568.79,Sports,Active
+798,Laura,Wilson,laura.wilson@icloud.com,53.0,Female,Austin,TX,78701,2023-09-27,555-FAKE,Silver,90,1315.22,Health,Active
+799,David,Brown,davidbrown@icloud.com,47.0,Male,New York,NY,10001,2023-02-24,+1-884-402-2830,Platinum,10,4963.14,Books,Inactive
+800,Sandra,Torres,sandra13@icloud.com,42.0,Male,San Jose,CA,99999,2021-11-17,+1-726-628-5536,Bronze,76,5879.47,Clothing,Active
+801,Timothy,Lopez,timothy65@hotmail.com,69.0,Female,Jacksonville,FL,32201,2021-02-16,+1-598-926-8963,Silver,71,4703.96,Health,Inactive
+802,Jennifer,White,jwhite@icloud.com,41.0,Female,Atlanta,GA,30301,2024-06-27,+1-991-878-8778,Gold,39,1902.35,Beauty,Active
+803,Susan,Torres,susan75@yahoo.com,64.0,Male,San Jose,CA,95101,2023-02-07,+1-488-827-6235,Silver,39,5477.65,Electronics,Active
+804,Jessica,Jones,jessica.jones@yahoo.com,66.0,Male,Phoenix,AZ,85001,2021-06-09,+1-471-589-8603,Bronze,47,122.72,Books,Suspended
+805,  James  ,Allen, jallen@outlook.com ,56.0,Prefer not to say, New York ,NY,10001,2021-09-05,+1-443-643-9084,Gold,74,6478.57,Sports,Active
+806,Rebecca@#,O'Lee,rebeccalee@outlook.com,33.0,Prefer not to say,Austin,TX,78701,2023-02-04,+1-550-659-3484,Bronze,83,1033.04,Home & Garden,Active
+807,Rebecca,Scott,rscott@gmail.com,59.0,Female,Chicago,IL,60601,2024-02-12,+1-563-361-4851,Bronze,67,3362.74,Electronics,Active
+808,SANDRA,Hernandez,shernandez@hotmail.com,51.0,Non-binary,PHOENIX,AZ,85001,2021-01-10,+1-571-297-9409,Gold,90,5799.94,Health,Active
+809,Matthew@#,O'Rodriguez,matthewrodriguez@gmail.com,63.0,Male,Boston,MA,02101,2023-11-30,+1-600-853-3170,Silver,87,5961.52,Home & Garden,Inactive
+810,  Jennifer  ,Young, jennifer78@hotmail.com ,72.0,Prefer not to say, Houston ,TX,77001,2021-09-21,+1-464-366-1177,Silver,99,5745.36,Home & Garden,Active
+811,George,Davis,georgedavis@hotmail.com,68.0,Non-binary,New York,NY,10001,2024-08-02,+1-875-809-1362,Platinum,21,5016.16,Sports,Active
+812,Brian,Brown,brian.brown@yahoo.com,68.0,Prefer not to say,Chicago,IL,60601,2023-08-06,+1-500-810-9835,Bronze,76,438.98,Home & Garden,Active
+813,Emily,Jones,emily73@icloud.com,71.0,Female,Seattle,WA,98101,2021-09-01,+1-251-421-7279,Bronze,71,1536.95,Electronics,Active
+814,Jennifer,Jones,jennifer61@yahoo.com,49.0,Prefer not to say,Boston,MA,02101,2024-02-06,+1-709-576-5170,Silver,89,5281.89,Books,Active
+815,David,Wilson,david70@outlook.com,26.0,Female,Miami,FL,33101,2024-09-21,+1-529-505-4269,Platinum,78,3058.76,Books,Active
+816,Amy,Thomas,athomas@outlook.com,54.0,Male,Denver,CO,80201,2023-10-06,+1-680-322-5259,Bronze,84,4445.39,Books,Active
+817,Joshua,Lopez,joshualopez@gmail.com,59.0,Female,Miami,FL,33101,2023-04-20,+1-662-804-8399,Silver,71,3919.38,Sports,Suspended
+818,Nancy,Sanchez,nancy19@gmail.com,38.0,Male,Austin,TX,78701,2022-08-12,+1-748-918-8526,Bronze,78,1284.69,Clothing,Active
+819,David,Thomas,david41@icloud.com,55.0,Prefer not to say,Denver,CO,80201,2023-02-03,+1-537-489-5735,Silver,0,1855.53,Electronics,Active
+820,Barbara,Rodriguez,barbara.rodriguez@yahoo.com,44.0,Male,San Antonio,TX,78201,2024-03-12,+1-292-986-8094,Bronze,2,2375.78,Electronics,Inactive
+821,Ronald,Smith,rsmith@hotmail.com,55.0,Prefer not to say,Boston,MA,02101,2024-03-02,+1-341-898-4728,Bronze,86,2714.91,Home & Garden,Active
+822,Emily,Smith,emily.smith@gmail.com,34.0,Non-binary,Atlanta,GA,30301,2022-06-30,+1-839-585-4457,Silver,23,1799.28,Automotive,Active
+823,Kathleen,Anderson,kathleen.anderson@hotmail.com,31.0,Non-binary,San Diego,CA,92101,2024-04-03,+1-298-655-6267,Bronze,70,1471.49,Clothing,Active
+824,Jason,Moore,jason.moore@yahoo.com,29.0,Male,Philadelphia,PA,19101,2021-11-15,+1-355-692-9926,Silver,70,385.44,Electronics,Active
+825,Laura,Robinson,laura.robinson@gmail.com,55.0,Female,Chicago,IL,60601,2025-01-17,+1-550-478-2458,Silver,6,6719.72,Clothing,Inactive
+826,Joseph,Torres,joseph.torres@icloud.com,48.0,Female,New York,NY,10001,2025-04-08,+1-617-937-5232,Gold,78,1804.87,Books,Suspended
+827,Linda,Lewis,linda.lewis@hotmail.com,38.0,Non-binary,Phoenix,AZ,85001,2024-10-28,+1-249-487-9046,Silver,45,786.58,Clothing,Active
+828,Donald,Harris,donald.harris@hotmail.com,0.0,Female,Detroit,MI,48201,2021-01-17,+1-558-509-5362,Silver,54,4753.59,Electronics,Active
+829,George,Martin,georgemartin@outlook.com,29.0,Male,Los Angeles,CA,90001,2025-05-03,+1-249-501-3750,Bronze,90,1510.75,Automotive,Active
+830,Jacob,Thompson,jacob75@gmail.com,66.0,Male,Boston,MA,02101,2021-09-06,+1-268-395-3735,Bronze,93,1414.41,Sports,Active
+831,Michelle,Brown,michelle73@icloud.com,73.0,Male,San Diego,CA,92101,2021-02-09,+1-419-755-3650,Bronze,87,4528.67,Books,Active
+832,Mary,Thomas,mthomas@outlook.com,49.0,Prefer not to say,San Antonio,TX,78201,2021-04-10,+1-271-409-1965,Platinum,14,5761.99,Home & Garden,Active
+833,James,Perez,james2@outlook.com,62.0,Male,San Antonio,TX,78201,2025-06-10,+1-871-685-8860,Bronze,38,3327.35,Books,Active
+834,Anthony,Moore,anthony7@gmail.com,63.0,Non-binary,Philadelphia,PA,19101,2024-05-07,+1-838-284-6336,Silver,22,4777.39,Home & Garden,Active
+835,Laura,Garcia,laura.garcia@gmail.com,54.0,Male,Seattle,WA,98101,2023-04-16,+1-232-773-3610,Platinum,11,3915.73,Sports,Active
+836,Steven,Johnson,steven74@gmail.com,68.0,Female,Detroit,MI,,2024-06-12,+1-995-902-8028,Silver,45,4563.34,Beauty,Inactive
+837,  Steven  ,Wright, steven.wright@gmail.com ,20.0,Female, Jacksonville ,FL,32201,2022-05-09,+1-484-436-2812,Silver,23,2662.95,Electronics,Active
+838,Donna,Moore,donna.moore@gmail.com,40.0,Male,Boston,MA,02101,2021-10-31,+1-450-414-7418,Gold,86,3103.8,Automotive,Active
+839,Kenneth,Nguyen,kenneth22@hotmail.com,27.0,Non-binary,Miami,FL,33101,2025-08-19,+1-947-413-3141,Bronze,56,2663.6,Health,Active
+840,Edward,Jackson,edward.jackson@gmail.com,49.0,Non-binary,New York,NY,10001,2025-09-25,+1-203-932-4146,Bronze,41,5726.03,Sports,Active
+841,Matthew,Lopez,matthew.lopez@icloud.com,70.0,Male,Philadelphia,PA,19101,2025-01-26,+1-567-499-1874,Bronze,69,1242.03,Automotive,Inactive
+842,Mark,Scott,mscott@gmail.com,72.0,Prefer not to say,Chicago,IL,60601,2026-02-10,+1-498-550-7965,Platinum,64,5006.18,Home & Garden,Active
+843,Christopher,Garcia,christopher27@gmail.com,55.0,Male,Seattle,WA,98101,2023-08-04,+1-781-953-6391,Bronze,25,7484.49,Electronics,Active
+844,Laura,Allen,laura7@outlook.com,58.0,Non-binary,Los Angeles,CA,90001,2025-03-04,+1-985-355-8882,Bronze,60,7474.33,Beauty,Inactive
+845,Sarah,Thomas,sarah38@gmail.com,41.0,Female,Philadelphia,PA,19101,2024-04-11,+1-395-653-8636,Bronze,95,6949.48,Health,Active
+846,Laura,Williams,laura19@outlook.com,66.0,Female,Chicago,IL,60601,2022-05-15,+1-704-442-9412,Bronze,46,5222.45,Beauty,Active
+847,Sandra,Torres,storres@outlook.com,27.0,Prefer not to say,Atlanta,GA,ABCDE,2022-01-02,+1-970-646-1864,Silver,86,1806.32,Clothing,Active
+848,Jennifer,Jackson,jjackson@hotmail.com,24.0,Female,Austin,TX,78701,2022-02-18,+1-321-360-9270,Platinum,35,3116.19,Electronics,Active
+849,Joshua,Ramirez,joshua.ramirez@icloud.com,70.0,Male,Los Angeles,CA,00000,2021-02-15,+1-222-419-8574,Silver,7,5312.23,Home & Garden,Active
+850,Sarah,Jones,sarah82@gmail.com,56.0,Prefer not to say,Boston,MA,02101,2025-04-06,N/A,Bronze,92,4242.21,Clothing,Inactive
+851,Linda,Flores,linda.flores@yahoo.com,46.0,Non-binary,Los Angeles,CA,ABCDE,2024-07-23,+1-362-806-2731,Silver,25,185.25,Books,Active
+852,Thomas@#,O'Smith,thomas.smith@yahoo.com,31.0,Prefer not to say,Detroit,MI,48201,2021-10-11,+1-513-661-2285,Silver,36,2244.34,Beauty,Active
+853,Kevin,Garcia,kevingarcia@gmail.com,35.0,Female,Austin,TX,78701,2025-08-19,+1-656-847-5816,Bronze,5,3786.31,Sports,Inactive
+854,Nancy,Young,nancyyoung@gmail.com,0.0,Prefer not to say,San Jose,CA,95101,2025-06-22,+1-203-215-6154,Gold,62,3469.7,Sports,Active
+855,James,Lopez,james.lopez@icloud.com,46.0,Prefer not to say,Austin,TX,78701,2025-02-10,+1-949-285-2905,Silver,33,7159.86,Home & Garden,Active
+856,Rebecca,Scott,rscott@hotmail.com,42.0,Prefer not to say,Dallas,TX,75201,2022-02-17,+1-305-745-5549,Bronze,65,5003.8,Automotive,Active
+857,Joshua,Allen,joshuaallen@yahoo.com,39.0,Female,Los Angeles,CA,90001,2022-07-21,+1-582-707-2392,Silver,78,1947.06,Health,Active
+858,Jacob,Harris,jacob4@yahoo.com,27.0,Female,Seattle,WA,98101,2022-06-27,+1-222-223-1298,Platinum,36,2556.4,Health,Active
+859,Karen,Wilson,,26.0,Non-binary,San Jose,CA,95101,2022-07-02,+1-202-847-7254,Gold,50,3534.04,Sports,Active
+860,Susan,Williams,swilliams@yahoo.com,18.0,Non-binary,San Jose,CA,95101,2022-02-12,+1-647-361-7016,Silver,41,3925.38,Automotive,Active
+861,Michelle,Moore,michellemoore@gmail.com,21.0,Prefer not to say,San Antonio,TX,78201,2025-01-31,+1-508-785-7851,Bronze,96,2523.38,Books,Inactive
+862,Jessica,Anderson,null,58.0,Female,Philadelphia,PA,19101,2021-03-12,+1-797-536-8206,Silver,68,2981.67,Automotive,Active
+863,Kathleen,Wilson,kathleen78@icloud.com,70.0,Male,Chicago,IL,60601,2023-02-24,+1-784-411-8386,Gold,28,4187.5,Health,Active
+864,Jacob,Flores,jacob29@yahoo.com,57.0,Female,San Jose,CA,95101,2024-04-19,+1-273-984-8540,Bronze,89,5695.12,Electronics,Active
+865,Rebecca,Miller,rebeccamiller@icloud.com,18.0,Female,Miami,FL,33101,2023-04-15,+1-542-886-9730,Bronze,8,2451.64,Automotive,Active
+866,Laura,Jackson,ljackson@icloud.com,57.0,Non-binary,Miami,FL,33101,2022-09-23,+1-334-822-9782,Gold,71,1430.16,Books,Active
+867,Emily,Ramirez,emilyramirez@hotmail.com,75.0,Prefer not to say,Dallas,TX,75201,2022-06-24,+1-497-792-9365,Bronze,72,418.88,Beauty,Active
+868,David,Torres,dtorres@outlook.com,23.0,Prefer not to say,Philadelphia,PA,19101,2022-12-14,+1-973-391-3988,Platinum,68,3922.87,Clothing,Active
+869,Jennifer,Jones,jjones@outlook.com,50.0,Female,Miami,FL,33101,2025-05-28,+1-331-459-4656,Silver,47,2072.71,Home & Garden,Active
+870,Charles,Jones,cjones@yahoo.com,65.0,Non-binary,Miami,FL,33101,2022-07-30,+1-902-301-2604,Silver,13,535.23,Electronics,Active
+871,Laura,Garcia,laura.garcia@yahoo.com,31.0,Female,San Jose,CA,95101,2023-04-15,+1-527-486-7385,Platinum,49,3717.92,Sports,Inactive
+872,Donna,Williams,donna.williams@icloud.com,40.0,Non-binary,Atlanta,GA,30301,2023-11-09,+1-383-435-3049,Bronze,52,412.19,Books,Active
+873,Kenneth,Smith,kennethsmith@gmail.com,44.0,Prefer not to say,Los Angeles,CA,90001,2025-06-28,+1-975-974-3388,Bronze,45,4317.9,Books,Active
+874,Linda,Walker,lindawalker@icloud.com,44.0,Female,Los Angeles,CA,90001,2023-10-19,+1-332-555-5288,Silver,44,4874.57,Clothing,Active
+875,Amanda,Rodriguez,arodriguez@gmail.com,71.0,Male,Boston,MA,02101,2025-07-29,+1-266-885-3040,Bronze,75,4958.07,Electronics,Active
+876,William,Williams,william.williams@icloud.com,72.0,Prefer not to say,Los Angeles,CA,90001,2024-10-26,+1-828-675-1568,Gold,73,4738.46,Electronics,Active
+877,Emily,Gonzalez,emily.gonzalez@yahoo.com,65.0,Prefer not to say,Miami,FL,33101,2025-01-08,+1-892-557-2179,Platinum,18,2807.23,Beauty,Inactive
+878,Nancy,Young,nancyyoung@hotmail.com,35.0,Female,Jacksonville,FL,32201,2022-04-25,+1-507-419-3631,Silver,1,353.6,Automotive,Active
+879,Kimberly,Thomas,kthomas@gmail.com,59.0,Non-binary,Jacksonville,FL,32201,2021-02-15,+1-597-520-8133,Bronze,52,3469.02,Electronics,Active
+880,Sharon,Wilson,sharon81@icloud.com,21.0,Prefer not to say,New York,XX,10001,2022-12-08,+1-798-564-4786,Bronze,88,268.9,Electronics,Active
+881,Stephanie,Lopez,null,53.0,Male,Philadelphia,PA,19101,2025-10-16,+1-412-875-5850,Bronze,56,3937.45,Books,Active
+882,Joseph,Davis,josephdavis@yahoo.com,49.0,Female,San Antonio,TX,78201,2021-07-11,+1-450-564-2120,Bronze,61,2613.55,Health,Active
+883,jennifer,Miller,jennifer.miller@outlook.com,50.0,Male,PHOENIX,AZ,85001,2022-08-25,+1-655-443-2387,Silver,16,6636.88,Beauty,Active
+884,Ryan,Anderson,ryananderson@outlook.com,73.0,Prefer not to say,Los Angeles,CA,90001,2022-12-20,+1-368-338-4951,Bronze,63,-2829.37,Clothing,Active
+885,James,Sanchez,jsanchez@gmail.com,63.0,Male,New York,NY,10001,2021-05-01,+1-938-205-4864,Bronze,22,236.91,Clothing,Active
+886,Daniel,Young,dyoung@outlook.com,41.0,Male,Philadelphia,PA,19101,2022-04-12,+1-511-589-8090,Gold,12,479.16,Clothing,Active
+887,Nancy,Wilson,nancywilson@outlook.com,55.0,Non-binary,Detroit,MI,48201,2022-06-04,+1-591-883-9677,Bronze,50,7132.13,Home & Garden,Active
+888,Michelle,Rodriguez,michellerodriguez@outlook.com,63.0,Female,Dallas,TX,75201,2021-05-30,+1-971-735-5655,BRONZE,68,2498.66,Health,Active
+889,Ashley,Wright,ashley96@outlook.com,40.0,Male,Seattle,WA,98101,2024-04-19,+1-397-873-3220,Bronze,77,2704.12,Sports,Active
+890,William,Brown,william39@hotmail.com,64.0,Female,San Jose,CA,95101,2026-10-11,+1-683-706-3414,Gold,49,3878.92,Home & Garden,Active
+891,Sharon,Perez,sperez@outlook.com,31.0,Male,San Jose,CA,99999,2021-03-10,+1-358-207-8723,Platinum,28,3209.1,Electronics,Active
+892,Jeffrey,Clark,jeffrey25@yahoo.com,67.0,Male,Dallas,TX,75201,2023-08-07,+1-284-953-3856,Gold,44,4540.39,Beauty,Active
+893,Christopher,Lewis,christopher94@gmail.com,47.0,Female,Detroit,MI,48201,2025-02-24,+1-619-918-7417,Bronze,97,5658.38,Beauty,Active
+894,Cynthia,Young,cyoung@gmail.com,72.0,Male,Boston,MA,02101,2023-04-04,+1-605-978-8834,Gold,53,3133.83,Clothing,Active
+895,Lisa@#,O'Hill,lhill@outlook.com,50.0,Female,Miami,FL,33101,2023-12-31,+1-359-432-9390,Bronze,28,6465.24,Beauty,Active
+896,Joseph,Harris,jharris@hotmail.com,33.0,Non-binary,Los Angeles,CA,90001,2020-12-11,,Silver,75,3719.42,Books,Active
+897,Brian,Miller,brianmiller@gmail.com,64.0,Female,Philadelphia,PA,00000,2024-02-01,+1-947-460-2368,Silver,19,3572.98,Health,Active
+898,Charles,Jones,cjones@gmail.com,68.0,Prefer not to say,Denver,CO,80201,2024-01-01,+1-880-515-4778,Platinum,88,843.36,Automotive,Active
+899,Laura,Robinson,laurarobinson@outlook.com,74.0,Female,Miami,FL,33101,2022-12-17,+1-341-885-3247,,40,4659.18,Electronics,Active
+900,Melissa,Smith,melissa61@hotmail.com,52.0,Male,New York,NY,10001,2025-11-25,+1-718-261-8976,Silver,59,4193.88,Electronics,Active
+901,Sarah,Nguyen,sarah16@hotmail.com,73.0,Male,Boston,MA,02101,2021-07-22,+1-208-795-7543,Bronze,17,1288.48,Health,Active
+902,Nancy,Martinez,nancymartinez@gmail.com,63.0,Non-binary,Detroit,MI,48201,2021-07-20,+1-900-998-3748,Bronze,87,449.75,Books,Active
+903,susan,Clark,sclark@gmail.com,20.0,Prefer not to say,detroit,MI,48201,2021-03-06,+1-243-256-4097,Bronze,80,2724.11,Clothing,Active
+904,Jessica,Ramirez,jramirez@hotmail.com,65.0,Non-binary,San Antonio,TX,78201,2025-11-05,+1-278-882-1005,Gold,84,2165.0,Home & Garden,Active
+905,Charles,White,charles83@hotmail.com,68.0,Male,Detroit,MI,48201,2023-12-08,+1-398-404-9941,Silver,15,2321.04,Home & Garden,Inactive
+906,Joseph@#,O'Harris,joseph.harris@yahoo.com,34.0,Non-binary,Houston,TX,77001,2023-02-18,+1-839-518-9117,Bronze,52,958.11,Beauty,Active
+907,Kathleen,Taylor,kathleen.taylor@gmail.com,53.0,Male,Phoenix,AZ,85001,2022-03-02,+1-328-741-6636,Bronze,45,3437.35,Books,Active
+908,Steven,Lopez,steven52@icloud.com,28.0,Prefer not to say,Houston,TX,77001,2021-05-11,+1-671-205-1552,Bronze,30,3694.29,Health,Active
+909,Sarah,Ramirez,sarah83@yahoo.com,70.0,Non-binary,New York,NY,10001,2022-02-12,+1-410-251-9396,Platinum,76,3209.73,Beauty,Active
+910,Jeffrey,Williams,jwilliams@yahoo.com,52.0,Prefer not to say,San Antonio,TX,78201,2025-12-29,+1-301-982-8066,Gold,71,667.6,Electronics,Active
+911,Carol,White,carol43@hotmail.com,32.0,Female,Detroit,MI,48201,2023-04-21,+1-749-965-4791,Silver,49,1189.09,Sports,Active
+912,Margaret,Thompson,margaret.thompson@yahoo.com,46.0,Non-binary,Miami,FL,33101,2025-04-25,+1-823-544-1434,Gold,73,2199.18,Home & Garden,Active
+913,Kenneth,Scott,kenneth.scott@hotmail.com,51.0,Male,Detroit,MI,48201,2025-07-20,+1-720-552-7365,Silver,65,3986.63,Clothing,Active
+914,Joseph,Wilson,jwilson@hotmail.com,52.0,Non-binary,Houston,TX,77001,2025-09-25,+1-793-343-3431,Bronze,9,3042.1,Automotive,Active
+915,John,Walker,johnwalker@yahoo.com,66.0,Male,Boston,MA,02101,2023-01-21,+1-799-773-7782,Silver,3,4314.16,Electronics,Inactive
+916,Kevin,Lee,klee@yahoo.com,75.0,Prefer not to say,Detroit,MI,48201,2023-04-21,+1-675-902-4483,Bronze,46,500.8,Health,Active
+917,Sharon,Gonzalez,sgonzalez@icloud.com,28.0,Female,Dallas,TX,75201,2024-01-30,+1-406-812-2190,Silver,66,2688.65,Clothing,Active
+918,Ashley,Williams,awilliams@gmail.com,51.0,Male,Atlanta,GA,30301,2024-10-03,+1-703-255-4639,Gold,74,2268.02,Electronics,Active
+919,Kathleen,Gonzalez,kathleen.gonzalez@gmail.com,56.0,Female,San Diego,CA,92101,2024-09-19,+1-706-666-5821,Platinum,54,4637.43,Clothing,Active
+920,Thomas,Allen,thomas.allen@hotmail.com,55.0,Non-binary,Jacksonville,FL,32201,2023-11-28,+1-818-391-4041,Bronze,96,1286.26,Books,Active
+921,jason,Perez,jason.perez@outlook.com,56.0,Prefer not to say,DETROIT,MI,48201,2024-08-13,+1-288-341-3423,Gold,25,3311.6,Sports,Active
+922,Andrew,Allen,andrew24@outlook.com,51.0,Male,Miami,FL,33101,2022-12-05,+1-687-309-9907,Silver,98,6401.16,Books,Active
+923,Robert,Taylor,rtaylor@hotmail.com,33.0,Prefer not to say,Denver,CO,80201,2025-08-15,+1-677-309-3193,Platinum,36,2046.32,Beauty,Active
+924,Lisa,Smith,lisa.smith@yahoo.com,34.0,Non-binary,Denver,CO,ABCDE,2024-02-02,+1-770-758-6665,Gold,70,2960.93,Health,Active
+925,Gary,Moore,gary35@outlook.com,-1.0,Female,Phoenix,AZ,85001,2022-12-27,+1-865-228-7524,Silver,62,4232.15,Books,Active
+926,Stephanie,Scott,sscott@icloud.com,29.0,Female,Denver,CO,80201,2024-01-07,+1-271-345-8608,Bronze,6,996.24,Home & Garden,Inactive
+927,Thomas,Williams,thomas.williams@outlook.com,27.0,Female,San Jose,CA,95101,2024-01-24,+1-809-270-9863,Silver,26,3024.58,Clothing,Active
+928,Amanda,Nguyen,anguyen@hotmail.com,68.0,Male,Dallas,TX,75201,2023-10-09,+1-676-475-3975,Bronze,94,3168.91,Health,Active
+929,Thomas,Taylor,thomas14@hotmail.com,34.0,Female,Los Angeles,CA,90001,2024-09-01,+1-474-227-7675,Platinum,12,4316.34,Automotive,Active
+930,Stephanie,Nguyen,null,18.0,Non-binary,Philadelphia,PA,19101,2024-10-02,+1-867-327-9331,Bronze,99,2111.49,Books,Inactive
+931,William,Jackson,william.jackson@icloud.com,43.0,Female,Phoenix,AZ,85001,2025-01-22,+1-642-905-7541,Silver,70,2362.91,Sports,Inactive
+932,Emily,Jackson,emily.jackson@yahoo.com,19.0,Female,Atlanta,GA,30301,2021-10-24,+1-562-618-4805,Silver,78,4373.67,Automotive,Active
+933,Christopher,Young,cyoung@gmail.com,,Female,Denver,CO,80201,2022-03-30,+1-982-912-8177,Gold,47,2522.65,Beauty,Active
+934,nancy,Walker,nwalker@icloud.com,21.0,Non-binary,AUSTIN,TX,78701,2022-12-05,+1-959-353-6357,Platinum,8,2987.34,Automotive,Active
+935,Richard,Wright,rwright@hotmail.com,30.0,Female,San Jose,CA,95101,2025-04-04,+1-632-633-4257,Silver,63,3338.77,Sports,Active
+936,Richard,White,richardwhite@yahoo.com,58.0,Female,Houston,TX,77001,2025-10-09,+1-501-670-3552,Bronze,95,4395.75,Sports,Active
+937,Paul,Harris,paul24@yahoo.com,42.0,Female,New York,NY,10001,2021-06-26,+1-704-307-6435,Platinum,75,6133.01,Electronics,Active
+938,Kimberly,Torres,kimberlytorres@icloud.com,67.0,Non-binary,Austin,TX,78701,2022-05-06,+1-653-370-5909,Bronze,7,133.36,Electronics,Active
+939,  Joshua  ,Ramirez, jramirez@icloud.com ,46.0,Female, Seattle ,WA,98101,2025-02-10,+1-361-891-3288,Gold,67,1311.43,Books,Active
+940,Michelle,Young,michelle44@hotmail.com,66.0,Non-binary,Los Angeles,CA,90001,2024-10-05,+1-430-386-6971,Silver,36,2287.23,Clothing,Active
+941,Betty,King,betty.king@gmail.com,25.0,Male,Austin,TX,78701,2026-07-21,+1-990-827-1790,Silver,90,3956.87,Sports,Active
+942,Melissa,Nguyen,melissanguyen@yahoo.com,41.0,Prefer not to say,San Antonio,TX,78201,2022-04-27,+1-624-861-2193,Silver,86,3263.34,Home & Garden,Active
+943,Joshua,Taylor,jtaylor@outlook.com,53.0,Non-binary,Philadelphia,PA,19101,2021-06-16,+1-621-489-9901,Bronze,22,2617.03,Sports,Active
+944,Karen@#,O'Williams,kwilliams@gmail.com,19.0,Male,Boston,MA,02101,2022-04-16,+1-318-914-7195,Gold,96,2258.67,Clothing,Active
+945,Daniel,Martinez,daniel67@icloud.com,26.0,Male,Los Angeles,CA,90001,2025-08-02,+1-549-661-8408,Gold,67,3123.99,Clothing,Active
+946,Jennifer,Miller,jennifer.miller@gmail.com,35.0,Prefer not to say,Austin,TX,78701,2025-06-16,+1-333-673-5179,Platinum,58,1094.55,Automotive,Active
+947,Charles,Smith,charles.smith@hotmail.com,25.0,Male,Dallas,TX,75201,2023-03-25,+1-606-402-5976,Gold,26,3885.16,Home & Garden,Active
+948,RICHARD,Taylor,richard.taylor@icloud.com,26.0,Prefer not to say,DALLAS,TX,75201,2024-03-23,+1-482-280-4133,Gold,96,3081.86,Health,Active
+949,Donna,Torres,donna2@hotmail.com,69.0,Prefer not to say,Houston,TX,77001,2025-04-03,+1-222-207-5254,Silver,60,1535.74,Automotive,Active
+950,Edward,Torres,,28.0,Female,Philadelphia,PA,19101,2022-02-07,+1-399-692-3046,Silver,52,637.33,Clothing,Active
+951,  Brian  ,Martinez, brianmartinez@outlook.com ,39.0,Male, Dallas ,TX,75201,2023-08-28,+1-287-652-5776,Gold,4,2830.69,Beauty,Active
+952,Sharon,Hill,sharon82@gmail.com,32.0,Male,Miami,FL,33101,2022-11-18,+1-826-493-9046,Bronze,73,2665.92,Automotive,Active
+953,Richard,Thompson,rthompson@outlook.com,68.0,Non-binary,Phoenix,AZ,85001,2024-03-06,+1-960-495-3431,Bronze,42,1350.4,Books,Active
+954,Matthew,Williams,matthew.williams@outlook.com,30.0,Prefer not to say,San Antonio,TX,,2025-04-26,+1-950-586-7240,Bronze,41,480.77,Home & Garden,Active
+955,Melissa,Thompson,melissa24@icloud.com,67.0,Male,Houston,TX,77001,2022-10-02,+1-805-459-9234,Bronze,89,1924.98,Home & Garden,Active
+956,Dorothy,Taylor,dorothytaylor@gmail.com,42.0,Female,Dallas,TX,75201,2024-03-10,+1-696-735-4880,Bronze,89,3043.05,Books,Active
+957,Karen,Jones,karen69@yahoo.com,54.0,Male,Los Angeles,CA,90001,2021-07-03,+1-333-371-2103,Bronze,35,5190.55,Beauty,Inactive
+958,Jeffrey,Hernandez,jhernandez@yahoo.com,70.0,Non-binary,Philadelphia,PA,19101,2023-12-03,+1-801-805-6683,Silver,97,5889.18,Clothing,Active
+959,Christopher,Taylor,christophertaylor@hotmail.com,29.0,Prefer not to say,Seattle,WA,98101,2025-01-18,+1-865-339-3170,Bronze,35,2266.44,Clothing,Active
+960,Sandra,Hill,sandrahill@yahoo.com,74.0,Non-binary,San Jose,CA,95101,2022-03-11,+1-535-466-8507,Bronze,81,873.2,Beauty,Active
+961,Jacob,Moore,jacob.moore@outlook.com,59.0,Female,Dallas,TX,75201,2023-12-09,+1-811-691-1766,Bronze,71,2455.64,Automotive,Active
+962,Edward,Ramirez,edwardramirez@icloud.com,59.0,Female,Philadelphia,PA,19101,2021-11-13,+1-999-351-1499,Bronze,88,2970.06,Clothing,Active
+963,Paul,Miller,paulmiller@gmail.com,61.0,Male,San Antonio,TX,78201,2022-01-25,+1-884-812-9131,Silver,49,3449.99,Beauty,Active
+964,Emily,Wright,emily.wright@outlook.com,57.0,Male,Detroit,MI,48201,2021-10-03,+1-291-702-4422,Silver,29,5710.83,Books,Active
+965,Linda,Martin,linda23@icloud.com,44.0,Non-binary,San Antonio,TX,78201,2022-05-20,+1-497-844-5087,Silver,82,3504.47,Automotive,Inactive
+966,Kimberly,Johnson,kimberlyjohnson@yahoo.com,42.0,Prefer not to say,San Diego,CA,92101,2020-12-24,+1-303-382-6751,Silver,50,5712.31,Home & Garden,Active
+967,Jason,Rodriguez,jason26@icloud.com,29.0,Male,San Diego,CA,92101,2025-04-13,+1-551-833-6540,Unknown,73,4123.51,Sports,Active
+968,Michelle,Young,michelleyoung@gmail.com,22.0,Male,Los Angeles,CA,90001,2021-03-17,+1-240-768-5779,Silver,41,2439.16,Sports,Active
+969,Betty,Hill,bhill@gmail.com,32.0,Male,Atlanta,GA,30301,2023-07-18,+1-960-916-7731,Gold,62,226.36,Clothing,Active
+970,Jessica,Clark,jessica11@outlook.com,46.0,Female,Miami,FL,ABCDE,2023-12-02,+1-886-953-8865,Bronze,88,730.94,Home & Garden,Active
+971,Cynthia,Garcia,cgarcia@outlook.com,66.0,Male,Seattle,WA,98101,2024-07-17,+1-739-889-7477,Gold,71,1013.14,Health,Active
+972,Amy,Hill,ahill@outlook.com,30.0,Non-binary,Phoenix,AZ,85001,2024-11-08,+1-319-918-4526,Gold,29,2898.37,Beauty,Active
+973,Richard,Anderson,richard72@gmail.com,56.0,Non-binary,Seattle,WA,98101,2021-12-03,+1-550-920-7590,Silver,95,690.07,Clothing,Active
+974,Michael,Lewis,michael72@hotmail.com,41.0,Female,Seattle,WA,98101,2024-01-03,+1-623-964-3361,Silver,56,3225.92,Automotive,Inactive
+975,John,Sanchez,jsanchez@gmail.com,47.0,Prefer not to say,Atlanta,GA,30301,2021-09-17,+1-684-220-3151,Bronze,73,-596.23,Beauty,Active
+976,Emily,Davis,emilydavis@icloud.com,52.0,Prefer not to say,New York,NY,10001,2023-02-07,+1-551-836-6308,Silver,80,1625.46,Beauty,Active
+977,Betty,Miller,bettymiller@outlook.com,31.0,Non-binary,San Jose,CA,95101,2024-10-03,+1-244-600-1536,Gold,66,1416.9,Books,Active
+978,Melissa,Walker,melissawalker@gmail.com,49.0,Male,Houston,TX,77001,2023-05-24,+1-278-715-9329,Silver,63,6837.72,Sports,Inactive
+979,Ryan,Martinez,ryan81@hotmail.com,29.0,Prefer not to say,Boston,MA,02101,2023-06-25,+1-503-590-1695,,75,2510.03,Home & Garden,Active
+980,Jason,Anderson,jason.anderson@gmail.com,72.0,Female,Jacksonville,FL,32201,2022-05-14,+1-806-489-3868,Bronze,62,710.16,Sports,Active
+981,Richard,Allen,rallen@outlook.com,55.0,Non-binary,Detroit,MI,48201,2025-08-09,(000) 000-0000,Silver,32,6614.48,Home & Garden,Active
+982,Barbara,Ramirez,barbararamirez@yahoo.com,64.0,Non-binary,Miami,FL,33101,2022-08-10,+1-968-727-6873,Silver,87,3910.72,Automotive,Active
+983,Melissa,Harris,mharris@yahoo.com,35.0,Prefer not to say,San Diego,CA,99999,2022-06-15,+1-243-330-1257,Gold,42,3786.5,Beauty,Active
+984,Thomas,Hernandez,thomashernandez@icloud.com,41.0,Non-binary,Jacksonville,FL,32201,2025-04-19,+1-799-319-1249,Silver,1,4515.28,Home & Garden,Inactive
+985,Dorothy,Martin,dorothymartin@yahoo.com,66.0,Prefer not to say,Detroit,MI,48201,2021-10-02,+1-261-267-4793,Silver,88,3396.89,Automotive,Active
+986,Richard,Lewis,richard95@gmail.com,49.0,Female,San Jose,CA,95101,2022-07-31,+1-888-408-1927,Gold,66,4835.26,Clothing,Active
+987,Jason,Martinez,jason22@outlook.com,18.0,Prefer not to say,New York,NY,10001,2023-05-30,+1-552-769-7296,Silver,80,3068.19,Health,Active
+988,Edward,Brown,edward.brown@gmail.com,42.0,Non-binary,Detroit,MI,48201,2021-05-25,+1-632-926-8461,Gold,1,2262.12,Health,Active
+989,Charles,White,charles22@gmail.com,71.0,Prefer not to say,Austin,TX,78701,2022-02-09,+1-620-578-3705,Bronze,25,5597.23,Beauty,Active
+990,Rebecca,Jackson,rebecca.jackson@icloud.com,60.0,Male,Denver,CO,80201,2021-11-20,+1-239-841-8724,Platinum,64,4355.35,Health,Active
+991,James,Williams,jwilliams@outlook.com,18.0,Male,Boston,MA,02101,2021-05-12,+1-816-562-6973,Silver,42,4394.04,Books,Active
+992,Kevin,Thomas,kevin96@yahoo.com,47.0,Non-binary,Dallas,TX,75201,2026-09-18,+1-269-672-4027,Gold,75,1362.98,Beauty,Active
+993,Karen,Jackson,karenjackson@gmail.com,55.0,Prefer not to say,Seattle,WA,98101,2025-07-25,+1-909-738-1765,Bronze,5,1971.0,Health,Active
+994,Sandra,Williams,swilliams@outlook.com,66.0,Prefer not to say,Jacksonville,FL,32201,2022-09-15,+1-568-465-3284,Unknown,2,4309.95,Beauty,Active
+995,David,Miller,david.miller@hotmail.com,53.0,Male,San Diego,CA,92101,2021-03-18,+1-783-660-6899,Bronze,87,6234.01,Automotive,Active
+996,Steven,Walker,steven.walker@icloud.com,67.0,Prefer not to say,Houston,TX,77001,2025-01-08,+1-335-581-7719,Bronze,98,4217.6,Electronics,Inactive
+997,Christopher,Clark,christopher.clark@icloud.com,44.0,Female,San Jose,XX,95101,2022-05-07,+1-983-684-4495,Bronze,70,1563.78,Health,Active
+998,Christopher,White,christopher44@hotmail.com,40.0,Non-binary,San Jose,CA,95101,2021-09-29,,Silver,53,4305.86,Home & Garden,Active
+999,Sandra,Lewis,sandralewis@yahoo.com,51.0,Prefer not to say,Austin,TX,78701,2022-04-17,+1-672-977-2708,Bronze,48,3935.68,Health,Inactive
+1000,Dorothy,Wilson,dorothy34@yahoo.com,65.0,Female,Denver,CO,80201,2025-05-17,+1-232-267-9591,Gold,19,3163.64,Automotive,Active
+1001,Robert,Jones,robert.jones@icloud.com,60.0,Prefer not to say,Dallas,TX,75201,2022-06-09,+1-694-976-5483,Bronze,43,6341.47,Health,Inactive
+1002,Nancy,Williams,nancywilliams@gmail.com,67.0,Non-binary,Miami,FL,33101,2025-02-10,+1-562-416-3466,Silver,56,-1309.99,Electronics,Active
+1003,Timothy,Robinson,timothy91@hotmail.com,39.0,Non-binary,New York,NY,10001,2025-08-04,+1-868-487-8221,Platinum,88,3537.82,Home & Garden,Active
+1004,Susan,Lee,susanlee@icloud.com,27.0,Non-binary,Houston,TX,77001,2024-04-20,+1-416-421-3870,Silver,52,4234.7,Books,Active
+1005,Ashley,Jones,ashley.jones@icloud.com,20.0,Non-binary,Boston,MA,02101,2022-05-23,+1-547-297-6954,Bronze,24,2336.19,Clothing,Active
+1006,Kenneth,Walker,kenneth30@hotmail.com,40.0,Female,Phoenix,AZ,85001,2024-02-07,+1-341-863-8855,Silver,82,2286.18,Health,Active
+1007,William,Gonzalez,williamgonzalez@yahoo.com,30.0,Prefer not to say,Boston,MA,02101,2024-07-05,+1-304-397-9849,Bronze,25,4384.81,Clothing,Active
+1008,Jeffrey@#,O'Garcia,jeffrey@#.o'garcia@icloud.com,54.0,Female,San Jose,CA,95101,2024-01-24,+1-204-343-6377,Bronze,85,3648.69,Health,Active
+1009,Nancy,Davis,nancy.davis@yahoo.com,36.0,Male,Houston,TX,77001,2022-10-01,+1-779-876-6482,Bronze,36,4054.54,Health,Active
+1010,Mary,Sanchez,marysanchez@gmail.com,71.0,Female,Los Angeles,CA,90001,2022-04-28,+1-204-389-9020,Gold,80,2163.13,Electronics,Inactive
+1011,Amanda,Garcia,agarcia@hotmail.com,48.0,Male,Miami,FL,33101,2023-01-18,+1-486-902-5055,Gold,11,4936.29,Clothing,Suspended
+1012,Thomas,Thomas,thomas9@gmail.com,24.0,Male,New York,NY,10001,2024-10-29,+1-919-870-4148,Bronze,43,3477.37,Sports,Suspended
+1013,Charles,Jones,cjones@yahoo.com,65.0,Non-binary,Miami,FL,33101,2022-07-30,+1-902-301-2604,Silver,13,535.23,Electronics,Active
+1014,Dorothy,Smith,dorothysmith@gmail.com,22.0,Non-binary,Dallas,TX,75201,2022-03-27,+1-416-484-5379,Silver,74,2412.81,Home & Garden,Active
+1015,Brian@#,O'Moore,brian22@yahoo.com,68.0,Non-binary,Houston,TX,77001,2022-11-05,+1-910-605-8082,Platinum,17,1505.14,Sports,Suspended
+1016,Melissa,Walker,melissawalker@gmail.com,49.0,Male,Houston,TX,77001,2023-05-24,+1-278-715-9329,Silver,63,6837.72,Sports,Inactive
+1017,Robert,Lee,robertlee@yahoo.com,62.0,Prefer not to say,San Antonio,TX,78201,2024-04-21,+1-906-627-3416,Gold,79,4454.56,Books,Inactive
+1018,Charles,Robinson,charlesrobinson@yahoo.com,74.0,Male,Dallas,TX,75201,2021-05-29,+1-356-745-9535,Silver,87,837.5,Sports,Active
+1019,George,Davis,george82@gmail.com,68.0,Non-binary,New York,NY,10001,2024-08-02,+1-875-809-1362,Platinum,21,5016.16,Sports,Active
+1020,Sharon,Gonzalez,sharongonzalez@gmail.com,28.0,Female,Dallas,TX,75201,2024-01-30,+1-406-812-2190,Silver,66,2688.65,Clothing,Active
+1021,John,Torres,jtorres@outlook.com,28.0,Non-binary,New York,NY,10001,2025-06-09,+1-450-939-2162,Silver,13,1412.48,Beauty,Active
+1022,Christopher,Thompson,christopher77@outlook.com,44.0,Female,Miami,FL,33101,2024-03-15,+1-596-377-7132,Bronze,48,3626.64,Beauty,Active
+1023,Susan,Flores,susanflores@hotmail.com,62.0,Female,Phoenix,AZ,85001,2025-11-11,+1-223-286-4472,Bronze,14,1160.39,Health,Active
+1024,Kevin,Smith,kevin1@hotmail.com,62.0,Male,San Diego,CA,92101,2021-04-22,+1-449-875-2309,Bronze,0,154.14,Sports,Active
+1025,Andrew,Wright,andrewwright@hotmail.com,60.0,Prefer not to say,San Antonio,TX,78201,2022-07-31,+1-329-852-9831,Silver,97,3690.51,Beauty,Active
+1026,Michael,Thomas,mthomas@yahoo.com,48.0,Male,Seattle,WA,98101,2021-10-04,+1-368-609-1607,Bronze,58,1025.78,Automotive,Inactive
+1027,Edward,Thomas,ethomas@icloud.com,40.0,Non-binary,New York,NY,10001,2025-06-11,+1-771-633-5184,Bronze,69,3366.14,Clothing,Active
+1028,Thomas,Moore,thomasmoore@icloud.com,20.0,Non-binary,Seattle,WA,98101,2022-09-07,+1-907-236-1185,Bronze,25,760.92,Sports,Active
+1029,Jennifer,Jackson,jjackson@hotmail.com,24.0,Female,Austin,TX,78701,2022-02-18,+1-321-360-9270,Platinum,35,3116.19,Electronics,Active
+1030,John,Torres,john36@gmail.com,44.0,Non-binary,Austin,TX,78701,2025-03-14,+1-966-727-6335,Gold,90,5175.45,Electronics,Inactive
+1031,Thomas,Moore,thomas28@gmail.com,20.0,Non-binary,Seattle,WA,98101,2022-09-07,+1-907-236-1185,Bronze,25,760.92,Sports,Active
+1032,Robert,Taylor,rtaylor@hotmail.com,33.0,Prefer not to say,Denver,CO,80201,2025-08-15,+1-677-309-3193,Platinum,36,2046.32,Beauty,Active
+1033,Joseph,Torres,joseph7@yahoo.com,48.0,Female,New York,NY,10001,2025-04-08,+1-617-937-5232,Gold,78,1804.87,Books,Suspended
+1034,  Kevin  ,Robinson, kevinrobinson@yahoo.com ,61.0,Male, Houston ,TX,77001,2022-09-04,+1-749-457-5365,Bronze,65,2023.77,Electronics,Active
+1035,Dorothy,Wilson,dorothy34@yahoo.com,65.0,Female,Denver,CO,80201,2025-05-17,+1-232-267-9591,Gold,19,3163.64,Automotive,Active
+1036,Michael,Flores,mflores@icloud.com,52.0,Female,Los Angeles,CA,90001,2023-09-21,+1-513-670-2151,Silver,12,5163.33,Beauty,Active
+1037,Amy,Martinez,null,42.0,Non-binary,Denver,CO,80201,2023-01-21,+1-959-799-1366,Bronze,81,1502.25,Books,Active
+1038,William,Gonzalez,williamgonzalez@yahoo.com,30.0,Prefer not to say,Boston,MA,02101,2024-07-05,+1-304-397-9849,Bronze,25,4384.81,Clothing,Active
+1039,Michelle,Lewis,michellelewis@hotmail.com,30.0,Prefer not to say,Atlanta,GA,30301,2021-06-16,+1-601-363-9032,Bronze,72,3988.95,Home & Garden,Active
+1040,Elizabeth,Hernandez,elizabeth59@yahoo.com,18.0,Non-binary,Atlanta,GA,30301,2025-03-25,+1-824-654-4919,Silver,45,1440.33,Home & Garden,Active
+1041,Ashley,Jones,ashleyjones@yahoo.com,20.0,Non-binary,Boston,MA,02101,2022-05-23,+1-547-297-6954,Bronze,24,2336.19,Clothing,Active
+1042,Richard,King,rking@outlook.com,23.0,Prefer not to say,Detroit,MI,48201,2021-06-12,+1-496-448-5808,Bronze,100,461.62,Sports,Active
+1043,Sharon,Clark,sharon.clark@icloud.com,46.0,Prefer not to say,San Jose,CA,95101,2021-06-09,+1-910-954-4551,Silver,14,200.31,Beauty,Active
+1044,Edward,Robinson,edward.robinson@yahoo.com,22.0,Non-binary,Seattle,XX,98101,2023-05-09,+1-439-398-8348,Bronze,42,3083.75,Health,Active
+1045,Robert,Lee,robertlee@outlook.com,62.0,Prefer not to say,San Antonio,TX,78201,2024-04-21,+1-906-627-3416,Gold,79,4454.56,Books,Inactive
+1046,Joseph,King,jking@yahoo.com,45.0,Male,Denver,CO,80201,2023-08-13,+1-445-673-6713,Bronze,47,179.27,Health,Inactive
+1047,Emily,Young,emily.young@hotmail.com,63.0,Male,Phoenix,AZ,85001,2022-10-09,+1-473-200-9136,Silver,70,166.74,Home & Garden,Suspended
+1048,Donna,Moore,donna28@outlook.com,40.0,Male,Boston,MA,02101,2021-10-31,+1-450-414-7418,Gold,86,3103.8,Automotive,Active
+1049,Ashley,Jones,ashley.jones@icloud.com,20.0,Non-binary,Boston,MA,02101,2022-05-23,+1-547-297-6954,Bronze,24,2336.19,Clothing,Active
+1050,Brian,Brown,brian.brown@yahoo.com,68.0,Prefer not to say,Chicago,IL,60601,2023-08-06,+1-500-810-9835,Bronze,76,438.98,Home & Garden,Active
+1051,Kathleen,Wilson,kathleenwilson@hotmail.com,70.0,Male,Chicago,IL,60601,2023-02-24,+1-784-411-8386,Gold,28,4187.5,Health,Active
+1052,Edward,Thomas,edwardthomas@icloud.com,40.0,Non-binary,New York,NY,10001,2025-06-11,+1-771-633-5184,Bronze,69,3366.14,Clothing,Active
+1053,Daniel,Williams,daniel93@icloud.com,75.0,Non-binary,Atlanta,GA,30301,2022-08-07,+1-249-638-8344,Bronze,32,2013.05,Health,Active
+1054,Lisa,Martin,lisa33@yahoo.com,19.0,Non-binary,Denver,CO,80201,2023-07-22,+1-331-209-7156,Bronze,77,606.79,Sports,Active
+1055,John,Torres,john.torres@icloud.com,44.0,Non-binary,Austin,TX,78701,2025-03-14,+1-966-727-6335,Gold,90,5175.45,Electronics,Inactive
+1056,Melissa,Harris,mharris@yahoo.com,35.0,Prefer not to say,San Diego,CA,99999,2022-06-15,+1-243-330-1257,Gold,42,3786.5,Beauty,Active
+1057,Mary,Robinson,mary.robinson@gmail.com,49.0,Non-binary,Houston,TX,77001,2024-12-03,+1-255-698-8432,Bronze,9,1618.77,Sports,Active
+1058,David,Torres,dtorres@outlook.com,23.0,Prefer not to say,Philadelphia,PA,19101,2022-12-14,+1-973-391-3988,Platinum,68,3922.87,Clothing,Active
+1059,Jason,Moore,jason.moore@outlook.com,66.0,Non-binary,Atlanta,,30301,2025-08-07,+1-548-316-5222,Silver,99,932.65,Books,Active
+1060,Barbara,Rodriguez,barbara.rodriguez@outlook.com,50.0,Prefer not to say,Chicago,IL,60601,2024-10-29,+1-515-704-7451,Silver,17,2019.24,Clothing,Active
+1061,Christopher,Thompson,christopherthompson@yahoo.com,44.0,Female,Miami,FL,33101,2024-03-15,+1-596-377-7132,Bronze,48,3626.64,Beauty,Active
+1062,Sharon,Perez,sperez@gmail.com,75.0,Non-binary,Miami,FL,33101,2025-11-22,+1-625-226-9674,Silver,71,5147.51,Automotive,Active
+1063,Donald,Smith,donald11@hotmail.com,73.0,Male,San Antonio,XX,78201,2022-11-24,+1-253-213-4314,Bronze,29,3984.67,Beauty,Active
+1064,  Margaret  ,Gonzalez, margaret34@hotmail.com ,46.0,Male, Los Angeles ,CA,90001,2023-03-29,+1-338-816-7481,Gold,49,5065.3,Automotive,Active
+1065,  Anthony  ,Young, young@outlook.com,43.0,Prefer not to say, Jacksonville ,FL,32201,2023-02-07,+1-798-595-6676,Silver,46,1240.27,Books,Active
+1066,Brian,Taylor,brian.taylor@gmail.com,68.0,Female,Detroit,MI,48201,2022-02-15,123456,Silver,7,4193.08,Books,Suspended
+1067,Lisa,Martin,lisa.martin@hotmail.com,19.0,Non-binary,Denver,CO,80201,2023-07-22,+1-331-209-7156,Bronze,77,606.79,Sports,Active
+1068,Robert,Taylor,rtaylor@hotmail.com,33.0,Prefer not to say,Denver,CO,80201,2025-08-15,+1-677-309-3193,Platinum,36,2046.32,Beauty,Active
+1069,Laura,Williams,laurawilliams@hotmail.com,66.0,Female,Chicago,IL,60601,2022-05-15,+1-704-442-9412,Bronze,46,5222.45,Beauty,Active
+1070,Jeffrey,Smith,jeffrey.smith@outlook.com,61.0,Male,Detroit,MI,48201,2021-07-03,+1-818-924-3494,Bronze,9,1902.09,Home & Garden,Inactive
+1071,Donna,Wilson,donna27@yahoo.com,38.0,Prefer not to say,San Jose,CA,95101,2024-04-02,+1-693-779-9350,Silver,1,993.9,Home & Garden,Active
+1072,Melissa,Walker,melissawalker@gmail.com,49.0,Male,Houston,TX,77001,2023-05-24,+1-278-715-9329,Silver,63,6837.72,Sports,Inactive
+1073,Carol,King,cking@icloud.com,72.0,Female,San Diego,CA,92101,2024-02-06,+1-304-292-6355,Silver,73,2220.5,Clothing,Active
+1074,jason,Perez,jason.perez@outlook.com,56.0,Prefer not to say,DETROIT,MI,48201,2024-08-13,+1-288-341-3423,Gold,25,3311.6,Sports,Active
+1075,Laura,Jackson,laurajackson@hotmail.com,57.0,Non-binary,Miami,FL,33101,2022-09-23,+1-334-822-9782,Gold,71,1430.16,Books,Active
+1076,Matthew,Wright,matthewwright@hotmail.com,,Female,Atlanta,GA,30301,2023-10-13,+1-579-862-4056,Silver,7,2316.6,Home & Garden,Inactive
+1077,James,Sanchez,jsanchez@gmail.com,63.0,Male,New York,NY,10001,2021-05-01,+1-938-205-4864,Bronze,22,236.91,Clothing,Active
+1078,Kenneth,Walker,kenneth30@hotmail.com,40.0,Female,Phoenix,AZ,85001,2024-02-07,+1-341-863-8855,Silver,82,2286.18,Health,Active
+1079,Dorothy,White,dorothywhite@yahoo.com,27.0,Prefer not to say,San Jose,CA,95101,2023-08-17,unknown,Silver,32,1917.06,Clothing,Active
+1080,Robert,Lee,robertlee@hotmail.com,62.0,Prefer not to say,San Antonio,TX,78201,2024-04-21,+1-906-627-3416,Gold,79,4454.56,Books,Inactive
+1081,Steven,Martin,stevenmartin@outlook.com,27.0,Prefer not to say,Seattle,WA,98101,2021-07-27,+1-911-534-3083,Gold,42,1772.86,Books,Inactive
+1082,Thomas,Moore,thomas28@gmail.com,20.0,Non-binary,Seattle,WA,98101,2022-09-07,+1-907-236-1185,Bronze,25,760.92,Sports,Active
+1083,Joseph,Torres,joseph.torres@icloud.com,48.0,Female,New York,NY,10001,2025-04-08,+1-617-937-5232,Gold,78,1804.87,Books,Suspended
+1084,Anthony,Martinez,amartinez@hotmail.com,63.0,Male,Austin,TX,78701,2022-08-30,+1-333-393-9083,Gold,14,369.28,Electronics,Active
+1085,Rebecca@#,O'Lee,rebeccalee@outlook.com,33.0,Prefer not to say,Austin,TX,78701,2023-02-04,+1-550-659-3484,Bronze,83,1033.04,Home & Garden,Active
+1086,Carol,White,carol43@hotmail.com,32.0,Female,Detroit,MI,48201,2023-04-21,+1-749-965-4791,Silver,49,1189.09,Sports,Active
+1087,Charles,White,charles.white@outlook.com,68.0,Male,Detroit,MI,48201,2023-12-08,+1-398-404-9941,Silver,15,2321.04,Home & Garden,Inactive
+1088,Kevin,Clark,kevin37@icloud.com,33.0,Female,Chicago,IL,60601,2021-05-09,+1-934-680-7451,Gold,9,153.03,Automotive,Active
+1089,Betty,Miller,bettymiller@outlook.com,31.0,Non-binary,San Jose,CA,95101,2024-10-03,+1-244-600-1536,Gold,66,1416.9,Books,Active
+1090,Barbara,Rodriguez,barbara18@icloud.com,50.0,Prefer not to say,Chicago,IL,60601,2024-10-29,+1-515-704-7451,Silver,17,2019.24,Clothing,Active
+1091,Melissa,Walker,melissa1@outlook.com,49.0,Male,Houston,TX,77001,2023-05-24,+1-278-715-9329,Silver,63,6837.72,Sports,Inactive
+1092,Donald,Hernandez,dhernandez@outlook.com,22.0,Female,Houston,TX,77001,2024-01-20,+1-991-394-3549,Silver,86,4432.04,Beauty,Active
+1093,JESSICA,Taylor,jtaylor@icloud.com,46.0,Prefer not to say,boston,MA,02101,2024-12-19,+1-659-524-7912,Platinum,95,831.62,Home & Garden,Active
+1094,Dorothy,Thompson,dorothy33@yahoo.com,73.0,Non-binary,San Antonio,TX,78201,2025-01-20,+1-663-333-9200,Bronze,43,5567.49,Automotive,Active
+1095,Donna,Johnson,donnajohnson@icloud.com,30.0,Male,San Jose,CA,95101,2025-07-07,+1-731-200-7916,Silver,84,167.78,Clothing,Active
+1096,Donna,Clark,N/A,25.0,Male,San Jose,CA,95101,2024-06-28,+1-828-944-6964,Bronze,22,1009.29,Automotive,Inactive
+1097,Donna,Martinez,donna38@gmail.com,45.0,Female,Seattle,WA,98101,2025-05-14,+1-861-545-9528,Silver,67,6623.99,Clothing,Active
+1098,Mary,Nguyen,mary73@gmail.com,71.0,Male,Austin,TX,78701,2022-01-03,+1-336-784-3197,Bronze,3,1672.03,Electronics,Active
+1099,Jacob,Gonzalez,jacob98@yahoo.com,57.0,Non-binary,San Antonio,TX,78201,2024-12-07,+1-571-338-5919,Gold,12,1559.39,Health,Active
+1100,Deborah,Lopez,deborah.lopez@hotmail.com,67.0,Non-binary,San Antonio,TX,78201,2022-01-07,+1-321-533-4589,Bronze,2,4145.66,Automotive,Active

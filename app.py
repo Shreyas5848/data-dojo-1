@@ -40,7 +40,11 @@ from datadojo.web.styles import (
     create_glass_card,
     create_badge,
     create_divider,
-    create_stat_card
+    create_stat_card,
+    create_sidebar_stat,
+    create_empty_state,
+    create_data_card,
+    create_quick_actions
 )
 
 # Page configuration
@@ -69,7 +73,7 @@ def load_datasets():
     """Load and cache available datasets."""
     if not st.session_state.datasets:
         with st.spinner("🔍 Discovering datasets..."):
-            st.session_state.datasets = discover_datasets(['datasets', 'test_datasets'])
+            st.session_state.datasets = discover_datasets(['datasets', 'test_datasets', 'generated_datasets', 'demo_datasets'])
     return st.session_state.datasets
 
 
@@ -105,20 +109,20 @@ def show_home_page():
         col1, col2, col3, col4 = st.columns(4)
         
         with col1:
-            st.markdown(create_metric_card("#", str(total_datasets), "Datasets"), unsafe_allow_html=True)
+            st.markdown(create_metric_card("📊", str(total_datasets), "Datasets"), unsafe_allow_html=True)
         with col2:
-            st.markdown(create_metric_card("~", f"{total_rows:,}", "Records"), unsafe_allow_html=True)
+            st.markdown(create_metric_card("📝", f"{total_rows:,}", "Records"), unsafe_allow_html=True)
         with col3:
-            st.markdown(create_metric_card("&gt;", format_size(total_size), "Volume"), unsafe_allow_html=True)
+            st.markdown(create_metric_card("💾", format_size(total_size), "Volume"), unsafe_allow_html=True)
         with col4:
-            st.markdown(create_metric_card("@", str(domains), "Domains"), unsafe_allow_html=True)
+            st.markdown(create_metric_card("🏷️", str(domains), "Domains"), unsafe_allow_html=True)
     
     st.markdown("<br>", unsafe_allow_html=True)
     
     # Feature Cards Section
     st.markdown("""
-    <h2 style="text-align: center; margin: 2rem 0 1.5rem; color: #F8FAFC; font-size: 1.5rem; font-weight: 600;">
-    Features
+    <h2 style="text-align: center; margin: 2rem 0 1.5rem; color: #F0F6FC; font-size: 1.5rem; font-weight: 600;">
+    ✨ Features
     </h2>
     """, unsafe_allow_html=True)
     
@@ -126,21 +130,21 @@ def show_home_page():
     
     with col1:
         st.markdown(create_feature_card(
-            "{}",
+            "🔍",
             "Smart Profiling",
             "AI-powered data analysis with quality assessment and pattern detection."
         ), unsafe_allow_html=True)
     
     with col2:
         st.markdown(create_feature_card(
-            "[]",
+            "📓",
             "Notebook Templates",
             "Generate ready-to-run Jupyter notebooks for EDA, ML, and data cleaning."
         ), unsafe_allow_html=True)
     
     with col3:
         st.markdown(create_feature_card(
-            "++",
+            "🏆",
             "Progress Tracking",
             "Track your learning with XP, achievements, and skill progression."
         ), unsafe_allow_html=True)
@@ -151,21 +155,21 @@ def show_home_page():
     
     with col1:
         st.markdown(create_feature_card(
-            "&lt;&gt;",
+            "⚡",
             "Data Generation",
             "Create realistic synthetic datasets for healthcare, finance, and e-commerce."
         ), unsafe_allow_html=True)
     
     with col2:
         st.markdown(create_feature_card(
-            "||",
+            "📊",
             "Visualizations",
             "Intelligent chart recommendations based on your data types."
         ), unsafe_allow_html=True)
     
     with col3:
         st.markdown(create_feature_card(
-            "?!",
+            "🎓",
             "Learning Hub",
             "Interactive tutorials and guided workflows for all skill levels."
         ), unsafe_allow_html=True)
@@ -175,8 +179,8 @@ def show_home_page():
     # Charts Section
     if datasets:
         st.markdown("""
-        <h2 style="text-align: center; margin: 2rem 0 1rem; color: #F8FAFC; font-size: 1.25rem; font-weight: 600;">
-        Data Overview
+        <h2 style="text-align: center; margin: 2rem 0 1rem; color: #F0F6FC; font-size: 1.25rem; font-weight: 600;">
+        📈 Data Overview
         </h2>
         """, unsafe_allow_html=True)
         
@@ -194,8 +198,8 @@ def show_home_page():
                     values=list(domain_counts.values()),
                     hole=0.6,
                     marker=dict(
-                        colors=['#3B82F6', '#14B8A6', '#8B5CF6', '#22C55E', '#F59E0B'],
-                        line=dict(color='#0F172A', width=2)
+                        colors=['#FF6B6B', '#4ECDC4', '#FFD93D', '#C9B1FF', '#6BCB77'],
+                        line=dict(color='#0D1117', width=2)
                     ),
                     textinfo='label+percent',
                     textfont=dict(size=12, color='#F8FAFC'),
@@ -240,7 +244,7 @@ def show_home_page():
                     x='Dataset', 
                     y='Size (MB)',
                     color='Domain',
-                    color_discrete_sequence=['#FF6B35', '#00D9FF', '#A855F7', '#10B981']
+                    color_discrete_sequence=['#FF6B6B', '#4ECDC4', '#FFD93D', '#C9B1FF']
                 )
                 
                 fig.update_layout(
@@ -297,16 +301,14 @@ def show_home_page():
                 hide_index=True
             )
     else:
-        # Empty state
-        st.markdown("""
-        <div class="glass-card" style="text-align: center; padding: 4rem 2rem;">
-            <div style="font-size: 4rem; margin-bottom: 1rem;">🚀</div>
-            <h2 style="color: white; margin-bottom: 1rem;">Ready to Get Started?</h2>
-            <p style="color: rgba(255,255,255,0.7); margin-bottom: 2rem;">
-                Generate your first dataset and begin your data science journey!
-            </p>
-        </div>
-        """, unsafe_allow_html=True)
+        # Empty state - Enhanced
+        st.markdown(create_empty_state(
+            "🚀",
+            "Ready to Get Started?",
+            "Generate your first dataset and begin your data science journey. DataDojo provides realistic datasets across healthcare, finance, and e-commerce domains.",
+            "Generate Dataset",
+            "⚡"
+        ), unsafe_allow_html=True)
 
 def show_dataset_explorer():
     """Display the dataset explorer page with modern UI."""
@@ -709,10 +711,10 @@ def show_data_generator():
                     st.success("✅ Data generation completed!")
                     st.text(result.output)
                     
-                    # Refresh datasets cache
+                    # Refresh datasets cache and reload page
                     st.session_state.datasets = []
-                    
                     st.balloons()
+                    st.rerun()
                 else:
                     st.error(f"❌ Generation failed: {result.error_message}")
                     
@@ -723,77 +725,124 @@ def main():
     """Main application function."""
     init_session_state()
     
-    # Sidebar - Clean Professional Design
+    # Navigation icons mapping
+    nav_icons = {
+        "Home": "🏠",
+        "Learning Projects": "🎯",
+        "Dataset Explorer": "📂",
+        "Data Profiler": "🔍",
+        "Data Generator": "⚡",
+        "Notebook Templates": "📓",
+        "Progress Dashboard": "📈",
+        "Tutorial & Help": "💡"
+    }
+    
+    # Sidebar - Modern Professional Design
     with st.sidebar:
+        # Logo Section
         st.markdown("""
-        <div style="text-align: center; padding: 1.25rem 0; border-bottom: 1px solid #334155; margin-bottom: 1rem;">
-            <h2 style="color: #F8FAFC; font-size: 1.5rem; margin: 0; font-weight: 700;">
+        <div style="text-align: center; padding: 1.5rem 0; border-bottom: 1px solid #30363D; margin-bottom: 1.25rem;">
+            <div style="font-size: 2.5rem; margin-bottom: 0.5rem;">🥋</div>
+            <h2 style="color: #F0F6FC; font-size: 1.4rem; margin: 0; font-weight: 700; font-family: 'Space Grotesk', sans-serif;">
             DataDojo
             </h2>
-            <p style="color: #94A3B8; font-size: 0.75rem; margin-top: 0.25rem;">
-            Data Science Platform
+            <p style="color: #8B949E; font-size: 0.75rem; margin-top: 0.25rem; letter-spacing: 0.05em;">
+            MASTER YOUR DATA
             </p>
         </div>
         """, unsafe_allow_html=True)
         
+        # Navigation Section Title
+        st.markdown("""
+        <p style="color: #6E7681; font-size: 0.65rem; text-transform: uppercase; 
+        letter-spacing: 0.1em; padding: 0 0.5rem; margin-bottom: 0.5rem; font-weight: 600;">Navigation</p>
+        """, unsafe_allow_html=True)
+        
+        # Navigation with icons
+        pages = list(nav_icons.keys())
+        
         page = st.selectbox(
             "Navigation",
-            [
-                "Home",
-                "Learning Projects",
-                "Dataset Explorer", 
-                "Data Profiler",
-                "Data Generator",
-                "Notebook Templates",
-                "Progress Dashboard",
-                "Tutorial & Help"
-            ],
+            pages,
+            format_func=lambda x: f"{nav_icons[x]}  {x}",
             label_visibility="collapsed"
         )
         
-        st.markdown("<div style='margin: 1rem 0; border-top: 1px solid #334155;'></div>", unsafe_allow_html=True)
+        st.markdown("<div style='margin: 1.25rem 0; border-top: 1px solid #30363D;'></div>", unsafe_allow_html=True)
         
-        # Quick Stats in Sidebar
+        # Quick Stats Section
         datasets = load_datasets()
         if datasets:
             st.markdown("""
-            <p style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; 
-            letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 500;">Statistics</p>
+            <p style="color: #6E7681; font-size: 0.65rem; text-transform: uppercase; 
+            letter-spacing: 0.1em; padding: 0 0.5rem; margin-bottom: 0.75rem; font-weight: 600;">Quick Stats</p>
             """, unsafe_allow_html=True)
             
+            # Datasets count
             st.markdown(f"""
-            <div style="background: #1E293B; padding: 0.625rem; border-radius: 6px; margin-bottom: 0.5rem; border: 1px solid #334155;">
-                <span style="color: #3B82F6; font-weight: 600;">{len(datasets)}</span>
-                <span style="color: #CBD5E1;"> datasets</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; 
+                padding: 0.625rem 0.875rem; background: #21262D; border-radius: 8px; 
+                margin-bottom: 0.5rem; border: 1px solid #30363D;">
+                <span style="color: #8B949E; font-size: 0.8rem;">Datasets</span>
+                <span style="color: #FF6B6B; font-weight: 600; font-family: 'JetBrains Mono', monospace;">{len(datasets)}</span>
             </div>
             """, unsafe_allow_html=True)
             
+            # Total records
             total_rows = sum(d.rows for d in datasets)
             st.markdown(f"""
-            <div style="background: #1E293B; padding: 0.625rem; border-radius: 6px; margin-bottom: 0.5rem; border: 1px solid #334155;">
-                <span style="color: #14B8A6; font-weight: 600;">{total_rows:,}</span>
-                <span style="color: #CBD5E1;"> records</span>
+            <div style="display: flex; align-items: center; justify-content: space-between; 
+                padding: 0.625rem 0.875rem; background: #21262D; border-radius: 8px; 
+                margin-bottom: 0.5rem; border: 1px solid #30363D;">
+                <span style="color: #8B949E; font-size: 0.8rem;">Records</span>
+                <span style="color: #4ECDC4; font-weight: 600; font-family: 'JetBrains Mono', monospace;">{total_rows:,}</span>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            # Domains
+            domains = len(set(d.domain for d in datasets))
+            st.markdown(f"""
+            <div style="display: flex; align-items: center; justify-content: space-between; 
+                padding: 0.625rem 0.875rem; background: #21262D; border-radius: 8px; 
+                margin-bottom: 0.5rem; border: 1px solid #30363D;">
+                <span style="color: #8B949E; font-size: 0.8rem;">Domains</span>
+                <span style="color: #FFD93D; font-weight: 600; font-family: 'JetBrains Mono', monospace;">{domains}</span>
             </div>
             """, unsafe_allow_html=True)
         
-        st.markdown("<div style='margin: 1rem 0; border-top: 1px solid #334155;'></div>", unsafe_allow_html=True)
+        st.markdown("<div style='margin: 1.25rem 0; border-top: 1px solid #30363D;'></div>", unsafe_allow_html=True)
         
-        # Tips
+        # Pro Tips Section
         st.markdown("""
-        <p style="color: #94A3B8; font-size: 0.7rem; text-transform: uppercase; 
-        letter-spacing: 1px; margin-bottom: 0.5rem; font-weight: 500;">Tips</p>
-        <ul style="color: #94A3B8; font-size: 0.8rem; padding-left: 1rem; margin: 0;">
-            <li style="margin-bottom: 0.25rem;">Use Notebook Templates for quick starts</li>
-            <li style="margin-bottom: 0.25rem;">Track progress to unlock achievements</li>
-            <li>Generate synthetic data for practice</li>
-        </ul>
+        <p style="color: #6E7681; font-size: 0.65rem; text-transform: uppercase; 
+        letter-spacing: 0.1em; padding: 0 0.5rem; margin-bottom: 0.75rem; font-weight: 600;">Pro Tips</p>
         """, unsafe_allow_html=True)
         
-        st.markdown("<br>" * 2, unsafe_allow_html=True)
+        tips = [
+            ("⌨️", "Use keyboard shortcuts for faster navigation"),
+            ("📊", "Profile datasets before analysis"),
+            ("🎯", "Complete projects to earn XP"),
+        ]
         
+        for icon, tip in tips:
+            st.markdown(f"""
+            <div style="display: flex; gap: 0.5rem; padding: 0.5rem; margin-bottom: 0.375rem; 
+                font-size: 0.75rem; color: #8B949E; line-height: 1.4;">
+                <span>{icon}</span>
+                <span>{tip}</span>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        # Footer
+        st.markdown("<div style='flex: 1;'></div>", unsafe_allow_html=True)
         st.markdown("""
-        <div style="text-align: center; color: #64748B; font-size: 0.7rem;">
-        v2.0
+        <div style="margin-top: 2rem; padding-top: 1rem; border-top: 1px solid #30363D; text-align: center;">
+            <p style="color: #6E7681; font-size: 0.7rem; margin: 0;">
+                DataDojo v2.0
+            </p>
+            <p style="color: #484F58; font-size: 0.65rem; margin-top: 0.25rem;">
+                Built with ❤️ for data scientists
+            </p>
         </div>
         """, unsafe_allow_html=True)
     

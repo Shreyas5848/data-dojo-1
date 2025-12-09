@@ -366,40 +366,30 @@ def create_data_quality_summary_card(profile) -> str:
     
     quality_color = "#00D084" if profile.overall_quality_score > 0.8 else "#FFB020" if profile.overall_quality_score > 0.6 else "#FF6B6B"
     
-    return f"""
-    <div style="
-        border: 2px solid {quality_color};
-        border-radius: 15px;
-        padding: 20px;
-        margin: 20px 0;
-        background: linear-gradient(135deg, {quality_color}25, {quality_color}10);
-        box-shadow: 0 4px 12px rgba(255, 153, 0, 0.2);
-    ">
-        <div style="text-align: center;">
-            <h2 style="color: {quality_color}; margin: 0;">Data Quality Score</h2>
-            <h1 style="color: {quality_color}; font-size: 3rem; margin: 10px 0;">{profile.overall_quality_score:.1%}</h1>
-        </div>
-        
-        <div style="display: flex; justify-content: space-around; margin-top: 20px;">
-            <div style="text-align: center;">
-                <h4 style="color: #BBBBBB; margin: 5px 0;">Completeness</h4>
-                <h3 style="color: {quality_color}; margin: 0;">{profile.completeness_score:.1%}</h3>
-            </div>
-            <div style="text-align: center;">
-                <h4 style="color: #BBBBBB; margin: 5px 0;">Consistency</h4>
-                <h3 style="color: {quality_color}; margin: 0;">{profile.consistency_score:.1%}</h3>
-            </div>
-            <div style="text-align: center;">
-                <h4 style="color: #BBBBBB; margin: 5px 0;">Uniqueness</h4>
-                <h3 style="color: {quality_color}; margin: 0;">{profile.uniqueness_score:.1%}</h3>
-            </div>
-        </div>
-        
-        <div style="margin-top: 20px; padding: 15px; background: rgba(38, 39, 48, 0.8); border-radius: 10px; color: #FAFAFA;">
-            <h4 style="margin: 0 0 10px 0; color: #FAFAFA;">Dataset Overview</h4>
-            <p style="margin: 5px 0; color: #FAFAFA;"><strong>Shape:</strong> {profile.shape[0]:,} rows × {profile.shape[1]} columns</p>
-            <p style="margin: 5px 0; color: #FAFAFA;"><strong>Memory:</strong> {profile.memory_usage_mb:.1f} MB</p>
-            <p style="margin: 5px 0; color: #FAFAFA;"><strong>Duplicates:</strong> {profile.duplicate_rows:,} ({profile.duplicate_percentage:.1f}%)</p>
-        </div>
-    </div>
-    """
+    # Build compact HTML to avoid Streamlit rendering issues
+    score_pct = f"{profile.overall_quality_score:.1%}"
+    completeness_pct = f"{profile.completeness_score:.1%}"
+    consistency_pct = f"{profile.consistency_score:.1%}"
+    uniqueness_pct = f"{profile.uniqueness_score:.1%}"
+    shape_str = f"{profile.shape[0]:,} rows × {profile.shape[1]} columns"
+    memory_str = f"{profile.memory_usage_mb:.1f} MB"
+    duplicates_str = f"{profile.duplicate_rows:,} ({profile.duplicate_percentage:.1f}%)"
+    
+    html = f'<div style="border: 1px solid {quality_color}; border-radius: 12px; padding: 20px; margin: 20px 0; background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);">'
+    html += f'<div style="text-align: center;">'
+    html += f'<h2 style="color: #94A3B8; margin: 0; font-size: 1rem;">Data Quality Score</h2>'
+    html += f'<h1 style="color: {quality_color}; font-size: 2.5rem; margin: 10px 0;">{score_pct}</h1>'
+    html += '</div>'
+    html += '<div style="display: flex; justify-content: space-around; margin-top: 20px;">'
+    html += f'<div style="text-align: center;"><h4 style="color: #64748B; margin: 5px 0; font-size: 0.8rem;">Completeness</h4><h3 style="color: {quality_color}; margin: 0;">{completeness_pct}</h3></div>'
+    html += f'<div style="text-align: center;"><h4 style="color: #64748B; margin: 5px 0; font-size: 0.8rem;">Consistency</h4><h3 style="color: {quality_color}; margin: 0;">{consistency_pct}</h3></div>'
+    html += f'<div style="text-align: center;"><h4 style="color: #64748B; margin: 5px 0; font-size: 0.8rem;">Uniqueness</h4><h3 style="color: {quality_color}; margin: 0;">{uniqueness_pct}</h3></div>'
+    html += '</div>'
+    html += '<div style="margin-top: 20px; padding: 15px; background: #0F172A; border-radius: 8px; border: 1px solid #334155;">'
+    html += '<h4 style="margin: 0 0 10px 0; color: #F8FAFC; font-size: 0.9rem;">Dataset Overview</h4>'
+    html += f'<p style="margin: 5px 0; color: #94A3B8; font-size: 0.85rem;"><strong style="color: #F8FAFC;">Shape:</strong> {shape_str}</p>'
+    html += f'<p style="margin: 5px 0; color: #94A3B8; font-size: 0.85rem;"><strong style="color: #F8FAFC;">Memory:</strong> {memory_str}</p>'
+    html += f'<p style="margin: 5px 0; color: #94A3B8; font-size: 0.85rem;"><strong style="color: #F8FAFC;">Duplicates:</strong> {duplicates_str}</p>'
+    html += '</div></div>'
+    
+    return html

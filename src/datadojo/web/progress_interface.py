@@ -253,26 +253,52 @@ def render_progress_dashboard():
     progress = check_achievements(progress)
     save_progress_data(progress)
     
-    # User Profile Section
-    st.markdown("<h2 style='color: #F8FAFC; font-size: 1.25rem; font-weight: 600;'>Your Profile</h2>", unsafe_allow_html=True)
-    
-    col1, col2, col3, col4 = st.columns(4)
-    
+    # User Profile Section with enhanced level display
     level, current_xp, next_level_xp = calculate_level(progress["user_info"]["xp"])
+    xp_progress = current_xp / next_level_xp if next_level_xp > 0 else 0
+    xp_percent = int(xp_progress * 100)
     
-    with col1:
-        st.metric("Level", level)
-    with col2:
-        st.metric("Total XP", progress["user_info"]["xp"])
-    with col3:
-        st.metric("Streak", f"{progress['streak_days']} days")
-    with col4:
-        st.metric("Achievements", len(progress["achievements"]))
+    # Enhanced Level Badge Card - toned down colors for better balance
+    total_xp = progress["user_info"]["xp"]
+    streak = progress['streak_days']
+    achievements_count = len(progress["achievements"])
     
-    # XP Progress bar
-    xp_progress = current_xp / next_level_xp
-    st.progress(xp_progress)
-    st.caption(f"Level {level} → Level {level + 1}: {current_xp}/{next_level_xp} XP")
+    level_card_html = f'''<div style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border: 1px solid #334155; border-radius: 16px; padding: 1.5rem; margin-bottom: 1.5rem;">
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem;">
+<div style="display: flex; align-items: center; gap: 1rem;">
+<div style="width: 70px; height: 70px; background: linear-gradient(135deg, #E85D5D 0%, #D97440 100%); border-radius: 50%; display: flex; align-items: center; justify-content: center; border: 2px solid #475569;">
+<span style="font-size: 1.75rem; font-weight: 700; color: white;">{level}</span>
+</div>
+<div>
+<p style="color: #64748B; font-size: 0.7rem; margin: 0; text-transform: uppercase; letter-spacing: 1px;">Current Level</p>
+<p style="color: #F8FAFC; font-size: 1.25rem; font-weight: 600; margin: 0;">Level {level}</p>
+<p style="color: #94A3B8; font-size: 0.8rem; margin: 0;">{total_xp:,} Total XP</p>
+</div>
+</div>
+<div style="display: flex; gap: 1.5rem;">
+<div style="text-align: center;">
+<p style="color: #F8FAFC; font-size: 1.5rem; font-weight: 600; margin: 0;">🔥 {streak}</p>
+<p style="color: #64748B; font-size: 0.7rem; margin: 0;">Day Streak</p>
+</div>
+<div style="text-align: center;">
+<p style="color: #F8FAFC; font-size: 1.5rem; font-weight: 600; margin: 0;">🏆 {achievements_count}</p>
+<p style="color: #64748B; font-size: 0.7rem; margin: 0;">Achievements</p>
+</div>
+</div>
+</div>
+<div style="margin-top: 1rem;">
+<div style="display: flex; justify-content: space-between; margin-bottom: 0.4rem;">
+<span style="color: #64748B; font-size: 0.7rem;">Progress to Level {level + 1}</span>
+<span style="color: #94A3B8; font-size: 0.7rem; font-weight: 500;">{current_xp} / {next_level_xp} XP</span>
+</div>
+<div style="background: #0F172A; border-radius: 8px; height: 8px; overflow: hidden; border: 1px solid #334155;">
+<div style="width: {xp_percent}%; height: 100%; background: linear-gradient(90deg, #E85D5D 0%, #D97440 100%); border-radius: 8px;"></div>
+</div>
+<p style="color: #475569; font-size: 0.65rem; margin-top: 0.25rem; text-align: center;">{xp_percent}% complete</p>
+</div>
+</div>'''
+    
+    st.markdown(level_card_html, unsafe_allow_html=True)
     
     st.markdown("---")
     
@@ -290,8 +316,20 @@ def render_progress_dashboard():
         "time_series": "Time Series"
     }
     
-    # Create skill cards in 2 columns
+    # Create skill cards in 2 columns with enhanced styling
     cols = st.columns(2)
+    
+    # Level color mapping for visual distinction
+    def get_level_style(level):
+        """Get distinct colors based on skill level."""
+        if level <= 2:
+            return {"bg": "#3B82F6", "glow": "#60A5FA", "label": "Beginner"}  # Blue
+        elif level <= 5:
+            return {"bg": "#22C55E", "glow": "#4ADE80", "label": "Intermediate"}  # Green
+        elif level <= 8:
+            return {"bg": "#F59E0B", "glow": "#FBBF24", "label": "Advanced"}  # Amber/Gold
+        else:
+            return {"bg": "#8B5CF6", "glow": "#A78BFA", "label": "Expert"}  # Purple
     
     for i, (skill_key, skill_name) in enumerate(skill_names.items()):
         with cols[i % 2]:
@@ -300,12 +338,31 @@ def render_progress_dashboard():
             skill_xp = skill_data["xp"]
             skill_max = skill_data["max_xp"]
             
-            # Skill progress
+            # Skill progress percentage
             xp_pct = skill_xp / skill_max if skill_max > 0 else 0
+            xp_percent = int(xp_pct * 100)
             
-            st.markdown(f"**{skill_name}** - Level {skill_level}")
-            st.progress(xp_pct)
-            st.caption(f"{skill_xp}/{skill_max} XP")
+            # Get level styling
+            level_style = get_level_style(skill_level)
+            bg = level_style['bg']
+            glow = level_style['glow']
+            label = level_style['label']
+            
+            # Enhanced skill card - compact HTML
+            skill_html = f'<div style="background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%); border: 1px solid #334155; border-radius: 12px; padding: 16px; margin-bottom: 12px;">'
+            skill_html += f'<div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">'
+            skill_html += f'<span style="color: #F8FAFC; font-weight: 600; font-size: 1rem;">{skill_name}</span>'
+            skill_html += f'<span style="background: {bg}; color: white; padding: 4px 12px; border-radius: 20px; font-weight: 700; font-size: 0.85rem; box-shadow: 0 0 10px {glow}40; text-shadow: 0 1px 2px rgba(0,0,0,0.3);">Lv. {skill_level}</span>'
+            skill_html += '</div>'
+            skill_html += f'<div style="background: #1E293B; border-radius: 8px; height: 10px; overflow: hidden; margin-bottom: 8px;">'
+            skill_html += f'<div style="background: linear-gradient(90deg, {bg} 0%, {glow} 100%); height: 100%; width: {xp_percent}%; border-radius: 8px;"></div>'
+            skill_html += '</div>'
+            skill_html += f'<div style="display: flex; justify-content: space-between; align-items: center;">'
+            skill_html += f'<span style="color: #94A3B8; font-size: 0.8rem;">{skill_xp}/{skill_max} XP</span>'
+            skill_html += f'<span style="color: {bg}; font-size: 0.75rem; font-weight: 600;">{label}</span>'
+            skill_html += '</div></div>'
+            
+            st.markdown(skill_html, unsafe_allow_html=True)
     
     st.markdown("---")
     
