@@ -39,35 +39,56 @@ DataDojo is an educational framework designed to teach data science skills throu
 ### Prerequisites
 
 - Python 3.11 or higher
-- pip or poetry for package management
+- pip (comes with Python)
 
-### Installation
+### Installation (Step-by-Step)
 
+
+**Step 1: Clone the repository**
 ```bash
-# Clone the repository
 git clone https://github.com/Shreyas5848/data-dojo-1.git
 cd data-dojo-1
+```
 
-# Create virtual environment (recommended)
+**Step 2: Create and activate virtual environment**
+
+*Windows (PowerShell):*
+```powershell
 python -m venv .venv
-.venv\Scripts\activate  # Windows
-# source .venv/bin/activate  # macOS/Linux
+.venv\Scripts\Activate.ps1
+```
 
-# Install dependencies
+*Windows (Command Prompt):*
+```cmd
+python -m venv .venv
+.venv\Scripts\activate.bat
+```
+
+*macOS/Linux:*
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+**Step 3: Install dependencies**
+```bash
 pip install -r requirements.txt
+```
 
-# Install in development mode (for CLI access)
+**Step 4: Install the package (for CLI commands)**
+```bash
 pip install -e .
 ```
 
 ### Launch the Web Interface
 
 ```bash
-# Start the Streamlit dashboard
-streamlit run app.py --server.port 8530
-
-# The app will open automatically at http://localhost:8530
+streamlit run app.py
 ```
+
+This will open automatically at **http://localhost:8501**
+
+> 💡 **Tip:** If port 8501 is busy, use: `streamlit run app.py --server.port 8530`
 
 ### Using the CLI
 
