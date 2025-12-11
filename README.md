@@ -92,12 +92,23 @@ This will open automatically at **http://localhost:8501**
 
 ### Using the CLI
 
+**Option 1: Interactive Mode (Recommended for beginners)**
 ```bash
-# Start an interactive learning session
 datadojo learn
+```
+This opens an interactive session. Inside it, type:
+- `help` - show all commands
+- `web` - launch web dashboard  
+- `list-projects` - see available projects
+- `notebook` - generate analysis notebooks
+- `exit` - quit
 
-# Or use individual commands
-datadojo --help
+**Option 2: Direct Commands**
+```bash
+datadojo --help              # Show all commands
+datadojo web                 # Launch web dashboard
+datadojo list-projects       # List learning projects
+datadojo notebook datasets/finance/stock_prices.csv --template eda
 ```
 
 ---
@@ -126,22 +137,27 @@ streamlit run app.py --server.port 8530
 
 ## 💻 Command Line Interface (CLI)
 
-DataDojo provides a comprehensive CLI for terminal-based workflows.
+DataDojo provides two CLI modes:
 
-### Getting Started
+### Interactive Mode (Recommended)
 
 ```bash
-# Show all available commands
-datadojo --help
-
-# Start interactive learning session (recommended for beginners)
 datadojo learn
-
-# Launch web dashboard from CLI
-datadojo web
 ```
 
-### Available Commands
+This starts an interactive REPL session where you can type commands without the `datadojo` prefix:
+
+```
+(dojo) > help              # Show all commands
+(dojo) > list-projects     # Browse learning projects
+(dojo) > web               # Launch web dashboard
+(dojo) > notebook          # Generate notebooks
+(dojo) > exit              # Quit
+```
+
+### Direct Commands
+
+For scripting or quick one-off commands:
 
 #### 📋 Project Management
 
